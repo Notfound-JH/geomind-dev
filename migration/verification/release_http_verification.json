@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "asset_zip_url": "http://127.0.0.1:8782/geomind-assets-v1.zip",
+  "checks": [
+    {
+      "kind": "HEAD",
+      "passed": true,
+      "status": 200,
+      "content_length": "8696938222",
+      "disposition": "attachment; filename=\"geomind-assets-v1.zip\"; filename*=UTF-8''geomind-assets-v1.zip"
+    },
+    {
+      "kind": "bytes=0-1048575",
+      "passed": true,
+      "status": 206,
+      "content_range": "bytes 0-1048575/8696938222",
+      "sha256": "1c754349a3b0c04b5d6d570deb085b5b705d7b8f9d4f770a6a07c6524762f77d"
+    },
+    {
+      "kind": "bytes=-1024",
+      "passed": true,
+      "status": 206,
+      "content_range": "bytes 8696937198-8696938221/8696938222",
+      "sha256": "a4836d2946552182da2f4767c4f4aa9d08e1226745c45351e2993616ec7c1ba2"
+    },
+    {
+      "kind": "invalid_range",
+      "passed": true,
+      "status": 416
+    }
+  ]
+}

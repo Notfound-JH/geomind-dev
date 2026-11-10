@@ -1,0 +1,43 @@
+{
+  "all_original_audit_functions_AST_unchanged": true,
+  "audit_functions_compared": [
+    "_closing_control_width",
+    "_cloud_at",
+    "_command_sample_valid",
+    "_finger_binding",
+    "_finger_condition",
+    "_geometry",
+    "_grasp_width_axis",
+    "_gt_equivalent",
+    "_load_body_geometry",
+    "_place_chain_complete",
+    "_place_sample_valid",
+    "_relation_context",
+    "_relation_sample",
+    "_replay_query_gt",
+    "_require",
+    "_rotation",
+    "_trailing_dwell",
+    "_valid_topology_negative",
+    "audit"
+  ],
+  "isolated_physical_worker_function_AST_unchanged": true,
+  "live_regression_tests_passed": 61,
+  "candidate_mock_tests_passed": 6,
+  "real_fresh_parent_has_pxrlib": false,
+  "actual_CPU_replay_passed": true,
+  "real_direct_cli_fresh_parent_passed": true,
+  "original_failure_preserved": true,
+  "source_files_changed": [
+    "geomind/scene_assembly/robot_execution.py",
+    "geomind/tools/audit_assembled_robot.py",
+    "tests/test_robot_audit_environment.py"
+  ],
+  "scope": "Launch/environment/report transport only; no audit predicates, robot action/control, GT or tolerance changes",
+  "proofs": [
+    "failed_relocation_v1_posthoc_cpu_audit.json",
+    "direct_audit_cli_proof.json"
+  ],
+  "runtime_source_frozen": true,
+  "asset_stage_and_ZIP_unchanged": true
+}

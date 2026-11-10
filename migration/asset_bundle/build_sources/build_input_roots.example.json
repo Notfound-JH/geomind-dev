@@ -1,0 +1,11 @@
+{
+  "repository": "<checkout>",
+  "geomind_assets": "<raw GEOMIND assets tree>",
+  "grscenes_home": "<GRScenes home_scenes tree>",
+  "isaacsim_assets": "<NVIDIA local Assets mirror root>",
+  "material_cache": "<cached NVIDIA MDL/module tree>",
+  "repo_assets/assets": "<checkout>/assets",
+  "repo_assets/scene_atlas": "<checkout>/scene_atlas",
+  "curobo_assets": "<optional custom FR3 assets>",
+  "output": "<build workspace>/portable_delivery_v1"
+}

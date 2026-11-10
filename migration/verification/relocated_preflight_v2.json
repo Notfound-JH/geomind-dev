@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "interpreter": "/tmp/geomind-relocated-framework-89s0ttnl/venv/bin/python",
+  "checks": [
+    {
+      "name": "checkout",
+      "passed": true,
+      "detail": "/tmp/geomind-dev-publish-1b07dha_"
+    },
+    {
+      "name": "distribution:numpy",
+      "passed": true,
+      "detail": "1.26.0"
+    },
+    {
+      "name": "distribution:gymnasium",
+      "passed": true,
+      "detail": "1.2.1"
+    },
+    {
+      "name": "import-location:geomind",
+      "passed": true,
+      "detail": "/tmp/geomind-dev-publish-1b07dha_/geomind/__init__.py"
+    },
+    {
+      "name": "import-location:geomind_lab",
+      "passed": true,
+      "detail": "/tmp/geomind-dev-publish-1b07dha_/geomind_lab/__init__.py"
+    },
+    {
+      "name": "import-location:geomind_client",
+      "passed": true,
+      "detail": "/tmp/geomind-dev-publish-1b07dha_/geomind_client.py"
+    },
+    {
+      "name": "import-location:scripted_goal_policy",
+      "passed": true,
+      "detail": "/tmp/geomind-dev-publish-1b07dha_/scripted_goal_policy.py"
+    },
+    {
+      "name": "checkout-resource:assets/annotations/annotated_tasks.json",
+      "passed": true,
+      "detail": "assets/annotations/annotated_tasks.json"
+    },
+    {
+      "name": "checkout-resource:assets/scene_profiles/assets_catalog_with_metadata.json",
+      "passed": true,
+      "detail": "assets/scene_profiles/assets_catalog_with_metadata.json"
+    },
+    {
+      "name": "checkout-resource:geomind/configs/current_task_mapping.json",
+      "passed": true,
+      "detail": "geomind/configs/current_task_mapping.json"
+    },
+    {
+      "name": "checkout-resource:geomind/configs/task_definitions",
+      "passed": true,
+      "detail": "geomind/configs/task_definitions"
+    },
+    {
+      "name": "executable:git",
+      "passed": true,
+      "detail": "/usr/bin/git"
+    },
+    {
+      "name": "executable:ffmpeg",
+      "passed": true,
+      "detail": "/usr/bin/ffmpeg"
+    },
+    {
+      "name": "executable:ffprobe",
+      "passed": true,
+      "detail": "/usr/bin/ffprobe"
+    },
+    {
+      "name": "simulation-python",
+      "passed": true,
+      "detail": "3.11.14"
+    },
+    {
+      "name": "simulation-distribution:isaacsim",
+      "passed": true,
+      "detail": "5.1.0.0"
+    },
+    {
+      "name": "simulation-distribution:isaaclab",
+      "passed": true,
+      "detail": "0.51.1"
+    },
+    {
+      "name": "simulation-distribution:isaaclab-assets",
+      "passed": true,
+      "detail": "0.2.4"
+    },
+    {
+      "name": "simulation-distribution:isaaclab-tasks",
+      "passed": true,
+      "detail": "0.11.10"
+    },
+    {
+      "name": "simulation-distribution:isaaclab-mimic",
+      "passed": true,
+      "detail": "1.0.16"
+    },
+    {
+      "name": "simulation-distribution:torch",
+      "passed": true,
+      "detail": "2.7.0+cu128"
+    },
+    {
+      "name": "framework-source",
+      "passed": true,
+      "detail": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab"
+    },
+    {
+      "name": "framework-editable:isaaclab",
+      "passed": true,
+      "detail": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab/source/isaaclab"
+    },
+    {
+      "name": "framework-editable:isaaclab-assets",
+      "passed": true,
+      "detail": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab/source/isaaclab_assets"
+    },
+    {
+      "name": "framework-editable:isaaclab-tasks",
+      "passed": true,
+      "detail": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab/source/isaaclab_tasks"
+    },
+    {
+      "name": "framework-editable:isaaclab-mimic",
+      "passed": true,
+      "detail": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab/source/isaaclab_mimic"
+    },
+    {
+      "name": "framework-manifest",
+      "passed": true,
+      "detail": "/tmp/geomind-dev-publish-1b07dha_/migration/isaaclab/runtime_sources.json"
+    },
+    {
+      "name": "framework-git-metadata",
+      "passed": true,
+      "detail": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab"
+    },
+    {
+      "name": "framework-commit",
+      "passed": true,
+      "detail": "54cf64beb4eee99bc7b78e0353c8a4a8a13aa2c0"
+    },
+    {
+      "name": "framework-runtime:source/isaaclab/isaaclab/envs/mimic_env_cfg.py",
+      "passed": true,
+      "detail": "source/isaaclab/isaaclab/envs/mimic_env_cfg.py"
+    },
+    {
+      "name": "framework-runtime:source/isaaclab_assets/isaaclab_assets/robots/__init__.py",
+      "passed": true,
+      "detail": "source/isaaclab_assets/isaaclab_assets/robots/__init__.py"
+    },
+    {
+      "name": "framework-runtime:source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py",
+      "passed": true,
+      "detail": "source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py"
+    },
+    {
+      "name": "framework-runtime:source/isaaclab_assets/isaaclab_assets/robots/fr3.py",
+      "passed": true,
+      "detail": "source/isaaclab_assets/isaaclab_assets/robots/fr3.py"
+    },
+    {
+      "name": "simulation-usd-cpu-probe",
+      "passed": true,
+      "detail": {
+        "scope": "CPU pxr.Usd import using the selected SDK USD-only environment",
+        "timeout_s": 30,
+        "simulation_started": false,
+        "selected_interpreter": "/home/elm/miniconda3/envs/new_isaaclab/bin/python3.11",
+        "returncode": 0,
+        "usd_version": [
+          0,
+          24,
+          5
+        ],
+        "kit_imported": false,
+        "simulation_app_imported": false,
+        "passed": true
+      }
+    },
+    {
+      "name": "asset-root:geomind_assets",
+      "passed": true,
+      "detail": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/geomind_assets"
+    },
+    {
+      "name": "asset-root:grscenes_home",
+      "passed": true,
+      "detail": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/grscenes_home"
+    },
+    {
+      "name": "asset-root:isaacsim_assets",
+      "passed": true,
+      "detail": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/isaacsim_assets"
+    },
+    {
+      "name": "asset-root:material_cache",
+      "passed": true,
+      "detail": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/material_cache"
+    },
+    {
+      "name": "asset-root:repo_assets",
+      "passed": true,
+      "detail": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/repo_assets"
+    },
+    {
+      "name": "asset-manifest",
+      "passed": true,
+      "detail": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/asset_bundle_manifest.json"
+    },
+    {
+      "name": "asset-manifest-nonempty",
+      "passed": true,
+      "detail": 2489
+    },
+    {
+      "name": "asset-files-present",
+      "passed": true,
+      "detail": {
+        "missing_count": 0,
+        "first_paths": []
+      }
+    },
+    {
+      "name": "asset-files-integrity",
+      "passed": true,
+      "detail": {
+        "deep_sha256": false,
+        "mismatch_count": 0,
+        "first_paths": []
+      }
+    }
+  ],
+  "failed_checks": [],
+  "physics_started": false,
+  "robot_actions_executed": false,
+  "scope": "File, version and source-location preflight; real GPU/assets/action success still requires the documented bounded smoke test"
+}

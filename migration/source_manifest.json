@@ -1,8 +1,8 @@
 {
   "source_root_redacted": "current_project",
   "destination": "isolated-publication-tree",
-  "files": 965,
-  "total_bytes": 9991269,
+  "files": 987,
+  "total_bytes": 10078352,
   "source_dirs": [
     "geomind",
     "geomind_lab",
@@ -78,8 +78,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 5765,
-      "sha256": "a1d2266a20cd7d9de4406dcf91f76ac11e6218b8da76156b13dc501d08d3239f"
+      "size_bytes": 6092,
+      "sha256": "28413ecbf5a013bae4fe6adf2876d902d10414ee633cd8eeca9f02cc6a5e7859"
     },
     {
       "path": "TODO.md",
@@ -323,8 +323,8 @@
     },
     {
       "path": "docs/installation_zh.md",
-      "size_bytes": 10775,
-      "sha256": "d960db1014adb1afdf02def5d689c289cb11ad3d629892ffd68e7191d84522f3"
+      "size_bytes": 11025,
+      "sha256": "fbcd27fb7ae54024bd2cf4ee78575ba97b78a8e6dc26e5414776cdc407566dee"
     },
     {
       "path": "docs/interactive_assets_and_layouts_zh.md",
@@ -625,6 +625,11 @@
       "path": "docs/trajectory_collection_status_and_randomization_zh.md",
       "size_bytes": 24838,
       "sha256": "f1596378bec784db1836cfb6c6cc95519d102d334900f0dec0a71745bbe1e775"
+    },
+    {
+      "path": "docs/validation/portable_release_20261111.md",
+      "size_bytes": 2007,
+      "sha256": "fe2ced2fffabdf39da89e1f092a4222f313b03f88129434badf5d7c355f96122"
     },
     {
       "path": "environment/observed-sim51/environment_observed.json",
@@ -3002,6 +3007,86 @@
       "sha256": "35b5cffbb6cc94d09d6e7e39fc05d1c740872d6caab80580d167b10cd4b61f6e"
     },
     {
+      "path": "migration/asset_bundle/build_sources/README.md",
+      "size_bytes": 3300,
+      "sha256": "12a1a901be60741cdc4ccdd87284549e583eb85cee92a414ee55569bc229b946"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/asset_security_scan.py",
+      "size_bytes": 1716,
+      "sha256": "708756078757f1c0c3246dcf5de2802b0ebac8bf025e86804c72cb06d3df41d5"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/asset_validation_summary.json",
+      "size_bytes": 799,
+      "sha256": "5fa7ddc1aca769db042e4ab8cd7cf68a100e1f4125a787567499fae2952e8480"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/build_asset_zip.py",
+      "size_bytes": 9250,
+      "sha256": "63e1cf0c1046ad4c57dfe1cb148b23b0a7e1c33cdd65e3ca7268fa0f90807606"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/build_input_roots.example.json",
+      "size_bytes": 450,
+      "sha256": "8bf6ba036408b16c12e1e1d090f9ab25c4ae23a68c4f7996b2c9c9e46be48b21"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/curate_asset_inventory.py",
+      "size_bytes": 1391,
+      "sha256": "32cf04f992c7e883369bf7b8117a6ba1afd43cad0f327f93aa6d77798938c0ca"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/extract_bulk_stage.py",
+      "size_bytes": 2012,
+      "sha256": "848eadc363e86ea5d2ccc1b8d78af226098e5fdbc8673c2109f4c86257236bf2"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/final_asset_stage_corrections.py",
+      "size_bytes": 2821,
+      "sha256": "ce6acea0077c7e022fabbd8c6e862b4a723240aa03ebf17e3283b4e9dc6f86fe"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/finalize_asset_stage.py",
+      "size_bytes": 5539,
+      "sha256": "df3e8e0c063b9f457a0cc7541fe5106335f5e0eac6472b26e1291aa7b1c4cd10"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/inventory_asset_closure_v4.py",
+      "size_bytes": 9905,
+      "sha256": "4516728a17a171c0aedc1e1a442ddd85eb2c51d4abdb9cafa6845788c401a46c"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/pack_final_asset_zip.py",
+      "size_bytes": 3284,
+      "sha256": "d6bda5e0ca3ed6a2de0358543c86dd0d4faf0c211152b7f63e20d1cd239b5208"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/repack_from_manifest.py",
+      "size_bytes": 2318,
+      "sha256": "cc987d817690687d56b7d826c24b5b753009dace9c7c1e78282f1b8e4366a310"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/source_manifest.json",
+      "size_bytes": 3538,
+      "sha256": "e90c31e20cb26e152246acd402ef0cf3e093dd3408f8542e7ebb5fc50df04e41"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/validate_relocated_asset_stage.py",
+      "size_bytes": 6881,
+      "sha256": "3a09a8b79a3f346ba0b16cba0f3cfaf62c084c13f4d0cec1bd24921306ec81cf"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/validate_xml_closure.py",
+      "size_bytes": 2856,
+      "sha256": "e40827a63bf3e03184e050ecdf21a5b3513d710f179bfe856d9e4758b110984c"
+    },
+    {
+      "path": "migration/asset_bundle/build_sources/verify_final_asset_zip.py",
+      "size_bytes": 2835,
+      "sha256": "5ae4a132888f4a611e62561f6a2cf21f90fc1910cafb3bd382947eec96121e58"
+    },
+    {
       "path": "migration/curobo/README.md",
       "size_bytes": 1263,
       "sha256": "0c66b8d5f66bebca59d5b920994987706b2a659bae06987657b1bdc47e2ad9f2"
@@ -3070,6 +3155,31 @@
       "path": "migration/isaaclab/runtime_sources.json",
       "size_bytes": 3730,
       "sha256": "73be90f8d9ddb550df517bb300c432cf5a9d3fe13eecb1e9a32cfccaefd7293e"
+    },
+    {
+      "path": "migration/verification/asset_zip_download_verification.json",
+      "size_bytes": 766,
+      "sha256": "ec2078c50bce5ae614ebb4deb21efad3aabf46e65266e2e21fed295392ed56c3"
+    },
+    {
+      "path": "migration/verification/cpu_audit_environment_fix_summary.json",
+      "size_bytes": 1306,
+      "sha256": "c86ee4eb3bf172f020b64d120c13149193629576d5ee85ce4de56c80c1039df0"
+    },
+    {
+      "path": "migration/verification/release_http_verification.json",
+      "size_bytes": 875,
+      "sha256": "5f344cb553cb3c3c23c69c500e11228e81cf506224aa4ba0aab0dd76b7fede62"
+    },
+    {
+      "path": "migration/verification/relocated_preflight_v2.json",
+      "size_bytes": 7416,
+      "sha256": "4f982a099642ede7061209e32894c3f3f1000215148f90a8fc3dad44008e4ce9"
+    },
+    {
+      "path": "migration/verification/relocation_final_verification.json",
+      "size_bytes": 15241,
+      "sha256": "850736d60a8b94c390c070a6363457b8ac95a70232e007b9f034476734b6d7b9"
     },
     {
       "path": "paper/README.md",

@@ -55,9 +55,11 @@ git clone https://github.com/isaac-sim/IsaacLab.git IsaacLab
 git -C IsaacLab checkout --detach 54cf64beb4eee99bc7b78e0353c8a4a8a13aa2c0
 git -C IsaacLab apply --check "$PWD/migration/isaaclab/minimal-runtime.patch"
 git -C IsaacLab apply "$PWD/migration/isaaclab/minimal-runtime.patch"
-./IsaacLab/isaaclab.sh -i
+./IsaacLab/isaaclab.sh -i none
 python -m pip install -c constraints.sim51.txt -e '.[dev,analysis]'
 ```
+
+`-i none` 安装框架扩展并跳过当前任务生成不需要的 RL 训练框架；该参数由固定提交的安装脚本支持。项目依赖使用随仓库提供的 constraints，避免新机自动选到不同的分析/数值库版本。
 
 目标 `IsaacLab/` 应为新 clone，不能重复应用补丁。`migration/isaaclab/runtime_sources.json` 记录固定 SHA、补丁 SHA-256 和必要源文件哈希。这个 runtime 补丁包含当前使用的 SkillGen/mimic 合同扩展、对象 remapping 和 FR3 配置。
 

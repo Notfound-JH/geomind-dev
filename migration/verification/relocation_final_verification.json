@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "kind": "relocated_current_source_smoke_v2_final_verification",
+  "completed_at_utc": "2026-11-10T16:24:11.799058+00:00",
+  "passed": true,
+  "gates": {
+    "v2_full_pipeline_completed": true,
+    "run_end_provenance_passed": true,
+    "positive_actual_command_passed": true,
+    "negative_actual_command_completed_and_rejected": true,
+    "runtime_gt_independently_verified": true,
+    "selected_raw_holds_and_motion_chain_verified": true,
+    "original_independent_robot_audit_passed": true,
+    "original_audit_raw_hashes_unchanged": true,
+    "newvenv_wrist_audit_passed": true,
+    "independent_raw_source_review_passed": true,
+    "saved_source_configuration_complete": true,
+    "source_prefix_and_framework_cpu_validation_passed": true,
+    "actual_external_and_wrist8frames_reviewed": true,
+    "walls_table_materials_not_black_and_wrist_unoccluded": true,
+    "post_action_deep_preflight_passed": true,
+    "all2489_assets_present_and_sha256_unchanged": true,
+    "asset_manifest_unchanged": true,
+    "recorded_scene_robot_dependencies_use_relocated_bundle": true,
+    "cpu_usd_probe_no_kit_or_app": true,
+    "v1_failure_preserved_not_upgraded": true
+  },
+  "source_runtime_commit": "0289dd2f18be9d4f589e105b9e48515636c712ff",
+  "source_snapshot_id": "e19229b34146e5abd598f7eeae56c62f9da62caa816a53e6f695f2a36845488e",
+  "configuration_id": "52a109f4fa35eac04c8737a450dfba96dafeb7018a32ebdf6692dff029024f5a",
+  "case_directory": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0",
+  "clean_source_prefix": "/tmp/geomind-dev-publish-1b07dha_",
+  "framework_source_prefix": "/tmp/geomind-relocated-framework-89s0ttnl/IsaacLab",
+  "python_executable": "/tmp/geomind-relocated-framework-89s0ttnl/venv/bin/python",
+  "sdk_installation_shared_from_base": true,
+  "fresh_sdk_installation_verified": false,
+  "other_hardware_verified": false,
+  "new_physics_cases_verified": 1,
+  "task_id": "SelectByIndirectReference_v0",
+  "scene_id": 65,
+  "seed": 0,
+  "robot": "franka_robotiq",
+  "robot_base_w_m": [
+    -0.12,
+    0.32,
+    0.9328504589976385
+  ],
+  "maximum_action_steps": 12000,
+  "maximum_worker_seconds": 420,
+  "model_evaluated": false,
+  "records": [
+    {
+      "negative_control": false,
+      "semantic_success": true,
+      "record_success": true,
+      "verification_passed": true,
+      "independent_gt_passed": true,
+      "actual_lift_stage6_m": 0.14523178339004517,
+      "selected_command_complete": true,
+      "selected_command_dwell_steps": 240,
+      "raw_recomputed_dwell_steps": 240,
+      "raw_hold_duration_s": 1.0,
+      "required_dwell_steps": 120,
+      "raw_hold_maximums": {
+        "speed_m_s": 0.008130645868853377,
+        "spin_rad_s": 0.013806612455095546,
+        "reference_drift_m": 7.450580596923828e-09,
+        "reference_angle_rad": 4.339283638763745e-07,
+        "tcp_distance_m": 0.0029555649179400685
+      },
+      "all_motion_stages_complete": true,
+      "no_state_write_attachment_force": true
+    },
+    {
+      "negative_control": true,
+      "semantic_success": false,
+      "record_success": false,
+      "verification_passed": true,
+      "independent_gt_passed": true,
+      "actual_lift_stage6_m": 0.14556056261062622,
+      "selected_command_complete": true,
+      "selected_command_dwell_steps": 240,
+      "raw_recomputed_dwell_steps": 240,
+      "raw_hold_duration_s": 1.0,
+      "required_dwell_steps": 120,
+      "raw_hold_maximums": {
+        "speed_m_s": 0.008347431371171235,
+        "spin_rad_s": 0.08324575736523403,
+        "reference_drift_m": 0.0,
+        "reference_angle_rad": 0.0,
+        "tcp_distance_m": 0.0027912517134543484
+      },
+      "all_motion_stages_complete": true,
+      "no_state_write_attachment_force": true
+    }
+  ],
+  "image_checks": [
+    {
+      "negative_control": false,
+      "view": "external",
+      "frame": "first_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_first.png",
+      "sha256": "261bf39299d0f96ccda85bba2337127450d578ba5ef04f3699b288fdab8b93d9",
+      "rgb_std": 60.29594234567986,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": false,
+      "view": "external",
+      "frame": "last_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_last.png",
+      "sha256": "e4424fda652668b7d7a7d02be45c9189af4fff0ee668d8624a8d11ca93dc98ff",
+      "rgb_std": 59.776874813701475,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": false,
+      "view": "wrist",
+      "frame": "first_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_wrist_first.png",
+      "sha256": "1f9ee5f55dc603bc3a18e24ddca5f1eae1d77364cdffde005cb54dd8e6a3a1c7",
+      "rgb_std": 74.60055831238905,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": false,
+      "view": "wrist",
+      "frame": "last_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_wrist_last.png",
+      "sha256": "36cfd4ab529d69502166be5edc0c52484043af040c3d1cf2e1ab55f8d9bb7324",
+      "rgb_std": 54.071650460761006,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": true,
+      "view": "external",
+      "frame": "first_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_first.png",
+      "sha256": "887e01d9d82dca1c7b3f6f4bc31a8e9f5ff03a51163c7d125777d1f7ed3c6b9b",
+      "rgb_std": 60.28036223415879,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": true,
+      "view": "external",
+      "frame": "last_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_last.png",
+      "sha256": "6f7203138a47f740a6b77766d673e33b877977b2270a51f746101df1540a9bb0",
+      "rgb_std": 59.94892260189282,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": true,
+      "view": "wrist",
+      "frame": "first_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_wrist_first.png",
+      "sha256": "94957faa9ed48ce8a2162f43e7b3e6b2639aa258d8bb73624bc13ebf0336b42c",
+      "rgb_std": 74.55240923913549,
+      "manually_reviewed": true
+    },
+    {
+      "negative_control": true,
+      "view": "wrist",
+      "frame": "last_frame",
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_wrist_last.png",
+      "sha256": "c701b3fe2eabbc879b5309f3c6d5bfb1c57362e1a1f8f23574a9dedf50f61a9b",
+      "rgb_std": 63.536446065310194,
+      "manually_reviewed": true
+    }
+  ],
+  "original_audit_raw_hashes": [
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/traces/assembled_task.npz",
+      "sha256": "40e7a9a5d7e4a75ea0f70322c89f67ee70ed55e60e8389d2abd2d13ca7b38b8f",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/traces/assembled_task_objects.npz",
+      "sha256": "4866ff6503f7ea51387809dcae90d0e9b0e16cdd7c6d604b649ead7611596a70",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/traces/assembled_task_controls.npz",
+      "sha256": "870a8c842b7559921f92b6152fd3ff2ca4c713679100f1757395fef40325f7c9",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/evidence/assembled_task.json",
+      "sha256": "581a11fed358a770cf3816d56b6475f701e5de32828401b77f7c6b2619c43b9f",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/observations/assembled_task.json",
+      "sha256": "c74ec934c30ac7f56fe80c7d21b78fd3f6fb0c0a17d2190150004c945bf64d61",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_observer.mp4",
+      "sha256": "7b9816b386637d47e6ac80e4803b3994cd1160139086f0925af3c129818adc16",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_agent.mp4",
+      "sha256": "7b9816b386637d47e6ac80e4803b3994cd1160139086f0925af3c129818adc16",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/positive/videos/assembled_task_frames.jsonl",
+      "sha256": "305d25467093cabc9587e0501043c84120fe0eb211426e731d2ea397f97abb1f",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz",
+      "sha256": "6ad925c4ad7d4d8049d15e8b9b1fdbb1965705c693a5d32b943ed83ecaf5beeb",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz",
+      "sha256": "36177eda461c6e8b90c6fc432c5b179223fb8489a245a2c578f93ae03204c560",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz",
+      "sha256": "9c8b0a8de2ed171e17a84046e02b8e989cc1154218c6d6a2e690861262447355",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/evidence/assembled_task_negative.json",
+      "sha256": "2cb0ce068e36200aeaf3094f9b4a7aede35c9f8e34a3ac3807670b8050df3dd4",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/observations/assembled_task_negative.json",
+      "sha256": "c74ec934c30ac7f56fe80c7d21b78fd3f6fb0c0a17d2190150004c945bf64d61",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_observer.mp4",
+      "sha256": "f812f77337fd6c719e8ed35490d5c1668182f550721111181fb468f1837dab26",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_agent.mp4",
+      "sha256": "f812f77337fd6c719e8ed35490d5c1668182f550721111181fb468f1837dab26",
+      "matches_original_audit": true
+    },
+    {
+      "path": "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/robot_physics/runs/negative/videos/assembled_task_negative_frames.jsonl",
+      "sha256": "9faa878ca1941922bb9c8798f8502683c2c55bbe8f84f9332d2cf7d1d454d6fc",
+      "matches_original_audit": true
+    }
+  ],
+  "relocated_dependency_paths": [
+    "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/geomind_assets/stage/65/65_new.usda",
+    "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/repo_assets/assets/scenes/tabletop_cleared_v1/65/65.usda",
+    "/tmp/geomind-dev-publish-1b07dha_/outputs/portable_relocation_smoke_v2/SelectByIndirectReference_v0/assembly/scene.usda",
+    "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/repo_assets/assets/scenes/tabletop_cleared_v1/65/65.usda",
+    "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1/isaacsim_assets/Assets/Isaac/5.1/Isaac/Robots/FrankaRobotics/FrankaPanda/franka.usd"
+  ],
+  "asset_bundle": {
+    "root": "/home/elm/projects/geomind_lab/outputs/research/portable_delivery_v1/relocated_validation/geomind-assets-v1",
+    "files": 2489,
+    "uncompressed_size_bytes": 33385692594,
+    "manifest_sha256": "b13fa35efe7f79b8669f530e62d8693707d72bf94a3f6549e07e4194ad1586a9",
+    "post_action_missing_files": 0,
+    "post_action_sha256_mismatches": 0
+  },
+  "v1": {
+    "result_status": "robot_action_physics_failed",
+    "task_completed": false,
+    "result_sha256_before": "07c479a9fd2e2a4a9d23b2f7eec6183c8a33c830ef18db79dbca4675b8daaff7",
+    "result_sha256_after": "07c479a9fd2e2a4a9d23b2f7eec6183c8a33c830ef18db79dbca4675b8daaff7",
+    "posthoc_audit_did_not_replace_failure": true
+  },
+  "cpu_postprocessing_gpu_used": false,
+  "cpu_sdk_probe": {
+    "scope": "CPU pxr.Usd import using the selected SDK USD-only environment",
+    "timeout_s": 30,
+    "simulation_started": false,
+    "selected_interpreter": "/tmp/geomind-relocated-framework-89s0ttnl/venv/bin/python",
+    "returncode": 0,
+    "usd_version": [
+      0,
+      24,
+      5
+    ],
+    "kit_imported": false,
+    "simulation_app_imported": false,
+    "passed": true
+  },
+  "supporting_reports": {
+    "outputs/research/portable_delivery_v1/relocated_framework.json": "e46572a4a67e878cd56f796602740a37d66b153b26070ff34c9c824dec75a817",
+    "outputs/research/portable_delivery_v1/relocated_environment.json": "5f0e27bbc1cbd9060f8fa9ff86957bfb8158649f4eea0a63a9e0e19271e768d5",
+    "outputs/research/portable_delivery_v1/relocation_post_action_deep_preflight.json": "4a5d3a27407ddd9c22d8f0c1626edceb3c536c4e047824f06bc7ad97003388d3",
+    "outputs/research/portable_delivery_v1/relocation_final_cpu_stage.json": "784aeab711aae3fee5fc8316cd4a355945e2fa2205aea6f7ed2ed590c3abfc79"
+  },
+  "scope": "One complete fresh v2 task from relocated clean source/framework and extracted assets, with a new venv sharing the already installed SDK/dependencies. This is not a fresh SDK download/install, another hardware test, or a rerun of every historical task."
+}

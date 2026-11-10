@@ -6,6 +6,8 @@ GeoMind 是基于 IsaacLab 的空间推理、空间记忆和机器人操作研�
 
 本交付按 **27 种 canonical 任务**组织；顺序选择的多个序位和拓扑放置的多个变体可属于同一种任务。任务定义、CPU 语义检查、真实机器人动作和模型表现分别记录。已有 GT、源码或录像本身不等于真实抓放通过。
 
+本轮任务展示严格验收为 **27/27 类、30/30 实例**（含原20项的保存版本）。便携源码还通过一次独立新目录的真实正负抓放测试和行动后资产深度校验；SDK使用已有5.1安装。完整范围与结果见 [迁移验证记录](docs/validation/portable_release_20261111.md)。
+
 ## 新主机安装
 
 完整步骤见 [安装与迁移](docs/installation_zh.md)，资产解压位置与环境变量见 [ASSETS.md](ASSETS.md)。AI agent 的工作约定见 [AGENTS.md](AGENTS.md)；用户要求的 [agent.md](agent.md) 为同一约定的入口。
@@ -27,7 +29,7 @@ git clone https://github.com/isaac-sim/IsaacLab.git IsaacLab
 git -C IsaacLab checkout --detach 54cf64beb4eee99bc7b78e0353c8a4a8a13aa2c0
 git -C IsaacLab apply --check "$PWD/migration/isaaclab/minimal-runtime.patch"
 git -C IsaacLab apply "$PWD/migration/isaaclab/minimal-runtime.patch"
-./IsaacLab/isaaclab.sh -i
+./IsaacLab/isaaclab.sh -i none
 python -m pip install -c constraints.sim51.txt -e '.[dev,analysis]'
 ```
 

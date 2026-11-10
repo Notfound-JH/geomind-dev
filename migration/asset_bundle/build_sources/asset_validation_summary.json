@@ -1,0 +1,22 @@
+{
+  "asset_manifest_sha256": "b13fa35efe7f79b8669f530e62d8693707d72bf94a3f6549e07e4194ad1586a9",
+  "zip_sha256": "f979987acc249e6ea5eb62a6e0aa14e171e91274042d05272e5dd3e24598175a",
+  "zip_size_bytes": 8696938222,
+  "asset_files": 2489,
+  "archive_entries": 2491,
+  "reference_counts": {
+    "asset_files": 2489,
+    "XML_URDF_OBJ_resource_reference": 383,
+    "USD_binary_asset_reference": 174,
+    "SDK_builtin_asset": 212,
+    "USD_text_asset_reference": 11395,
+    "MDL_texture_reference": 514,
+    "scene_root_layers_parsed": 102
+  },
+  "creator_home_prefix_in_text": false,
+  "CRC_and_SHA256_passed": true,
+  "credential_scan_passed": true,
+  "optional_source_template_requirements": 12,
+  "GPU_executed_by_these_build_scripts": false,
+  "runtime_install_uses_configure_script_instead": true
+}
