@@ -1,0 +1,43 @@
+{
+  "task_id": "PlaceByTopology",
+  "family": "RelationalGrounding",
+  "condition": "Base",
+  "layout": "Stack",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "place_on_top",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+    "semantic_module": "spatial_placement",
+    "phase": "phase2",
+    "annotation_layout_key": "place_on_top_scene65_skill_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "spatial_placement",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "place_on_top"
+    },
+    "registration_id": "PlaceByTopologyOnTopVla_v0",
+    "protocol_family": "spatial_placement",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "PlaceOnTopVla_v0",
+    "place_on_top",
+    "place_on_top:vla",
+    "RelationBaseBase_PlaceOnTopVla_v0"
+  ],
+  "variant": "OnTop"
+}

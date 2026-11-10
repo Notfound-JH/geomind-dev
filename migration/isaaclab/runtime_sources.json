@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "upstream_url": "https://github.com/isaac-sim/IsaacLab.git",
+  "upstream_commit": "54cf64beb4eee99bc7b78e0353c8a4a8a13aa2c0",
+  "observed_gpu_distribution": "Isaac Sim 5.1.0.0 / Python 3.11.14",
+  "patches": {
+    "full_source.patch": {
+      "bytes": 1240486,
+      "sha256": "e9475ceadde7118710810beff76520b3146721cfab9eccc2c0e8e6e71a98c0c1"
+    },
+    "minimal-runtime.patch": {
+      "bytes": 12350,
+      "sha256": "0103f70976a592f1c0472360892b96a2f84572ecb6234d559d3c0b4dcaddd6bc"
+    }
+  },
+  "minimal_runtime_sources": {
+    "source/isaaclab/isaaclab/envs/mimic_env_cfg.py": "91fd39b16053aae4a0175f23ba9d3c690e6c9edfb991d621d1e9496926787460",
+    "source/isaaclab_assets/isaaclab_assets/robots/__init__.py": "d004719aadf9cfc858d55b9caca40f168d947f3345a8382b014bdce1471e92d8",
+    "source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py": "5a4d92fff5954af1a5d72bfda4a4e4b7853920d9fe775ad49bdbb547cc210524",
+    "source/isaaclab_assets/isaaclab_assets/robots/fr3.py": "2b2c2dcc58abd095e2920aebbb92ebc981efdae150c3daaf17011deccfbba478"
+  },
+  "full_untracked_source_paths": [
+    "source/isaaclab_assets/isaaclab_assets/robots/fr3.py",
+    "my_sc/test_curobo.py",
+    "scripts/tools/test/print_observation_fields.py",
+    "egl_probe/README.md",
+    "egl_probe/setup.py",
+    "egl_probe/.gitignore",
+    "egl_probe/LICENSE",
+    "egl_probe/egl_probe/test_device.cpp",
+    "egl_probe/egl_probe/CMakeLists.txt",
+    "egl_probe/egl_probe/get_available_devices.py",
+    "egl_probe/egl_probe/__init__.py",
+    "egl_probe/egl_probe/query_devices.cpp",
+    "egl_probe/egl_probe/glad/linmath.h",
+    "egl_probe/egl_probe/glad/egl.cpp",
+    "egl_probe/egl_probe/glad/glx_dyn.cpp",
+    "egl_probe/egl_probe/glad/gl.cpp",
+    "egl_probe/egl_probe/glad/KHR/khrplatform.h",
+    "egl_probe/egl_probe/glad/EGL/eglplatform.h",
+    "egl_probe/egl_probe/glad/glad/gl.h",
+    "egl_probe/egl_probe/glad/glad/glx.h",
+    "egl_probe/egl_probe/glad/glad/egl.h",
+    "egl_probe/egl_probe/glad/X11/Xfuncs.h",
+    "egl_probe/egl_probe/glad/X11/Xfuncproto.h",
+    "egl_probe/egl_probe/glad/X11/Xlib.h",
+    "egl_probe/egl_probe/glad/X11/Xutil.h",
+    "egl_probe/egl_probe/glad/X11/Xlibint.h",
+    "egl_probe/egl_probe/glad/X11/cursorfont.h",
+    "egl_probe/egl_probe/glad/X11/XlibConf.h",
+    "egl_probe/egl_probe/glad/X11/Xmd.h",
+    "egl_probe/egl_probe/glad/X11/X.h",
+    "egl_probe/egl_probe/glad/X11/XKBlib.h",
+    "egl_probe/egl_probe/glad/X11/Xproto.h",
+    "egl_probe/egl_probe/glad/X11/Xosdefs.h",
+    "egl_probe/egl_probe/glad/X11/Xatom.h",
+    "egl_probe/egl_probe/glad/X11/keysymdef.h",
+    "egl_probe/egl_probe/glad/X11/keysym.h",
+    "egl_probe/egl_probe/glad/X11/Xprotostr.h",
+    "egl_probe/egl_probe/glad/X11/extensions/shapeconst.h",
+    "egl_probe/egl_probe/glad/X11/extensions/XKB.h",
+    "egl_probe/egl_probe/glad/X11/extensions/XKBstr.h",
+    "egl_probe/egl_probe/glad/X11/extensions/XShm.h",
+    "egl_probe/egl_probe/glad/X11/extensions/Xext.h",
+    "egl_probe/egl_probe/glad/X11/extensions/shape.h",
+    "egl_probe/egl_probe/glad/X11/extensions/shm.h",
+    "egl_probe/egl_probe/glad/X11/extensions/extutil.h"
+  ],
+  "full_source_excludes": [
+    "cuRobo vendor repos: separate pin/diff/config exports",
+    "Conda environments",
+    "build/cache/binary probe products"
+  ],
+  "notes": [
+    "minimal-runtime.patch excludes local ground-color override and debug/tutorial/demo edits",
+    "full_source.patch preserves all eight tracked framework edits and the enumerated first-party untracked source",
+    "full and minimal are alternatives; do not apply both",
+    "FR3 asset path requires portable Geomind overrides and GEOMIND_ISAAC_ASSETS_ROOT; do not assume original home path exists"
+  ]
+}

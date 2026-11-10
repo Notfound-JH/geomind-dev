@@ -1,0 +1,11 @@
+name: geomind_sim51
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.14
+  - pip
+  - git
+  - cmake
+  - ninja
+  - ffmpeg
+# Bootstrap only. Follow docs/installation_zh.md for Isaac Sim, PyTorch, pinned IsaacLab and assets.

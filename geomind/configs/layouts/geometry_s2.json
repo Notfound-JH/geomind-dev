@@ -1,0 +1,90 @@
+{
+  "layout_id": "geometry_s2",
+  "frame": "table",
+  "objects": [
+    {
+      "id": "line_a",
+      "label": "the coffee can",
+      "asset": "blue_can",
+      "position_m": [
+        0.04575526809801231,
+        -0.06705555722694291,
+        0.1649352896328177
+      ],
+      "physical_asset": {
+        "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/002_master_chef_can.usd",
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "dimensions_m": [
+          0.046081703824958846,
+          0.06307965376050051,
+          0.04603883354279024
+        ],
+        "bottom_offset_m": -0.023019588432768235,
+        "sha256": "f5bd7d98fb23d777b0aa4710bcc93d3077b8e06cefaafe5863b11eb23f2c4175",
+        "reference_point": "RigidBodyOrigin",
+        "collision": "convexHull"
+      }
+    },
+    {
+      "id": "line_b",
+      "label": "the meat tin",
+      "asset": "cube_can",
+      "position_m": [
+        -0.13444499455265058,
+        -0.015970043741272772,
+        0.23506471036718232
+      ],
+      "physical_asset": {
+        "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/010_potted_meat_can.usd",
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ],
+        "dimensions_m": [
+          0.060988078661529416,
+          0.05012579901235252,
+          0.03456055706976597
+        ],
+        "bottom_offset_m": -0.0172803293180392,
+        "sha256": "50472367ec0e026b2fb0372da279ef6f6f354225c4eb84a76fad307f132d8ada",
+        "reference_point": "RigidBodyOrigin",
+        "collision": "convexHull"
+      }
+    },
+    {
+      "id": "point",
+      "label": "the yellow mustard bottle",
+      "asset": "yellow_bottle",
+      "position_m": [
+        -0.16016817461750552,
+        -0.0814362383513241,
+        0.237645347168396
+      ],
+      "physical_asset": {
+        "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/006_mustard_bottle.usd",
+        "scale": [
+          0.4,
+          0.4,
+          0.4
+        ],
+        "dimensions_m": [
+          0.03840966329552984,
+          0.07652039929061233,
+          0.02329957528487796
+        ],
+        "bottom_offset_m": -0.011649691321335177,
+        "sha256": "cf833351d1a4ad5c3a1861536cb2192f4a5cf12e6cf80bd08609be2f0aec7a48",
+        "reference_point": "RigidBodyOrigin",
+        "collision": "convexHull"
+      }
+    }
+  ],
+  "randomization": {
+    "position_jitter_m": 0.0
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "benchmark_name": "geomind_spatial_benchmark",
+  "suite_name": "phase1",
+  "runner_dispatch_mode": "permissive",
+  "description": "Phase 1 suite centered on the most interpretable spatial-understanding tasks plus the flagship skill/stress carriers.",
+  "diagnostic_tags": [
+    "phase1_suite",
+    "representative_tasks",
+    "static_stress_only"
+  ],
+  "declared_task_matrix": [
+    {
+      "task_id": "grasp_anchor_direction",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "grasp_anchor_distance",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "select_visual_spatial",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "select_exclusion_unique",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "reindex_extreme",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "reindex_subset",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "track_single",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "perfect_midpoint",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "trend_continuation",
+      "task_versions": [
+        "base"
+      ]
+    },
+    {
+      "task_id": "weak_destruction_control",
+      "task_versions": [
+        "control"
+      ]
+    },
+    {
+      "task_id": "square_completion",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    }
+  ],
+  "task_ids": [
+    "grasp_anchor_direction",
+    "grasp_anchor_distance",
+    "select_visual_spatial",
+    "select_exclusion_unique",
+    "reindex_extreme",
+    "reindex_subset",
+    "track_single",
+    "perfect_midpoint",
+    "trend_continuation",
+    "weak_destruction_control",
+    "square_completion"
+  ],
+  "phase_filter": [
+    "phase1"
+  ],
+  "agent_names": [
+    "state_refresh_core_oracle",
+    "state_refresh_core_random",
+    "historical_oracle",
+    "historical_final_frame_only",
+    "explicit_midpoint_oracle",
+    "explicit_random",
+    "implicit_trend_oracle",
+    "implicit_trend_random"
+  ],
+  "default_agent_groups": {
+    "state_refresh": [
+      "state_refresh_core_oracle",
+      "state_refresh_core_random",
+      "historical_oracle",
+      "historical_final_frame_only"
+    ],
+    "geometric_structure": [
+      "explicit_midpoint_oracle",
+      "explicit_random",
+      "implicit_trend_oracle",
+      "implicit_trend_random"
+    ]
+  },
+  "default_thresholds": {
+    "min_valid_rate": 0.8,
+    "min_success_rate": 0.7,
+    "max_accidental_displacement_rate": 0.2,
+    "max_mean_l2_error": 0.05
+  },
+  "output_layout": {
+    "state_refresh_root": "logs/state_reindexing_matrix/<timestamp>",
+    "geometric_structure_root": "logs/geometric_inference_matrix/<timestamp>",
+    "manifest_file": "run_manifest.tsv",
+    "aggregate_text": "aggregate.txt",
+    "aggregate_csv": "aggregate.csv"
+  },
+  "summary_preset": {
+    "joint_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "skill_type",
+      "phase",
+      "agent_name",
+      "task_type"
+    ],
+    "joint_common_fields": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "episode_count",
+      "valid_rate",
+      "success_rate",
+      "task_type"
+    ],
+    "state_refresh_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "object_count",
+      "distractor_count",
+      "visual_mode"
+    ],
+    "geometric_structure_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "noise_level",
+      "anchor_count"
+    ]
+  }
+}

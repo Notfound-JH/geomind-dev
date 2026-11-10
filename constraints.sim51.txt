@@ -1,0 +1,16 @@
+# Observed application versions for the Python 3.11 / Isaac Sim 5.1 environment.
+# Use as pip constraints after the official pinned SDK/framework installation.
+numpy==1.26.0
+gymnasium==1.2.1
+h5py==3.15.1
+pytest==9.0.2
+scipy==1.15.3
+pillow==11.3.0
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+opencv-python-headless==4.11.0.86
+# Original environment had pandas 3.0.0 outside project analysis bound; retain declared compatible range.
+pandas>=2,<3
+matplotlib==3.10.3
+trimesh==4.5.1
+pyyaml==6.0.2

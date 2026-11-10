@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectByGridIndex",
+  "family": "TargetIdentification",
+  "condition": "Base",
+  "layout": "Grid",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "grid_rowcol_grounding",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Pick up the block in the first row, second column.",
+    "evaluator_key": "state_reindexing_evaluator",
+    "semantic_module": "state_refresh",
+    "skill_type": "grid_indexing",
+    "phase": "phase2",
+    "annotation_layout_key": "",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "state_reindexing",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "grid_rowcol_grounding"
+    },
+    "registration_id": "SelectByGridIndex_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "SelectByGridIndex_v0",
+    "grid_rowcol_grounding",
+    "GridRowcolGrounding_v0",
+    "ReindexBaseBase_SelectByGridIndex_v0",
+    "ReindexBaseBase_GridRowcolGrounding_v0"
+  ]
+}

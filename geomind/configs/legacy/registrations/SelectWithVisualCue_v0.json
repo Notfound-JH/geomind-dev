@@ -1,0 +1,42 @@
+{
+  "task_id": "SelectWithVisualCue",
+  "family": "ConstraintComposition",
+  "condition": "Base",
+  "layout": "Cross",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "select_visual_spatial",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Pick up the wood-grain cylinder to the right of the red block.",
+    "evaluator_key": "constraint_selection_evaluator",
+    "semantic_module": "constraint_selection",
+    "skill_type": "visual_spatial_constraint_selection",
+    "phase": "phase1",
+    "annotation_layout_key": "select_visual_spatial_scene65_base",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "constraint_selection",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "select_visual_spatial"
+    },
+    "registration_id": "SelectWithVisualCue_v0",
+    "protocol_family": "constraint_selection",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "SelectVisualSpatial_v0",
+    "select_visual_spatial",
+    "ConstraintBaseBase_SelectVisualSpatial_v0"
+  ]
+}

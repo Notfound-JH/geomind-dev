@@ -1,0 +1,259 @@
+{
+  "layout_id": "grasp_anchor_direction_scene65_base",
+  "format": "LegacyInitialization",
+  "category": "Cross",
+  "source_layout": "grasp_anchor_direction_scene65_base",
+  "scene_structure": {
+    "layout": "Anchor Direction Runtime Injection",
+    "num_of_objects": 5,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "anchor_bowl": {
+        "position": [
+          0.4,
+          0.02
+        ]
+      },
+      "block_front": {
+        "position": [
+          0.57,
+          0.02
+        ]
+      },
+      "block_back": {
+        "position": [
+          0.21,
+          0.02
+        ]
+      },
+      "block_left": {
+        "position": [
+          0.4,
+          0.19
+        ]
+      },
+      "block_right": {
+        "position": [
+          0.4,
+          -0.15
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 1,
+      "bowl_position": [
+        [
+          0.4,
+          0.02
+        ]
+      ]
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "anchor_bowl",
+        "kind": "usd",
+        "asset_category": "container",
+        "asset_key": "bowl_1",
+        "scale": [
+          0.0085,
+          0.0085,
+          0.0085
+        ],
+        "dimensions": [
+          0.1511,
+          0.135,
+          0.0612
+        ],
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "collision": {
+            "type": "static_mesh",
+            "contact_offset": 0.0015,
+            "rest_offset": 0.0,
+            "sdf_resolution": 192,
+            "sdf_subgrid_resolution": 6,
+            "sdf_margin": 0.01,
+            "sdf_narrow_band_thickness": 0.01
+          }
+        },
+        "material_override": {
+          "diffuse_color": [
+            0.12,
+            0.28,
+            0.82
+          ]
+        },
+        "pose": {
+          "xy": [
+            0.4,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "block_front",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.9,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.6
+        },
+        "pose": {
+          "xy": [
+            0.57,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "block_back",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.9,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.6
+        },
+        "pose": {
+          "xy": [
+            0.21,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "block_left",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.9,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.6
+        },
+        "pose": {
+          "xy": [
+            0.4,
+            0.19
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "block_right",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.9,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.6
+        },
+        "pose": {
+          "xy": [
+            0.4,
+            -0.15
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

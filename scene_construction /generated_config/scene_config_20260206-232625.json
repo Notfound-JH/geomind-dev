@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "name": "table_3",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "table"
+        },
+        {
+            "name": "basket_1",
+            "pos_xy": [
+                0.3,
+                0.3
+            ],
+            "yaw_deg": 0,
+            "type": "container"
+        },
+        {
+            "name": "plant_2",
+            "pos_xy": [
+                1.5,
+                1.5
+            ],
+            "yaw_deg": 0,
+            "type": "decoration"
+        },
+        {
+            "name": "chair_1",
+            "pos_xy": [
+                -0.647,
+                1
+            ],
+            "yaw_deg": 0,
+            "type": "furniture"
+        }
+    ],
+    "furniture": [],
+    "decoration": []
+}

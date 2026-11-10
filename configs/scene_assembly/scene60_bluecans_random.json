@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "scene_id": 60,
+  "object": {
+    "asset": "blue_can",
+    "count": 4
+  },
+  "layout": {
+    "type": "random"
+  },
+  "seed": 7
+}

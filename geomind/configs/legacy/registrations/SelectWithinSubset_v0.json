@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectWithinSubset",
+  "family": "ConstraintComposition",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "reindex_subset",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Among only the red blocks, pick up the one in the middle.",
+    "evaluator_key": "state_reindexing_evaluator",
+    "semantic_module": "state_refresh",
+    "skill_type": "subset_state_reindexing",
+    "phase": "phase1",
+    "annotation_layout_key": "",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "state_reindexing",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "reindex_subset"
+    },
+    "registration_id": "SelectWithinSubset_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "SelectWithinSubset_v0",
+    "reindex_subset",
+    "ReindexSubset_v0",
+    "ReindexBaseBase_SelectWithinSubset_v0",
+    "ReindexBaseBase_ReindexSubset_v0"
+  ]
+}

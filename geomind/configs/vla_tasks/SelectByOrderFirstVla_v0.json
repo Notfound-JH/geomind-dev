@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByOrderFirstVla_v0",
+  "task_id": "SelectByOrder",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {
+    "index": 1,
+    "from": "Left",
+    "reference_time": "Current"
+  },
+  "aliases": [
+    "ReindexExtremeVla_v0",
+    "reindex_extreme",
+    "reindex_extreme:vla",
+    "ReindexBaseBase_ReindexExtremeVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "state_reindex_blocks_line_4_vla",
+  "release_version": "1.0"
+}

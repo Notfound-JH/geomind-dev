@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByGridIndexVla_v0",
+  "task_id": "SelectByGridIndex",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectByGridIndexVla_v0",
+    "grid_rowcol_grounding",
+    "grid_rowcol_grounding:vla",
+    "GridRowcolGroundingVla_v0",
+    "ReindexBaseBase_SelectByGridIndexVla_v0",
+    "ReindexBaseBase_GridRowcolGroundingVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "grid_rowcol_grounding_grid_2x3_base_vla",
+  "release_version": "1.0"
+}

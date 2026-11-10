@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectAfterExclusionVla_v0",
+  "task_id": "SelectAfterExclusion",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectAfterExclusionVla_v0",
+    "select_exclusion_unique",
+    "select_exclusion_unique:vla",
+    "SelectExclusionUniqueVla_v0",
+    "ConstraintBaseBase_SelectAfterExclusionVla_v0",
+    "ConstraintBaseBase_SelectExclusionUniqueVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "select_exclusion_unique_scene65_base_vla",
+  "release_version": "1.0"
+}

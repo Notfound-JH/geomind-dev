@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "stage": "assemble_and_solve_gt",
+  "output": "outputs/research/assembled_tasks_v2/projection_reuse_scene60_grid",
+  "timeout_s": 420,
+  "assembly_manifest": "outputs/research/assembled_tasks_v2/midpoint_scene60_grid/assembly/manifest.json",
+  "task": {
+    "task_id": "ProjectOntoLine",
+    "parameters": {
+      "point": "blue_can_003",
+      "line": ["blue_can_001", "blue_can_004"]
+    },
+    "operation": {"type": "place", "moving_object": "blue_can_002"}
+  },
+  "selection": {
+    "actor": "agent",
+    "reason": "复用60号随机网格已经落稳的同一组实测物体，改为求3号罐中心到1号与4号罐所定无限直线的投影，以验证同一场景可以按不同任务重新计算GT；不复用上一任务的答案。",
+    "considered_scene_ids": [60, 65],
+    "considered_layouts": ["grid", "line", "random"]
+  }
+}

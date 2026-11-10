@@ -1,0 +1,5 @@
+{
+  "task_id": "SelectByDistance",
+  "domain": "SpatialReasoning",
+  "family": "RelationalGrounding"
+}

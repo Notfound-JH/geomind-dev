@@ -1,0 +1,90 @@
+{
+  "template_version": 1,
+  "manual_only": true,
+  "purpose": "Scratch template for manual tuning. Runtime does not load this file.",
+  "task": {
+    "canonical_task_id": "perfect_midpoint",
+    "raw_task_aliases_to_keep": [],
+    "family": "explicit_rule_extrapolation",
+    "task_type": "continuous_placement",
+    "core_skill": "explicit_geometric_reasoning",
+    "default_query_template": "Place the target exactly at the midpoint between the anchors.",
+    "diagnostic_tags": [
+      "center_interpolation",
+      "explicit_rule"
+    ],
+    "difficulty_axes": [
+      "spacing",
+      "anchor_count",
+      "layout"
+    ],
+    "canonical_role": "task_prototype",
+    "notes": "Decide the semantic task here before changing scene or instance details."
+  },
+  "scene": {
+    "scene_id": 5,
+    "scene_name": "scene_5",
+    "capability_tags": [
+      "geometry_friendly"
+    ],
+    "risk_tags": [],
+    "table_shape": "",
+    "table_material": "",
+    "background_level": "",
+    "reflection_level": "",
+    "texture_strength": "",
+    "workspace_margin": 0.0,
+    "camera_profile": "",
+    "notes": "Scene metadata only. The runtime still loads the physical scene from scene_id."
+  },
+  "instance": {
+    "instance_id": "manual_midpoint_scene5_line2",
+    "layout_key_reference": "geometric_inference_perfect_midpoint_line_2",
+    "layout": "linear",
+    "object_count": 3,
+    "anchor_count": 2,
+    "distractor_count": 0,
+    "visual_mode": "distinct_objects",
+    "spacing": 0.08,
+    "axis_variant": "line",
+    "noise_level": "zero_noise",
+    "sigma_parallel": 0.0,
+    "sigma_perpendicular": 0.0,
+    "intervention_type": "",
+    "intervention_steps": 0,
+    "query_template": "Put the grasped object exactly at the midpoint between anchor A and anchor B.",
+    "gt_generator": "analytic_midpoint",
+    "success_tolerance_l2": 0.05,
+    "success_tolerance_orthogonal": 0.02,
+    "diagnostic_tags": [
+      "center_interpolation"
+    ],
+    "difficulty_factors": {
+      "anchor_count": 2,
+      "spacing": 0.08,
+      "noise_level": "zero_noise"
+    },
+    "notes": "Keep layout and difficulty knobs here, not in canonical task naming."
+  },
+  "apply_changes_in": {
+    "annotation_source": "assets/annotations/annotated_tasks.json",
+    "state_refresh_generator_if_family_wide": "scripts/generate_state_reindexing_matrix.py",
+    "geometric_structure_generator_if_family_wide": "scripts/generate_geometric_inference_matrix.py",
+    "canonical_mapping_if_needed": "geomind_lab/mimic/utils/config_semantics_adapter.py",
+    "benchmark_manifests_if_suite_changes": [
+      "configs/geomind_benchmark_smoke.json",
+      "configs/geomind_benchmark_main.json",
+      "configs/geomind_benchmark_control.json",
+      "configs/geomind_benchmark_stress.json"
+    ]
+  },
+  "review_checklist": [
+    "canonical_task_id still maps cleanly",
+    "layout remains instance-level",
+    "scene capability tags match the task",
+    "annotation.protocol remains valid",
+    "generator output is still parseable",
+    "summary still carries semantic fields",
+    "manifest changes are only needed if suite membership changed"
+  ]
+}

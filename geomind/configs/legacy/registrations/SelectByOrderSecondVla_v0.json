@@ -1,0 +1,49 @@
+{
+  "task_id": "SelectByOrder",
+  "family": "TargetIdentification",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "ordinal_insert_static",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the second block from the left in the current order.",
+    "semantic_module": "state_refresh",
+    "phase": "phase2",
+    "annotation_layout_key": "ordinal_insert_static_blocks_base_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "state_reindexing",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "ordinal_insert_static"
+    },
+    "registration_id": "SelectByOrderSecondVla_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "SelectByOrderVla_v0",
+    "ordinal_insert_static",
+    "ordinal_insert_static:vla",
+    "OrdinalInsertStaticVla_v0",
+    "ReindexBaseBase_SelectByOrderVla_v0",
+    "ReindexBaseBase_OrdinalInsertStaticVla_v0"
+  ],
+  "parameters": {
+    "index": 2,
+    "from": "Left",
+    "reference_time": "Current"
+  }
+}

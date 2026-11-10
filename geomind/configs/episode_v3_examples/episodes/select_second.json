@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "select_second",
+  "task_id": "SelectByOrder",
+  "scene_id": "table_65",
+  "layout_id": "four_blocks_line",
+  "parameters": {
+    "index": 2,
+    "from": "Left",
+    "frame": "table",
+    "candidates": [
+      "block_a",
+      "block_b",
+      "block_c",
+      "block_d"
+    ],
+    "tie_tolerance_m": 0.001
+  },
+  "response": "SelectObject",
+  "seed": 0
+}

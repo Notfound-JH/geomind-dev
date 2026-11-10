@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "stage": "assemble_and_solve_gt",
+  "output": "outputs/research/assembled_tasks_v2/midpoint_scene60_grid",
+  "timeout_s": 420,
+  "assembly": {
+    "schema_version": 1,
+    "scene_id": 60,
+    "object": {"asset": "blue_can", "count": 4},
+    "layout": {"type": "grid", "rows": 2, "cols": 2},
+    "seed": 23,
+    "randomization": {"enabled": true, "jitter_xy_m": 0.02, "shift_max_m": 0.15, "yaw_deg": 7.5}
+  },
+  "task": {
+    "task_id": "InferMidpoint",
+    "parameters": {"endpoints": ["blue_can_001", "blue_can_004"]},
+    "operation": {"type": "place", "moving_object": "blue_can_002"}
+  },
+  "selection": {
+    "actor": "agent",
+    "reason": "选择60号长方木桌和2×2网格，以对角两罐为参考，中间留出放置区域；采用已验证的蓝罐尺寸描述，并从随机化后的实测位置重新求中点GT。",
+    "considered_scene_ids": [60, 65],
+    "considered_layouts": ["grid", "line", "random"]
+  }
+}

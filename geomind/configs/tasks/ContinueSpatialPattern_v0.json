@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "ContinueSpatialPattern_v0",
+  "task_id": "ContinueSpatialPattern",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "ContinueSpatialPattern_v0",
+    "trend_continuation",
+    "TrendContinuation_v0",
+    "GeometricBaseBase_ContinueSpatialPattern_v0",
+    "GeometricBaseBase_TrendContinuation_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "geometric_inference_implicit_trend_line_3",
+  "release_version": "1.0"
+}

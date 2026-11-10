@@ -1,0 +1,40 @@
+{
+  "task_id": "CompleteSquare",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Square",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "square_completion",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the fourth cube. Place it to complete a square with the three anchor cubes.",
+    "semantic_module": "structure_inference",
+    "phase": "phase1",
+    "annotation_layout_key": "geometric_inference_square_completion_corner_3_vla",
+    "annotation_task_index": 0,
+    "object_set": "runtime_blocks",
+    "assets_group": "stage_65",
+    "tags": [
+      "shape_completion",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "CompleteSquareVla_v0",
+    "protocol_family": "shape_completion",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "CompleteSquareVla_v0",
+    "square_completion",
+    "square_completion:vla",
+    "SquareCompletionVla_v0",
+    "GeometricBaseBase_CompleteSquareVla_v0",
+    "GeometricBaseBase_SquareCompletionVla_v0"
+  ]
+}

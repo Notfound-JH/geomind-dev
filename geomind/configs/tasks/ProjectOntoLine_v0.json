@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "episode_id": "ProjectOntoLine_v0",
+  "task_id": "ProjectOntoLine",
+  "execution": "AssembledNative",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "ProjectOntoLine_v0"
+  ],
+  "seed": 0,
+  "release_version": "1.0",
+  "scene_id": "scene_65",
+  "layout_id": "native_TabletopPlane"
+}

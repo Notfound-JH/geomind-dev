@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectByGridIndex",
+  "family": "TargetIdentification",
+  "condition": "Base",
+  "layout": "Grid",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "grid_rowcol_grounding",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the cube at row 1, column 2.",
+    "semantic_module": "state_refresh",
+    "phase": "phase2",
+    "annotation_layout_key": "grid_rowcol_grounding_grid_2x3_base_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "state_reindexing",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "grid_rowcol_grounding"
+    },
+    "registration_id": "SelectByGridIndexVla_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "SelectByGridIndexVla_v0",
+    "grid_rowcol_grounding",
+    "grid_rowcol_grounding:vla",
+    "GridRowcolGroundingVla_v0",
+    "ReindexBaseBase_SelectByGridIndexVla_v0",
+    "ReindexBaseBase_GridRowcolGroundingVla_v0"
+  ]
+}

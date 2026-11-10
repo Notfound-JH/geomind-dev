@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "intent": "Complete current first-party source export, including untracked modules, without mutating the original Git index",
+  "include_directories": [
+    "geomind",
+    "geomind_lab",
+    "configs",
+    "scripts",
+    "cripts",
+    "tests",
+    "docs",
+    "migration",
+    "paper",
+    "scene_construction ",
+    ".agents/skills/geomind-research"
+  ],
+  "include_root_text_source": true,
+  "include_lightweight_asset_metadata": [
+    "assets/annotations/*.json",
+    "assets/scene_profiles/*.json"
+  ],
+  "excluded_directories": [
+    ".git",
+    ".aws",
+    ".ssh",
+    ".codex",
+    ".vscode",
+    ".idea",
+    "outputs",
+    "__pycache__",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".venv",
+    "venv",
+    "env",
+    "envs",
+    "node_modules",
+    "build",
+    "dist",
+    "IsaacLab"
+  ],
+  "excluded_file_kinds": [
+    ".env and .env.* except reviewed examples",
+    "private keys and credential stores",
+    "virtual environments/editable .pth",
+    "model/checkpoint weights",
+    "video/trajectory/raw experiment outputs",
+    "large USD/MDL/mesh/texture assets (separate ZIP)",
+    "previous .zip/.tar/.deb installation archives"
+  ],
+  "binary_test_fixtures": "Preserve required small fixture files and license notices; do not drop based on extension alone",
+  "frameworks": "Pin upstream + complete custom-source patch/provenance; default runtime patch separately verified",
+  "must_not_omit": [
+    "untracked geomind/episodes and scene_assembly",
+    "new native registrations and task configs",
+    "new audit/delivery tools",
+    "authoring tools in cripts and trailing-space scene_construction directory"
+  ],
+  "secret_scan": {
+    "scope": "the exact clean export AND framework patches, before archive and push",
+    "report_values": false,
+    "report_fields": [
+      "relative_file",
+      "line",
+      "rule"
+    ],
+    "rules": [
+      "private-key PEM markers",
+      "GitHub fine-grained/classic tokens",
+      "AWS access key IDs",
+      "OpenAI/service key-shaped literals",
+      "credentials in URL userinfo",
+      "literal key/password/token assignments after excluding placeholders and environment lookups"
+    ],
+    "on_match": "Block archive/push; replace hard-coded credential with environment lookup in source; rescan; never print the matched value"
+  },
+  "export_manifest_fields": [
+    "source_relative_path",
+    "published_relative_path",
+    "size_bytes",
+    "sha256",
+    "selection_reason"
+  ],
+  "validation": [
+    "Every selected first-party source copied",
+    "No excluded/sensitive path in output",
+    "Fresh-path editable installation imports from export",
+    "Relevant CPU tests and asset relocation smoke",
+    "GitHub file size limit checked; no asset/SDK/outputs blobs",
+    "Final archive hash and commit recorded"
+  ]
+}

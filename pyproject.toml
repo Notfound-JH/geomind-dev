@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geomind-lab"
+version = "0.1.0"
+description = "GeoMind task package built on top of IsaacLab."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "GeoMind" }]
+dependencies = ["numpy>=1.26,<2", "gymnasium>=1.0,<2"]
+
+[project.optional-dependencies]
+trajectory = ["h5py>=3.10"]
+dev = ["pytest>=8,<10", "h5py>=3.10"]
+analysis = ["pandas>=2,<3", "scipy>=1.11", "matplotlib>=3.8", "pillow>=10", "imageio>=2", "openpyxl>=3"]
+viewer = ["PyQt5>=5.15"]
+
+[tool.setuptools]
+py-modules = ["geomind_client", "scripted_goal_policy"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["geomind", "geomind.*", "geomind_lab", "geomind_lab.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+geomind = ["configs/**/*.json", "web/*.html"]

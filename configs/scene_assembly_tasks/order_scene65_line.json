@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "stage": "assemble_and_solve_gt",
+  "output": "outputs/research/assembled_tasks_v2/order_scene65_line",
+  "timeout_s": 420,
+  "assembly": {
+    "schema_version": 1,
+    "scene_id": 65,
+    "object": {"asset": "blue_can", "count": 4},
+    "layout": {"type": "line", "axis": "x"},
+    "seed": 11,
+    "randomization": {"enabled": true, "jitter_xy_m": 0.02, "shift_max_m": 0.15, "yaw_deg": 7.5}
+  },
+  "task": {
+    "task_id": "SelectByOrder",
+    "parameters": {
+      "index": 2,
+      "from": "Left",
+      "candidates": ["blue_can_001", "blue_can_002", "blue_can_003", "blue_can_004"],
+      "tie_tolerance_m": 0.01
+    },
+    "operation": {"type": "pick"}
+  },
+  "selection": {
+    "actor": "agent",
+    "reason": "选择65号椭圆大理石桌验证不同场景；顺序选择使用沿世界X的直线，避免网格同行X近似并列导致歧义。整体偏移和独立朝向保留顺序，目标由实测X排序求解。",
+    "considered_scene_ids": [60, 65],
+    "considered_layouts": ["line", "grid", "random"]
+  }
+}

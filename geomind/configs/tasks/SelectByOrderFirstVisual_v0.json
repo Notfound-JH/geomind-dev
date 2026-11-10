@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByOrderFirstVisual_v0",
+  "task_id": "SelectByOrder",
+  "execution": "LegacyIsaacLab",
+  "condition": "Visual",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {
+    "index": 1,
+    "from": "Left",
+    "reference_time": "Current"
+  },
+  "aliases": [
+    "ReindexExtremeVisual_v0",
+    "reindex_extreme:visual",
+    "ReindexBaseVisual_ReindexExtreme_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "state_reindex_blocks_line_4",
+  "release_version": "1.0"
+}

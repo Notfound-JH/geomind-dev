@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "episode_id": "TrackObjectOriginClutter_v0",
+  "task_id": "TrackObjectOrigin",
+  "execution": "AssembledNative",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {
+    "source": "InitialRegion",
+    "target_region": "SourceA",
+    "source_assignment": "Seeded",
+    "require_movement": true
+  },
+  "aliases": [
+    "TrackClutter_v0",
+    "track_clutter",
+    "TrackBaseBase_TrackClutter_v0"
+  ],
+  "seed": 0,
+  "variant": "Clutter",
+  "release_version": "1.0",
+  "scene_id": "scene_65",
+  "layout_id": "native_SourceRegionMix"
+}

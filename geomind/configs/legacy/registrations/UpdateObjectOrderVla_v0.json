@@ -1,0 +1,49 @@
+{
+  "task_id": "UpdateObjectOrder",
+  "family": "SceneUpdating",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "reindex_insert",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the second block from the left after the insertion.",
+    "semantic_module": "state_refresh",
+    "phase": "phase2",
+    "annotation_layout_key": "state_reindex_insert_blocks_line_4_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "state_reindexing",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "reindex_insert"
+    },
+    "registration_id": "UpdateObjectOrderVla_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Vla",
+    "history_requirement_status": "deferred"
+  },
+  "aliases": [
+    "ReindexInsertVla_v0",
+    "reindex_insert",
+    "reindex_insert:vla",
+    "ReindexBaseBase_ReindexInsertVla_v0"
+  ],
+  "parameters": {
+    "index": 2,
+    "from": "Left",
+    "reference_time": "Current",
+    "history_mode": "Deferred"
+  }
+}

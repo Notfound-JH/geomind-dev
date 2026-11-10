@@ -1,0 +1,8 @@
+{
+  "model_name": "internvla",
+  "remote_policy_url": "http://127.0.0.1:8002/infer",
+  "remote_policy_action_scale": 2,
+  "remote_policy_disable_rotation": false,
+  "remote_policy_overshoot_guard": false,
+  "output_dir_name": "run_eval_internvla"
+}

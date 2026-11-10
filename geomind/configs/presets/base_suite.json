@@ -1,0 +1,10 @@
+{
+  "name": "base_suite",
+  "group": "base",
+  "task_ids": [
+    "SelectByDirection_v0",
+    "SelectByOrderFirst_v0",
+    "TrackMovingObject_v0",
+    "CompleteSquare_v0"
+  ]
+}

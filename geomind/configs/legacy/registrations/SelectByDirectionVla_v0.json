@@ -1,0 +1,41 @@
+{
+  "task_id": "SelectByDirection",
+  "family": "RelationalGrounding",
+  "condition": "Base",
+  "layout": "Cross",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "grasp_anchor_direction",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the cube to the right of the blue bowl.",
+    "semantic_module": "anchor_reference",
+    "phase": "phase1",
+    "annotation_layout_key": "grasp_anchor_direction_scene65_base_vla",
+    "annotation_task_index": 0,
+    "object_set": "concrete_anchor_objects",
+    "assets_group": "stage_65",
+    "tags": [
+      "anchor_reference",
+      "directional",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "SelectByDirectionVla_v0",
+    "protocol_family": "anchor_reference",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "SelectByDirectionVla_v0",
+    "grasp_anchor_direction",
+    "grasp_anchor_direction:vla",
+    "AnchorDirectionVla_v0",
+    "BindingBaseBase_SelectByDirectionVla_v0",
+    "BindingBaseBase_AnchorDirectionVla_v0"
+  ]
+}

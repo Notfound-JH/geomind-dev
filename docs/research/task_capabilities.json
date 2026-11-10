@@ -1,0 +1,3302 @@
+[
+  {
+    "task_id": "SelectByOrder",
+    "domain": "SpatialReasoning",
+    "family": "TargetIdentification",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "b60de8dd166fecf0d3464a8c0810da9b620c16a58f32f0976b5cbe64b3666bf8",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByOrderFirstSem_v0.json",
+      "geomind/configs/tasks/SelectByOrderFirstVisual_v0.json",
+      "geomind/configs/tasks/SelectByOrderFirst_v0.json",
+      "geomind/configs/tasks/SelectByOrderLast_v0.json",
+      "geomind/configs/tasks/SelectByOrderSecond_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectByOrderFirst_v0",
+      "SelectByOrderLast_v0",
+      "SelectByOrderSecond_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": true,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base",
+      "Semantic",
+      "Visual"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "mixed_static_and_update_current_by_instance",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "ordinal_insert_static_blocks_base",
+      "state_reindex_blocks_line_4"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "semantic_native_episode",
+      "isaaclab_native_episode",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "3/3 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectByOrderFirst_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_canonical240_v1/SelectByOrderFirst_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "0403fd1493b20c5db451a512a843debfef203c934771269b0865b5b656a0b121",
+          "temporal_event_required": true,
+          "temporal_script": "swap_adjacent_pairs_over_4",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        },
+        {
+          "registration_id": "SelectByOrderLast_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v4/SelectByOrderLast_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "8ffc2f0cf999f7b53f8f76fe3117e84dd1a081048672280f3db03ac4e90bf4b5",
+          "temporal_event_required": true,
+          "temporal_script": "swap_adjacent_pairs_over_4",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        },
+        {
+          "registration_id": "SelectByOrderSecond_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v3/SelectByOrderSecond_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "5584b91fb63ab9de2ec9752133b2f57afa7ea53394c7e2d7a5868ff994ab0dd9",
+          "temporal_event_required": false,
+          "temporal_script": "static_scene_noop",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "First/Last/Second remain three distinct registered instances of one type; original saved-version grasp evidence retained. Stable structured identities are not visual perception evidence."
+  },
+  {
+    "task_id": "SelectByGridIndex",
+    "domain": "SpatialReasoning",
+    "family": "TargetIdentification",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "5c525493a05f078122434e981e459c385d76fc806cbe1cb702c62e10acfd468f",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByGridIndex_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectByGridIndex_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "grid_rowcol_grounding_grid_2x3_base"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectByGridIndex_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v3/SelectByGridIndex_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "607a9e5fc6c034a7ebe4fe78cd3a7cabcb16dab44494a5f897a6a959f06d035e",
+          "temporal_event_required": false,
+          "temporal_script": "static_scene_noop",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Configured grid row/column grounding and runtime bucket validation; original saved instance physically verified, not arbitrary-grid generalization."
+  },
+  {
+    "task_id": "SelectByBranchPosition",
+    "domain": "SpatialReasoning",
+    "family": "TargetIdentification",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "ce76d18a42d5ff25cfeea83ad04ca9b8eb0aa8895813f077d80bd0add5b36db3",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByBranchPosition_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "SelectByBranchPosition_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_static_tasks",
+      "variant": "RootedDirectedTreeMarkedBranchOrdinal",
+      "registration_ids": [
+        "SelectByBranchPosition_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {
+        "instruction_difficulty": "Base, one bounded graph/region/composition rule",
+        "visual_context_required": true,
+        "solver_uses_actual_positions": true,
+        "selection_requires_true_grasp": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_static_tasks.py": "60a055230530dddb2a7a73961948c2382cf9f3a5c144b9429b20661984c905ec"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_RootedBranchGraph"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "SelectByBranchPosition_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "SelectByBranchPosition_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByBranchPosition_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_001",
+                "frozen_semantic_target_object_id": "obj_007",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.14231711626052856,
+                "trailing_hold_steps": 240,
+                "trailing_hold_duration_s": 1.0,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 3466,
+                "action_end_tick": 3706,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.00198426154809046,
+                  "angular_speed_rad_s": 0.030711439159099636,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 3.71035921513699e-07,
+                  "tcp_distance_m": 0.005830925935575178
+                },
+                "final_selected_lift_height_m": 0.14360803365707397,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0/robot_configs/episodes/assembled_task.json": "d5fce0c724f276a7616b705fe2f6cc06813990406c2115a9d4b1921141b073bb",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0/robot_configs/scenes/assembled_scene.json": "d4543f994ac7be0f3cfa35ec6b6f5c1bab9a8ac2b9d9615bc015b7dac912ab89",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "54d1c99a20156a2e6d4bae2f94e6f49260db27ffdb7cc4d91c4120449c3130fa",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "6d0b164b1c6eadaf32d871a34068cbcb11ffce2e7c95df7d58addbdfa2d68312",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "0d3e640227f6d85122bce013bb00250618f2d040b9160d842a7ec00e145b1708",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "b71b001733f16099835b028bb3bb552ed1e531cd2d4418fcb9a682000b74ca94"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Bounded rooted directed tree, visible arrows, marked branch and ordinal after the mark. Topology/branch/ordinal are explicit; no unrestricted graph traversal claim."
+  },
+  {
+    "task_id": "SelectByRegion",
+    "domain": "SpatialReasoning",
+    "family": "TargetIdentification",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "1ac59e27a97af28f010b3e88be60bb0e0184ddf49cafb49152015b7b5cb2ccaf",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByRegion_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "SelectByRegion_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_static_tasks",
+      "variant": "VisibleRectangleInterior",
+      "registration_ids": [
+        "SelectByRegion_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {
+        "instruction_difficulty": "Base, one bounded graph/region/composition rule",
+        "visual_context_required": true,
+        "solver_uses_actual_positions": true,
+        "selection_requires_true_grasp": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_static_tasks.py": "60a055230530dddb2a7a73961948c2382cf9f3a5c144b9429b20661984c905ec"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_MarkedRegion"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "SelectByRegion_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "SelectByRegion_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_002",
+                "frozen_semantic_target_object_id": "obj_001",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.1421804428100586,
+                "trailing_hold_steps": 240,
+                "trailing_hold_duration_s": 1.0,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 3301,
+                "action_end_tick": 3541,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.0006420732445515224,
+                  "angular_speed_rad_s": 0.049467986235422035,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 4.2146848510894035e-08,
+                  "tcp_distance_m": 0.0060533695079999636
+                },
+                "final_selected_lift_height_m": 0.14343881607055664,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0/robot_configs/episodes/assembled_task.json": "47c5a59a8d6f7953b64b90dacb7de4c9d62bc1f44d93e1e88fc2d6dfa2b35379",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0/robot_configs/scenes/assembled_scene.json": "ba1323536fc70ed8b9784109e636eb19efc841c66ad527ff40298d99cdc27219",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "28aa11c62f4b46c5d07057713e2ff4fd63389e184833aafef9733f53c21d741c",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "f916363553de02325a7463b00a2e319c8de2ecff3fd6b09d30d81d4c95e7ba94",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "d84faeb7e63dc8b0ed0f3d78a5507cc521f155132228277d3822adcd68a7d764",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1/SelectByRegion_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "539c66d755476f03c06b7a867d11b0652ff62b34695f37a25fb833910dc2f78f"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Visible axis-aligned rectangle defined by two diagonal markers, unique interior candidate with boundary margin. Shared translation preserves membership; other region geometries are not implemented."
+  },
+  {
+    "task_id": "SelectByDirection",
+    "domain": "SpatialReasoning",
+    "family": "RelationalGrounding",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "3cb768405d4d2efd9f9fa2c447c0f32a8fa18d019a0bcae7af7db7f46ad36fc9",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByDirection_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectByDirection_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "grasp_anchor_direction_scene65_base"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectByDirection_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_contact240_v1/SelectByDirection_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "5c4f2f840c089c3917d849a5908a70690a65c14e909586870721890a2340e664",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original directional-reference contract and saved physical instance retained; direction conventions remain task-specific."
+  },
+  {
+    "task_id": "SelectByDistance",
+    "domain": "SpatialReasoning",
+    "family": "RelationalGrounding",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "105e97dab7de10c1d388797a7bb1ad920aeb838d369c28d259f1192e70d3922f",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByDistance_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectByDistance_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Semantic"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_10"
+    ],
+    "layout": [
+      "grasp_anchor_distance_scene10_base"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectByDistance_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_horizontal_tgs240_v1/SelectByDistance_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "fa2220c7ed63cd9e9186222c15939bb00e26f1b851e5d2780c9395cfc8267bb5",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original Semantic nearest-anchor registration has no separately registered Base parent; measured distance and original saved physical evidence retained."
+  },
+  {
+    "task_id": "SelectByAdjacency",
+    "domain": "SpatialReasoning",
+    "family": "RelationalGrounding",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "cf53fd0b12e79713cdb82fa19ef49a793fd76b6131b8748026ab9218dc03f9b4",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByAdjacency_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectByAdjacency_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "update_then_query_current_sufficient",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "state_reindex_neighbor_red_left_blocks_5"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectByAdjacency_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_layout240_v1/SelectByAdjacency_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "0c1ade59113633322b21d83ec9b70ae9dafc08803eed10b246c9ef2bcd2ac56f",
+          "temporal_event_required": true,
+          "temporal_script": "rightmost_to_between_first_and_second",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original directed-chain predecessor contract and visible arrows; structure is not replaced by geometric nearest-neighbour selection."
+  },
+  {
+    "task_id": "SelectByPathDistance",
+    "domain": "SpatialReasoning",
+    "family": "RelationalGrounding",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "663448578565163200871c9adbb8f8f9fa70fc611aae4842f6e2cb43696ca7f1",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByPathDistance_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "SelectByPathDistance_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_static_tasks",
+      "variant": "VisibleUnitEdgeShortestPathFarthest",
+      "registration_ids": [
+        "SelectByPathDistance_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {
+        "instruction_difficulty": "Base, one bounded graph/region/composition rule",
+        "visual_context_required": true,
+        "solver_uses_actual_positions": true,
+        "selection_requires_true_grasp": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_static_tasks.py": "60a055230530dddb2a7a73961948c2382cf9f3a5c144b9429b20661984c905ec"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_WeightedGraph"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "SelectByPathDistance_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "SelectByPathDistance_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByPathDistance_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_004",
+                "frozen_semantic_target_object_id": "obj_005",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.14307546615600586,
+                "trailing_hold_steps": 204,
+                "trailing_hold_duration_s": 0.85,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 3792,
+                "action_end_tick": 4032,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.0009339101766293615,
+                  "angular_speed_rad_s": 0.09845738392860039,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 2.9802322387695312e-08,
+                  "tcp_distance_m": 0.005276351190572912
+                },
+                "final_selected_lift_height_m": 0.14383506774902344,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0/robot_configs/episodes/assembled_task.json": "092e843cf67ca9629c5a902e68e06ced75c359539704f1ccdc0547501bc8dfa2",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0/robot_configs/scenes/assembled_scene.json": "aead20bcb0870af1b7a793a228732f839874f057b93eb160be6ee7d3a7cecd34",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "644228b33a26f3def19bddfddded05883afab48d0ecbbbd66f15509eb35540be",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "86f7b35b66115bada9dece90fcf31382b6e788b9c1d068faae453908997c263d",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "56bf8a8e736e82a0ced8a8d4e872cabfd34158c09d396b561c3cd9b40355c066",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "a9ebaabff2589507bfb283375641c37e5a39cb189d482c43bdae70b0ce10ec21"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Visible undirected graph with unweighted edge-hop shortest path, unique farthest candidate and a Euclidean-distance counterexample. Weighted graphs are not claimed."
+  },
+  {
+    "task_id": "PlaceByTopology",
+    "domain": "SpatialReasoning",
+    "family": "RelationalGrounding",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "aad0e5d8906cc6a337049284b75286c1ee13fc0b02409c9151d5bf0e9e0415c5",
+    "config_sources": [
+      "geomind/configs/tasks/PlaceByTopologyInside_v0.json",
+      "geomind/configs/tasks/PlaceByTopologyOnTop_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "PlaceByTopologyInside_v0",
+      "PlaceByTopologyOnTop_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [
+      "Inside",
+      "OnTop"
+    ],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "place_inside_scene65_skill",
+      "place_on_top_scene65_skill"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "2/2 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "PlaceByTopologyInside_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v3/PlaceByTopologyInside_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "58265c1907a06f803e9f261294c85f21cadde2fba6afe9001dae090dbf1432ec",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        },
+        {
+          "registration_id": "PlaceByTopologyOnTop_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_contact240_v2/PlaceByTopologyOnTop_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "aea7b9dc533301ece942a9862d4a108d2b5a55bae166815fade41a0d06e4fc5b",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Inside/OnTop remain two distinct relation instances. Actual grasp, release, stable support/containment and valid wrong-placement controls were audited in saved versions."
+  },
+  {
+    "task_id": "SelectWithinSubset",
+    "domain": "SpatialReasoning",
+    "family": "ConstraintComposition",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "2d921ac3ed55de9565d31ac436386712b1bf2c2f56c4535e4d69fcb8a0d304e5",
+    "config_sources": [
+      "geomind/configs/tasks/SelectWithinSubset_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectWithinSubset_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "update_then_query_current_sufficient",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "state_reindex_red_subset_blocks_line_5"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectWithinSubset_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v4/SelectWithinSubset_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "5d3a9c15d7a660bf74fc0b19725b985677868e44a15e49558b65b08c7fa41b6a",
+          "temporal_event_required": true,
+          "temporal_script": "rightmost_to_between_first_and_second",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original subset/ranking contract and saved physical evidence retained; no general condition-necessity claim for all old layouts."
+  },
+  {
+    "task_id": "SelectWithVisualCue",
+    "domain": "SpatialReasoning",
+    "family": "ConstraintComposition",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "f26beb96121621e240790e5e10bf0431f20bbe450b857a1933ac4e0e5493990e",
+    "config_sources": [
+      "geomind/configs/tasks/SelectWithVisualCue_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectWithVisualCue_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "select_visual_spatial_scene65_base"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectWithVisualCue_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_visual_pgs240_v1/SelectWithVisualCue_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "75eb3f7c2c4dcb44048bd1a232190b168c31302e1750e5f177bdc67ff7a88e02",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original material/shape plus spatial contract and saved physical evidence retained. Attribute metadata or oracle actions are not visual-model evaluation."
+  },
+  {
+    "task_id": "SelectAfterExclusion",
+    "domain": "SpatialReasoning",
+    "family": "ConstraintComposition",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "6fbd724d8bf99a67b48d35f7267347a3a94eaadb9d493f5c660634ec83bbd96b",
+    "config_sources": [
+      "geomind/configs/tasks/SelectAfterExclusion_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "SelectAfterExclusion_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "select_exclusion_unique_scene65_base"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "SelectAfterExclusion_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_v2/SelectAfterExclusion_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "5c8ea00f38b1ac17b82e88c02644fc58a4afb65da0717bc58efaf8ee9310384f",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original exclusion/nearest solver and saved physical instance retained; older inspected layouts contain redundant conditions, so general composition necessity remains unproven."
+  },
+  {
+    "task_id": "SelectByTwoRelations",
+    "domain": "SpatialReasoning",
+    "family": "ConstraintComposition",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "163051e9843bbf045781bf5aeb9e87dc96936b40b7fee49d0ad1585878d681e3",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByTwoRelations_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "SelectByTwoRelations_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_static_tasks",
+      "variant": "IndependentRightAndFrontIntersection",
+      "registration_ids": [
+        "SelectByTwoRelations_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {
+        "instruction_difficulty": "Base, one bounded graph/region/composition rule",
+        "visual_context_required": true,
+        "solver_uses_actual_positions": true,
+        "selection_requires_true_grasp": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_static_tasks.py": "60a055230530dddb2a7a73961948c2382cf9f3a5c144b9429b20661984c905ec"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_RelationalScatter"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "SelectByTwoRelations_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "SelectByTwoRelations_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_006",
+                "frozen_semantic_target_object_id": "obj_004",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.1425500512123108,
+                "trailing_hold_steps": 240,
+                "trailing_hold_duration_s": 1.0,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 3748,
+                "action_end_tick": 3988,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.0021335682911646356,
+                  "angular_speed_rad_s": 0.06487274101293287,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 1.3328003749250115e-07,
+                  "tcp_distance_m": 0.0056166650546685066
+                },
+                "final_selected_lift_height_m": 0.14373642206192017,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0/robot_configs/episodes/assembled_task.json": "d444ea6952d675dfb3f110b5ade8248e49e53201df39cd5a24e712fc3e3bc8b9",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0/robot_configs/scenes/assembled_scene.json": "1a487e5fc4db6c62bb829f927523a56a17ed5e3058582bc2ce3a2e75603b656f",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "bdf16cae42c82a5ffcc32e0d83cb0a64e30d98f530f0b5a52488a6897687ac20",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "b5bc43bf0bca6678778d680fb8132b3854aeb022bf94c91449794be84372e3db",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "1f014984c9fa8aad3b1c62a113e7be6f0e8132e8c8f169dfca352b720e84ab7d",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByTwoRelations_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "23faabc19b3c7faa7a21f06552e604967a40c694b4000feadab04e3ed675fcc7"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Bounded intersection of two independent directional relations. Each relation alone leaves distractors; deletion controls are checked, not inferred from unique full GT."
+  },
+  {
+    "task_id": "SelectByIndirectReference",
+    "domain": "SpatialReasoning",
+    "family": "ConstraintComposition",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "beaf29de14f72b36c967dd6d3606be8b36a7c860699b71028ed3f39ef1793441",
+    "config_sources": [
+      "geomind/configs/tasks/SelectByIndirectReference_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "SelectByIndirectReference_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_static_tasks",
+      "variant": "TwoHopNearestReferenceThenCandidate",
+      "registration_ids": [
+        "SelectByIndirectReference_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {
+        "instruction_difficulty": "Base, one bounded graph/region/composition rule",
+        "visual_context_required": false,
+        "solver_uses_actual_positions": true,
+        "selection_requires_true_grasp": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_static_tasks.py": "60a055230530dddb2a7a73961948c2382cf9f3a5c144b9429b20661984c905ec"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_RelationalScatter"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "SelectByIndirectReference_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "SelectByIndirectReference_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/SelectByIndirectReference_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2/SelectByIndirectReference_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3/SelectByIndirectReference_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4/SelectByIndirectReference_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5/SelectByIndirectReference_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_005",
+                "frozen_semantic_target_object_id": "obj_006",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.14556056261062622,
+                "trailing_hold_steps": 240,
+                "trailing_hold_duration_s": 1.0,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 4494,
+                "action_end_tick": 4734,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.0015088427207098597,
+                  "angular_speed_rad_s": 0.08324575736523403,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 0.0,
+                  "tcp_distance_m": 0.0027912517134543484
+                },
+                "final_selected_lift_height_m": 0.14663714170455933,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0/robot_configs/episodes/assembled_task.json": "5097bb8a5ec6047d12b522d5d29ba3853f9944da5cf2178596c0b42072a53ada",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0/robot_configs/scenes/assembled_scene.json": "4e0787067ade396f5c7ce640d5312a42f5db4306a0b4c864e14376f10e55f923",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "6ad925c4ad7d4d8049d15e8b9b1fdbb1965705c693a5d32b943ed83ecaf5beeb",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "36177eda461c6e8b90c6fc432c5b179223fb8489a245a2c578f93ae03204c560",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "5df122202e7b2074914eb0f43b4877ffe165d59d46fed64050302a3859a2fcc2",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "5425503760ee85586e96f8a1f529f14c9c2b67eb4deb6d37344baf418eff5683"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Bounded two-hop reference resolution with independently unique intermediate and final referents. Shortcut controls are tested; arbitrary chain depth is not claimed."
+  },
+  {
+    "task_id": "InferMidpoint",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "86830f0a575ff396fe35c4f274a2226fa8f76bb67f581a0099e5574b4216ea2e",
+    "config_sources": [
+      "geomind/configs/tasks/InferMidpoint_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "InferMidpoint_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": true,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "geometric_inference_perfect_midpoint_line_2"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "semantic_native_episode",
+      "isaaclab_native_episode",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "InferMidpoint_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v3/InferMidpoint_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "154c9c28d3cdbe46ffe9658962e2867c6519d23e94ebdd0744258ab772edb8a0",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original registered midpoint placement and independent saved-version physical evidence retained; actual moving-object end state, not TCP arrival, defines success."
+  },
+  {
+    "task_id": "InferPointSymmetry",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "84d1d66b1fc4c85e59cbcfb2f4b44c8639b1bd8d58b91801f4e97af897441ac8",
+    "config_sources": [
+      "geomind/configs/tasks/InferPointSymmetry_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "InferPointSymmetry_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "geometric_inference_point_symmetry_line_2"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "InferPointSymmetry_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_v2/InferPointSymmetry_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "063618dde3796cafc03a3130f56f27d2c4cec4cc7ded373ad464c9e36627c682",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original 2c-p registration and saved physical placement retained; no arbitrary role-assignment generalization claim."
+  },
+  {
+    "task_id": "ReflectAcrossLine",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "0d48ff26b47210d3244e031a27ac12218b7804db1303d7bd9a0bdbdaf4c3a8cf",
+    "config_sources": [
+      "geomind/configs/tasks/ReflectAcrossLine_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "ReflectAcrossLine_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_geometry_tasks",
+      "variant": "TabletopPlane",
+      "registration_ids": [
+        "ReflectAcrossLine_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickPlaceObject",
+      "quality_scope": {
+        "variant": "TabletopPlane",
+        "support_plane": "MeasuredHorizontalTabletop",
+        "reference_point": "WorldAxisAlignedBoundingBoxCenter",
+        "line_extent": "Infinite",
+        "preserves_public_3d_native_contract": true,
+        "requires_real_pick_transport_release_and_stability": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_geometry_tasks.py": "218c04602ed5b5724ca0c6a6ad14a075f43889202f0b9f5e70160b60cc69fee1"
+    },
+    "bare_native_episode_api_preserved": true,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_TabletopPlane"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "semantic_native_episode",
+      "isaaclab_native_episode"
+    ],
+    "current_execution_evidence": "ReflectAcrossLine_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "ReflectAcrossLine_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4/ReflectAcrossLine_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/ReflectAcrossLine_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2/ReflectAcrossLine_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3/ReflectAcrossLine_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4/ReflectAcrossLine_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 0,
+            "cases": [],
+            "raw_sha256": {},
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Explicit TabletopPlane manipulation variant with independent midpoint/orthogonality/signed-side identities. Original bare native InfiniteLine3D axial-reflection API is preserved separately."
+  },
+  {
+    "task_id": "ExtendEqualSpacing",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "c1fbf328e2e5b1d43f83e9e3d722215f76c19097cdc831b5a2b4bc327e491115",
+    "config_sources": [
+      "geomind/configs/tasks/ExtendEqualSpacing_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "ExtendEqualSpacing_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "geometric_inference_isometric_extension_line_2"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "ExtendEqualSpacing_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_spacing_control240_v1/ExtendEqualSpacing_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "e7ce3444dabd604391c4cff4a1f99846828441d6cdc55eb77c89a8f96122dd56",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original ordered-extension registration and saved physical placement/control evidence retained; fixed equal-spacing contract, not arbitrary extrapolation."
+  },
+  {
+    "task_id": "ProjectOntoLine",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "5070e20d86a1ad382c9330e5ba2ea7351840cd27c3022fb6e4ba81af0a2173e8",
+    "config_sources": [
+      "geomind/configs/tasks/ProjectOntoLine_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "ProjectOntoLine_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_geometry_tasks",
+      "variant": "TabletopPlane",
+      "registration_ids": [
+        "ProjectOntoLine_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickPlaceObject",
+      "quality_scope": {
+        "variant": "TabletopPlane",
+        "support_plane": "MeasuredHorizontalTabletop",
+        "reference_point": "WorldAxisAlignedBoundingBoxCenter",
+        "line_extent": "Infinite",
+        "preserves_public_3d_native_contract": true,
+        "requires_real_pick_transport_release_and_stability": true
+      }
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_geometry_tasks.py": "218c04602ed5b5724ca0c6a6ad14a075f43889202f0b9f5e70160b60cc69fee1"
+    },
+    "bare_native_episode_api_preserved": true,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_TabletopPlane"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "semantic_native_episode",
+      "isaaclab_native_episode"
+    ],
+    "current_execution_evidence": "ProjectOntoLine_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "ProjectOntoLine_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2/ProjectOntoLine_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/ProjectOntoLine_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2/ProjectOntoLine_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 0,
+            "cases": [],
+            "raw_sha256": {},
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Explicit TabletopPlane placement onto an infinite tilted line, with unique minimum-displacement and orthogonality checks. Original bare 3-D projection API and diagnostic evidence remain separate."
+  },
+  {
+    "task_id": "CompleteSquare",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "bfa034af9fd22f07f797d57fa5668868e9d8a4431b4a80629cb5f666d74bb4a5",
+    "config_sources": [
+      "geomind/configs/tasks/CompleteSquare_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "CompleteSquare_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "geometric_inference_square_completion_corner_3"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "CompleteSquare_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_v2/CompleteSquare_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "0c8ad5de067a4919b70c79eb671cf90d0491d959f4281d0212c589bb0f08b01f",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original square-completion contract and saved physical placement retained; explicit corner roles and accepted saved geometry, not arbitrary vertex assignment."
+  },
+  {
+    "task_id": "ContinueSpatialPattern",
+    "domain": "SpatialReasoning",
+    "family": "GeometricInference",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "48d245b13d88fea3affb2ed4a5a168e501f96647d0a9450ea182d56dc6d97e1c",
+    "config_sources": [
+      "geomind/configs/tasks/ContinueSpatialPattern_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": false,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "ContinueSpatialPattern_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "static_query",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "geometric_inference_implicit_trend_line_3"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "ContinueSpatialPattern_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_v2/ContinueSpatialPattern_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "5ffb85a3c5328edb31d1ddc0aa12926e9dbf97f77da3cc8d57edfed87f0d47aa",
+          "temporal_event_required": false,
+          "temporal_script": null,
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original declared trend family and saved physical placement retained; finite point sequences do not define unrestricted pattern rules."
+  },
+  {
+    "task_id": "DetectSceneChange",
+    "domain": "SpatialMemory",
+    "family": "SceneUpdating",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "d3aab76715ec888115f57f9f4115304ec113a46e14589f93718678f4d2b41151",
+    "config_sources": [
+      "geomind/configs/tasks/DetectSceneChange_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "DetectSceneChange_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_temporal_tasks",
+      "variant": null,
+      "registration_ids": [
+        "DetectSceneChange_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {}
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_temporal_tasks.py": "31f702bb6959f417f38ec108b5d5facd3600ef6234b12b4c074b76aac9627f74"
+    },
+    "bare_native_episode_api_preserved": true,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "history_comparison",
+    "gt_state": "measured Observe.End + current",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_TemporalScatter"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "semantic_native_episode",
+      "isaaclab_native_episode"
+    ],
+    "current_execution_evidence": "DetectSceneChange_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "DetectSceneChange_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/DetectSceneChange_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_002",
+                "frozen_semantic_target_object_id": "obj_003",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.14363545179367065,
+                "trailing_hold_steps": 240,
+                "trailing_hold_duration_s": 1.0,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 5555,
+                "action_end_tick": 5795,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.000664909152137785,
+                  "angular_speed_rad_s": 0.024077656206667578,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 0.0,
+                  "tcp_distance_m": 0.004400075039513687
+                },
+                "final_selected_lift_height_m": 0.144015371799469,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0/robot_configs/episodes/assembled_task.json": "5a1bfc1b819c6c80711400f86b5012ff5825de7caf89c75767404b094a193dff",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0/robot_configs/scenes/assembled_scene.json": "8be305bea41e38c3a2f0d60ab7be7570f52063116869d2d228a17b5d172594fe",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "f93ed09fe777057ad44be30a978fd7f9fb291fa5d2ee12456f9c13d29cd32cde",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "36967e43f38b79d2be5dc13de71ee32b082badf10966829308a9b221e8db8240",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "f154f5cce85bc1b156ea51a293336223c772bf98995e0de2d2208260fb04edc4",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "35b37bc0f84644063c6ad1262f05026c4d9d1d8956d2dd61e6636741430745b4"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Confirmed unique displacement-over-3cm variant from measured Observe.End/current states; real PD event, hidden public-video phase and actual selected-object grasp. Add/remove variants remain undefined."
+  },
+  {
+    "task_id": "UpdateObjectOrder",
+    "domain": "SpatialMemory",
+    "family": "SceneUpdating",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "b5a32715d3b5ada707c3628b7f8eafb3d0d24afe17d9a547718c5bb3e419a7df",
+    "config_sources": [
+      "geomind/configs/tasks/UpdateObjectOrder_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "UpdateObjectOrder_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "update_then_query_current_sufficient",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "state_reindex_insert_blocks_line_4"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "UpdateObjectOrder_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v3/UpdateObjectOrder_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "67d8b111bb6240fad22a17be2b67dd5b4540bd47a0b04608134d1acbdd176a5e",
+          "temporal_event_required": true,
+          "temporal_script": "rightmost_to_between_first_and_second",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original intervention then measured current-state ordering with saved physical evidence; final-state solvability is acknowledged, not reported as demonstrated history necessity."
+  },
+  {
+    "task_id": "UpdateEmptySlot",
+    "domain": "SpatialMemory",
+    "family": "SceneUpdating",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "2a1c5ad8444e0e4e82662fb22d587c7007a99d421480df44339a803a91e0be5b",
+    "config_sources": [
+      "geomind/configs/tasks/UpdateEmptySlot_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "UpdateEmptySlot_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_temporal_tasks",
+      "variant": null,
+      "registration_ids": [
+        "UpdateEmptySlot_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickPlaceObject",
+      "quality_scope": {}
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_temporal_tasks.py": "31f702bb6959f417f38ec108b5d5facd3600ef6234b12b4c074b76aac9627f74"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "update_then_query_current_sufficient",
+    "gt_state": "measured current state",
+    "input_answer": "structured measured geometry/history + scene image → point for actual placement",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_MarkedSlots"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "UpdateEmptySlot_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "UpdateEmptySlot_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2/UpdateEmptySlot_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1/UpdateEmptySlot_v0",
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2/UpdateEmptySlot_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 0,
+            "cases": [],
+            "raw_sha256": {},
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Bounded visible-slot occupancy update from measured object centres. Fill the unique current vacancy with a real picked object; current-state sufficient, not a history-necessity claim."
+  },
+  {
+    "task_id": "TrackMovingObject",
+    "domain": "SpatialMemory",
+    "family": "IdentityTracking",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "6b9393fa5feb60f33b98f229d98110ac09d5ca9aa60e4e3846ac6850a305897a",
+    "config_sources": [
+      "geomind/configs/tasks/TrackMovingObjectSem_v0.json",
+      "geomind/configs/tasks/TrackMovingObjectVisual_v0.json",
+      "geomind/configs/tasks/TrackMovingObject_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "TrackMovingObject_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base",
+      "Semantic",
+      "Visual"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "continuous_identity_tracking",
+    "gt_state": "measured initial identity/source + actual terminal state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "historical_identity_blocks_line_3",
+      "historical_identity_blocks_line_3_visual_occlusion",
+      "track_single_scene65_semantic_anchors"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "TrackMovingObject_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_repairs_v4/TrackMovingObject_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "afbf115b93b09619fbf68bcb3d398db91c88ed5a1e956b140c2bec48f63670a2",
+          "temporal_event_required": true,
+          "temporal_script": "swap_middle_with_seeded_neighbor_over_2s",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original visible continuous motion/initial-identity contract and saved physical grasp evidence retained; structured identity access is explicit and no visual identity-switch metric is claimed."
+  },
+  {
+    "task_id": "TrackObjectSwap",
+    "domain": "SpatialMemory",
+    "family": "IdentityTracking",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "a3990721a53078f20d3769ff66d236c573558a5b9017d4a5324814ac755c0e47",
+    "config_sources": [
+      "geomind/configs/tasks/TrackObjectSwap_v0.json"
+    ],
+    "legacy_declared": true,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": true,
+    "assembled_native_implemented": true,
+    "registration_kind": "ExistingRegisteredMeasuredAdapter",
+    "registered_manipulation_ids": [
+      "TrackObjectSwap_v0"
+    ],
+    "native_recipe": null,
+    "implementation_sources_sha256": {},
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Existing registered task and seeded structure-preserving layout",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [],
+    "time_mechanism": "continuous_identity_tracking",
+    "gt_state": "measured initial identity/source + actual terminal state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "scene_65"
+    ],
+    "layout": [
+      "historical_identity_multistep_blocks_line_5"
+    ],
+    "backends": [
+      "isaaclab_native_assembled",
+      "isaaclab_legacy"
+    ],
+    "current_execution_evidence": "1/1 historical saved instances accepted; not re-executed under current source",
+    "execution_evidence": {
+      "historical_saved_instances": [
+        {
+          "registration_id": "TrackObjectSwap_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/registered_robotiq_contact240_v2/TrackObjectSwap_v0",
+          "task_completed_at_saved_version": true,
+          "gt_verified_at_saved_version": true,
+          "original_qualification": {
+            "task_completed": true,
+            "gates": {
+              "initial_layout_verified": true,
+              "worker_physical_execution_verified": true,
+              "positive_action_passed": true,
+              "negative_controls_rejected": true,
+              "new_offline_robot_audit_passed": true,
+              "runtime_gt_replayed": true,
+              "saved_source_snapshot_complete": true,
+              "saved_config_hashes_complete": true,
+              "run_end_provenance_passed": true,
+              "registered_identity_verified": true,
+              "robotiq_evidence_verified": true
+            },
+            "failed_gates": [],
+            "current_workspace_drift_blocks_completion": false,
+            "current_workspace_drift_policy": "Saved original sources/configs must be intact and run-end provenance must pass; later workspace drift is reported separately."
+          },
+          "source_snapshot_id": "363a37c8d27c9d8696859ba4d12763a9c0e0f63b2fb0964cf1a80bab79b870db",
+          "temporal_event_required": true,
+          "temporal_script": "leftmost_to_middle_then_rightmost_to_left_of_leftmost",
+          "scope": "Accepted historical delivery at its saved source/config version; no fresh current-code physical execution"
+        }
+      ],
+      "new_instances": [],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Original swap path and initial-identity contract with saved physical grasp evidence retained; no unrestricted occlusion/re-identification claim."
+  },
+  {
+    "task_id": "TrackObjectOrigin",
+    "domain": "SpatialMemory",
+    "family": "IdentityTracking",
+    "definition_version": "Canonical taxonomy with bounded operational scope defined by actual recipe or saved registered contract",
+    "definition_sha256": "9fbb788c0f0971f4ffd628fda1ee7931b1afae9b43e566cd396d3d0a4630728a",
+    "config_sources": [
+      "geomind/configs/tasks/TrackObjectOriginClutter_v0.json"
+    ],
+    "legacy_declared": false,
+    "native_solver": true,
+    "native_generator": true,
+    "native_events": true,
+    "native_controller": true,
+    "native_execution_implemented": true,
+    "legacy_execution_declared": false,
+    "assembled_native_implemented": true,
+    "registration_kind": "AssembledNative",
+    "registered_manipulation_ids": [
+      "TrackObjectOriginClutter_v0"
+    ],
+    "native_recipe": {
+      "module": "geomind.episodes.extended_temporal_tasks",
+      "variant": null,
+      "registration_ids": [
+        "TrackObjectOriginClutter_v0"
+      ],
+      "runner": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "quality_scope": {}
+    },
+    "implementation_sources_sha256": {
+      "geomind/episodes/extended_temporal_tasks.py": "31f702bb6959f417f38ec108b5d5facd3600ef6234b12b4c074b76aac9627f74"
+    },
+    "bare_native_episode_api_preserved": false,
+    "data_export": "Native configs, evaluator/public observations, raw state/control NPZ, original external/wrist video where actually recorded",
+    "base": "Bounded native recipe with shared structure-preserving layout translation",
+    "aug": "No new Aug claim; existing Semantic/Visual conditions retain their separate registrations",
+    "legacy_conditions": [
+      "Base"
+    ],
+    "legacy_variants": [
+      "Clutter"
+    ],
+    "time_mechanism": "continuous_identity_tracking",
+    "gt_state": "measured initial identity/source + actual terminal state",
+    "input_answer": "structured measured geometry/history + scene image → object identity for actual grasp",
+    "scenes": [
+      "registered_scene_65"
+    ],
+    "layout": [
+      "native_SourceRegionMix"
+    ],
+    "backends": [
+      "isaaclab_native_assembled"
+    ],
+    "current_execution_evidence": "TrackObjectOriginClutter_v0: action_recorded_passed",
+    "execution_evidence": {
+      "historical_saved_instances": [],
+      "new_instances": [
+        {
+          "registration_id": "TrackObjectOriginClutter_v0",
+          "case_directory": "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0",
+          "status": "action_recorded_passed",
+          "task_completed": true,
+          "checks": {
+            "result_task_completed": true,
+            "initial_layout_physics_verified": true,
+            "task_action_physics_verified": true,
+            "gt_verified": true,
+            "independent_gt_checked": true,
+            "physical_execution_verified": true,
+            "raw_state_offline_audit": true,
+            "actual_negative_controls_rejected": true,
+            "selected_wrong_pick_commands_valid": true,
+            "run_end_provenance": true
+          },
+          "failure": null,
+          "versions": [
+            "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0"
+          ],
+          "selected_wrong_pick_command_audit": {
+            "passed": true,
+            "applicable_negative_pick_cases": 1,
+            "cases": [
+              {
+                "episode_id": "assembled_task",
+                "negative_control": true,
+                "semantic_rejection_correct": true,
+                "command_execution_valid": true,
+                "selected_object_id": "obj_005",
+                "frozen_semantic_target_object_id": "obj_003",
+                "checks": {
+                  "selected_identity_is_wrong": true,
+                  "grasp_stages_2_to_6_complete": true,
+                  "reported_grasp_verified": true,
+                  "selected_body_actual_lift_over_6cm": true,
+                  "selected_body_trailing_hold_complete": true,
+                  "no_pose_writes_attachment_or_external_transport": true
+                },
+                "selected_body_lift_at_stage6_end_m": 0.1423305869102478,
+                "trailing_hold_steps": 240,
+                "trailing_hold_duration_s": 1.0,
+                "required_hold_steps": 120,
+                "required_hold_duration_s": 0.5,
+                "raw_hold_samples": 240,
+                "hold_start_tick": 4739,
+                "action_end_tick": 4979,
+                "final_half_second_maximums": {
+                  "linear_speed_m_s": 0.0006142658090320326,
+                  "angular_speed_rad_s": 0.028156577132007383,
+                  "reference_drift_m": 0.0,
+                  "reference_orientation_error_rad": 4.2146848510894035e-08,
+                  "tcp_distance_m": 0.0056377945478000855
+                },
+                "final_selected_lift_height_m": 0.14323562383651733,
+                "final_fingers_closed": true,
+                "failed_checks": [],
+                "scope": "Selected wrong-body actual grasp and hold, independently of semantic rejection; GT is read unchanged, never solved",
+                "actual_selected_command_valid": true
+              }
+            ],
+            "raw_sha256": {
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0/robot_configs/episodes/assembled_task.json": "a47f0efad9ef040808229cfc62f2445e51250ecdb0b8fbf9716473239bfe254b",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0/robot_configs/scenes/assembled_scene.json": "95303c55d6f493394657d609c83f568168aa4c7ed0760839332d744ebfa3dcb5",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0/robot_physics/runs/negative/traces/assembled_task_negative.npz": "926f8014c30782e3fa5cd8c21b7b0a136ed26b2d5148f5b7c3002a0f9f6f8395",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0/robot_physics/runs/negative/traces/assembled_task_negative_objects.npz": "6f6da2bbe5e84824e80a3dc9200d759327a0007a844b582efe1dbe567a5cc72f",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0/robot_physics/runs/negative/traces/assembled_task_negative_controls.npz": "ca905a43e4bbfa7f8f6e5917a73439f1f9cca21c8e16535adc6458a060f43ecc",
+              "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0/robot_physics/runs/negative/evidence/assembled_task_negative.json": "e2dc54469f1a052d5132e978f2b2fb312f1ffe52ebe31db2d06deff202fd1368"
+            },
+            "scope": "Independent selected wrong-object command execution; separate from frozen-GT semantic rejection. Empty means not applicable to placement."
+          },
+          "selection_policy": "Latest explicitly listed case wins, including failure",
+          "scope": "Recorded per-instance physics/GT/audit/provenance flags; final delivery separately checks saved bytes, complete media and wrist-camera audits"
+        }
+      ],
+      "new_batch_roots_in_selection_order": [
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_temporal_smoke_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_new_v1",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_branch_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_contact_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_hold_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_solver64_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_height50_v5",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_path_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_detect_rebase_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_geometry_replay_v2",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_budget_v3",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_reflect_rebase_v4",
+        "/home/elm/projects/geomind_lab/outputs/research/canonical27_indirect_camera_v6"
+      ],
+      "model_evaluated": false,
+      "registered_or_implemented_is_not_physical_pass": true
+    },
+    "gap": "Bounded initial marked-source region followed by visible separated mixing paths, measured initial membership and movement checks. Counterfactual history checks exist; stable structured IDs preclude pure-visual memory claims."
+  }
+]

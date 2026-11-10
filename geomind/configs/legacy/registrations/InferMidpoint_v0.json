@@ -1,0 +1,44 @@
+{
+  "task_id": "InferMidpoint",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "perfect_midpoint",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Place the block in your hand exactly midway between the red and blue blocks.",
+    "evaluator_key": "geometric_inference_evaluator",
+    "semantic_module": "structure_inference",
+    "skill_type": "midpoint_inference",
+    "phase": "phase1",
+    "annotation_layout_key": "",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "explicit_rule_extrapolation",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "perfect_midpoint"
+    },
+    "registration_id": "InferMidpoint_v0",
+    "protocol_family": "explicit_rule_extrapolation",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "InferMidpoint_v0",
+    "perfect_midpoint",
+    "PerfectMidpoint_v0",
+    "GeometricBaseBase_InferMidpoint_v0",
+    "GeometricBaseBase_PerfectMidpoint_v0"
+  ]
+}

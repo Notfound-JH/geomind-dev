@@ -1,0 +1,13 @@
+{
+  "suite_id": "generated_spatial_reasoning",
+  "domain": "SpatialReasoning",
+  "backend": "semantic",
+  "episodes": [
+    "ProjectOntoLine_v0",
+    "ReflectAcrossLine_v0",
+    "ProjectOntoLine_s1_v0",
+    "ReflectAcrossLine_s1_v0",
+    "ProjectOntoLine_s2_v0",
+    "ReflectAcrossLine_s2_v0"
+  ]
+}

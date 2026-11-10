@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "CompleteSquare_v0",
+  "task_id": "CompleteSquare",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "CompleteSquare_v0",
+    "square_completion",
+    "SquareCompletion_v0",
+    "GeometricBaseBase_CompleteSquare_v0",
+    "GeometricBaseBase_SquareCompletion_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "geometric_inference_square_completion_corner_3",
+  "release_version": "1.0"
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "PlaceByTopology",
+  "family": "RelationalGrounding",
+  "condition": "Base",
+  "layout": "Containment",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "place_inside",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the cube. Put it fully inside the blue box.",
+    "semantic_module": "spatial_placement",
+    "phase": "phase2",
+    "annotation_layout_key": "place_inside_scene65_skill_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "spatial_placement",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "place_inside"
+    },
+    "registration_id": "PlaceByTopologyInsideVla_v0",
+    "protocol_family": "spatial_placement",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "PlaceInsideVla_v0",
+    "place_inside",
+    "place_inside:vla",
+    "RelationBaseBase_PlaceInsideVla_v0"
+  ],
+  "variant": "Inside"
+}

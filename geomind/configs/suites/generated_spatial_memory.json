@@ -1,0 +1,10 @@
+{
+  "suite_id": "generated_spatial_memory",
+  "domain": "SpatialMemory",
+  "backend": "semantic",
+  "episodes": [
+    "DetectSceneChange_v0",
+    "DetectSceneChange_s1_v0",
+    "DetectSceneChange_s2_v0"
+  ]
+}

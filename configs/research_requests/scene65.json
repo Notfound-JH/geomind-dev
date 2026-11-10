@@ -1,0 +1,10 @@
+{
+  "task_family": "GeometricInference",
+  "scene_id": "registered_scene_65",
+  "condition": "Base",
+  "count": 2,
+  "seed": 0,
+  "backend": "isaaclab",
+  "timeout_s": 420,
+  "output": "outputs/research/pipeline_20261107/scene65"
+}

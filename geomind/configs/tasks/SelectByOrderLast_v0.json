@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByOrderLast_v0",
+  "task_id": "SelectByOrder",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {
+    "index": 1,
+    "from": "Right",
+    "reference_time": "Current"
+  },
+  "aliases": [],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "state_reindex_blocks_line_4",
+  "release_version": "1.0"
+}

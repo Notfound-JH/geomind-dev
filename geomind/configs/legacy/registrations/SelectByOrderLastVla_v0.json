@@ -1,0 +1,39 @@
+{
+  "task_id": "SelectByOrder",
+  "family": "TargetIdentification",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "reindex_extreme",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the first block from the right in the current order.",
+    "semantic_module": "state_refresh",
+    "phase": "phase1",
+    "annotation_layout_key": "state_reindex_blocks_line_4_vla",
+    "annotation_task_index": 0,
+    "object_set": "runtime_blocks",
+    "assets_group": "stage_65",
+    "tags": [
+      "state_reindexing",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "SelectByOrderLastVla_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Vla",
+    "register_canonical_alias": false
+  },
+  "aliases": [],
+  "parameters": {
+    "index": 1,
+    "from": "Right",
+    "reference_time": "Current"
+  }
+}

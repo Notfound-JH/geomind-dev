@@ -1,0 +1,4846 @@
+{
+  "source_root_redacted": "current_project",
+  "destination": "isolated-publication-tree",
+  "files": 964,
+  "total_bytes": 9974147,
+  "source_dirs": [
+    "geomind",
+    "geomind_lab",
+    "configs",
+    "scripts",
+    "tests",
+    "docs",
+    "data",
+    ".agents",
+    "cripts",
+    "migration",
+    "scene_construction ",
+    "paper",
+    "environment",
+    "requirements"
+  ],
+  "credential_scan_findings": [],
+  "entries": [
+    {
+      "path": ".agents/skills/geomind-research/SKILL.md",
+      "size_bytes": 14547,
+      "sha256": "45ef4c398d4856eb3ab249e728a9aca6726f57f27a7faea28dab4e9befb3aed1"
+    },
+    {
+      "path": ".agents/skills/geomind-research/agents/openai.yaml",
+      "size_bytes": 348,
+      "sha256": "4540f830368a4b7bdc1b36c60b45f003f0a1ec2a6c8ad1182755e94d445b4949"
+    },
+    {
+      "path": ".agents/skills/geomind-research/references/assembled-robot-actions.md",
+      "size_bytes": 6574,
+      "sha256": "43d53c31650b24e77cbd78b6224a9508d7119f2cc72413474402eeb33e6bb651"
+    },
+    {
+      "path": ".agents/skills/geomind-research/references/pipeline.md",
+      "size_bytes": 9301,
+      "sha256": "6c004574d0074d7c28c9f1330010011fdb0eaa834235b623652c00e2bcfdf705"
+    },
+    {
+      "path": ".gitattributes",
+      "size_bytes": 80,
+      "sha256": "9a819f2de97f088a8d669553ecf682265c7a3b2a33f2711077361d0a8e8214c8"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 852,
+      "sha256": "590cee9f831cd3b93b88f4009717129ec2cd2918916347a5dfd47bc926a6827b"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 4308,
+      "sha256": "c2d416727a95856e3db909ed7dfc32ff33c4834cbd6c4062430f706126035654"
+    },
+    {
+      "path": "ASSETS.md",
+      "size_bytes": 3610,
+      "sha256": "8359aec119f7830d83eeda4f2e2a8b0c2a91b67192774e7552baf55feb6d8ab9"
+    },
+    {
+      "path": "DEVELOPMENT_CONTEXT.md",
+      "size_bytes": 13317,
+      "sha256": "1504aaf606768f0d67517fdc6c03bff85bc2b487e2bae5c88b5ad29c1f0859e1"
+    },
+    {
+      "path": "GEOMIND_PROTOCOL.md",
+      "size_bytes": 20102,
+      "sha256": "eec6c745695fd02f2471c045a3bf86f71bfbf5d65c8ccbac0c90ae9b16f7132f"
+    },
+    {
+      "path": "MANIFEST.in",
+      "size_bytes": 420,
+      "sha256": "01652cb2e3360848eaae268c97750e1a9451dd7114e8b2084ab00f4aa15d04ff"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 5765,
+      "sha256": "a1d2266a20cd7d9de4406dcf91f76ac11e6218b8da76156b13dc501d08d3239f"
+    },
+    {
+      "path": "TODO.md",
+      "size_bytes": 7638,
+      "sha256": "206a14cf46b1f705f38d7288390bbd64bdede79343cf97c3bba65986df46e1fb"
+    },
+    {
+      "path": "TRAJECTORY_DATA_PIPELINE_IMPLEMENTATION_PLAN_zh.md",
+      "size_bytes": 43184,
+      "sha256": "f4caac4dabc54f9e71f12f00fa4352c29c908a654412df7a06ffc99023c62e89"
+    },
+    {
+      "path": "agent.md",
+      "size_bytes": 429,
+      "sha256": "6b0ffdda903e1896f8c596362ad410d7f517e85c9d91e753a2597feedb562c6b"
+    },
+    {
+      "path": "assets/annotations/annotated_tasks.json",
+      "size_bytes": 630688,
+      "sha256": "e05530dafb78f4312e22d0a2dd836be2fb10813600d76f2326c514d1471ba49c"
+    },
+    {
+      "path": "assets/scene_profiles/assets_catalog_with_metadata.json",
+      "size_bytes": 53105,
+      "sha256": "966dc932a226e0effbd793e2dcc45c14bea4ccfd520da736242ba94450522862"
+    },
+    {
+      "path": "configs/geomind_benchmark_control.json",
+      "size_bytes": 2302,
+      "sha256": "5eba651d585daa26dad0d640fa052dbafea2e98f0131dbfe66a9dc390c32b648"
+    },
+    {
+      "path": "configs/geomind_benchmark_main.json",
+      "size_bytes": 5340,
+      "sha256": "087a684a5cfe0256d5f1da9e5e029127959ff96db5126f42c66d7ad44f0f4127"
+    },
+    {
+      "path": "configs/geomind_benchmark_phase1.json",
+      "size_bytes": 3752,
+      "sha256": "77b6ec34c763b748751a1ce07842ff930d16dc661e269dd2228dd7bf3cb77f51"
+    },
+    {
+      "path": "configs/geomind_benchmark_phase2_reserve.json",
+      "size_bytes": 3126,
+      "sha256": "ebe1873a72719ea97c8ccd1b1d6383aa82b44f5b1924b784a95d7790f6e3c2b2"
+    },
+    {
+      "path": "configs/geomind_benchmark_smoke.json",
+      "size_bytes": 2002,
+      "sha256": "312906b0cd0d25d22e6f8729a6d5e20a630f27c40d110bfd6c3c7f0fae33b961"
+    },
+    {
+      "path": "configs/geomind_benchmark_stress.json",
+      "size_bytes": 2335,
+      "sha256": "015f0e84a75ecba948fab878f0dd6e72e7d43d934eed0835ded4ffbe46dd7852"
+    },
+    {
+      "path": "configs/manual_task_scene_instance_template.json",
+      "size_bytes": 3123,
+      "sha256": "06b1d3cc7a3c2c8e70304a6081f2d57d9c87978858b75b5404bad1ba078533a9"
+    },
+    {
+      "path": "configs/reproduction/canonical27_verified.json",
+      "size_bytes": 1066381,
+      "sha256": "723fc530752853f5cffb729ba400896af77905183ded8f49b7fbbfd4e3e0ef70"
+    },
+    {
+      "path": "configs/research_requests/aug.json",
+      "size_bytes": 261,
+      "sha256": "e36c9379fc78d335e95c9724b079a623874b381616cbb0b2b24ce152c3701410"
+    },
+    {
+      "path": "configs/research_requests/base.json",
+      "size_bytes": 224,
+      "sha256": "e54cc425ea39ea3f5fa2f4c589b233c23a935968ac8e31998f7dfcd8cab88e0a"
+    },
+    {
+      "path": "configs/research_requests/dynamic_second.json",
+      "size_bytes": 229,
+      "sha256": "084d7d9382d9ee98fdc6208feca98b102ca3a9782dd7c7bc24eda4586952a4e8"
+    },
+    {
+      "path": "configs/research_requests/dynamic_single.json",
+      "size_bytes": 229,
+      "sha256": "d5f6a6edc0d580ea3d900768b1f897e8fa19ead9f7dbb7b5cf7179ea5346e6de"
+    },
+    {
+      "path": "configs/research_requests/next_base_20261109.json",
+      "size_bytes": 444,
+      "sha256": "3834a6bf5d29d521c70c97a7967d23b42e68196f6641e1ea154226fba49d4d48"
+    },
+    {
+      "path": "configs/research_requests/next_base_repeat_20261109.json",
+      "size_bytes": 198,
+      "sha256": "ef611d7d1fdeaa95aeb297d5c88cb51ece63d5800e3e87199f43e7b4f661ff5e"
+    },
+    {
+      "path": "configs/research_requests/run_next_base_video_20261109.py",
+      "size_bytes": 727,
+      "sha256": "d1aec393c0cd3181c073263a1d431c99b188d0bf480755f45baf397626ff5923"
+    },
+    {
+      "path": "configs/research_requests/scene65.json",
+      "size_bytes": 232,
+      "sha256": "ce6c8b5a6ac1bf00b9b918906896caa4c2bcdde232987f05ac4b402ad541903b"
+    },
+    {
+      "path": "configs/research_requests/scene_updating_base_20261109.json",
+      "size_bytes": 223,
+      "sha256": "5b8628c72fa26099600f1020d0c1cc18260843f776327934ae67e545f0c68f04"
+    },
+    {
+      "path": "configs/research_requests/scene_updating_base_20261109_second_v3.json",
+      "size_bytes": 230,
+      "sha256": "20120f94b7d6f138def03c53d909dbbfa39b2534b537a20de2acd554aecb309d"
+    },
+    {
+      "path": "configs/research_requests/scene_updating_base_20261109_v2.json",
+      "size_bytes": 223,
+      "sha256": "4d9a8cac775415258413a5e827c427e18751c13270819a78d52c576fffa24ca3"
+    },
+    {
+      "path": "configs/research_requests/scene_updating_base_20261109_v3.json",
+      "size_bytes": 230,
+      "sha256": "9a794d0d23fda806e298cf5788bf2305f9081fdce477bee2e0007aa5ed6a3b99"
+    },
+    {
+      "path": "configs/scene_assembly/scene60_bluecans_grid2x2.json",
+      "size_bytes": 156,
+      "sha256": "2092f2348e362c8d9128fb25131d3d3acab63a87400e4b3351776163df889ba0"
+    },
+    {
+      "path": "configs/scene_assembly/scene60_bluecans_grid2x2_randomized_seed19.json",
+      "size_bytes": 273,
+      "sha256": "9569d2fa1ca2e7f11b104ecc8d0cef339d02db73fcc54ea5e9e192ab33a48a0a"
+    },
+    {
+      "path": "configs/scene_assembly/scene60_bluecans_grid2x2_randomized_seed7.json",
+      "size_bytes": 272,
+      "sha256": "fab11fdd3a606d88f3554ab397be513b2d77dedb7752227200ba0d1edeecd99c"
+    },
+    {
+      "path": "configs/scene_assembly/scene60_bluecans_random.json",
+      "size_bytes": 155,
+      "sha256": "989bd0860975ba2f0a22d7225c675e120947b9fe8ab1a9eaa89f819e01c67552"
+    },
+    {
+      "path": "configs/scene_assembly/scene65_redcans_grid2x3.json",
+      "size_bytes": 182,
+      "sha256": "a4b655658eac43d2df1189700b0a0f292fc0684a23794788bb85eea76842c113"
+    },
+    {
+      "path": "configs/scene_assembly_tasks/midpoint_scene60_grid.json",
+      "size_bytes": 959,
+      "sha256": "0c002dae4e292bba87571751514f125d0a6a45e9ff4cb239a91738540cb1d416"
+    },
+    {
+      "path": "configs/scene_assembly_tasks/order_scene65_line.json",
+      "size_bytes": 1053,
+      "sha256": "af5eac14d1982b0ddee837cba6c387bbe54bc53ab7f24f350f333ad9e809100c"
+    },
+    {
+      "path": "configs/scene_assembly_tasks/panda_pick_scene65.json",
+      "size_bytes": 1051,
+      "sha256": "3b6aa4883d184193023c3d49572eb46c4a707d0f0482d5bf09d0fe68007278bf"
+    },
+    {
+      "path": "configs/scene_assembly_tasks/panda_place_scene60.json",
+      "size_bytes": 974,
+      "sha256": "3e166c192a0ce9303a464a4fb03df64e2517efec26ae0a794b093ba1c28baaa8"
+    },
+    {
+      "path": "configs/scene_assembly_tasks/projection_reuse_scene60_grid.json",
+      "size_bytes": 870,
+      "sha256": "a79ba1516342b2dc939a2162a51da1bf84dbf2245a3899693b801c995ba01a32"
+    },
+    {
+      "path": "constraints.sim51.txt",
+      "size_bytes": 486,
+      "sha256": "a15b24c79ed2c200d5a4cdc8df53545749499746c3cab3aebd46d7dd53d0757e"
+    },
+    {
+      "path": "cripts/debug_reindex_insert.sh",
+      "size_bytes": 2892,
+      "sha256": "dd9a4dfbedd382d94fa9248f83607b5d9ff87dbc1b4d71e6129a6de875780ad9"
+    },
+    {
+      "path": "docs/assembled_tasks_zh.md",
+      "size_bytes": 13271,
+      "sha256": "94da2ac54163bfa8f25523647b898eb9a818b44f44f42c813af2b7885ef4d9bc"
+    },
+    {
+      "path": "docs/canonical_task_families_zh.md",
+      "size_bytes": 1449,
+      "sha256": "ce6571518471ded8a6f7f5637c5ce05d332c2fc2163845eafbed4cf594ceca30"
+    },
+    {
+      "path": "docs/dashboard_zh.md",
+      "size_bytes": 2675,
+      "sha256": "d9c22caf3b05f7f30d132c03af19de9d5f7f16f42ade1b74bf7526aedbe302d6"
+    },
+    {
+      "path": "docs/development_checklist_zh.md",
+      "size_bytes": 16782,
+      "sha256": "1f2a6a27eb1b9be239b0d3158f1fb557b37db42799d520dd314325788cb2e362"
+    },
+    {
+      "path": "docs/direct_ablation/instruction_check.json",
+      "size_bytes": 16441,
+      "sha256": "9475d9e7b76d765ceba843402b289171b462466d8e9b7a94adba623709f87fda"
+    },
+    {
+      "path": "docs/direct_ablation/offline_audit.json",
+      "size_bytes": 31354,
+      "sha256": "7cad013687ae5c071625d79fcde5335a378075f8ab6f26b574eee17e64a82786"
+    },
+    {
+      "path": "docs/direct_ablation/scoring_invariance.json",
+      "size_bytes": 109207,
+      "sha256": "6c051fc886e3caf2c22f038124ccee34901ecbb0f1a8e2bc888d37e41ac10edc"
+    },
+    {
+      "path": "docs/episode_contract_v3_zh.md",
+      "size_bytes": 16649,
+      "sha256": "33d58c476c6479729e4aebf0944aa579459f0c97196ccc514424fa5d9f27d41f"
+    },
+    {
+      "path": "docs/generated_tasks_verification_zh.md",
+      "size_bytes": 4848,
+      "sha256": "ca976b8f698d35e1bb14fedc1f948d9700227df640b8ceee43c017322139fb3d"
+    },
+    {
+      "path": "docs/headless_physics_verification_zh.md",
+      "size_bytes": 6976,
+      "sha256": "5c073e467b3cc639a061f95fad406028d81133b7f27a831a31f311e4fd668c16"
+    },
+    {
+      "path": "docs/history/README-before-portable-20261110.md",
+      "size_bytes": 3775,
+      "sha256": "8305703adb9553318af722565f5512d7ec82145a8665c9f873510925f4eefaf1"
+    },
+    {
+      "path": "docs/installation_zh.md",
+      "size_bytes": 10542,
+      "sha256": "a616e253459aa17b046af945fd8fced085d522b3a36f104508a0c0fb5fee0c94"
+    },
+    {
+      "path": "docs/interactive_assets_and_layouts_zh.md",
+      "size_bytes": 8996,
+      "sha256": "c85ccd8860fe63c234f9659f303025ad86a15abb9568061edb6e65b14c9f828f"
+    },
+    {
+      "path": "docs/manual_tuning_guide.md",
+      "size_bytes": 24883,
+      "sha256": "c5c70e029b066aa7b7c8267308a9e5107938516cf60d986241c35cc4e203d0c5"
+    },
+    {
+      "path": "docs/manual_tuning_guide_zh.md",
+      "size_bytes": 23176,
+      "sha256": "226f7c2ab84d06f027a4ec27053890a16de1721eff289223128878f1dc069793"
+    },
+    {
+      "path": "docs/migration.md",
+      "size_bytes": 7224,
+      "sha256": "e267c0e659b73179e664389fd82a58bf4dc828b372d31515e80123145582e59b"
+    },
+    {
+      "path": "docs/registered_scene_episodes_zh.md",
+      "size_bytes": 4914,
+      "sha256": "9aaf6c3376541ba72bb6f0400ffe445ebb47fdec9dc7c0f15fd9952cf276fc3c"
+    },
+    {
+      "path": "docs/research/base_aug_mapping.md",
+      "size_bytes": 3246,
+      "sha256": "0d02aa94fd30ce65e02d2981d1b5cba592b62047f1b416205b9664e2dc3d193a"
+    },
+    {
+      "path": "docs/research/decisions/detect_scene_change_semantics.md",
+      "size_bytes": 1558,
+      "sha256": "6be8409e9b24df12fecf95a504aee98d17c55b88b8f3267c5bbad4574d45759b"
+    },
+    {
+      "path": "docs/research/execution_mapping.md",
+      "size_bytes": 9471,
+      "sha256": "33db33675a3b18254e9cea2e3a41fec72a726dc67edb6af0781218d72384d50e"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-07-delivery-audit.md",
+      "size_bytes": 8745,
+      "sha256": "803e2f7f0f23849de83603aa776d10f9d3e66af0e9101a4133b482bcda896e2a"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-07-dsc-counterfactual.md",
+      "size_bytes": 7097,
+      "sha256": "817a3b34216a607d8f040ef3349c727b0456076196e8d97028f46f86ed6feff8"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-07-pipeline-validation.md",
+      "size_bytes": 13268,
+      "sha256": "67e0d023314ac21ba9dc43a9dd6b89de06ccb61b58a040edec0021cbd9915504"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-07-select-exclusion-skill-use.md",
+      "size_bytes": 6270,
+      "sha256": "1aa9941abfce58b5cbc320e192a38fc5d4cd8182840674c21d94e359a28d60da"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-assembled-task-generation.md",
+      "size_bytes": 5725,
+      "sha256": "3a2947d784e8ef0de961b35ef176ba51e77dbf66b8aef49fcb363f81f59d9432"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-fr3-matched-home.md",
+      "size_bytes": 1042,
+      "sha256": "e8be2fe703d073f30e50c3e204eb7f9ebda330ec9ad285b71bd3a9fd586ff755"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-fr3-panda-target.md",
+      "size_bytes": 2674,
+      "sha256": "a4656690a62e8479534f7f17c7b35cca8d3930a3944cdda8432919fbf2cee8f7"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-midpoint-placement-design.md",
+      "size_bytes": 1428,
+      "sha256": "b9eaede60006dd66b10e1fe514169fcc60976ce4ecad5337a6bd27a90368ad05"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-midpoint-placement-physics.md",
+      "size_bytes": 4265,
+      "sha256": "12c60162ea2fa1dccabfd543be8b5374de18786ffa59f71f16ce9390585b9617"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-next-base-repeat.md",
+      "size_bytes": 2752,
+      "sha256": "3f8af96ec69935774eb5c60f809b32b593d9f46a83c4816719ed702e09f1119f"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-next-base-video.md",
+      "size_bytes": 1889,
+      "sha256": "958caa0c630e48092a28e7070be7cbc082733d17c3c2ad14ed62afe40dc39fde"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-next-base.md",
+      "size_bytes": 3094,
+      "sha256": "923c648aeec4af7c009975c68980da477ebd5658167d0e5d2f13821a3d4e7358"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-operation-routing-regression.md",
+      "size_bytes": 1431,
+      "sha256": "1f3246c573d57ed9ecf95251bfad76b8111b82844041e746f6c131eb98159125"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-piper-dual-table.md",
+      "size_bytes": 3572,
+      "sha256": "b0222a13e737165193e05b38c7fa8a21fc2306658ceb7586f1489b9f217e6e1f"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-piper-natural-pose.md",
+      "size_bytes": 1638,
+      "sha256": "7a0cd755a1d92ec395dfe54fe06e5fca5ece9afd4b4a9becb761bf10d4c5b063"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-piper-rear-placement.md",
+      "size_bytes": 1229,
+      "sha256": "e1f56379d383f3a484abb2a16aa9f78fc8232c6b62be98076f0b690a9d153431"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-piper-table-edge.md",
+      "size_bytes": 2020,
+      "sha256": "0b414e17ee89ad4e79bbb295f6a33c61a1fdc1350ebdf51e71537df4684f2770"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-piper-target.md",
+      "size_bytes": 3293,
+      "sha256": "124fa4085cf94a8482a4c94f715aecd8c526ca06b6a21f7ea88a027293cfb66a"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-robotiq-collision-debug.md",
+      "size_bytes": 3258,
+      "sha256": "74a7cb301d0655eec57688ba9639c8daf23083d84a2d0756c2ac241db4a5def5"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-robotiq-joint-comparison.md",
+      "size_bytes": 1695,
+      "sha256": "035e50b078b9a374251b139bcd61e6e9f262640a8cdd92e445dd6ff3e8c9a219"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-robotiq-target.md",
+      "size_bytes": 1325,
+      "sha256": "98ff20f8a6bc1c43ae1226709634aa3dd71f7a987d0980bc627ee00a1a62b577"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-scene-assembly-randomization.md",
+      "size_bytes": 4233,
+      "sha256": "13e72934a7fb0356b4432ea7594077f07173860cfb120d9c7a20b7f9472cc2aa"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-scene-assembly.md",
+      "size_bytes": 6163,
+      "sha256": "8b11ba2fdf645dbe69f51944d7bd605b2d39ff6e9cdf6a79ba570f81caf7e430"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-scene-atlas-cleared.md",
+      "size_bytes": 3026,
+      "sha256": "dcb6b65562318480b6f73006260c98003b327712323c53561c2eb9ead14914ad"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-scene-atlas-materials.md",
+      "size_bytes": 2560,
+      "sha256": "b6dad9284c123f9a121134d3a5432bd10aa368435f9f637ef0c73a642d9d73d6"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-scene-updating-grasp.md",
+      "size_bytes": 4577,
+      "sha256": "bdcd7ac6068f78c525e842814fce932d6c5cb01854322f1027322348b77b4c5a"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-09-scene65-instruction-fix.md",
+      "size_bytes": 1631,
+      "sha256": "f65a5a10de8b3c2ed93e7e5476cfaae7819af650bd90318e5cf6f7ad54404abf"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-assembled-robot-actions.md",
+      "size_bytes": 6574,
+      "sha256": "1ad662a918c3fb9335076bca1f842e09b6f7fb19f6641b4306a65a72b84d9e17"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-canonical27-completion.md",
+      "size_bytes": 21095,
+      "sha256": "a0426f67135d34ca716a3fe31893ee68282c7432c8c1ae7c35a142b50abace5d"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-complete-square-centered-robot.md",
+      "size_bytes": 5313,
+      "sha256": "0bbb0ecf68cc3724e0219925e2526e3c02ea4fe3895a4f51ae6f67b911bc9e37"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-complete-square-video-comparison.md",
+      "size_bytes": 3636,
+      "sha256": "92f3266859e81472db56f6e5368803f0571659ee5e5dff5c49dcafa55850f52a"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-complete-square-wall-retest.md",
+      "size_bytes": 5349,
+      "sha256": "1cb44908a2461001a0e789717d92dc36a7ce773024a2f42f21bb3b1248359a04"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-randomized-wall-materials.md",
+      "size_bytes": 1719,
+      "sha256": "260e62b4ed64621896c744b76f8516737ff40f7e97d6ded6f6736264be75bf68"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-registered-robotiq-regeneration.md",
+      "size_bytes": 11372,
+      "sha256": "8ab92449e829402ff2fe8015ea8d4784449ca968cd90a238524d6f56dd1b4138"
+    },
+    {
+      "path": "docs/research/experiments/2026-11-10-wrist-scene-corrections.md",
+      "size_bytes": 11740,
+      "sha256": "562be6579e83bfa13e6c1c6b21f33a2d935496afc23c1629f046b58cc64dfb93"
+    },
+    {
+      "path": "docs/research/history_counterfactual_protocol.md",
+      "size_bytes": 4735,
+      "sha256": "b5eef6fc9cdc8c669bb9f04edbd77d8edbbc4eaf8f63510cff36cac0e8cce500"
+    },
+    {
+      "path": "docs/research/model_input_contract.md",
+      "size_bytes": 4920,
+      "sha256": "f3b3e65e7195073f8f0847f5515a8de87914eee87561f42e99b4384e50916eb6"
+    },
+    {
+      "path": "docs/research/progress.md",
+      "size_bytes": 18250,
+      "sha256": "98e131391feaae03c0844e937229128822a58f8180ed641b784b5553dc80bd97"
+    },
+    {
+      "path": "docs/research/task_capabilities.json",
+      "size_bytes": 175834,
+      "sha256": "68bc512ea8eef28cd59ce83655969c2571588f37cfd6f14af5a8673347c7868e"
+    },
+    {
+      "path": "docs/research/task_capabilities.md",
+      "size_bytes": 10794,
+      "sha256": "b54c7dcc868ccc8e10b8efec1e612ce45f99c2bff4969fa3fadfe285a1853532"
+    },
+    {
+      "path": "docs/research/tasks/CompleteSquare.md",
+      "size_bytes": 1586,
+      "sha256": "ea0de3a923f6d28ed0cc569154eff247ca49ae1741f48974777d12e9f2385602"
+    },
+    {
+      "path": "docs/research/tasks/DetectSceneChange.md",
+      "size_bytes": 4932,
+      "sha256": "773d1f721303174eada34145b9b249775f8202f23b25fc171027d45a83569549"
+    },
+    {
+      "path": "docs/research/tasks/InferMidpointPlacement.md",
+      "size_bytes": 827,
+      "sha256": "d1e1b3f2050ca5903233a59eecee95b7504771d2cfe05b0bc9b9534d4da31a3e"
+    },
+    {
+      "path": "docs/research/tasks/ProjectOntoLine.md",
+      "size_bytes": 5127,
+      "sha256": "e8401a292c032ba68a79760877464f3eee3b3886a4fc691c3617e0477a6443c5"
+    },
+    {
+      "path": "docs/research/tasks/SelectAfterExclusion.md",
+      "size_bytes": 4531,
+      "sha256": "453c45c6af6c39b355af526acff066e6401133931841686433fc1d748724800b"
+    },
+    {
+      "path": "docs/research/tasks/canonical_extensions.md",
+      "size_bytes": 13442,
+      "sha256": "d459e073614a8fa4d2233080d2036163c3e7cbbfd7af5d40bcdad0bfa514529c"
+    },
+    {
+      "path": "docs/robot_embodiments_zh.md",
+      "size_bytes": 12456,
+      "sha256": "047d28fadd843bfff16c2622913a1ff9471a22dd283477d5ece979528069c1ca"
+    },
+    {
+      "path": "docs/scene_assembly_zh.md",
+      "size_bytes": 11367,
+      "sha256": "3abe3d84c0ed74c3c2cf0b008853e88b3e13a5bd5f60b25c33daa23915aed208"
+    },
+    {
+      "path": "docs/task_descriptions.md",
+      "size_bytes": 18097,
+      "sha256": "a1e9a0705ed61e36b64f00e802ce5fe348f4a30d5b138ba8d5e456cfecdff6e4"
+    },
+    {
+      "path": "docs/task_evolution_zh.md",
+      "size_bytes": 3226,
+      "sha256": "192d606ebfffd940cc636f2cb1ef99ede686f076016b7c116b626139e965ecaa"
+    },
+    {
+      "path": "docs/trajectory_annotation_sampling_plan_zh.md",
+      "size_bytes": 17604,
+      "sha256": "15773297b34cdf2fd974e7a3abadfa0a5197b83b3cd24e3743e5d73bf4b993a1"
+    },
+    {
+      "path": "docs/trajectory_collection_status_and_randomization_zh.md",
+      "size_bytes": 24838,
+      "sha256": "f1596378bec784db1836cfb6c6cc95519d102d334900f0dec0a71745bbe1e775"
+    },
+    {
+      "path": "environment/observed-sim51/environment_observed.json",
+      "size_bytes": 18651,
+      "sha256": "8381dfa96b2057eeb667c81cacbec73341dd32223dd521b347080a5d760cf4b2"
+    },
+    {
+      "path": "environment/observed-sim51/packages_observed.txt",
+      "size_bytes": 5282,
+      "sha256": "babe87339af5c8fe148edbf0b75737af6769bf56e3ea57349376b39d12966d72"
+    },
+    {
+      "path": "environment.isaac_curobo.yml",
+      "size_bytes": 1472,
+      "sha256": "9c7f7c1c38f8c5a9977865cf2266307b698607ba0684497dc7e2cc65781f6f05"
+    },
+    {
+      "path": "environment.sim51.yml",
+      "size_bytes": 227,
+      "sha256": "27a04491e9dbc125d5883242007eae098ce2303e486b292ecddef5deeb171484"
+    },
+    {
+      "path": "geomind/__init__.py",
+      "size_bytes": 321,
+      "sha256": "446bb7191890fcfb03b7951c726ee26316c495461827aea637d505b92cba0e9b"
+    },
+    {
+      "path": "geomind/configs/agents/default.json",
+      "size_bytes": 163,
+      "sha256": "3cbd2a221b952866f98785a2e83a5b128c3ee51a44c4a57b8518d54664df0b9f"
+    },
+    {
+      "path": "geomind/configs/current_task_mapping.json",
+      "size_bytes": 20635,
+      "sha256": "6a844c312c430d35c38c162da7c01ff6ddfeaa32944b73be76d62c863dd5230a"
+    },
+    {
+      "path": "geomind/configs/deprecated/tasks/PlaceDirectionalSem_v0.json",
+      "size_bytes": 1329,
+      "sha256": "266624139037a3ae310d198b3dedb79a286cb429cda2d26907fcbcc156f454c1"
+    },
+    {
+      "path": "geomind/configs/deprecated/tasks/PlaceDirectionalVisual_v0.json",
+      "size_bytes": 1326,
+      "sha256": "567277ce568379d0397f196bb5e955a68b1e71d0f93c03b00ce321c8f76df7e6"
+    },
+    {
+      "path": "geomind/configs/deprecated/tasks/PlaceDirectional_v0.json",
+      "size_bytes": 1257,
+      "sha256": "16b8c7b71dd9cc33cf2a610147b1bb28f0ae668bac9c81153197644ea4431555"
+    },
+    {
+      "path": "geomind/configs/deprecated/vla_tasks/PlaceDirectionalSemVla_v0.json",
+      "size_bytes": 1286,
+      "sha256": "6fc9538e2b59915468b8637e087663ef3ac0184f7a78019d94aea9ec4f9eebd7"
+    },
+    {
+      "path": "geomind/configs/deprecated/vla_tasks/PlaceDirectionalVisualVla_v0.json",
+      "size_bytes": 1287,
+      "sha256": "789a0f243eaaaf3abc09c2b2d2b7bb7f8b8c1ab221cb6b79eafaf6635e6e914a"
+    },
+    {
+      "path": "geomind/configs/deprecated/vla_tasks/PlaceDirectionalVla_v0.json",
+      "size_bytes": 1292,
+      "sha256": "74925925a174a39b8608b872e4c85a970753ec2cb1206c24f87138ee09178925"
+    },
+    {
+      "path": "geomind/configs/direct_ablation/direct_tasks.json",
+      "size_bytes": 8490,
+      "sha256": "f4a30934c672fcca3edc6bfd62af9ad14c7fb5c09349516ed30cbb83fa27da6b"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/episodes/infer_midpoint.json",
+      "size_bytes": 353,
+      "sha256": "1d59dd8d631d4e884ddb9fce6304145a320d86fa94a3dddc2e96535477f0095c"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/episodes/recall_blue_location.json",
+      "size_bytes": 546,
+      "sha256": "10d5c5892d68532f0b41fc2bf665640189ee302a6192d9149cec834ab58d1b13"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/episodes/select_second.json",
+      "size_bytes": 397,
+      "sha256": "4a5acd311600fbacdb97358ffdb905be76d6628cbe941a8e629271ccf4fb824a"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/layouts/four_blocks_line.json",
+      "size_bytes": 804,
+      "sha256": "c693d15562d713741c00c1d47a49d6bb20035d5dbbd7810744d7171ff08f8513"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/protocols/observe_delay_recall.json",
+      "size_bytes": 470,
+      "sha256": "00cfe8f02647bc8ead98bbbf8df35de97078dc079dbbf8f0b62d5e8dff0e6cce"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/scenes/table_65.json",
+      "size_bytes": 439,
+      "sha256": "ed1a2b891cddf95fac46677a43ce5463410649b9b9f4ef691dcb73a5abb25d40"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/tasks/InferMidpoint.json",
+      "size_bytes": 99,
+      "sha256": "86830f0a575ff396fe35c4f274a2226fa8f76bb67f581a0099e5574b4216ea2e"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/tasks/RecallObjectLocation.json",
+      "size_bytes": 99,
+      "sha256": "c9a469ef4eeb214876bf5a2f7b03d466b16e7a07afb46318d42996ee9eaf2980"
+    },
+    {
+      "path": "geomind/configs/episode_v3_examples/tasks/SelectByOrder.json",
+      "size_bytes": 101,
+      "sha256": "b60de8dd166fecf0d3464a8c0810da9b620c16a58f32f0976b5cbe64b3666bf8"
+    },
+    {
+      "path": "geomind/configs/episodes/DetectSceneChange_s1_v0.json",
+      "size_bytes": 856,
+      "sha256": "0aae150fc1c88b4dd14cb279f02de9100f46cdee26b518ebb4fa4b048bcc7b25"
+    },
+    {
+      "path": "geomind/configs/episodes/DetectSceneChange_s2_v0.json",
+      "size_bytes": 856,
+      "sha256": "46986fb7e279903aa1e4c2b8cf65d3a5487eacb6dc6644b0496919cce5d81406"
+    },
+    {
+      "path": "geomind/configs/episodes/DetectSceneChange_v0.json",
+      "size_bytes": 853,
+      "sha256": "abb5eb97d0daa897bf9e8f856d70b4954dcc11fa6b12c4b4aa84700d9f1f2689"
+    },
+    {
+      "path": "geomind/configs/episodes/ProjectOntoLine_s1_v0.json",
+      "size_bytes": 799,
+      "sha256": "88c6d3b1e8ddaaf4ee96d87fbeac3c754c161ba5344754e84229283524b9f0c5"
+    },
+    {
+      "path": "geomind/configs/episodes/ProjectOntoLine_s2_v0.json",
+      "size_bytes": 799,
+      "sha256": "32442b2a5802f632e36e78ce8b21199035294e0e0f4782ede6ad120d50a8dfd2"
+    },
+    {
+      "path": "geomind/configs/episodes/ProjectOntoLine_v0.json",
+      "size_bytes": 796,
+      "sha256": "69717047f4b4d50ff1cb3eaef9c5d284a074a1877243866067496a9b52fb95d9"
+    },
+    {
+      "path": "geomind/configs/episodes/ReflectAcrossLine_s1_v0.json",
+      "size_bytes": 803,
+      "sha256": "76b7cf029f5ac53b171d4470f50ceff9c6a5d77478a952835857c2cc77312306"
+    },
+    {
+      "path": "geomind/configs/episodes/ReflectAcrossLine_s2_v0.json",
+      "size_bytes": 803,
+      "sha256": "66066c2df3da3cffb46211eaec558a13fbaaf7e09e723915aeab0ed213dd98bb"
+    },
+    {
+      "path": "geomind/configs/episodes/ReflectAcrossLine_v0.json",
+      "size_bytes": 800,
+      "sha256": "2ec0f5ced21798d0235d7400ba13e2a05385c6e311c6dee674ffb9c39161d7ea"
+    },
+    {
+      "path": "geomind/configs/evidence/DetectSceneChange_s1_v0.json",
+      "size_bytes": 1162,
+      "sha256": "e28a7384ebf819c59b6e7f3c64025a3be5c1707781057f5ff764b775a46c04b8"
+    },
+    {
+      "path": "geomind/configs/evidence/DetectSceneChange_s2_v0.json",
+      "size_bytes": 1154,
+      "sha256": "b0fced500162e70d9c9f41638e135678cf2b63a88062eaf497a7e3d29032f24e"
+    },
+    {
+      "path": "geomind/configs/evidence/DetectSceneChange_v0.json",
+      "size_bytes": 1154,
+      "sha256": "2be6de6098716eceb274eb591f50bd20ec980d5eec199604ae0a6d12aa7764c3"
+    },
+    {
+      "path": "geomind/configs/evidence/ProjectOntoLine_s1_v0.json",
+      "size_bytes": 614,
+      "sha256": "dcbf5c703391af31b66a30f52565f8e6e3855fc6df3423ce1eadaed42bb07d88"
+    },
+    {
+      "path": "geomind/configs/evidence/ProjectOntoLine_s2_v0.json",
+      "size_bytes": 616,
+      "sha256": "772144f1cc8d6e830b216321fcfc975a26fd48a422c8631a1b0b3858c85ddaec"
+    },
+    {
+      "path": "geomind/configs/evidence/ProjectOntoLine_v0.json",
+      "size_bytes": 613,
+      "sha256": "b833c4ada478de9fec86e2f28bdaec6011d3623170dc54cab263a30bc1428408"
+    },
+    {
+      "path": "geomind/configs/evidence/ReflectAcrossLine_s1_v0.json",
+      "size_bytes": 614,
+      "sha256": "c29c71e570f50dba0bc603b298de33229f498f1a4958dab6a2388b26b5512604"
+    },
+    {
+      "path": "geomind/configs/evidence/ReflectAcrossLine_s2_v0.json",
+      "size_bytes": 616,
+      "sha256": "fd394757c80207fdb1a0ff1b267d687214350e4c994c64cd834bfc654f8c0633"
+    },
+    {
+      "path": "geomind/configs/evidence/ReflectAcrossLine_v0.json",
+      "size_bytes": 613,
+      "sha256": "18b90d373d74cfa3d930967d0606882bdd39b15d0fb95649e72abb7a2f7c8740"
+    },
+    {
+      "path": "geomind/configs/layouts/change_s0.json",
+      "size_bytes": 2451,
+      "sha256": "0956fe08ca52057fac6e3a1adb3b8ddcd9ad479fc5303a4bf6880fdfc877516d"
+    },
+    {
+      "path": "geomind/configs/layouts/change_s1.json",
+      "size_bytes": 2456,
+      "sha256": "92f949cf6f8ca9b256df99fef12ae4f5f8fa6bcf757e63cf7fbb4d91d5a82cd4"
+    },
+    {
+      "path": "geomind/configs/layouts/change_s2.json",
+      "size_bytes": 2453,
+      "sha256": "52cc7e7da1d79095013ccb7edc3d1eca5648050e5d5b475e345c8e37a7a3b0a7"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_implicit_trend_line_3.json",
+      "size_bytes": 4266,
+      "sha256": "d544cb10779dd064c561b79623bfa998ae2c273177e199c54015e508f7ab9bb3"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_implicit_trend_line_3_vla.json",
+      "size_bytes": 4274,
+      "sha256": "1fb3043b09da053ea2ac9df0a4b62e8d462eaa02fee21836dcb30282054e8d73"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_isometric_extension_line_2.json",
+      "size_bytes": 3487,
+      "sha256": "8b41f77ffbfd2bd25af42952df15902f56bfe114c5b5a16a39f0158504174cd3"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_isometric_extension_line_2_vla.json",
+      "size_bytes": 3495,
+      "sha256": "37d41483cbbbedb9c3a31bb5d425061b0ff97ee13136f8f2b39d2777d4b6c671"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_perfect_midpoint_line_2.json",
+      "size_bytes": 3481,
+      "sha256": "d7ca177e1ab6f0f4c19c95c2075abac3d219e943a71a036698fb1c602fdc9bec"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_perfect_midpoint_line_2_vla.json",
+      "size_bytes": 3489,
+      "sha256": "d4f1c69dec3939d5bed73519d80d5499a426400e5f14ec74721441cdf4d44132"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_point_symmetry_line_2.json",
+      "size_bytes": 3485,
+      "sha256": "5885447d229dc0cb5c594e3fb1a405139a0eda7153c0af457bd154a00283f88b"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_point_symmetry_line_2_vla.json",
+      "size_bytes": 3493,
+      "sha256": "1cbcaf0f116eb3786df903e8fbd776fe0bf1b093a703e51c51555fb413c95c29"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_square_completion_corner_3.json",
+      "size_bytes": 4280,
+      "sha256": "0ca93c6df6b372032f559ae2406dc2159677315e25355b50f34ea670ce048d4f"
+    },
+    {
+      "path": "geomind/configs/layouts/geometric_inference_square_completion_corner_3_vla.json",
+      "size_bytes": 4288,
+      "sha256": "cfc70eb7272f5a87869635da521e322c950a7f8bd9988ee0cb3f814ccaa19c71"
+    },
+    {
+      "path": "geomind/configs/layouts/geometry_s0.json",
+      "size_bytes": 2493,
+      "sha256": "27778c0793caceeb3e83addb5b5e80e9974928b5b1b77f741c6f5791f3741c4e"
+    },
+    {
+      "path": "geomind/configs/layouts/geometry_s1.json",
+      "size_bytes": 2494,
+      "sha256": "22c402e03dc91e04d72ef0ffbddd73353ac36ed3ce3a360b34fd7ca6d02791bf"
+    },
+    {
+      "path": "geomind/configs/layouts/geometry_s2.json",
+      "size_bytes": 2496,
+      "sha256": "965e32b30982ebb55bae13a46b28f3516594cd53447c31f3144903a83509dec2"
+    },
+    {
+      "path": "geomind/configs/layouts/grasp_anchor_direction_scene65_base.json",
+      "size_bytes": 5370,
+      "sha256": "e53a629a45f0edf73f88f37fc93e64766e7585c78fb95ee1d3eb17fb515d10c4"
+    },
+    {
+      "path": "geomind/configs/layouts/grasp_anchor_direction_scene65_base_vla.json",
+      "size_bytes": 5378,
+      "sha256": "9c003190a3b6e4cce4dd78506b1d69d251af908aca008599092e80ed1319770a"
+    },
+    {
+      "path": "geomind/configs/layouts/grasp_anchor_distance_scene10_base.json",
+      "size_bytes": 6307,
+      "sha256": "ef622be99b6655834004727865ac8bce9df288543753eb63dbb4bf4b2b746a46"
+    },
+    {
+      "path": "geomind/configs/layouts/grasp_anchor_distance_scene10_base_vla.json",
+      "size_bytes": 6315,
+      "sha256": "b00fb5a2bd78f7d3b4b2b0fdcaa0e72fa88186285b2b060866f91a86f2402f5e"
+    },
+    {
+      "path": "geomind/configs/layouts/grid_rowcol_grounding_grid_2x3_base.json",
+      "size_bytes": 3429,
+      "sha256": "748a0116718a687769c19a047b749832ea1eaa155d2e2f53a37f44dab4375901"
+    },
+    {
+      "path": "geomind/configs/layouts/grid_rowcol_grounding_grid_2x3_base_vla.json",
+      "size_bytes": 3437,
+      "sha256": "a03ea0ab6d1c34da66f7543e9860121589ba41f488fcfadc7632a7a331ba0355"
+    },
+    {
+      "path": "geomind/configs/layouts/historical_identity_blocks_line_3.json",
+      "size_bytes": 2100,
+      "sha256": "eabadd50c6091a8dfe79adf549a2aad522ea467d608a7f475867eead7a14905b"
+    },
+    {
+      "path": "geomind/configs/layouts/historical_identity_blocks_line_3_visual_occlusion.json",
+      "size_bytes": 2900,
+      "sha256": "9abdfd39f785053952bafe3100355f8df4805d45eb85c6d80f67b01de978c3ed"
+    },
+    {
+      "path": "geomind/configs/layouts/historical_identity_blocks_line_3_vla.json",
+      "size_bytes": 2108,
+      "sha256": "b8900b27be776acd1b1711698265521ec9943671236b9518d90988e30fb50cfd"
+    },
+    {
+      "path": "geomind/configs/layouts/historical_identity_multistep_blocks_line_5.json",
+      "size_bytes": 5909,
+      "sha256": "250e209c4f5b1cfd5c7396db06877830c1cdfdc23f9a1caefe5197cd4c454a8a"
+    },
+    {
+      "path": "geomind/configs/layouts/historical_identity_multistep_blocks_line_5_vla.json",
+      "size_bytes": 5917,
+      "sha256": "fcc649384dada273dfd211ad782068d1bbf609e1fb3f7fed02e643b65bfd31a5"
+    },
+    {
+      "path": "geomind/configs/layouts/ordinal_insert_static_blocks_base.json",
+      "size_bytes": 3036,
+      "sha256": "e1d10c6c29856d5add7da28dd64a1c8617adfedf477624b3eb4dd94234844dd7"
+    },
+    {
+      "path": "geomind/configs/layouts/ordinal_insert_static_blocks_base_vla.json",
+      "size_bytes": 3044,
+      "sha256": "9de73f994276eb7ef74af23887390c0c24f73568927cc3b9f4943cc98385620e"
+    },
+    {
+      "path": "geomind/configs/layouts/place_inside_scene65_skill.json",
+      "size_bytes": 6546,
+      "sha256": "dd935c22c2207cdf5e6cbeeeaf3643299f324c924255d267c1bb51b32d414590"
+    },
+    {
+      "path": "geomind/configs/layouts/place_inside_scene65_skill_vla.json",
+      "size_bytes": 6554,
+      "sha256": "abcc6d5cecb89aa6c1a8760f4e4c07d124fba0f43f7f86ea56e278ee82eecdb5"
+    },
+    {
+      "path": "geomind/configs/layouts/place_on_top_scene65_skill.json",
+      "size_bytes": 3360,
+      "sha256": "503658d1cd9bb0b595131766e0a02c8059ffe99355450ec955cbc718b8c15fae"
+    },
+    {
+      "path": "geomind/configs/layouts/place_on_top_scene65_skill_vla.json",
+      "size_bytes": 3368,
+      "sha256": "f89360ae5193194c3679b6d2ebff434647452c53a15318c058d04e0fd8cdeaf9"
+    },
+    {
+      "path": "geomind/configs/layouts/select_exclusion_unique_scene65_base.json",
+      "size_bytes": 7153,
+      "sha256": "5ad5783844cc8d4ea6f3561371fb375b7dd361515805eca77b3063a55c6f8863"
+    },
+    {
+      "path": "geomind/configs/layouts/select_exclusion_unique_scene65_base_vla.json",
+      "size_bytes": 7161,
+      "sha256": "07bbd78d056a4bdbc60785bea1d34a77a64726fccf7d3f8a0f1a0a22b27a94ad"
+    },
+    {
+      "path": "geomind/configs/layouts/select_visual_spatial_scene65_base.json",
+      "size_bytes": 7170,
+      "sha256": "4027bde15412887be1056bc4acc7bb11116341dc56ee521d45fd4c1424695642"
+    },
+    {
+      "path": "geomind/configs/layouts/select_visual_spatial_scene65_base_vla.json",
+      "size_bytes": 7178,
+      "sha256": "8d40c27fba516f2ea9dc198b1aac19761e8142602dd7b92b71db5c38b67faeb5"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_blocks_line_4.json",
+      "size_bytes": 5639,
+      "sha256": "de511ce05a36f379f1f7e2187f71732f6a132f31acf759869035cbc50d024c9d"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_blocks_line_4_vla.json",
+      "size_bytes": 5647,
+      "sha256": "1ad3f4f4a643d5b510d6d0d1b835bd9b11bdef02e09f5eaaa0df68f660bb8728"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_insert_blocks_line_4.json",
+      "size_bytes": 2554,
+      "sha256": "c07de873e1bc600bd242f0f2517421ff0a7d191c3caa16a20f0761853baa0189"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_insert_blocks_line_4_vla.json",
+      "size_bytes": 2562,
+      "sha256": "fd9cc7560765677cda224e0df7beb55c43a82e71da00f86b580ceb8ab0e7313e"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_neighbor_red_left_blocks_5.json",
+      "size_bytes": 3318,
+      "sha256": "85a65097505043ade1f6e83cbadb49809de4355f60b5f761b3c8d723668a6e53"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_neighbor_red_left_blocks_5_vla.json",
+      "size_bytes": 3326,
+      "sha256": "25a40470d36d418226b38eb7856372369eac00cbe4a16abfbc30313da6d916dd"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_red_subset_blocks_line_5.json",
+      "size_bytes": 3304,
+      "sha256": "72c9b0650b37e0261e0a82b829260b0e957632dff7fc7bd9dbc7b2005da48a16"
+    },
+    {
+      "path": "geomind/configs/layouts/state_reindex_red_subset_blocks_line_5_vla.json",
+      "size_bytes": 3312,
+      "sha256": "369d88acbf533fc67efd66d102adc04bd75a8a1c5e42eb9f373aee5d5b888553"
+    },
+    {
+      "path": "geomind/configs/layouts/track_single_scene65_semantic_anchors.json",
+      "size_bytes": 4128,
+      "sha256": "e707b8bcd54ce663c0ae2975ccb7a55f3fb0bd835c0b79110eb61583bc0f7844"
+    },
+    {
+      "path": "geomind/configs/legacy/layouts/standard.json",
+      "size_bytes": 77573,
+      "sha256": "fd1136077d864cf425a7ffe30f3ac2274826c95c499277f53822f1c49a7121d3"
+    },
+    {
+      "path": "geomind/configs/legacy/layouts/vla.json",
+      "size_bytes": 215725,
+      "sha256": "bae4f1525a5a762d01a2c23b6185103afef466c6d7b5f76df1d801be67165263"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/CompleteSquareVla_v0.json",
+      "size_bytes": 1167,
+      "sha256": "720e8313d59addfb2508d9b0f708a09a40e0655103c763e35c6bbb8e54d917ad"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/CompleteSquare_v0.json",
+      "size_bytes": 1194,
+      "sha256": "83d0cf93d473d845bba2ccd755b719de5a84104bb1df8f0df128e44cca1e907d"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/ContinueSpatialPatternVla_v0.json",
+      "size_bytes": 1349,
+      "sha256": "a44c21e3771578a7a87d44f86ec30f4c17faf8320f958591d185a6f5b0512fb4"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/ContinueSpatialPattern_v0.json",
+      "size_bytes": 1375,
+      "sha256": "93eea1a1f1f20fe7fcad166eb2a8e1f5eaabc45d7069b24ed7d70d3d845bb95e"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/DetectSceneChange_v0.json",
+      "size_bytes": 425,
+      "sha256": "3f2cb0583b0acf7f839fe8ce326b2ef50784518b9e0022a8cece18551a64e7f4"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/ExtendEqualSpacingVla_v0.json",
+      "size_bytes": 1356,
+      "sha256": "2fa6fa75ffd7d006d067f8e7409b07a9acb17023a53e9b3186ca5e2cf3485e0b"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/ExtendEqualSpacing_v0.json",
+      "size_bytes": 1424,
+      "sha256": "031f1bfadb3be41a9921a43550b02a6612e432bbd7af8208de18715c7e4d2c00"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/InferMidpointVla_v0.json",
+      "size_bytes": 1313,
+      "sha256": "6c3cbb2fc588a1d2f3c801f9d5817a0ee0d10531747abb64ae6050f83399d7b5"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/InferMidpoint_v0.json",
+      "size_bytes": 1303,
+      "sha256": "a650f3138f862c7c99c2d1fdf75f8a5cc6421d7027b43a2843a5f0a3e9c6ea0f"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/InferPointSymmetryVla_v0.json",
+      "size_bytes": 1321,
+      "sha256": "248b382c8f28410b7b3240ee4486f93f284ff14256ebde88d39f177e600663c4"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/InferPointSymmetry_v0.json",
+      "size_bytes": 1338,
+      "sha256": "2165bdd5bd2a6370d60bdecd8529e2192edf3303b85495dcc65461302bc21cf1"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/PlaceByTopologyInsideVla_v0.json",
+      "size_bytes": 1194,
+      "sha256": "ad42dd1befd44ee3165e5c0c1d3c0eaff9c8afc95b1e0f31345bf197d03036b5"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/PlaceByTopologyInside_v0.json",
+      "size_bytes": 1225,
+      "sha256": "b8df090b692f22b92f42ba8b13a15e34e8271af3cd657f86b6db449d8bbb9ee3"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/PlaceByTopologyOnTopVla_v0.json",
+      "size_bytes": 1226,
+      "sha256": "32248157381e902c8d3d32f3b2db47d7ce99b66e85bd787c56926f92287e4e19"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/PlaceByTopologyOnTop_v0.json",
+      "size_bytes": 1234,
+      "sha256": "0e5b919de86037300919b9ccb071c910c5aefd82af8bb76938bdace6b570d09f"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/ProjectOntoLine_v0.json",
+      "size_bytes": 424,
+      "sha256": "e95ecccce3faf46003e7ff0426d4b8053062de2bd498e78c5ef6367fa16b3dff"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/ReflectAcrossLine_v0.json",
+      "size_bytes": 430,
+      "sha256": "395af4d090ed9fa385456b33be9f5549866b5cab686dd1948012e8f4f0ca308f"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectAfterExclusionVla_v0.json",
+      "size_bytes": 1373,
+      "sha256": "296999d66b8b1d807452f6f0b99c3dc04050bb5c24d39a8b40f894fefa806f9a"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectAfterExclusion_v0.json",
+      "size_bytes": 1370,
+      "sha256": "ad4f8bb507b9ecc0202b2a5668823d12cdd931789e70125169ad01c335311cc5"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByAdjacencyVla_v0.json",
+      "size_bytes": 1357,
+      "sha256": "f2a68db6e082465fde477d0119d662262a3c884edb62008be8582e595a991725"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByAdjacency_v0.json",
+      "size_bytes": 1389,
+      "sha256": "062d79e9ea6053e2df8768581310bcafbe24ce423305e7f9f4fe55c623f8790d"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByBranchPosition_v0.json",
+      "size_bytes": 447,
+      "sha256": "5781448f9dfd9290b187e4c3b62de7b795921df73cd34aa67ecde6cd863db6fc"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByDirectionVla_v0.json",
+      "size_bytes": 1178,
+      "sha256": "915ed685f1a9f22672edeaf12f01e088448020762e47176a3b3edbbc40a4c1ee"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByDirection_v0.json",
+      "size_bytes": 1198,
+      "sha256": "316dabbfbeb3927b9a2980cc200554ec5dc4456a912d67a412aa73b6ef06e746"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByDistanceVla_v0.json",
+      "size_bytes": 1245,
+      "sha256": "67452e425583b56ad85c981e2934adc5421d58fadb004782da58e5ab628cc97e"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByDistance_v0.json",
+      "size_bytes": 1276,
+      "sha256": "00c09ae716c87e26a84c7cdb664cc6e4d65db33c82d18293024ad028d2be0080"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByGridIndexVla_v0.json",
+      "size_bytes": 1290,
+      "sha256": "bdf5393dec62e4820bd14b1701038571973a2812d853b9befe31a1ed93c0156e"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByGridIndex_v0.json",
+      "size_bytes": 1278,
+      "sha256": "860d3f87f6bdf29e3757401e4a7ff2e7934a80447a4888d1431758f9f8172d26"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByIndirectReference_v0.json",
+      "size_bytes": 457,
+      "sha256": "941ff3191b0275778921aec691f1c43cbe1c34028820152662a007c334e226b4"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderFirstSemVla_v0.json",
+      "size_bytes": 1172,
+      "sha256": "a8072a1004419acb29dacfd13a0404b1546519dc324d4ca1a59ec0c3520dde76"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderFirstSem_v0.json",
+      "size_bytes": 1212,
+      "sha256": "17e0a6af5fd3f10a5db71f00d287e6cae347a31d9956b34fee95f89fce987d6d"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderFirstVisualVla_v0.json",
+      "size_bytes": 1175,
+      "sha256": "8a0cc0a3369b2ae936d4b452736e9cec02fd4e7da7b435fcc42ea110d8d0d1d2"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderFirstVisual_v0.json",
+      "size_bytes": 1211,
+      "sha256": "a62f179b5cc889385582213a306e679db73b0829d7552e06b80d165fd6407a15"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderFirstVla_v0.json",
+      "size_bytes": 1136,
+      "sha256": "13b9498a70dbb1ec6a35d087ca9cef351eebfdb7343457bfcba350c109d338ef"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderFirst_v0.json",
+      "size_bytes": 1168,
+      "sha256": "4590fd69132dc777a0df6bb4dfc8ab2c8423b3142f94d2aff11837335489490a"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderLastVla_v0.json",
+      "size_bytes": 1052,
+      "sha256": "420f38f4c3e102e8cb7a05a200765891716f633f31765538f51ad0428ac1f518"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderLast_v0.json",
+      "size_bytes": 1117,
+      "sha256": "e1f1f2b99df2750ee2077b836c7e10530226318239a760745fdcbc7e50a91081"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderSecondVla_v0.json",
+      "size_bytes": 1393,
+      "sha256": "f62ea3babd5c6b62046df81118764ea2203c4502e882c799ea121a6e23ed0237"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByOrderSecond_v0.json",
+      "size_bytes": 1406,
+      "sha256": "fce77a94bf132d94b687f656b2c0a529b2aa06ed14ccc00ea457b8f7f3573e9a"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByPathDistance_v0.json",
+      "size_bytes": 440,
+      "sha256": "1067753e9b12af90675af3b5855e059f4f65553cda025f3985acef369e5b60ce"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByRegion_v0.json",
+      "size_bytes": 423,
+      "sha256": "acf9397735b6517c541c5eb97200af24d5e39ae5e728b951162d9c18b90f3c58"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectByTwoRelations_v0.json",
+      "size_bytes": 442,
+      "sha256": "d6dea4c39a50ce6d25c437a4b83bde9d84f38a893d898de53b1c2d4594392e8c"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectWithVisualCueVla_v0.json",
+      "size_bytes": 1261,
+      "sha256": "b38fc0f0168e38da2f60f9d5a21e1a5916d16d97dbd413e96549272b7b77d5f4"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectWithVisualCue_v0.json",
+      "size_bytes": 1302,
+      "sha256": "c6b3a453b05aa3d84f8004e50c093b31bf2b71ae535162475353929fdf916cb6"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectWithinSubsetVla_v0.json",
+      "size_bytes": 1271,
+      "sha256": "f39fa30d1a5075dc4fd5fd8614a64b1a38185da38f4e1b2ee6bc6bad7fb54bb6"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/SelectWithinSubset_v0.json",
+      "size_bytes": 1267,
+      "sha256": "ce1c48c7ba68ddd5d96a4d33fce0a6438a6cb2086e90c9922533c160917cedbb"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackMovingObjectSemVla_v0.json",
+      "size_bytes": 1160,
+      "sha256": "88e7b8dbf42ec065bb1613818817696c1b1aca47e45c977e97fe53a3d271c7c5"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackMovingObjectSem_v0.json",
+      "size_bytes": 1214,
+      "sha256": "3789b19f30932c3a98a6bd7fc00a6d13a852a8a2ddac524563324ef7dbab49c1"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackMovingObjectVisualVla_v0.json",
+      "size_bytes": 1169,
+      "sha256": "34390654281016108e73bcf2186c9555165df0d2e04f05ceae3226a607c6e365"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackMovingObjectVisual_v0.json",
+      "size_bytes": 1232,
+      "sha256": "c8834db80b0abda814a191667566088e12cec05b203aa5da214cdd76f4eabc04"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackMovingObjectVla_v0.json",
+      "size_bytes": 1122,
+      "sha256": "37111cab961821f3ab17c81b281a6959a5bf910e0fec77ab824281e7b5f684d0"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackMovingObject_v0.json",
+      "size_bytes": 1164,
+      "sha256": "0803d83c72c92404515675e155103f1a073bfc214882c9acfb543de178989cda"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackObjectOriginClutterVla_v0.json",
+      "size_bytes": 859,
+      "sha256": "e01d3d5fefaa25e2f4dc751212e92e9143c62eb6376d9e8ac3d5a4c12426abde"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackObjectOriginClutter_v0.json",
+      "size_bytes": 824,
+      "sha256": "3dd2db4e3038d3740908d47186ae631cfd87cd5a9fa87c9f63a01bd10b23ee2b"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackObjectSwapVla_v0.json",
+      "size_bytes": 1262,
+      "sha256": "62100b02a1aaae1b66da94f0409251d0b92d1b0e4bfe2fad6d3ddc1bc9fe9588"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/TrackObjectSwap_v0.json",
+      "size_bytes": 1261,
+      "sha256": "d2793f9a1fdcdf91cd53fe013a97a85680d88e894e9585a9a6f48a900f0bdb24"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/UpdateEmptySlot_v0.json",
+      "size_bytes": 419,
+      "sha256": "99e4b76e68bd1e496a75d93347feb0291e83e28c87cf890c73bbf6aaa5345e48"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/UpdateObjectOrderVla_v0.json",
+      "size_bytes": 1356,
+      "sha256": "09c4b676729117f286f68c2fb35dac531536777fe7e42558c160481f0bdc5da8"
+    },
+    {
+      "path": "geomind/configs/legacy/registrations/UpdateObjectOrder_v0.json",
+      "size_bytes": 1389,
+      "sha256": "d2753802458f7e65dbb07e49a3b174c545d49799666f9b2b84ff1d4f7c94c15b"
+    },
+    {
+      "path": "geomind/configs/legacy/relation_variants/SelectBetweenObjects_v0.json",
+      "size_bytes": 496,
+      "sha256": "edbb62904b1ef76a70f40dd0384014292e92fc185f360c439e2576fff2d2aa48"
+    },
+    {
+      "path": "geomind/configs/legacy/tasks/SelectByDistance_placeholder_v0.json",
+      "size_bytes": 428,
+      "sha256": "301d7a95b87b95af0a0936e7ba2db671b8116bfda8f5bc9fedee7a84d88b03d3"
+    },
+    {
+      "path": "geomind/configs/legacy/tasks/TrackClutter_v0.json",
+      "size_bytes": 1281,
+      "sha256": "02f36c64f670976a1e1e781de1b2ceebd917225730640d8a1a98ccdd62d7b897"
+    },
+    {
+      "path": "geomind/configs/legacy/vla_tasks/TrackClutterVla_v0.json",
+      "size_bytes": 1252,
+      "sha256": "a26915778151f82efbdc34934b5efadb8a3f6805d01311f0fce7e6f8d7744fd6"
+    },
+    {
+      "path": "geomind/configs/native/registrations/DetectSceneChange_v0.json",
+      "size_bytes": 1070,
+      "sha256": "0a0e108db989dae697cc0eac01ea475ac84127d7fce3d1e06134aa1a940f5b51"
+    },
+    {
+      "path": "geomind/configs/native/registrations/ProjectOntoLine_v0.json",
+      "size_bytes": 1056,
+      "sha256": "58f9058acc49cace8355e3fd5c7f5278667f96252e4e4ac6d5cc46888d873bb4"
+    },
+    {
+      "path": "geomind/configs/native/registrations/ReflectAcrossLine_v0.json",
+      "size_bytes": 1066,
+      "sha256": "11d0cdfe8c781a16a0edd69eb29e77eff275345876fcf5de2a26d239da9610c2"
+    },
+    {
+      "path": "geomind/configs/native/registrations/SelectByBranchPosition_v0.json",
+      "size_bytes": 1102,
+      "sha256": "35057db15317f337b17d6740d98512020535abaec59408e29c856d5b60035dd9"
+    },
+    {
+      "path": "geomind/configs/native/registrations/SelectByIndirectReference_v0.json",
+      "size_bytes": 1118,
+      "sha256": "7e747fda6fbc38582c16fde4d1fbdd45447c2e609eb8572b3dbf88e9161cd395"
+    },
+    {
+      "path": "geomind/configs/native/registrations/SelectByPathDistance_v0.json",
+      "size_bytes": 1087,
+      "sha256": "e70f3a60bb08cfdf742fa8f429becfab3d0316c878010192508e9180568c3565"
+    },
+    {
+      "path": "geomind/configs/native/registrations/SelectByRegion_v0.json",
+      "size_bytes": 1057,
+      "sha256": "1898cfe89903d647e216cbfccd50d69b592490016a8239fd5e2016acaba1d67e"
+    },
+    {
+      "path": "geomind/configs/native/registrations/SelectByTwoRelations_v0.json",
+      "size_bytes": 1093,
+      "sha256": "631cf47616765f299ec7f1b57a35729cd32e32c98ccab751e815f0371ebcffcb"
+    },
+    {
+      "path": "geomind/configs/native/registrations/TrackObjectOriginClutter_v0.json",
+      "size_bytes": 1321,
+      "sha256": "df2fd1962abf254a6842d99b7f7adb814f2708f43b410f2c7f23dd40a9d98fa5"
+    },
+    {
+      "path": "geomind/configs/native/registrations/UpdateEmptySlot_v0.json",
+      "size_bytes": 1049,
+      "sha256": "758b3ab076aee6e57810517a455ffa688911f8168b2caa01430d0f9e17b99531"
+    },
+    {
+      "path": "geomind/configs/openpi_eval_models /openpi_0.json",
+      "size_bytes": 278,
+      "sha256": "e6dd308ef7315dffefedf38578b2388e706182e7f3637a7343f8df873174a748"
+    },
+    {
+      "path": "geomind/configs/openpi_eval_models /openpi_05.json",
+      "size_bytes": 280,
+      "sha256": "a96651ea84fb79b8ab286d8342c7a34b78b9d6e72ba4def5f9bac637e2f1f530"
+    },
+    {
+      "path": "geomind/configs/planned_task_mapping.json",
+      "size_bytes": 4383,
+      "sha256": "d486bc144baa2f46827d6b42c0d518efe90bd6373dd0a59d0bb3200aae4411de"
+    },
+    {
+      "path": "geomind/configs/presets/aug_suite.json",
+      "size_bytes": 91,
+      "sha256": "4355dc2f2302a3c77d788afbd891f136555989aea6eae116a09b357b3079eb54"
+    },
+    {
+      "path": "geomind/configs/presets/base_suite.json",
+      "size_bytes": 176,
+      "sha256": "4cd636609045587d13972a7ff4fab5e218e442863b9d6b2912e7670504cd0907"
+    },
+    {
+      "path": "geomind/configs/protocols/change_protocol_s0.json",
+      "size_bytes": 725,
+      "sha256": "00ad45d2d6921e378c7ba95583b1a19a66f9aca117809176f751f27367be5a86"
+    },
+    {
+      "path": "geomind/configs/protocols/change_protocol_s1.json",
+      "size_bytes": 724,
+      "sha256": "57c941ad231470b857c25e0de3538358287c4532855aa55cf477b9e990ed2ace"
+    },
+    {
+      "path": "geomind/configs/protocols/change_protocol_s2.json",
+      "size_bytes": 725,
+      "sha256": "36e920932192f7a5218f753e927674fc6573e2bbd57d444fac8fbbe2bb3e57b6"
+    },
+    {
+      "path": "geomind/configs/relational_variants.json",
+      "size_bytes": 316,
+      "sha256": "831d7a8f8c6a93c0bd77bf74ed6e895f39c56c18c6505e84e761f393446a11c1"
+    },
+    {
+      "path": "geomind/configs/reports/generated_spatial_suite.json",
+      "size_bytes": 22531,
+      "sha256": "9c08e7d6eaca62da63594f6493b08230c4051960e336228355c9d90c6971adde"
+    },
+    {
+      "path": "geomind/configs/scenes/registered_scene_65.json",
+      "size_bytes": 1048,
+      "sha256": "76c6d1b9fa181c87e8ca245d0144342aa3e7863fba287673aca2111f3737c9f5"
+    },
+    {
+      "path": "geomind/configs/scenes/scene_10.json",
+      "size_bytes": 142,
+      "sha256": "4a10d9867583893e686e5125b44b28128f423ad559bb7e6feff6075baa85e88f"
+    },
+    {
+      "path": "geomind/configs/scenes/scene_65.json",
+      "size_bytes": 139,
+      "sha256": "e894067f31133d0a32cab4f212de70bdd33993d6c0142a877ddc93e9fa43d268"
+    },
+    {
+      "path": "geomind/configs/scenes/semantic_table.json",
+      "size_bytes": 996,
+      "sha256": "da83784e5e9d9dfd3915375331503e47f572db5f7eb4fdba7f9bce17b895c4f7"
+    },
+    {
+      "path": "geomind/configs/suites/generated_spatial_memory.json",
+      "size_bytes": 209,
+      "sha256": "53614c7b00ce9ef3ee49c07979effdfed30f43c2788be3802cfe5d4e41f394f3"
+    },
+    {
+      "path": "geomind/configs/suites/generated_spatial_reasoning.json",
+      "size_bytes": 299,
+      "sha256": "494673f4ebb8e4beb9270b12a6cf492fcdf6c884ddda6ea9f52ca68a7506e485"
+    },
+    {
+      "path": "geomind/configs/suites/generated_spatial_suite.json",
+      "size_bytes": 3485,
+      "sha256": "96b05844654bcb7848adc3cc01eab316e0380a7f2f55ebb21a53bd5ef391a336"
+    },
+    {
+      "path": "geomind/configs/task_definitions/CompleteSquare.json",
+      "size_bytes": 100,
+      "sha256": "bfa034af9fd22f07f797d57fa5668868e9d8a4431b4a80629cb5f666d74bb4a5"
+    },
+    {
+      "path": "geomind/configs/task_definitions/ContinueSpatialPattern.json",
+      "size_bytes": 108,
+      "sha256": "48d245b13d88fea3affb2ed4a5a168e501f96647d0a9450ea182d56dc6d97e1c"
+    },
+    {
+      "path": "geomind/configs/task_definitions/DetectSceneChange.json",
+      "size_bytes": 95,
+      "sha256": "d3aab76715ec888115f57f9f4115304ec113a46e14589f93718678f4d2b41151"
+    },
+    {
+      "path": "geomind/configs/task_definitions/ExtendEqualSpacing.json",
+      "size_bytes": 104,
+      "sha256": "c1fbf328e2e5b1d43f83e9e3d722215f76c19097cdc831b5a2b4bc327e491115"
+    },
+    {
+      "path": "geomind/configs/task_definitions/InferMidpoint.json",
+      "size_bytes": 99,
+      "sha256": "86830f0a575ff396fe35c4f274a2226fa8f76bb67f581a0099e5574b4216ea2e"
+    },
+    {
+      "path": "geomind/configs/task_definitions/InferPointSymmetry.json",
+      "size_bytes": 104,
+      "sha256": "84d1d66b1fc4c85e59cbcfb2f4b44c8639b1bd8d58b91801f4e97af897441ac8"
+    },
+    {
+      "path": "geomind/configs/task_definitions/PlaceByTopology.json",
+      "size_bytes": 102,
+      "sha256": "aad0e5d8906cc6a337049284b75286c1ee13fc0b02409c9151d5bf0e9e0415c5"
+    },
+    {
+      "path": "geomind/configs/task_definitions/ProjectOntoLine.json",
+      "size_bytes": 101,
+      "sha256": "5070e20d86a1ad382c9330e5ba2ea7351840cd27c3022fb6e4ba81af0a2173e8"
+    },
+    {
+      "path": "geomind/configs/task_definitions/ReflectAcrossLine.json",
+      "size_bytes": 103,
+      "sha256": "0d48ff26b47210d3244e031a27ac12218b7804db1303d7bd9a0bdbdaf4c3a8cf"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectAfterExclusion.json",
+      "size_bytes": 109,
+      "sha256": "6fbd724d8bf99a67b48d35f7267347a3a94eaadb9d493f5c660634ec83bbd96b"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByAdjacency.json",
+      "size_bytes": 104,
+      "sha256": "cf53fd0b12e79713cdb82fa19ef49a793fd76b6131b8748026ab9218dc03f9b4"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByBranchPosition.json",
+      "size_bytes": 110,
+      "sha256": "ce76d18a42d5ff25cfeea83ad04ca9b8eb0aa8895813f077d80bd0add5b36db3"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByDirection.json",
+      "size_bytes": 104,
+      "sha256": "3cb768405d4d2efd9f9fa2c447c0f32a8fa18d019a0bcae7af7db7f46ad36fc9"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByDistance.json",
+      "size_bytes": 103,
+      "sha256": "105e97dab7de10c1d388797a7bb1ad920aeb838d369c28d259f1192e70d3922f"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByGridIndex.json",
+      "size_bytes": 105,
+      "sha256": "5c525493a05f078122434e981e459c385d76fc806cbe1cb702c62e10acfd468f"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByIndirectReference.json",
+      "size_bytes": 114,
+      "sha256": "beaf29de14f72b36c967dd6d3606be8b36a7c860699b71028ed3f39ef1793441"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByOrder.json",
+      "size_bytes": 101,
+      "sha256": "b60de8dd166fecf0d3464a8c0810da9b620c16a58f32f0976b5cbe64b3666bf8"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByPathDistance.json",
+      "size_bytes": 107,
+      "sha256": "663448578565163200871c9adbb8f8f9fa70fc611aae4842f6e2cb43696ca7f1"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByRegion.json",
+      "size_bytes": 102,
+      "sha256": "1ac59e27a97af28f010b3e88be60bb0e0184ddf49cafb49152015b7b5cb2ccaf"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectByTwoRelations.json",
+      "size_bytes": 109,
+      "sha256": "163051e9843bbf045781bf5aeb9e87dc96936b40b7fee49d0ad1585878d681e3"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectWithVisualCue.json",
+      "size_bytes": 108,
+      "sha256": "f26beb96121621e240790e5e10bf0431f20bbe450b857a1933ac4e0e5493990e"
+    },
+    {
+      "path": "geomind/configs/task_definitions/SelectWithinSubset.json",
+      "size_bytes": 107,
+      "sha256": "2d921ac3ed55de9565d31ac436386712b1bf2c2f56c4535e4d69fcb8a0d304e5"
+    },
+    {
+      "path": "geomind/configs/task_definitions/TrackMovingObject.json",
+      "size_bytes": 98,
+      "sha256": "6b9393fa5feb60f33b98f229d98110ac09d5ca9aa60e4e3846ac6850a305897a"
+    },
+    {
+      "path": "geomind/configs/task_definitions/TrackObjectOrigin.json",
+      "size_bytes": 98,
+      "sha256": "9fbb788c0f0971f4ffd628fda1ee7931b1afae9b43e566cd396d3d0a4630728a"
+    },
+    {
+      "path": "geomind/configs/task_definitions/TrackObjectSwap.json",
+      "size_bytes": 96,
+      "sha256": "a3990721a53078f20d3769ff66d236c573558a5b9017d4a5324814ac755c0e47"
+    },
+    {
+      "path": "geomind/configs/task_definitions/UpdateEmptySlot.json",
+      "size_bytes": 93,
+      "sha256": "2a1c5ad8444e0e4e82662fb22d587c7007a99d421480df44339a803a91e0be5b"
+    },
+    {
+      "path": "geomind/configs/task_definitions/UpdateObjectOrder.json",
+      "size_bytes": 95,
+      "sha256": "b5a32715d3b5ada707c3628b7f8eafb3d0d24afe17d9a547718c5bb3e419a7df"
+    },
+    {
+      "path": "geomind/configs/tasks/CompleteSquare_v0.json",
+      "size_bytes": 529,
+      "sha256": "2e58bf14279c14c9807cf596d7d07cc8900be062cd594da02999427a0b25aa35"
+    },
+    {
+      "path": "geomind/configs/tasks/ContinueSpatialPattern_v0.json",
+      "size_bytes": 559,
+      "sha256": "4d50ce4ba23e5578657ff440860f266004d85c1c078cbe0c5b80fd246e9d90aa"
+    },
+    {
+      "path": "geomind/configs/tasks/DetectSceneChange_v0.json",
+      "size_bytes": 375,
+      "sha256": "88c3474382da4fa90e4742420a6672f45945a2fd44ce38f4ea75ef34bff3fe4e"
+    },
+    {
+      "path": "geomind/configs/tasks/ExtendEqualSpacing_v0.json",
+      "size_bytes": 551,
+      "sha256": "221884327f2f124d7ba848a85cdb2e3f907ebcfe056dad049e8558d8732d0c92"
+    },
+    {
+      "path": "geomind/configs/tasks/InferMidpoint_v0.json",
+      "size_bytes": 519,
+      "sha256": "8cd7a55e41a8b4b582a4e5d5aafe43e87790f4523c16ad88cf55eccf9e8d883f"
+    },
+    {
+      "path": "geomind/configs/tasks/InferPointSymmetry_v0.json",
+      "size_bytes": 531,
+      "sha256": "c9f78ea40e0fca38342b8987871dba33bb778ea9354e7f236d063581d2b7ee40"
+    },
+    {
+      "path": "geomind/configs/tasks/PlaceByTopologyInside_v0.json",
+      "size_bytes": 456,
+      "sha256": "a490f3d75a012d62bf43a5701aeba33fbc1d326215e206becfc847ec12370c51"
+    },
+    {
+      "path": "geomind/configs/tasks/PlaceByTopologyOnTop_v0.json",
+      "size_bytes": 452,
+      "sha256": "d04cc795d37826afdb7b974c145db733e432597b2721da5d2c3d4a387c40803c"
+    },
+    {
+      "path": "geomind/configs/tasks/ProjectOntoLine_v0.json",
+      "size_bytes": 367,
+      "sha256": "0798b393cb7ca5f7bd7485dd7ad87e34b55c048bf0bfcce7a98a04090ad022e4"
+    },
+    {
+      "path": "geomind/configs/tasks/ReflectAcrossLine_v0.json",
+      "size_bytes": 373,
+      "sha256": "cfce6cf79f0d6672ce9a77f95012f2dbae9123c21325cb143f5949904bf219da"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectAfterExclusion_v0.json",
+      "size_bytes": 561,
+      "sha256": "3f917d723bc9409dab22050fbeec674f2cf2ae618971fa650f27edc6322dac42"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByAdjacency_v0.json",
+      "size_bytes": 570,
+      "sha256": "75d5e8e210f117853aea67e463d6b601b3203a2c0f33c142228e2f3627e6c2d1"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByBranchPosition_v0.json",
+      "size_bytes": 392,
+      "sha256": "22c1d2f82ccd1f47a4eb30d93ac887120c6662f4c16ef16256b4bd83ca0e7944"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByDirection_v0.json",
+      "size_bytes": 529,
+      "sha256": "2c4e3b978109e965a7abb028b4169f1fda3e0dd333f558c8ada7ab63d434e9d2"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByDistance_v0.json",
+      "size_bytes": 615,
+      "sha256": "a8c902bf916b5511fdf91f122dea228c88d6001ead66e2fc2e6cc2ddf4e3ba2a"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByGridIndex_v0.json",
+      "size_bytes": 536,
+      "sha256": "1a7da76702b35b43fa898590f7d1bbff9b51c9ec0fdcfde2f40c30a08bb14cea"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByIndirectReference_v0.json",
+      "size_bytes": 401,
+      "sha256": "56f16a800ba7e79e8550a0be77f80b90378299c0065706ed0901013f9e923689"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByOrderFirstSem_v0.json",
+      "size_bytes": 526,
+      "sha256": "e34a0e696970d71118fbaeddfff7fa60e5e9b2db720b0d0567c74ce4f60def6d"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByOrderFirstVisual_v0.json",
+      "size_bytes": 531,
+      "sha256": "b4de606818b1068677158ffd1216df0ea51da2991f5562de86f8c772dd39654d"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByOrderFirst_v0.json",
+      "size_bytes": 508,
+      "sha256": "9d1aead35c0fa27d954835ad1ad6467df9cb43b1216b2e2eeec505de40306d4b"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByOrderLast_v0.json",
+      "size_bytes": 417,
+      "sha256": "df4660910cdc0de84844dfc47427c05d313d0a6daefdec75ad5bff20a592700b"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByOrderSecond_v0.json",
+      "size_bytes": 595,
+      "sha256": "f046a176a38943de6241939e958fbe90757579eea9ad87641167f5083ac147ac"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByPathDistance_v0.json",
+      "size_bytes": 382,
+      "sha256": "1a86a76fa76a86e369870014a8acf8739721930878922dc5745708c483c505e2"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByRegion_v0.json",
+      "size_bytes": 363,
+      "sha256": "7cc36bee8e4c9a80b071a2a1000c51e73ad6b5709ad9c0ecc0525c69414a3b46"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectByTwoRelations_v0.json",
+      "size_bytes": 386,
+      "sha256": "3314822b80864b1c3778df22045bd41cea170a3dd0ca12172198e387313088ce"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectWithVisualCue_v0.json",
+      "size_bytes": 470,
+      "sha256": "9169f3bdf1288f18965e8f63cfc8cc0f891b65a3b2671a8952bf18449e01ca38"
+    },
+    {
+      "path": "geomind/configs/tasks/SelectWithinSubset_v0.json",
+      "size_bytes": 524,
+      "sha256": "40f5ec353b885ee06f6e4e9961d2bac4d7f5f3aa7be535a0872ebfb830e24bb0"
+    },
+    {
+      "path": "geomind/configs/tasks/TrackMovingObjectSem_v0.json",
+      "size_bytes": 529,
+      "sha256": "a02b2f3daf5bfbdac95bb291daa084223ac34d4d6d585cf41b56af63c5956d3d"
+    },
+    {
+      "path": "geomind/configs/tasks/TrackMovingObjectVisual_v0.json",
+      "size_bytes": 553,
+      "sha256": "326086bc78a85a48f88c031e7d024632ffbea30813323809d082b578ca4fbbd4"
+    },
+    {
+      "path": "geomind/configs/tasks/TrackMovingObject_v0.json",
+      "size_bytes": 505,
+      "sha256": "a6e401333459ceb87acfa13991c4cc2e568cb4ea087a698f84d54382bb7582db"
+    },
+    {
+      "path": "geomind/configs/tasks/TrackObjectOriginClutter_v0.json",
+      "size_bytes": 589,
+      "sha256": "38d55e5128824d9e66316e80c60d63db09025e76bdd5db56d744a8c1fee5b558"
+    },
+    {
+      "path": "geomind/configs/tasks/TrackObjectSwap_v0.json",
+      "size_bytes": 504,
+      "sha256": "9077f9a40007cb35413214cab7c1c1325d284ea4bdd19f879a5ed92487104f63"
+    },
+    {
+      "path": "geomind/configs/tasks/UpdateEmptySlot_v0.json",
+      "size_bytes": 365,
+      "sha256": "b0da69a78e210b61424ec3cede1400140c0e4666808e4b31ba5b876f915ecb5a"
+    },
+    {
+      "path": "geomind/configs/tasks/UpdateObjectOrder_v0.json",
+      "size_bytes": 547,
+      "sha256": "c06cad9031493127209add599c69921b35d5c8bc6f956d4520c962267ab77bed"
+    },
+    {
+      "path": "geomind/configs/vla_eval_models/internvla.json",
+      "size_bytes": 249,
+      "sha256": "d9d4bf8ae150ed79ed667526ce1496f804a2a6630556051ec6d8d6c3976d1161"
+    },
+    {
+      "path": "geomind/configs/vla_eval_models/openlva.json",
+      "size_bytes": 246,
+      "sha256": "39890a68c8fd08cf95bb8515121f0618b1ddca4ff84a0b1e58c082e4d2d3dabe"
+    },
+    {
+      "path": "geomind/configs/vla_eval_models/openlva_oft.json",
+      "size_bytes": 253,
+      "sha256": "bc28a8df318779cb1d9a27a0801c9380db694a928fdb66deeeb4a8e8fe2e7f5e"
+    },
+    {
+      "path": "geomind/configs/vla_eval_models/openpi_0_5.json",
+      "size_bytes": 290,
+      "sha256": "17e35c955046827b26c072d9f68738509f248db4e495c5c8cdc8697036625389"
+    },
+    {
+      "path": "geomind/configs/vla_eval_models/spatialforcing.json",
+      "size_bytes": 259,
+      "sha256": "aedb4e90f1670be12d89285c5f2a5ef0ce8111e6046d8902cbdc797678df49a3"
+    },
+    {
+      "path": "geomind/configs/vla_eval_models/spatialvla.json",
+      "size_bytes": 252,
+      "sha256": "a8fc07ac741a2027a3226171c97facb20b1ae63decad4d09f3baf1616645714f"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/CompleteSquareVla_v0.json",
+      "size_bytes": 572,
+      "sha256": "af88082637821d9ed66d788a5b11b08be77aa6159808eaa786f173b3f04dbfc5"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/ContinueSpatialPatternVla_v0.json",
+      "size_bytes": 603,
+      "sha256": "d608c3561a06bc0649aba82b0c4a710e01abaf189bf1d5072a01d355609cd27b"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/ExtendEqualSpacingVla_v0.json",
+      "size_bytes": 596,
+      "sha256": "5f5eec23018dd8419b430237f7ef56b5505cdf78bfe1740e5d08dab044fd8293"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/InferMidpointVla_v0.json",
+      "size_bytes": 561,
+      "sha256": "090296d65fb5d50ac470e490dd46d83bc0568449f5459e26d7e1e6cc61d9b425"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/InferPointSymmetryVla_v0.json",
+      "size_bytes": 571,
+      "sha256": "52f9310062f200f3a1fafde806080577e2ad1d4cd852ca8abadb58a23951dd50"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/PlaceByTopologyInsideVla_v0.json",
+      "size_bytes": 488,
+      "sha256": "4e7f0a8748235e649c2b50b2564b3229c162f5057460ddd3ccd28f7e1cd39468"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/PlaceByTopologyOnTopVla_v0.json",
+      "size_bytes": 484,
+      "sha256": "ed3abe64b1825721c696c974a70d8c3700109a481b95719b98cee5f14a959144"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectAfterExclusionVla_v0.json",
+      "size_bytes": 610,
+      "sha256": "1fd7cf1008c3010d70cb2c36e4315505a09e79a0bf340eca8ddd89c21ee4d840"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByAdjacencyVla_v0.json",
+      "size_bytes": 606,
+      "sha256": "c329992be46f0ff7b92e9e92310b91ee601da84dae920aae963690289b958224"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByDirectionVla_v0.json",
+      "size_bytes": 577,
+      "sha256": "16105ecbcea011d5213d5123e5d3cf001853173a59f9d4a9ee4c7d6cada2e4d3"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByDistanceVla_v0.json",
+      "size_bytes": 646,
+      "sha256": "465f738dd7f143450aad464fa584bd024f5385c7a56b85ac1d1166b5128be092"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByGridIndexVla_v0.json",
+      "size_bytes": 583,
+      "sha256": "854332cb721438327e2f7ddb0a063c96906e2e9500035ed6d0c4110eafa84a62"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByOrderFirstSemVla_v0.json",
+      "size_bytes": 561,
+      "sha256": "7d11c3b6c29691ef341d636daffa77c93019b555c362e43cd2f37b2527fa5414"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByOrderFirstVisualVla_v0.json",
+      "size_bytes": 566,
+      "sha256": "86a29804309171f71bbe4734814a82d96c59c979e14dfb4621b10d821fb480eb"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByOrderFirstVla_v0.json",
+      "size_bytes": 543,
+      "sha256": "226bf375b62042ee7b3947dcbcdc21f0403c616c078472dcad2b6a8d2e3c274d"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByOrderLastVla_v0.json",
+      "size_bytes": 419,
+      "sha256": "d0ed92e3281c1b04f5e944ea38d580dbf5dbf08a2f0a969cc79fdf2b7ff8fe3a"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectByOrderSecondVla_v0.json",
+      "size_bytes": 642,
+      "sha256": "8577d07c88b0b5174f541f76fe39b2d6f32087aabd6e74252b0fb08bee63b730"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectWithVisualCueVla_v0.json",
+      "size_bytes": 511,
+      "sha256": "0eb4fe68dd3cd8b26e58014f4b32a1056f55f6c2d71ad7d20822e4c386cc3ac5"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/SelectWithinSubsetVla_v0.json",
+      "size_bytes": 564,
+      "sha256": "d024d38b6106e8791d306cb25093c86d2a6f2ed93ff6d16d1eb6f2e68019ce00"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/TrackMovingObjectSemVla_v0.json",
+      "size_bytes": 563,
+      "sha256": "6c57b1875f8a872c7bf270d854dbddd6dc2a3248e78759325a318ec243afe34a"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/TrackMovingObjectVisualVla_v0.json",
+      "size_bytes": 574,
+      "sha256": "31e5e8a74793a50052bd01ff806136190bc4c68be4dc0a503e03e70a42476310"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/TrackMovingObjectVla_v0.json",
+      "size_bytes": 543,
+      "sha256": "bb0f13858f7bcbf8ee80fbb7ebff681343f852b0f84f2980a8b5cdce56b7169d"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/TrackObjectOriginClutterVla_v0.json",
+      "size_bytes": 547,
+      "sha256": "7f290ab83beea2635218e838279dd1903c4a64aaf2e6599ef0056706436670b3"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/TrackObjectSwapVla_v0.json",
+      "size_bytes": 541,
+      "sha256": "9d12cb6fad425da3bd360323acba6c5eb733bdea92d5d6cf742b7d563f6267b5"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/UpdateObjectOrderVla_v0.json",
+      "size_bytes": 581,
+      "sha256": "4a42e801a57e9dbe42abd267705e464f82dbfce7f46e940833dd5ee616febd8b"
+    },
+    {
+      "path": "geomind/configs/vla_tasks/task_cards.yaml",
+      "size_bytes": 17733,
+      "sha256": "0b51c0d9f625cd3ec006e613a2a27b32779665beccd5edb051087411f8b1e80b"
+    },
+    {
+      "path": "geomind/core/__init__.py",
+      "size_bytes": 199,
+      "sha256": "bef44812654046c538db2fa3bc9ccee79ea860c9ef8717cc2eb1af578ca34cb2"
+    },
+    {
+      "path": "geomind/core/envs/__init__.py",
+      "size_bytes": 235,
+      "sha256": "f35f1f188d393058e4f96a7f5d1b7430299b68f8e433c7cc5a65892c39cb217c"
+    },
+    {
+      "path": "geomind/core/envs/isaaclab_env.py",
+      "size_bytes": 3794,
+      "sha256": "d07e546a809195cb6395328340e5afec73e9aabbcf2d11d35df75fb481360ccb"
+    },
+    {
+      "path": "geomind/core/envs/isaaclab_native_delegate.py",
+      "size_bytes": 42933,
+      "sha256": "e3e903a8e6c7542bc19449208c88494f816a2b97dc7f6ce1d2d0881de7fa1220"
+    },
+    {
+      "path": "geomind/core/envs/mock_backend.py",
+      "size_bytes": 22834,
+      "sha256": "0c5d6aa7cab2cee9499d3d5dcfff20c89f885f9034055a188dcb7a27d65424a3"
+    },
+    {
+      "path": "geomind/core/envs/task_env.py",
+      "size_bytes": 2394,
+      "sha256": "81f31f217139fc6bdb96b613ed543d2c03c5d671c15e8b8f5a6ebe60563b3662"
+    },
+    {
+      "path": "geomind/core/episode_compat.py",
+      "size_bytes": 5660,
+      "sha256": "e64ad4006898226c8a6142f10f623befdefff283e1f2f8007509fcffa938951a"
+    },
+    {
+      "path": "geomind/core/ids.py",
+      "size_bytes": 2713,
+      "sha256": "45822bafb125852500aa5140e2022ddc92684cba9ac2143afa62a8c50bf08cee"
+    },
+    {
+      "path": "geomind/core/loader.py",
+      "size_bytes": 7552,
+      "sha256": "c590ff845336bddb43736b2f3c8289e99b1f3d8f82cb9702edb1833624a7fd21"
+    },
+    {
+      "path": "geomind/core/observation.py",
+      "size_bytes": 1265,
+      "sha256": "aa28e26e7b5fd17128f304828b91c4372188a98a4d2351a9c0800a121f47947a"
+    },
+    {
+      "path": "geomind/core/registry.py",
+      "size_bytes": 25019,
+      "sha256": "2294fff95ca3f52d9467e5419ee5d04617e369aa693c44d73c86ae5cb2910749"
+    },
+    {
+      "path": "geomind/core/resolver.py",
+      "size_bytes": 6489,
+      "sha256": "5829f4d14df3bc49b8d32a53b9b53ab528f00c46ce45fbfd01fc566eb25824f2"
+    },
+    {
+      "path": "geomind/core/schema.py",
+      "size_bytes": 9596,
+      "sha256": "d67995a0f352445a92d6928fc3d887d1b747e1bd019c8759ef16033f58094745"
+    },
+    {
+      "path": "geomind/core/taxonomy.py",
+      "size_bytes": 1380,
+      "sha256": "452c5d74864a6badde64976a361cd9f6c66f07e74a95f267c616d7cf23fb3027"
+    },
+    {
+      "path": "geomind/core/types.py",
+      "size_bytes": 2236,
+      "sha256": "fcf988a414cf84e1704ef02ce8b14f4d86594a40ad02a8b0912c61272c0b7df5"
+    },
+    {
+      "path": "geomind/docs/remote_policy.md",
+      "size_bytes": 7326,
+      "sha256": "3ab0c01ee7837c0ddfa5fc4a35cc765e1eacc41b15a88f03caaee9836f78f708"
+    },
+    {
+      "path": "geomind/docs/开发者文档.md",
+      "size_bytes": 6656,
+      "sha256": "d6bc4f610702985f0f972d95fafca1f2e694d47e2250200da0f1762dc07f1f4c"
+    },
+    {
+      "path": "geomind/docs/系统概述.md",
+      "size_bytes": 4563,
+      "sha256": "c101206637df67c190135e41c401762b9d8ef15fa6be0e3e2ab6f3343f0cad2b"
+    },
+    {
+      "path": "geomind/docs/读者文档.md",
+      "size_bytes": 1626,
+      "sha256": "5e143136be0cd3d3fbf7ac72847ccf589f5fe2880525e332b8a2aabbc9f3f361"
+    },
+    {
+      "path": "geomind/episodes/__init__.py",
+      "size_bytes": 457,
+      "sha256": "f10684e5e35a439da8b58d2732a928a4f253141123bd19ec20c8fe1f0b6d2c5d"
+    },
+    {
+      "path": "geomind/episodes/assembled_actions.py",
+      "size_bytes": 31889,
+      "sha256": "a932b5eb2f53b0501dc5196e7724c858ea0a87dfd44bde6aa17ef2a2ef699ffa"
+    },
+    {
+      "path": "geomind/episodes/assembled_relations.py",
+      "size_bytes": 3574,
+      "sha256": "1fd23cca27347bf2b7b792a54a49f0f4e876438041251ea5ea88e1a3ecb8a405"
+    },
+    {
+      "path": "geomind/episodes/canonical_extensions.py",
+      "size_bytes": 2913,
+      "sha256": "a0f0fe1c3c8842ee8f52ca41a17de8ab3ad38b5a018ec83abba2dfbb3a46fdd7"
+    },
+    {
+      "path": "geomind/episodes/extended_geometry_tasks.py",
+      "size_bytes": 9313,
+      "sha256": "218c04602ed5b5724ca0c6a6ad14a075f43889202f0b9f5e70160b60cc69fee1"
+    },
+    {
+      "path": "geomind/episodes/extended_static_tasks.py",
+      "size_bytes": 25432,
+      "sha256": "60a055230530dddb2a7a73961948c2382cf9f3a5c144b9429b20661984c905ec"
+    },
+    {
+      "path": "geomind/episodes/extended_temporal_tasks.py",
+      "size_bytes": 18955,
+      "sha256": "31f702bb6959f417f38ec108b5d5facd3600ef6234b12b4c074b76aac9627f74"
+    },
+    {
+      "path": "geomind/episodes/gripper_profiles.py",
+      "size_bytes": 14846,
+      "sha256": "390c0fadf43a6a42ca4d8c2aba2982a220cd1fe42ff82f8564766b1b7c41e07a"
+    },
+    {
+      "path": "geomind/episodes/isaaclab_physics.py",
+      "size_bytes": 64649,
+      "sha256": "f40d3b9895e704ce0e57eb2f49c7b670dbf78ff9b4950314b0b8cb12ca5ec287"
+    },
+    {
+      "path": "geomind/episodes/object_assets.py",
+      "size_bytes": 2735,
+      "sha256": "49e137577e7312b35d788c69a196e936405ce89e9112124c3b8d0a5dd03fd3da"
+    },
+    {
+      "path": "geomind/episodes/physical_contract.py",
+      "size_bytes": 9051,
+      "sha256": "0716f356fdd1eb694dce76846001dcb5146714a5cc018408d5d151d35799a09b"
+    },
+    {
+      "path": "geomind/episodes/placement.py",
+      "size_bytes": 8141,
+      "sha256": "7888818512e2c5232837e8881b28a6d04dac018ace73c8d4d032b231b30eca8e"
+    },
+    {
+      "path": "geomind/episodes/registered_scene.py",
+      "size_bytes": 8134,
+      "sha256": "1f7a477a9a21460b47481e4e16e6f4cfe8dbebbc475552ab12b2531c6c77dfa8"
+    },
+    {
+      "path": "geomind/episodes/registered_tasks.py",
+      "size_bytes": 39412,
+      "sha256": "8037928f650de579f0a2e62446017b7679b9e6b80b6a1bf7601924d321d4b6ee"
+    },
+    {
+      "path": "geomind/episodes/resolver.py",
+      "size_bytes": 26482,
+      "sha256": "07c9ea569a4e481e8bdc838e1fac793cc4f28a7c51234d5c18109b27afe8b088"
+    },
+    {
+      "path": "geomind/episodes/robot_profiles.py",
+      "size_bytes": 5690,
+      "sha256": "0cb102569b9890583d3413abd230258d1aaf28a88791bae13d1d0694a89726f7"
+    },
+    {
+      "path": "geomind/episodes/runtime.py",
+      "size_bytes": 8251,
+      "sha256": "2770afbd5d7d6c9106c5217116363d40d6f8145700703331c55f80a2920786fa"
+    },
+    {
+      "path": "geomind/episodes/video.py",
+      "size_bytes": 8509,
+      "sha256": "202ea12a5c595649cd7901c9d3714173f742b39d9b8306ce47e9eb68a639c90e"
+    },
+    {
+      "path": "geomind/episodes/wrist_cameras.py",
+      "size_bytes": 5816,
+      "sha256": "581f663784349a61da5efab6689fa1db6f7189c511ec13c326f6595fdc84ca18"
+    },
+    {
+      "path": "geomind/runners/__init__.py",
+      "size_bytes": 33,
+      "sha256": "fc0d7231f937512b934572617259d933e37ec173107bceceb3120708699cdcd6"
+    },
+    {
+      "path": "geomind/runners/collect_data.py",
+      "size_bytes": 5818,
+      "sha256": "b454463e0b9483539a1d4c300611e69ec2b88b37a8c64fd79342e7487bbcca57"
+    },
+    {
+      "path": "geomind/runners/policy_runtime.py",
+      "size_bytes": 35721,
+      "sha256": "820cfff67f72ac640731c4068cea9331f464df29183188b6ae953e9e270941a6"
+    },
+    {
+      "path": "geomind/runners/run_env_policy.py",
+      "size_bytes": 10330,
+      "sha256": "3f8767b7e8bc863276ecaeb365933cd5c116743aab3c0f3a3e4d94e941085b63"
+    },
+    {
+      "path": "geomind/runners/run_suite.py",
+      "size_bytes": 6336,
+      "sha256": "8ed736f82720540553f2f6ea8fbedcfdcc5d3b845b3db5219c0333e51a762fa2"
+    },
+    {
+      "path": "geomind/runners/run_task.py",
+      "size_bytes": 4797,
+      "sha256": "068ea8f1865cb93081e23f82b0b08e48a60cfcbd3941085311c4265959d9c7f6"
+    },
+    {
+      "path": "geomind/scene_assembly/__init__.py",
+      "size_bytes": 87,
+      "sha256": "4c92379506346e264db536f85daf1c6c8086f96bbf9f8b73055c918dee9dd0f5"
+    },
+    {
+      "path": "geomind/scene_assembly/assets.py",
+      "size_bytes": 3457,
+      "sha256": "3447e4f5db7978751508a9bd6c38f3e2431bdd2ff2b34be28f5921b25d1b9d11"
+    },
+    {
+      "path": "geomind/scene_assembly/audit.py",
+      "size_bytes": 5885,
+      "sha256": "5fc25c6d411183ccd8f32fe52abbf618a8ad3538c16ea6baf45ce28e1989acca"
+    },
+    {
+      "path": "geomind/scene_assembly/body_geometry.py",
+      "size_bytes": 2542,
+      "sha256": "606b47581a1b8c4de22025ac4864970e8010522649340f25283275026c554585"
+    },
+    {
+      "path": "geomind/scene_assembly/cylinder_collisions.py",
+      "size_bytes": 11968,
+      "sha256": "f983571deffec2d9c8fc840d0b60d407e09ecdd7e77a7fae52c4b8a8495c41e9"
+    },
+    {
+      "path": "geomind/scene_assembly/gallery.py",
+      "size_bytes": 3445,
+      "sha256": "498673b68f8571167cce06d62f56e72c220cf1281e7d27e91fe15bb832b57661"
+    },
+    {
+      "path": "geomind/scene_assembly/grasp_orientation.py",
+      "size_bytes": 7094,
+      "sha256": "80051973ed4fa8b4d9d43787d8d9d20379f44c0bc23f7575ec1bd16b112656bd"
+    },
+    {
+      "path": "geomind/scene_assembly/layouts.py",
+      "size_bytes": 7783,
+      "sha256": "825cedfc0a7261859d7be7f8b189b1c482e6175ef0261f71e850d8bb84c93835"
+    },
+    {
+      "path": "geomind/scene_assembly/negative_controls.py",
+      "size_bytes": 9699,
+      "sha256": "fbe964aa8731a86a68de746732a04820e1b09c03420d0ad442a32c377ede6dbe"
+    },
+    {
+      "path": "geomind/scene_assembly/physics.py",
+      "size_bytes": 9166,
+      "sha256": "0dcae2629b9e1b1edaeba8e3a08f36bfa1ebd228c7939715e5e96eba7f767d22"
+    },
+    {
+      "path": "geomind/scene_assembly/randomization.py",
+      "size_bytes": 7413,
+      "sha256": "1f4b8e8d93745b901234c1e49b72c773b53ca99b5b6a3ad1e78a495df6ece878"
+    },
+    {
+      "path": "geomind/scene_assembly/registered_binding.py",
+      "size_bytes": 16998,
+      "sha256": "664f2660666bf37eb4620c87c71cd1a509a4f6a3a7a4d79975d563b84a41360c"
+    },
+    {
+      "path": "geomind/scene_assembly/registered_export.py",
+      "size_bytes": 31568,
+      "sha256": "3c88e800d46f007603f435f1fb1594fdff753938258ffd0a15dee573de5799b2"
+    },
+    {
+      "path": "geomind/scene_assembly/registered_layout_constraints.py",
+      "size_bytes": 10059,
+      "sha256": "a09dce1add190b1ee374ef7fe86828c46450cfe336c7733100fcc4358ed81c57"
+    },
+    {
+      "path": "geomind/scene_assembly/request.py",
+      "size_bytes": 13009,
+      "sha256": "70d172da15946640c26fc2e2569a56efb3cdcb6c7c5dc0959d4a10751971b8ac"
+    },
+    {
+      "path": "geomind/scene_assembly/robot_execution.py",
+      "size_bytes": 6611,
+      "sha256": "e860393630b9f92714ee6d8f281918461a920fb4669ac0f905977f3e2525525b"
+    },
+    {
+      "path": "geomind/scene_assembly/robot_task_config.py",
+      "size_bytes": 9494,
+      "sha256": "4624b403cd303dd6500b50ab9325fd9250e4aa262bf9d8f893f713a18c933e56"
+    },
+    {
+      "path": "geomind/scene_assembly/task_binding.py",
+      "size_bytes": 23126,
+      "sha256": "1431074daa8fd81d387d2aedc16e7eff62ab791a776dc1fc3e12c79bb21954a0"
+    },
+    {
+      "path": "geomind/scene_assembly/task_gallery.py",
+      "size_bytes": 6993,
+      "sha256": "8f1796734c4a21c8ec8823da244554e6e1329a5065976469ddb63cbb061a31bc"
+    },
+    {
+      "path": "geomind/scene_assembly/task_pipeline.py",
+      "size_bytes": 15490,
+      "sha256": "4237a8c279370bcdeea3b12b92db28ca6c9fa2b391014e4ac883c5a6caef73d0"
+    },
+    {
+      "path": "geomind/scene_assembly/task_request.py",
+      "size_bytes": 19733,
+      "sha256": "b774bfe31641c3a14924717c305b0f67439f86e3c8a4efee6a24eb5eb96fc888"
+    },
+    {
+      "path": "geomind/scene_assembly/usd.py",
+      "size_bytes": 18544,
+      "sha256": "dbf0772db9231573e692463dd18dadfcf1ce73372430d0a2cb22fb9c5c8c73bb"
+    },
+    {
+      "path": "geomind/scene_assembly/visibility.py",
+      "size_bytes": 1224,
+      "sha256": "4fdf3db5da3ee8899b4ada72db746b8e685e69c3168ca3e277369011f450109f"
+    },
+    {
+      "path": "geomind/scripts/README.md",
+      "size_bytes": 9831,
+      "sha256": "e63565ddadbba144898cecfa216bcda93ced54e9c984b772fc49245483c31772"
+    },
+    {
+      "path": "geomind/scripts/collect_data.sh",
+      "size_bytes": 3285,
+      "sha256": "644e41aff2a30270f7e2fc66dbb68e8ee4eea20858d54e2d00476c6538afc471"
+    },
+    {
+      "path": "geomind/scripts/replay_trajectory.sh",
+      "size_bytes": 996,
+      "sha256": "f2ec90d90b56ad7279c86aa6d6bf33d2db45cdaa2a392b85205619193166f966"
+    },
+    {
+      "path": "geomind/scripts/run_env_policy.sh",
+      "size_bytes": 1579,
+      "sha256": "4c2ff144526b92584f11b2a675cb87136b610d11b030774f906de3e479cb25a3"
+    },
+    {
+      "path": "geomind/scripts/run_remote_policy_isaaclab.sh",
+      "size_bytes": 8373,
+      "sha256": "9d4a53c8175a2f88e8418297b4af03f67e680667895664b0c2a92b19efec925f"
+    },
+    {
+      "path": "geomind/scripts/run_remote_policy_isaaclab_vla.sh",
+      "size_bytes": 13578,
+      "sha256": "0fd0f8a9b15bb82980b50c689dc332c3dd83ae6ffcac0ed1ce3903e1b097336d"
+    },
+    {
+      "path": "geomind/scripts/run_suite.sh",
+      "size_bytes": 2638,
+      "sha256": "e7252325ccf94d6b398dfe48a38325911e9f4c985703a92acccf58ab6d1d12c8"
+    },
+    {
+      "path": "geomind/scripts/run_task.sh",
+      "size_bytes": 1026,
+      "sha256": "c8601f8d6bf4de17375d31e86c68f079d83f33be795fd8d6b97f6ee0b4b4d88e"
+    },
+    {
+      "path": "geomind/scripts/run_task_isaaclab.sh",
+      "size_bytes": 2312,
+      "sha256": "a59e313774aa9f2b29efa41b62e23087425f1ddec4dd347560192a423f2f90fd"
+    },
+    {
+      "path": "geomind/scripts/test_remote_policy_isaaclab.sh",
+      "size_bytes": 10123,
+      "sha256": "c377152bb0cb79fde13458b65944c81d6277a771d898b3dfd980d571eb207870"
+    },
+    {
+      "path": "geomind/tasks/__init__.py",
+      "size_bytes": 41,
+      "sha256": "38a9499b917a2066da1dab89af5452eb1e58ca8d32c258539e544c5600daea99"
+    },
+    {
+      "path": "geomind/tasks/builders/__init__.py",
+      "size_bytes": 770,
+      "sha256": "2f6066da3d17cb38fa211c3bfacf7c1fbc03bfde8cef16d503c5b1c521fe2ff0"
+    },
+    {
+      "path": "geomind/tasks/builders/base.py",
+      "size_bytes": 688,
+      "sha256": "1e680d8e987920a07da46bd76bc683c9926a556b21b43cdcff1599e6a99b8d75"
+    },
+    {
+      "path": "geomind/tasks/builders/binding.py",
+      "size_bytes": 143,
+      "sha256": "0f61ba64be75847053cf738d545c31d2d280b3b97cb4fc3fffe8944df91126b0"
+    },
+    {
+      "path": "geomind/tasks/builders/geometric.py",
+      "size_bytes": 147,
+      "sha256": "827451c770ee0f1c0551522b2a94ad8f4ac235a530a7e886b8634f8a51ddc596"
+    },
+    {
+      "path": "geomind/tasks/builders/reindex.py",
+      "size_bytes": 143,
+      "sha256": "d9f3d55a34951d4d4d8b87fd4a3fb0ebda5da457ff371331cf40b805de7bae3f"
+    },
+    {
+      "path": "geomind/tasks/builders/relation.py",
+      "size_bytes": 145,
+      "sha256": "89c30efd86ba3440aada6a69ac12e8cfb415f39374088018ddaf0361bfc1e6f5"
+    },
+    {
+      "path": "geomind/tasks/builders/track.py",
+      "size_bytes": 139,
+      "sha256": "664cb363356b0e76a9b57f75eef957c0961f981d471e6cc90012866a1078b3f0"
+    },
+    {
+      "path": "geomind/tasks/direct_ablation.py",
+      "size_bytes": 19902,
+      "sha256": "c428de4360ed211e5d78f0fc940ddf0d66b8a7c090a3e4bbed000b5cd0a86080"
+    },
+    {
+      "path": "geomind/tasks/evaluators/__init__.py",
+      "size_bytes": 3329,
+      "sha256": "14ce8e2a7e37b5a3be1b367d9e4e469737d01cf0df17a6ccbc013a0af318ffa7"
+    },
+    {
+      "path": "geomind/tasks/evaluators/base.py",
+      "size_bytes": 316,
+      "sha256": "9d390f8c490bfeaf5202d7c281d561aa2a36670f9b4d05b2234737565c475b46"
+    },
+    {
+      "path": "geomind/tasks/evaluators/simple.py",
+      "size_bytes": 8351,
+      "sha256": "0cbf4e844550a479f550ea681b756222c51b5ec219cc816b0581086024f447c7"
+    },
+    {
+      "path": "geomind/tasks/families/__init__.py",
+      "size_bytes": 60,
+      "sha256": "4f348bf9572f28ff56fa021292bb05348743d8bf6b9308bc9e6acba347c51e99"
+    },
+    {
+      "path": "geomind/tasks/families/catalog.py",
+      "size_bytes": 107,
+      "sha256": "8b0584ab9875f918cd5fb265ccfec109732f85a75a666c6a8a583ba00c3174b4"
+    },
+    {
+      "path": "geomind/tasks/variants/__init__.py",
+      "size_bytes": 77,
+      "sha256": "106608d7cb2a785ac21b64feabbe2ef66ce64dd211dbe898cdffcd61dabb0b57"
+    },
+    {
+      "path": "geomind/tasks/variants/overlays.py",
+      "size_bytes": 435,
+      "sha256": "85c6f008b39ba7e58380c00addd9da06a9686a66e3f0a9784e15094466151ba5"
+    },
+    {
+      "path": "geomind/tools/__init__.py",
+      "size_bytes": 60,
+      "sha256": "1859e856161d4ab8a16fa1fab3738743cf5bed459be2b97587a17d425e5b1f5e"
+    },
+    {
+      "path": "geomind/tools/assemble_scene.py",
+      "size_bytes": 10196,
+      "sha256": "d4c5fc7229c1c348ccc55720c9375223977aa6b0338faf4fc2418ce934eb6b08"
+    },
+    {
+      "path": "geomind/tools/audit_assembled_robot.py",
+      "size_bytes": 39492,
+      "sha256": "05ab483848c8ad6ccf5e74cf9d8954cc2ca1571a12ffba577d5b8a5ec380c660"
+    },
+    {
+      "path": "geomind/tools/audit_changed_lift.py",
+      "size_bytes": 4087,
+      "sha256": "ee6a329bb2751665350c183117f51473cf16ea8253bcd2ce5f68effb9c508321"
+    },
+    {
+      "path": "geomind/tools/audit_dual_piper.py",
+      "size_bytes": 2809,
+      "sha256": "8a401da84ef11f901fad3e543498422a5b0060e90003a30a0adec25fcfac956f"
+    },
+    {
+      "path": "geomind/tools/audit_midpoint_placement.py",
+      "size_bytes": 4134,
+      "sha256": "da78f8b64d25e6a1e62c4839164e855cd60edef9d253458c6960c4b4086cf03f"
+    },
+    {
+      "path": "geomind/tools/audit_negative_pick.py",
+      "size_bytes": 13312,
+      "sha256": "b53ae7c7c3f0548d67c6ac04891f4c13b08bd76ba2b9b78360336ddc8dfe1cb1"
+    },
+    {
+      "path": "geomind/tools/audit_wrist_scene.py",
+      "size_bytes": 9277,
+      "sha256": "f58e5b7192dee0ccb710d84907d70dabfa55f708d4d029c3e5a46bf47a0af946"
+    },
+    {
+      "path": "geomind/tools/dashboard.py",
+      "size_bytes": 17374,
+      "sha256": "0d17302306e179d1ababd40d705fa8ae0e3c885b1b102270216bbf16ff3fe5e6"
+    },
+    {
+      "path": "geomind/tools/deliver_canonical27.py",
+      "size_bytes": 37962,
+      "sha256": "6cec496476964364bd6bb1a36dac854fedee71cd634d23a180c1b77e44a14ffb"
+    },
+    {
+      "path": "geomind/tools/deliver_registered_tasks.py",
+      "size_bytes": 46412,
+      "sha256": "beec768fb319506357b2e536a7772d9f4c9365096e32a0f256b6db4d604e9999"
+    },
+    {
+      "path": "geomind/tools/deliver_wrist_cameras.py",
+      "size_bytes": 26187,
+      "sha256": "720edee0292af932411d41172214c619c5eea8fea295136cb734d43765e57851"
+    },
+    {
+      "path": "geomind/tools/export_trace_camera_video.py",
+      "size_bytes": 5215,
+      "sha256": "281ca200b92d7934b35769d5234c8fb9c92ae55a4f649b7a87269076b91f3166"
+    },
+    {
+      "path": "geomind/tools/generate_spatial_suite.py",
+      "size_bytes": 13550,
+      "sha256": "c43dc2092c7af7a212993db047940baa4cbed0aabd797ae8a758814fb37beb34"
+    },
+    {
+      "path": "geomind/tools/generate_vla_task_suite.py",
+      "size_bytes": 32164,
+      "sha256": "d0dd18cd39ac5c5832051501f59fb9224a9b0fc0e291878af3fc90662d4be322"
+    },
+    {
+      "path": "geomind/tools/instruction_zh.py",
+      "size_bytes": 2880,
+      "sha256": "2474d491baa0dbccc46510c85b5070a59906b3fa002c81595e5c7c06b746f57a"
+    },
+    {
+      "path": "geomind/tools/migrate_episode_configs.py",
+      "size_bytes": 5466,
+      "sha256": "36ebe93bcbd47e0155d13363955ac8fc37afbaa352ec021e03a8a99a1e3f4c05"
+    },
+    {
+      "path": "geomind/tools/migrate_legacy_assets.py",
+      "size_bytes": 1342,
+      "sha256": "2346772823cc63e6478096dc79f11d495b0366c1766503d6805a2b39781f05f2"
+    },
+    {
+      "path": "geomind/tools/package_episode_videos.py",
+      "size_bytes": 10335,
+      "sha256": "c23291c76688e1733246cc44ff423f7721d347778359da198ce3e9e67224b3c1"
+    },
+    {
+      "path": "geomind/tools/regenerate_registered_tasks.py",
+      "size_bytes": 27640,
+      "sha256": "5984d743b46463a2d932732faabb1e2a2bb448b377081de68e5039be81a693d3"
+    },
+    {
+      "path": "geomind/tools/replay_trajectory.py",
+      "size_bytes": 1274,
+      "sha256": "b09c006886c0d6da34d8519fbd409f70895f43ac10c5ea10c2391515a2625fe7"
+    },
+    {
+      "path": "geomind/tools/research_capabilities.py",
+      "size_bytes": 18641,
+      "sha256": "a42b1429578d11013a7ea261fd79aaad7f3be29d3608251bc67cdeedd679dfcc"
+    },
+    {
+      "path": "geomind/tools/research_pairs.py",
+      "size_bytes": 28058,
+      "sha256": "227610d46cf75c8e402df2888e9753e623e9c2e4905a52e12662feb0bc6b0301"
+    },
+    {
+      "path": "geomind/tools/research_pipeline.py",
+      "size_bytes": 16935,
+      "sha256": "cea19cbaf5b1e1c9411d9fb8be6d458ddda0f85311517c1a71fb78bb7daf2e78"
+    },
+    {
+      "path": "geomind/tools/research_projection.py",
+      "size_bytes": 9272,
+      "sha256": "4fc1c04773f8f84336ac4e77c7d92a2867d33758cb639d3c298a83b11f4e0685"
+    },
+    {
+      "path": "geomind/tools/resolve_episode.py",
+      "size_bytes": 1915,
+      "sha256": "d90b9b9d758c842a13fe0bbdde4a486867c322f299cd8255d5549d6ae1843a41"
+    },
+    {
+      "path": "geomind/tools/run_episode_physics.py",
+      "size_bytes": 24432,
+      "sha256": "8b3a8e50e841282c24b0d6a7a606f8e60a41292c6862f623a3ad0d1eead5ef50"
+    },
+    {
+      "path": "geomind/tools/scaffold_task.py",
+      "size_bytes": 13569,
+      "sha256": "34276b7f902819802e36089c00e5038ce13aeba97a8083c5536411b41808265f"
+    },
+    {
+      "path": "geomind/tools/summarize_results.py",
+      "size_bytes": 1147,
+      "sha256": "fca049671a7babb100ab3e0f0c11445b1c354a3bf40e6ff17fea0717242f7ae3"
+    },
+    {
+      "path": "geomind/tools/verify_wrist_cameras.py",
+      "size_bytes": 21919,
+      "sha256": "678263412060e21a458b89f421a0ce3e610db50a89077e02d2f76715299e296f"
+    },
+    {
+      "path": "geomind/web/dashboard.html",
+      "size_bytes": 19247,
+      "sha256": "78ede2cabaa06bbc4ce4994d7e1ca7d9e26bcaf4e69fed3f7e3cc027c193b5d7"
+    },
+    {
+      "path": "geomind_client.py",
+      "size_bytes": 62409,
+      "sha256": "908e0f8d782e739c48cd458faaddd8f72eb23d49fec075769ef9c0cf666c6ab7"
+    },
+    {
+      "path": "geomind_handoff.md",
+      "size_bytes": 74043,
+      "sha256": "83a72de2455e5bca6ff0d4b51c1d9dcdf893470456cec4d32b42374052f28b07"
+    },
+    {
+      "path": "geomind_lab/__init__.py",
+      "size_bytes": 648,
+      "sha256": "4704d49e24e12aad60210b95d72f210c77e94006b5873db89789857621777c1d"
+    },
+    {
+      "path": "geomind_lab/bootstrap/__init__.py",
+      "size_bytes": 309,
+      "sha256": "a58863880202cfe646072f0cb230e9d1a11a0367a6c8f394e5b3b35da7a21019"
+    },
+    {
+      "path": "geomind_lab/bootstrap/env_setup.py",
+      "size_bytes": 470,
+      "sha256": "e1e9f86939a1aec112eb498b80a448f6839b12c842209c1dd4f9daead46a7258"
+    },
+    {
+      "path": "geomind_lab/bootstrap/isaaclab_path.py",
+      "size_bytes": 741,
+      "sha256": "ecef80e173dd8af7bb2f76c8e37f1dcea16b84ec8885ff9e0371b621867bdde2"
+    },
+    {
+      "path": "geomind_lab/cli/__init__.py",
+      "size_bytes": 41,
+      "sha256": "7b8ba3993873897c2057ec866ae4f5921ce4708a960f5ea660a2c4b52c916c1a"
+    },
+    {
+      "path": "geomind_lab/cli/annotate.py",
+      "size_bytes": 580,
+      "sha256": "493b70101b3616baffe37e9e440db6cbbaf7708255ba6b83e79932a240298217"
+    },
+    {
+      "path": "geomind_lab/cli/collect.py",
+      "size_bytes": 648,
+      "sha256": "5a7dae168c35c2b9e3ab75617bc9e8d032cd2d6647af3b74eca54996c62536ee"
+    },
+    {
+      "path": "geomind_lab/cli/generate.py",
+      "size_bytes": 714,
+      "sha256": "4823db504f48a28767f8ba5f9119eaffb79fc2b6c50f96b3adc06e854131bd3b"
+    },
+    {
+      "path": "geomind_lab/cli/replay.py",
+      "size_bytes": 653,
+      "sha256": "3d35469d1bbf67564cf336eb94b7a0505690c14d185f655bacc4d2e06f6d00b3"
+    },
+    {
+      "path": "geomind_lab/data/__init__.py",
+      "size_bytes": 46,
+      "sha256": "ec2a320060711101c87ac4ebdf2b12e55d1d10825404f44548f400e3180bf301"
+    },
+    {
+      "path": "geomind_lab/data/annotations/__init__.py",
+      "size_bytes": 37,
+      "sha256": "2113df467aeb5d4b00fcdbb02442835978185f90e4700483cc97aafc27365b64"
+    },
+    {
+      "path": "geomind_lab/data/datasets/.gitkeep",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "geomind_lab/data/io/__init__.py",
+      "size_bytes": 40,
+      "sha256": "eac89802da3dd8a4ad2eea47d2bfb41d9032b0c9115ce1fe3ac83e9f1f28ed12"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/__init__.py",
+      "size_bytes": 1290,
+      "sha256": "82dcb262b4824bfef15bc8e691a55066bf9a4c324bee0117fd640b169925b849"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/augmentation.py",
+      "size_bytes": 9091,
+      "sha256": "77977fd48a217f64cafadb433c4b81911187ff072fe53b68d2d57a02f53f42f3"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/collector.py",
+      "size_bytes": 3641,
+      "sha256": "860e1f70e6f45af355f1ccde2669f6b01d9dec520f03cc646a35f856153408d2"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/hdf5_exporter.py",
+      "size_bytes": 13030,
+      "sha256": "db304642028c98b318b844830e0e4cc754fd7c055122bb763c01067452e82625"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/metadata.py",
+      "size_bytes": 1322,
+      "sha256": "2f917adb611fe79b6ea0d0c22486587e83c7f7286c40c1318176814dbdc3f877"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/resample.py",
+      "size_bytes": 8859,
+      "sha256": "b4c4e0045c8f3937df3801c4107248dcd4146e273d93458681e0639eaba21ce1"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/segmenter.py",
+      "size_bytes": 13099,
+      "sha256": "bce96dc88952ea1ce6dbbbf936917c2f35f009f7272c548001cd071d7c3844b1"
+    },
+    {
+      "path": "geomind_lab/data/trajectory/validator.py",
+      "size_bytes": 17650,
+      "sha256": "37418d3ef6acbb7e52897eb7b1528fd224744ac0fc4749e975f192a5e4b0b7c7"
+    },
+    {
+      "path": "geomind_lab/mimic/__init__.py",
+      "size_bytes": 584,
+      "sha256": "0cdd93ce5be7a1bf49bbda9ff8ec05292a0d820dafba58a56d8e998b63181fa4"
+    },
+    {
+      "path": "geomind_lab/mimic/configs/__init__.py",
+      "size_bytes": 158,
+      "sha256": "87e58df51b6d0576fe5e3a038ec17734319870bc1d105c98167541c0d6675d3f"
+    },
+    {
+      "path": "geomind_lab/mimic/configs/geomind_franka_ik_rel_mimic_env_cfg.py",
+      "size_bytes": 3977,
+      "sha256": "160d3e10fc271ea0ce8ed8aed8b8b5148a5a67487c7f5a240b1817d7744724a7"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/__init__.py",
+      "size_bytes": 349,
+      "sha256": "321fae02432c2a8722a65dc5f8d3e4bdccbc8cf28c6c03ea962ca723423da8dd"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/anchor_reference_logic.py",
+      "size_bytes": 13681,
+      "sha256": "a5cb2238865ade59ed364b98a70eaee306beeac29cc66a01fc1c9762d3f53ef8"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/constraint_selection_logic.py",
+      "size_bytes": 20333,
+      "sha256": "9563ac50a4e4ac1ea43b7439ce9244a8d3478abbc14494fbfaa0db5bc1921240"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/geometric_inference_logic.py",
+      "size_bytes": 54071,
+      "sha256": "db2790724dc410a1c5efed850c4b2f96596bbc304141750e6c43a55a8b7f5200"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/geomind_franka_ik_rel_mimic_env.py",
+      "size_bytes": 160452,
+      "sha256": "5fea528b3b0404b76ed7bc16adb8c698f8bef11ee8eb66cc8bc192bfd118578f"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/post_action_relocation_motion.py",
+      "size_bytes": 14492,
+      "sha256": "81d0cfd9b219eb13286c55a89a0b35ae9af05ae03f39185e1773bd9883d9695f"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/state_reindexing_logic.py",
+      "size_bytes": 71182,
+      "sha256": "47a78a9e3b94579380eb7e798d7f1aef7d75db9c4c6fb911b61a6a0bb10ca5c6"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/task_context_visuals.py",
+      "size_bytes": 2711,
+      "sha256": "d134b4bc2d158e8c0eed41d9fee9ca28a17d106078b9712cadb9d313879a9778"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/task_contract_logic.py",
+      "size_bytes": 2945,
+      "sha256": "73a7dd5b42987b6df74fc16036951414e48e4a43408f9c2f776e903d877a60f9"
+    },
+    {
+      "path": "geomind_lab/mimic/envs/track_clutter_motion_planner.py",
+      "size_bytes": 26404,
+      "sha256": "48d0fee7e7501e2825410f924d4986ad17d2193dadb5a4ac3e285a2c5c3808d2"
+    },
+    {
+      "path": "geomind_lab/mimic/geometric_inference_agents.py",
+      "size_bytes": 5138,
+      "sha256": "241e1a2d6c8a7d3cd1940431e5738c4756dc54bd8924b4c646042f121c13507c"
+    },
+    {
+      "path": "geomind_lab/mimic/simple_protocol_agents.py",
+      "size_bytes": 2620,
+      "sha256": "4c011cf53417085d7fd348a070789574b7a71ac982ecf23618a853332f579905"
+    },
+    {
+      "path": "geomind_lab/mimic/state_reindexing_benchmark_utils.py",
+      "size_bytes": 9885,
+      "sha256": "f9acb8337308bd4ae0269b4e3e1f6b3bf58c04848597ca0cd1b6cb40dd5339bd"
+    },
+    {
+      "path": "geomind_lab/mimic/utils/__init__.py",
+      "size_bytes": 60,
+      "sha256": "4664b43a4fb5f82c163992ffb2870b5a4b0493d31fb2c84bf5e431f3bf48e265"
+    },
+    {
+      "path": "geomind_lab/mimic/utils/benchmark_manifest_utils.py",
+      "size_bytes": 21096,
+      "sha256": "bbc2fc27594d8bd20397a3a1dd9a1c11c502bd7ae36104fa100d21d6a3d8969b"
+    },
+    {
+      "path": "geomind_lab/mimic/utils/config_semantics_adapter.py",
+      "size_bytes": 50909,
+      "sha256": "3e249ae3e7d522f5f82c8d979699b144a8717875c51d4b6527bf79bd5f040f7a"
+    },
+    {
+      "path": "geomind_lab/mimic/utils/family_runner_registry.py",
+      "size_bytes": 12389,
+      "sha256": "f5d79d91336ea775a96ea19ef79afc4879f2f22d26e6531911b48f7c5b62bc92"
+    },
+    {
+      "path": "geomind_lab/mimic/utils/joint_summary_utils.py",
+      "size_bytes": 5907,
+      "sha256": "c7a977c08b495147ef5205c6020dd01dcd01ef4fc1324e4d01beb0cf6f55d04f"
+    },
+    {
+      "path": "geomind_lab/mimic/utils/task_metadata_registry.py",
+      "size_bytes": 57197,
+      "sha256": "08f74dd9380c5572b301e036bb7b917b4d1cd1f0ce07a8fa0447477b39eda086"
+    },
+    {
+      "path": "geomind_lab/scene/__init__.py",
+      "size_bytes": 48,
+      "sha256": "76e43836be3282ec4eb7e9cc54f4fe075b3fe5254f9c04f119bffb8b3819d411"
+    },
+    {
+      "path": "geomind_lab/scene/loaders/__init__.py",
+      "size_bytes": 37,
+      "sha256": "2bbb86de0bd1ec8fecb90027345240ca6c6dc988d91c4cec44c096123a0cc8aa"
+    },
+    {
+      "path": "geomind_lab/scene/profiles/__init__.py",
+      "size_bytes": 45,
+      "sha256": "0dca19babac586a13cc231e520ca5d854d7b7d0a20231decd950f456bab82215"
+    },
+    {
+      "path": "geomind_lab/tasks/__init__.py",
+      "size_bytes": 30,
+      "sha256": "9cdaaef434b21ae6c206955d03fa2fd7ef2b7445b16bfc95607260ea3062a9f3"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/__init__.py",
+      "size_bytes": 39,
+      "sha256": "4965d5a37a201f73ccce93969db8a553a5ffa183c4887de2adeb9b64b18b3950"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/__init__.py",
+      "size_bytes": 38,
+      "sha256": "6e8797410d3d1c9d4cdeefcf3307a7af5242da5cdbe23cc3d5a97a26aa92f9ff"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/__init__.py",
+      "size_bytes": 49,
+      "sha256": "e4b88195b2804bd43862a3d6f3f9ddf8615e1ab4c5200c0dbcebadcea5a62d4d"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/__init__.py",
+      "size_bytes": 44,
+      "sha256": "e4d7a3af3c7d48ea50b36772ab05025edee5ee24bc653d2cbca41a6bccf7a95f"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/franka/__init__.py",
+      "size_bytes": 1568,
+      "sha256": "1611f292a113b3c4d2b444c07c9222b48961fcf3a859ba2765b20337231e4455"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/franka/agents/__init__.py",
+      "size_bytes": 48,
+      "sha256": "7518361fbc341ecc9fb891ad04fb9bc2bc525d69582ba2c87c7ddaad90688690"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/franka/franka_env_cfg.py",
+      "size_bytes": 4660,
+      "sha256": "b0ba6aa21cc99ba2f4334e85db5a10e300db76783c0306b5922f03185fcc61c2"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/franka/geomind_ik_rel_env_cfg.py",
+      "size_bytes": 279,
+      "sha256": "9b919c0070861c654f4e841151c3c44ecea03f9154e031db511d74ff35006edb"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/franka/geomind_ik_rel_visuomotor_env_cfg.py",
+      "size_bytes": 11954,
+      "sha256": "92301b54584c1912ec78ea4b8cd84633b822412d2766c2ad2640f0003ace46f2"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/config/franka/task_registry.py",
+      "size_bytes": 2496,
+      "sha256": "4eda0717222c20b6b2d04924314b356be511bc20838d9ac0eadffcbcf9a8092c"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/geomind_env_cfg.py",
+      "size_bytes": 52812,
+      "sha256": "24c69e6ebc22f2a57c4760254f4e36f01764be87623b95e68ada50c60de94806"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/geomind_scene_cfg.py",
+      "size_bytes": 37829,
+      "sha256": "2abd9dba641de9cf9689dbf34b3593a8f2fe9056c48a10226541e6d7c91708f3"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/layout_randomizer.py",
+      "size_bytes": 49630,
+      "sha256": "96ed3b0ea258f744298a5ee0280fa4046b7f801600e9faa42bcaf1baccb60923"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/mdp/__init__.py",
+      "size_bytes": 177,
+      "sha256": "172b8b6c07320a17ef1bd24a2ea963c3617952e0d8ec24fa430398f974595598"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/mdp/common.py",
+      "size_bytes": 4558,
+      "sha256": "f43f77a98232289b7d500946b7db2e95c0e38b3e87f1165d7a552000ae2b6418"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/mdp/observations.py",
+      "size_bytes": 9862,
+      "sha256": "e62e202a9c664acf7a1a21974baf7b08227875a633a0d694ba01933e57aec0bb"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/mdp/spatial_placement_debug_vis.py",
+      "size_bytes": 4605,
+      "sha256": "9ee58e9df5d4436feb2a4b2ab55a2f38a4f9d4d5bf276e1be19b004783af9b5e"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/mdp/terminations.py",
+      "size_bytes": 18690,
+      "sha256": "6de94d4af043069c75f2f1d58f0b64106f11f49ae2654f44162ce7bbcca1fded"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/task_evolution.py",
+      "size_bytes": 7645,
+      "sha256": "f840199de0e46fe4cc7fc94b6e816aa81f4e88e3faecbb306f73f01de6259d51"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/task_profiles.py",
+      "size_bytes": 40524,
+      "sha256": "4dcd9b852ad51b597c1d43173e67d3badf524f8b00d64ffcbeee527c13458a01"
+    },
+    {
+      "path": "geomind_lab/tasks/manager_based/manipulation/geomind/task_specs.py",
+      "size_bytes": 72249,
+      "sha256": "1a9ba362f3a155bc748930de765cf3ece3764dd5722d45619a294bf01542043a"
+    },
+    {
+      "path": "geomind_lab/utils/__init__.py",
+      "size_bytes": 37,
+      "sha256": "7486a2e8f504dc9df4b7e35b6082b6c11323b95b92459411ecffd4362720f589"
+    },
+    {
+      "path": "geomind_lab/utils/asset_utils.py",
+      "size_bytes": 4656,
+      "sha256": "ecf29ec9ee1b5ed27550dc9b3a91a98ae77e8d849ee8ed9f48a2845636dcfcc0"
+    },
+    {
+      "path": "geomind_lab/utils/headless_camera_video.py",
+      "size_bytes": 24016,
+      "sha256": "0cac7c10c83a2b8f1e0c06be4dc9d6f10c08358ca4ecbfc6f92cf7bdd516286d"
+    },
+    {
+      "path": "geomind_lab/utils/headless_rollout_camera_hook.py",
+      "size_bytes": 1804,
+      "sha256": "4a19e937a44d0854df28ed197f184d94bb584c1e151e9ee29d7ae3082f7bd02a"
+    },
+    {
+      "path": "geomind_lab/utils/object_physics_utils.py",
+      "size_bytes": 1721,
+      "sha256": "f52c158a3d9bd4909ae359ce7aeff1fc62c114e5fb3af017d491e282b037e974"
+    },
+    {
+      "path": "geomind_lab/utils/portable_paths.py",
+      "size_bytes": 7100,
+      "sha256": "4f477fcbf62b379f8ec06912909c89b05d9d22abae878a378c40096b44689c60"
+    },
+    {
+      "path": "geomind_lab/utils/render_utils.py",
+      "size_bytes": 1044,
+      "sha256": "655c7624d1ea5725baa0f7d875be257331af5b3598773f658aa419dd798b2d1f"
+    },
+    {
+      "path": "geomind_lab/utils/scene_utils.py",
+      "size_bytes": 8353,
+      "sha256": "bf3c2faf9111076a8124abce330b9564071dcaae39188fb714304a6d77b236c7"
+    },
+    {
+      "path": "geomind_lab/utils/ui_viewport_utils.py",
+      "size_bytes": 4584,
+      "sha256": "35b5cffbb6cc94d09d6e7e39fc05d1c740872d6caab80580d167b10cd4b61f6e"
+    },
+    {
+      "path": "migration/curobo/README.md",
+      "size_bytes": 1263,
+      "sha256": "0c66b8d5f66bebca59d5b920994987706b2a659bae06987657b1bdc47e2ad9f2"
+    },
+    {
+      "path": "migration/curobo/experimental/full_source.patch",
+      "size_bytes": 71662,
+      "sha256": "fcf2e9931edf2bd91f0b41bdc529d1bc521f2656cb3a9c243fbaef95d35e8f7c"
+    },
+    {
+      "path": "migration/curobo/experimental/provenance.json",
+      "size_bytes": 964,
+      "sha256": "f4e2e61cf2984d6e82180aadbb5a3a148a5f95bc1c8ce51d8fe94e7b756163df"
+    },
+    {
+      "path": "migration/curobo/former-editable/full_source.patch",
+      "size_bytes": 6239,
+      "sha256": "ae05610f97b612cbf61b94959028de08518514a8d8f75fa6ae4ac8ecd99dd1dc"
+    },
+    {
+      "path": "migration/curobo/former-editable/provenance.json",
+      "size_bytes": 522,
+      "sha256": "41ad5fee3f0279d10293f45b712b4dbc1100bd9fc989ad2d514c75cde7299af6"
+    },
+    {
+      "path": "migration/isaaclab/0001-skillgen-fr3.patch",
+      "size_bytes": 12624,
+      "sha256": "1b4bd6c67a1127c9f7d32a48debef83fed1ab60459a679bb78160ad4a65875eb"
+    },
+    {
+      "path": "migration/isaaclab/0002-optional-visual-debug.patch",
+      "size_bytes": 1668,
+      "sha256": "0ce43887851430e142f3eb24164e811915e8087e1cf5f116e415a67dd15ba752"
+    },
+    {
+      "path": "migration/isaaclab/README-current.md",
+      "size_bytes": 2340,
+      "sha256": "9a176a20cca4844ae54560bebc795616d912b070bc9f15014d6206611a5dd739"
+    },
+    {
+      "path": "migration/isaaclab/README-legacy-4.5.md",
+      "size_bytes": 6021,
+      "sha256": "656e3a07fe4e6397c9aa83eae34d13ab9542fd8fb7599d863e2ac992041ca6be"
+    },
+    {
+      "path": "migration/isaaclab/README.md",
+      "size_bytes": 2552,
+      "sha256": "93dd9f16d8d77378979382dbcaa3d6a6f913a2d40dd1489a736ff254d58480ec"
+    },
+    {
+      "path": "migration/isaaclab/full_source.patch",
+      "size_bytes": 1240486,
+      "sha256": "e9475ceadde7118710810beff76520b3146721cfab9eccc2c0e8e6e71a98c0c1"
+    },
+    {
+      "path": "migration/isaaclab/minimal-runtime.patch",
+      "size_bytes": 12350,
+      "sha256": "0103f70976a592f1c0472360892b96a2f84572ecb6234d559d3c0b4dcaddd6bc"
+    },
+    {
+      "path": "migration/isaaclab/patch_verification.json",
+      "size_bytes": 797,
+      "sha256": "2fdb9baf87f292464334dfa73f2615659c9ae824646506654a80fadb013d9de3"
+    },
+    {
+      "path": "migration/isaaclab/runtime_sources.json",
+      "size_bytes": 3730,
+      "sha256": "73be90f8d9ddb550df517bb300c432cf5a9d3fe13eecb1e9a32cfccaefd7293e"
+    },
+    {
+      "path": "paper/README.md",
+      "size_bytes": 1946,
+      "sha256": "f2346c7fa9b3ac568217d338307032b802e4f443cf897223883033154499653e"
+    },
+    {
+      "path": "paper/appendix_results_dashboard.tex",
+      "size_bytes": 16233,
+      "sha256": "644fa9d424a797911f151200e56f3ae54d8cb7c4059f05b372188515c225f068"
+    },
+    {
+      "path": "paper/appendix_results_dashboard_preamble.tex",
+      "size_bytes": 1230,
+      "sha256": "f81744a7156cfd6ff75593477d360c007bfcbae44fc328cef7f52dbcdd47d439"
+    },
+    {
+      "path": "paper/data/appendix/aug_drop_results.csv",
+      "size_bytes": 206,
+      "sha256": "517a8b8ea67fbb2313c9312fdf8fa27ee113f1d8075cfcba974a027ad23621a3"
+    },
+    {
+      "path": "paper/data/appendix/aug_results.csv",
+      "size_bytes": 506,
+      "sha256": "5490ac894adfc75e27db4ade0c1db311d65ae55dfc80e76550e15c2d3a8951ce"
+    },
+    {
+      "path": "paper/data/appendix/base_family_results.csv",
+      "size_bytes": 625,
+      "sha256": "54e4d83d02b9240b880df4d449349c6e0036c086df2f3dcf0b11da5da314ca26"
+    },
+    {
+      "path": "paper/data/appendix/capability_demand_results.csv",
+      "size_bytes": 415,
+      "sha256": "1348d849dfaa71835d8521881ab790dab81d32538c0678562bcc844b8bfc51bf"
+    },
+    {
+      "path": "paper/data/appendix/diagnostics_results.csv",
+      "size_bytes": 557,
+      "sha256": "7dd19f9234979a535bc4928befae54314511e3927f68795592db767b905e3510"
+    },
+    {
+      "path": "paper/data/appendix/task_level_results.csv",
+      "size_bytes": 2517,
+      "sha256": "fbace01e8926bedb31e901b6ff746c68b9662192673e5cf0389f0c1657d35ed5"
+    },
+    {
+      "path": "paper/data/appendix/task_model_success_54x6.csv",
+      "size_bytes": 9962,
+      "sha256": "a5c25482be804bc383c425f6fdf15fa37f6c04346c496833cf8e93b25c67a2c8"
+    },
+    {
+      "path": "paper/data/appendix/task_model_success_54x6_models_only.csv",
+      "size_bytes": 3540,
+      "sha256": "1aa387a15e16811f2cbc4239387dac01173ee57e26fb30e6b081f5a2ba0df1aa"
+    },
+    {
+      "path": "paper/figures/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper/figures/app_aug_drop_bar.pdf",
+      "size_bytes": 18497,
+      "sha256": "9d47c637a3e51a02b498bfe563ebde1fe372573cd946b9d347275d682809a5b1"
+    },
+    {
+      "path": "paper/figures/app_base_heatmap.pdf",
+      "size_bytes": 29089,
+      "sha256": "9546d58c77674547949f0ab43f7dda5c630aa2a7a25b32746202f35262df143d"
+    },
+    {
+      "path": "paper/figures/app_result_dashboard.pdf",
+      "size_bytes": 23355,
+      "sha256": "225a079fb42fb5f944f55b9f010fc6a8ded8fa53d75f9a226b6689f8de1522b1"
+    },
+    {
+      "path": "paper/generated/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "paper/generated/app_aug_table_body.tex",
+      "size_bytes": 1999,
+      "sha256": "9c08c436ee86650ec6c50c37242a08e0051a8daafadcc0f26b824d6f76a422d2"
+    },
+    {
+      "path": "paper/generated/app_base_table_body.tex",
+      "size_bytes": 2350,
+      "sha256": "488bee318243c2ef7d4591db65841c30e18d427c8d9f898d044384a23274bf5e"
+    },
+    {
+      "path": "paper/generated/app_capability_table_body.tex",
+      "size_bytes": 809,
+      "sha256": "5c819daf86b78a32d2ed6ceef1d27de9a8dff3be77ef04507dd10089fd969018"
+    },
+    {
+      "path": "paper/generated/app_diagnostics_table_body.tex",
+      "size_bytes": 807,
+      "sha256": "c98108ba25c311e74d6fdd37185ca081291685e443cf0fcaaeab583909f8f56f"
+    },
+    {
+      "path": "paper/rebuttal_disentangle_draft.md",
+      "size_bytes": 10452,
+      "sha256": "fb73ea21a445112822a382b1a37b5e1c7fcadb72f7671285cdae27b46e91d86f"
+    },
+    {
+      "path": "paper/rebuttal_metrics.md",
+      "size_bytes": 31591,
+      "sha256": "ef79ae0337a668316d8c9e6a69eb48012da7206f99f2ef934d1f8ef2bc2e77a9"
+    },
+    {
+      "path": "paper/rebuttal_q4_draft.md",
+      "size_bytes": 7904,
+      "sha256": "c379dd566f231fe81fada6ecf02e59cd3086e681a4e801827b130b0f7ea5d9f7"
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 849,
+      "sha256": "36bedf367f67d398a272f852dc8c8f4dd65b6e9b34d199e1e439867d50703b33"
+    },
+    {
+      "path": "scene_construction /arrange_object.py",
+      "size_bytes": 18146,
+      "sha256": "2ae0834b3cbbe39ba02437619d4b2471d07d0c531f130343261d8c08a9cc49fd"
+    },
+    {
+      "path": "scene_construction /arrange_object_new.py",
+      "size_bytes": 11895,
+      "sha256": "e115edca5907b6449db1297853fdf58d8e941f0dabcc6744b0c9bda1585b7ab4"
+    },
+    {
+      "path": "scene_construction /assets_catalog_full.json",
+      "size_bytes": 57546,
+      "sha256": "bc3ea752f602d805cc2d43dc67e16178c92161e5d8e067fd6a547cf75783760e"
+    },
+    {
+      "path": "scene_construction /assets_catalog_with_metadata.json",
+      "size_bytes": 53096,
+      "sha256": "0458dcbc059014a31ef48bd9ff149c5b0a2ae3f724003afc2e0f6e4b215a4ebe"
+    },
+    {
+      "path": "scene_construction /configs/asset_config.py",
+      "size_bytes": 19468,
+      "sha256": "9f32a8df550d8e7f639083fcfdae5592710e05a9ef6f09898a2ef48abc289e41"
+    },
+    {
+      "path": "scene_construction /configs/object_config.py",
+      "size_bytes": 692,
+      "sha256": "bcbd11f4cad3d1ca8ef3e5681e062866aef88a0a01b48f749ed7261ac6f2dda7"
+    },
+    {
+      "path": "scene_construction /configs/robot_config.py",
+      "size_bytes": 4210,
+      "sha256": "dc3d52588decb62e615d65f4af66294f8b369ae10ac3cf2087b3bb46c8eb8dd4"
+    },
+    {
+      "path": "scene_construction /configs/stage_config.py",
+      "size_bytes": 2009,
+      "sha256": "11aafa8c090d2950c37ebbe64491734fc6b341de4ced8ebaf5b65456b748ae0d"
+    },
+    {
+      "path": "scene_construction /generate_asset_visualizations.py",
+      "size_bytes": 12207,
+      "sha256": "901323dbb74ea894b75571618f4d8572a22e21b563c65ae10bf570578359f9fa"
+    },
+    {
+      "path": "scene_construction /generate_grs_home_asset_visualizations.py",
+      "size_bytes": 29097,
+      "sha256": "9cce62fc2727f0d050b80cd2f247750c8e2e142b3273b82d8018657709165c61"
+    },
+    {
+      "path": "scene_construction /generated_config/debug_asset_knowledge.json",
+      "size_bytes": 7397,
+      "sha256": "6fd46211d93d9b3cd4b86b000cc74b6659407c08cf9d5bc158458f94cc072d9e"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260204-011639.json",
+      "size_bytes": 830,
+      "sha256": "a8a42f152cceecbb6d1d21fde7eabc2d383b993469ddc808253fa0dae3ddfdf2"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260204-012205.json",
+      "size_bytes": 881,
+      "sha256": "ab3d1b9baa975e4b19e64e259181ce34a84478246c69d74c6159e8517d5c3e65"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260204-012921.json",
+      "size_bytes": 835,
+      "sha256": "589fe589f971db5498f0e2803e7850f159d1189968055739593268250bb05d26"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260204-013251.json",
+      "size_bytes": 835,
+      "sha256": "37e23fa86ca4b470eeb7dad1afa004404316b4b2b5704b08d4c55ea247c164fd"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260204-013518.json",
+      "size_bytes": 841,
+      "sha256": "6c3e756ee71df8635a2bf8f59dcb4a58376089c8db2b4335b818cf88b62d7486"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-225007.json",
+      "size_bytes": 809,
+      "sha256": "733f359ec3a7f55ac8b3589b337624efc9f658daace14be4dc39555f8db526c9"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-230724.json",
+      "size_bytes": 812,
+      "sha256": "18c7db5993834bbbd77334f7826a081d61dcf4ee570cc0511fb099a52c559f03"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-232625.json",
+      "size_bytes": 821,
+      "sha256": "aadef063126a5e5e3766016363386da03f8e145433411f361a6c7a3efb25f94e"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-232952.json",
+      "size_bytes": 817,
+      "sha256": "b067cb132205f408e3f8de923c58ec82a139c9288168b17aab063a76e9eb2de0"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-233451.json",
+      "size_bytes": 815,
+      "sha256": "41989de63430defc0f1d85e9824aa3a23bf1924409cc3e951cfae537dfe22ad7"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-233734.json",
+      "size_bytes": 811,
+      "sha256": "6ebe083e13a8345a3e7a5f461c3b6eec122e39a18e98922a9f3fa1247b03596a"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-234355.json",
+      "size_bytes": 820,
+      "sha256": "c4c13d21d97023982a7f3b9cf07af8729adc768480b84371fc7f226e8829cfb4"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260206-235258.json",
+      "size_bytes": 810,
+      "sha256": "f2b1ab9245c31e379ede2770c380c1fc5120c352f796520982eee02e13199cb8"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-002708.json",
+      "size_bytes": 816,
+      "sha256": "3f56deb500a5e00667e39d65e14340bd745a40c1be04fffdf6ed6abddf318b98"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-003900.json",
+      "size_bytes": 906,
+      "sha256": "6f8d966c223a991865778485acf89ea5261aec2a1d60149bddddacdc0011e90e"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-004429.json",
+      "size_bytes": 1095,
+      "sha256": "43587983086fec2b30b66e747e14f28692b9d02b737c6d61d6c28b4bd6373e3f"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-010951.json",
+      "size_bytes": 903,
+      "sha256": "fc9e09c24946ec4e179374ec9af489b6790997fb7d3de42a4cbacb69eabd5ad6"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-011158.json",
+      "size_bytes": 1088,
+      "sha256": "f73443d2e27d0886b81641f914844697b79d68621fceca20728be0420d03491c"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-011658.json",
+      "size_bytes": 1101,
+      "sha256": "5f8b872e065e7eb01c24a5297049d8d78ba66fd42b8dff80314d84eb627db0b9"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-012043.json",
+      "size_bytes": 1285,
+      "sha256": "9a308ce3b11eb5b2f0bf810d12eb1d0bf46d13922394aa7a4808939560859090"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-012346.json",
+      "size_bytes": 908,
+      "sha256": "f09905f50a9f3bd29261d9290b3788127556540c1561291c555283e64fabe7a1"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-012701.json",
+      "size_bytes": 1284,
+      "sha256": "b1eafe7a35aa28791f956ee1cc3a519ee9a53e9786424286791994272b139770"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-012806.json",
+      "size_bytes": 907,
+      "sha256": "9cc9135a0763408f464179d8fc46f470b82e1fd69746162f4559c352f0cb0263"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-012853.json",
+      "size_bytes": 905,
+      "sha256": "01d6c8f585d5fa95f32662929973246a3f5781953e59a5082daaaf42770bb5d1"
+    },
+    {
+      "path": "scene_construction /generated_config/scene_config_20260207-013235.json",
+      "size_bytes": 907,
+      "sha256": "3fee789814ede243ac683e1bf1c38360a7e69f43d01a71183ac1bdd909090a28"
+    },
+    {
+      "path": "scene_construction /json_construction.py",
+      "size_bytes": 3170,
+      "sha256": "06345c763ab8d6658483911ce0c2c637279a2e8a6f2330cb842cafe28bbf92b2"
+    },
+    {
+      "path": "scene_construction /random_sampler.py",
+      "size_bytes": 14680,
+      "sha256": "56b86686174d3dd94d5b8055a0d2a9a307c1460b314ab5e2bb182037b675c147"
+    },
+    {
+      "path": "scene_construction /scene_utils/add_collision.py",
+      "size_bytes": 1383,
+      "sha256": "d1778f8720da76894c7456e1225d3d2f25969ccad75d593a6c7b20ec9c853b0a"
+    },
+    {
+      "path": "scene_construction /scene_utils/add_light.py",
+      "size_bytes": 343,
+      "sha256": "92fef5df8897c46baaa0efc95e131fb2ec022e461b136497cf979c7c10fc7134"
+    },
+    {
+      "path": "scene_construction /scene_utils/add_planes.py",
+      "size_bytes": 2794,
+      "sha256": "86ce13235096ac0495c0bab6502195217b044bc5e014b9a9373a0d49380be317"
+    },
+    {
+      "path": "scene_construction /scene_utils/add_walls.py",
+      "size_bytes": 1674,
+      "sha256": "9befeb08f8c6488bc5bb2f842acb42cb6ec88b789e2ca32c4b9bf017b74b6365"
+    },
+    {
+      "path": "scene_construction /scene_utils/poisson_disk_disks.py",
+      "size_bytes": 2624,
+      "sha256": "656057be2f1c3d093f1550f17df181441d1bb83320d6ba529e6d4801a903332b"
+    },
+    {
+      "path": "scene_construction /set_up_stage.py",
+      "size_bytes": 4924,
+      "sha256": "4d4f90119b2a9b67d0dbe9b1eca4cd3c13bbbd0fdfeb927bd8f8d6bab8e2b560"
+    },
+    {
+      "path": "scripted_goal_policy.py",
+      "size_bytes": 1675,
+      "sha256": "c131c581b8a82a9e27b0abe9b09afe89bedfcdf84da0448691e0c0056bea8cae"
+    },
+    {
+      "path": "scripts/DEBUG_SCRIPTS.md",
+      "size_bytes": 10432,
+      "sha256": "522dcd0955cb9a563f91217c59275cf80f888abb1c2cd337ae3c29fa76495d5c"
+    },
+    {
+      "path": "scripts/README.md",
+      "size_bytes": 7874,
+      "sha256": "da8f7a030a44c2103993323cd9c53818c4dab58f8c72ee115ff97bf5787198ad"
+    },
+    {
+      "path": "scripts/aggregate_run_eval_matrix.py",
+      "size_bytes": 7015,
+      "sha256": "84540de8d784818429f5f0fb9cfdf2f1dafcc57b4835cb397ce440f42c1c70c1"
+    },
+    {
+      "path": "scripts/analysis_q4_grounding.py",
+      "size_bytes": 8824,
+      "sha256": "15c18ff688c87292cfddc926b65c3b36177b0ae98760a8fa2f97ccdba2e49636"
+    },
+    {
+      "path": "scripts/annotate.sh",
+      "size_bytes": 80,
+      "sha256": "773c810a765fce171496a564998c68468e22eea2847916d52205945ab421cfbf"
+    },
+    {
+      "path": "scripts/build_interactive_assets_layouts_inventory.py",
+      "size_bytes": 16176,
+      "sha256": "f64ae2f47215febd7f7f3bdd9b1604e7f716d169305e68f476b93efedbfd8143"
+    },
+    {
+      "path": "scripts/build_scene_name_index.py",
+      "size_bytes": 8961,
+      "sha256": "f67a35260cf3e9355f3222be3b986bf249cfe9fd912dd1e87174ce9e3caaf495"
+    },
+    {
+      "path": "scripts/build_task_model_matrix_54x6.py",
+      "size_bytes": 6367,
+      "sha256": "3aaf8ef5132eca0e4a634cced9fecc0e8140bc1375f4fdfa937bff4ec633ef48"
+    },
+    {
+      "path": "scripts/cache_atlas_materials.py",
+      "size_bytes": 1734,
+      "sha256": "6dc7760726e8507aa6b5340643ec67b946ccc63ce2358e0fab7d89e97b273769"
+    },
+    {
+      "path": "scripts/capture_geometric_randomized_scene_cam.py",
+      "size_bytes": 16861,
+      "sha256": "34f1faed01a935b1c2e1eb203927d6d89add4260896b87e6b6106266e3634aff"
+    },
+    {
+      "path": "scripts/capture_geomind_scene_check_images.py",
+      "size_bytes": 9929,
+      "sha256": "34e8b26830df7f58b03a5bda6fccf247e1ac1b90e8f57e2eb6eb8ccaa7e40683"
+    },
+    {
+      "path": "scripts/capture_geomind_scene_check_images.sh",
+      "size_bytes": 1066,
+      "sha256": "46c5f119c0543c1b87e5f387ac8b12166a454e396df519df30308830d9d58104"
+    },
+    {
+      "path": "scripts/capture_scene_cam_lighting_pool.py",
+      "size_bytes": 10446,
+      "sha256": "6d85e0219fecb108a95d3e8182611b26125dcfbf35892e477a75bedc23581b80"
+    },
+    {
+      "path": "scripts/capture_vla_task_initial_table_cam.py",
+      "size_bytes": 14428,
+      "sha256": "fc6483eb5e15af386042c0088b3e7e5c4d77cd5e1d24a8d3ced62183edd1f338"
+    },
+    {
+      "path": "scripts/capture_vla_task_initial_table_cam.sh",
+      "size_bytes": 1237,
+      "sha256": "5a2a47ff0cae233c6498100d6cd489567293136c47a837356e69ee2f75bd9122"
+    },
+    {
+      "path": "scripts/check_development_setup.py",
+      "size_bytes": 3089,
+      "sha256": "ce64499387efebbc3ffbe448454af636178eb56f29edabf871bd8d4a8f0e6df4"
+    },
+    {
+      "path": "scripts/check_direct_ablation_offline.py",
+      "size_bytes": 7102,
+      "sha256": "0b6a792d4c28147f3be8c8dd7d0b2814e82cd9f2ebc02a796ea2b2ea9d628506"
+    },
+    {
+      "path": "scripts/check_direct_instructions.py",
+      "size_bytes": 6704,
+      "sha256": "2d9bd40a4c30d1ff496c3ce0292ccd84c619ec6ec9846261832356707b4593cc"
+    },
+    {
+      "path": "scripts/check_direct_pairing.py",
+      "size_bytes": 17707,
+      "sha256": "06c2794e2cd92831c337b9e7f01f7f238bf9035c26362507d1bc7c433d463cab"
+    },
+    {
+      "path": "scripts/check_direct_scoring_invariance.py",
+      "size_bytes": 7216,
+      "sha256": "216b6839c60abdc58ddfb417c60c3614cab826e1f87ff9b0a1f59cb09b5039a8"
+    },
+    {
+      "path": "scripts/check_geomind_object_collisions.py",
+      "size_bytes": 13606,
+      "sha256": "233dca685ce5e13835089068741bcae3550a150e1933227237a87106b1d912cf"
+    },
+    {
+      "path": "scripts/check_geomind_object_collisions.sh",
+      "size_bytes": 588,
+      "sha256": "f8d6bab3993eafded2fa1de358319d6040ef98b632e92a3464369a69e2886432"
+    },
+    {
+      "path": "scripts/check_portable_install.py",
+      "size_bytes": 8614,
+      "sha256": "14fc014edc573c1c36c8abd22e49724826a9e4984d79f46bead45a8b23886e9c"
+    },
+    {
+      "path": "scripts/clear_scene_atlas_tabletops.py",
+      "size_bytes": 7941,
+      "sha256": "4108c30aeacc09ae74bb75dd9b7f5ff8139730da413f6b3ff88609665b260b67"
+    },
+    {
+      "path": "scripts/collect.sh",
+      "size_bytes": 79,
+      "sha256": "cbb53bf7f1e189c6d4f2f66595cc868840ced561344e1635e90b6085b543b78a"
+    },
+    {
+      "path": "scripts/collect_all_randomized_trajectory_tasks.py",
+      "size_bytes": 7334,
+      "sha256": "bf68f7768db3a257d27e418d84dd28bff4f3ddfe301bafa28065a67c6a30cd66"
+    },
+    {
+      "path": "scripts/collect_anchor_reference_trajectory_dataset.py",
+      "size_bytes": 37374,
+      "sha256": "e9085c5e8bbd91fb9ebcc243d164359cf58f28d8bfedaea5f036f37b3d1dad41"
+    },
+    {
+      "path": "scripts/collect_phase4_acceptance.sh",
+      "size_bytes": 5585,
+      "sha256": "df31e290b142d2061da6aa20f999447ab714679c89da29cc748dd1765cc0f2ea"
+    },
+    {
+      "path": "scripts/compare_layout_randomization.py",
+      "size_bytes": 12981,
+      "sha256": "5647115ac1c8334bdbfe38549bbdac694ee983e332d3a53d5e53b3895b65cad4"
+    },
+    {
+      "path": "scripts/configure_portable_assets.py",
+      "size_bytes": 9200,
+      "sha256": "2458d29614d4b62324a863ef76091c12785be75f7f0191a81c004c38927fd269"
+    },
+    {
+      "path": "scripts/debug_grasp_anchor_direction.sh",
+      "size_bytes": 1704,
+      "sha256": "0b0847c3badf8db66e3de3479332e74c21aaebfec8410b84ad7a0d3b97ac0976"
+    },
+    {
+      "path": "scripts/debug_grasp_anchor_distance.sh",
+      "size_bytes": 1702,
+      "sha256": "5cbd67e26b810ed9726c5cda65ce74b443d243777a58dd40fe222106d38adc21"
+    },
+    {
+      "path": "scripts/debug_grid_rowcol_grounding.sh",
+      "size_bytes": 1890,
+      "sha256": "1ecb0ca6539218ee206bcfd7958ffa96b567f9e292e4239e7877b35f6e06303d"
+    },
+    {
+      "path": "scripts/debug_isometric_extension.sh",
+      "size_bytes": 1788,
+      "sha256": "337b1e5535f716663baca492315a0955df6e46f0b0862ddd85c46d7c1373fbce"
+    },
+    {
+      "path": "scripts/debug_new_registry_tasks.py",
+      "size_bytes": 49014,
+      "sha256": "7b7c552c4431ae5c2c6b9702cf35201043033b66cce915fb6087469e55fe5bbe"
+    },
+    {
+      "path": "scripts/debug_ordinal_insert_static.sh",
+      "size_bytes": 1889,
+      "sha256": "8cb7e2367e9b786907096bea1aac8bb52fdfb14d931365e79aafcf55b0e530c7"
+    },
+    {
+      "path": "scripts/debug_perfect_midpoint.sh",
+      "size_bytes": 1781,
+      "sha256": "40d644cf5b39d6354bc6a1e4e8091c6f202ec48f9688e4ffb774f1eac1aaf82b"
+    },
+    {
+      "path": "scripts/debug_place_directional.sh",
+      "size_bytes": 4396,
+      "sha256": "5582775e1d51af1a29dca08174ca10bd9621555ce787ec53911c1361c1dc87ee"
+    },
+    {
+      "path": "scripts/debug_place_inside.sh",
+      "size_bytes": 1549,
+      "sha256": "908ff974f30d89363ebb8d2ef59ca01e5f6d4ba6c9e8c03349f960c93258c3be"
+    },
+    {
+      "path": "scripts/debug_place_inside_boundary_control.sh",
+      "size_bytes": 2257,
+      "sha256": "b01524f0ea2f98d18e893fcdda83bfd15cc8da5bdae70d13073d3dbaf8a5d103"
+    },
+    {
+      "path": "scripts/debug_place_on_top.sh",
+      "size_bytes": 1549,
+      "sha256": "8519416733b04b79693fe2ac217150dd9c6556439a1bf488b8718246cc32ac6d"
+    },
+    {
+      "path": "scripts/debug_point_symmetry.sh",
+      "size_bytes": 1759,
+      "sha256": "a1b0391b73a11213025a39eee438653d01c06d1576ba6be985dfe6142d9450d0"
+    },
+    {
+      "path": "scripts/debug_protocol_anchor_reference.py",
+      "size_bytes": 73239,
+      "sha256": "0415141c8a6c40ac0fa138d5eb09678d0cdad9db0ee5ba2545f6e1a5612abf70"
+    },
+    {
+      "path": "scripts/debug_protocol_anchor_reference.sh",
+      "size_bytes": 4737,
+      "sha256": "5e5e176b74ca8b9b0e7c60d84e709f5abcc35ccb77c5d9ff8c4777351dd4b411"
+    },
+    {
+      "path": "scripts/debug_protocol_constraint_selection.py",
+      "size_bytes": 41357,
+      "sha256": "a5172959a566cb8c11c2c2600ab4951fc7517ed6cb0cd61e60d5d8cef0db1f18"
+    },
+    {
+      "path": "scripts/debug_protocol_constraint_selection.sh",
+      "size_bytes": 4313,
+      "sha256": "3ed0b6f80aa8816b4a611d0ba46269724005be268e5c739dfe780283448c6aa0"
+    },
+    {
+      "path": "scripts/debug_protocol_geometric_inference.py",
+      "size_bytes": 78280,
+      "sha256": "441ecb03bb283bd6949b9ad41c23a10b6783c5d46bf48ac0bfa9d33bd2b48f02"
+    },
+    {
+      "path": "scripts/debug_protocol_geometric_inference.sh",
+      "size_bytes": 6842,
+      "sha256": "f5ced09ce49c2fc6a07fcc7a4907426c74885a67a24c8cca9cb5742bf9d65818"
+    },
+    {
+      "path": "scripts/debug_protocol_spatial_placement.py",
+      "size_bytes": 89651,
+      "sha256": "036a095700bfdc6673740d33e84eddeef7a51ceb2b77a01cc2b9ee85eb38937f"
+    },
+    {
+      "path": "scripts/debug_protocol_spatial_placement.sh",
+      "size_bytes": 4064,
+      "sha256": "fc2214385209c4128d4e6754911d3555d77edfcf0ce87096091efd6851b59504"
+    },
+    {
+      "path": "scripts/debug_protocol_state_reindex.py",
+      "size_bytes": 89330,
+      "sha256": "913fb6b3f16d6bb4bef1fb427690ca239784ebee38bc5860a26b4b1f1e4786fd"
+    },
+    {
+      "path": "scripts/debug_protocol_state_reindex.sh",
+      "size_bytes": 4090,
+      "sha256": "bc8c337bf7f0023cd6f5bd2c1700634c226ffd27fb181afc2c5d183c1777e6ef"
+    },
+    {
+      "path": "scripts/debug_reindex_extreme.sh",
+      "size_bytes": 2372,
+      "sha256": "bfcb785b5941e6b80c829fcf30922e15699f390b8ebd4edf341cc94cd3e7a39d"
+    },
+    {
+      "path": "scripts/debug_reindex_insert.sh",
+      "size_bytes": 2892,
+      "sha256": "dd9a4dfbedd382d94fa9248f83607b5d9ff87dbc1b4d71e6129a6de875780ad9"
+    },
+    {
+      "path": "scripts/debug_reindex_neighbor.sh",
+      "size_bytes": 2278,
+      "sha256": "4c0b4149e4bbe98289b24eb25ec258108eb298d4f478d528c8e280f21a4b93fd"
+    },
+    {
+      "path": "scripts/debug_reindex_neighbor_control.sh",
+      "size_bytes": 2210,
+      "sha256": "dd75df9146fccc5f60696bce4f697d72950888e40d4c25b2cd448e447ababe38"
+    },
+    {
+      "path": "scripts/debug_reindex_subset.sh",
+      "size_bytes": 1999,
+      "sha256": "5a7c288791e684ffbd8eb23670cec5a39e43686f475d1e2f8af14ca1e980c252"
+    },
+    {
+      "path": "scripts/debug_reindex_subset_control.sh",
+      "size_bytes": 2194,
+      "sha256": "ef9df82993e8436915dd861d04cd3f675b0a87557b06bf0496abefdb888e7733"
+    },
+    {
+      "path": "scripts/debug_select_exclusion_unique.sh",
+      "size_bytes": 1721,
+      "sha256": "0ef08859a87a8ac9c05bdce0785aa800fe6255347ef8c01f550a2caf2fba4ae6"
+    },
+    {
+      "path": "scripts/debug_select_visual_spatial.sh",
+      "size_bytes": 1717,
+      "sha256": "c8916a203172e7335efbd538e6f17400406f03e69074f7b08421cd13a93977f3"
+    },
+    {
+      "path": "scripts/debug_select_visual_spatial_control.sh",
+      "size_bytes": 2257,
+      "sha256": "04f0a0ce64619ead889eaad257e9b6c5f4095ab6fb2fc34bdcdf4596796273f5"
+    },
+    {
+      "path": "scripts/debug_square_completion.sh",
+      "size_bytes": 1580,
+      "sha256": "10ceb2c9f6b684f6718f30d4a5fdd69bde5c6b6420ed17e1bbbdc2f8c306f20e"
+    },
+    {
+      "path": "scripts/debug_square_completion_decoy_control.sh",
+      "size_bytes": 2510,
+      "sha256": "3f63c605300ef4ac602f3de771c5b7e4504a362c55839a34a0d3a760da4e670e"
+    },
+    {
+      "path": "scripts/debug_static_arrangement_scene.sh",
+      "size_bytes": 6217,
+      "sha256": "ac339df4dea2867bc0c8c557a356d55fcb755e64830db29fbc13394fdcf17bd8"
+    },
+    {
+      "path": "scripts/debug_task.sh",
+      "size_bytes": 9047,
+      "sha256": "49be542a27fcca750a4366106e302b252ccd7591af7dd4b9a9f3450e4701651f"
+    },
+    {
+      "path": "scripts/debug_task_registry.json",
+      "size_bytes": 8811,
+      "sha256": "117e3f166e1a6161cb2b4007a7366fedabd8eb761e7a4b182ed3e1017ea2d53b"
+    },
+    {
+      "path": "scripts/debug_track_clutter.sh",
+      "size_bytes": 1967,
+      "sha256": "8ef895c573d1166aecbee2c1bb5e5da9dd6ffb9eadbef4b691c4d80eaf990959"
+    },
+    {
+      "path": "scripts/debug_track_multi.sh",
+      "size_bytes": 1963,
+      "sha256": "ec8d6c0b8282ba934ae4ac0fe4500f9c8fa81039cc33158f8f51052db3f25271"
+    },
+    {
+      "path": "scripts/debug_track_single.sh",
+      "size_bytes": 2463,
+      "sha256": "a1301ce22b9b60d062a35f1fd14edf22191b2a1147f2acfe0687b476f2e8b035"
+    },
+    {
+      "path": "scripts/debug_track_single_control.sh",
+      "size_bytes": 2178,
+      "sha256": "11ea3882995af43680b2c9fa9c66e379a60c5be6aa124b008c964fa86dc93814"
+    },
+    {
+      "path": "scripts/debug_trend_continuation.sh",
+      "size_bytes": 1782,
+      "sha256": "5abb29f02d317b6e3ebfa061309e1d32fabe5b91bfad1d8aea40560d566a1b96"
+    },
+    {
+      "path": "scripts/debug_weak_destruction_control.sh",
+      "size_bytes": 1794,
+      "sha256": "55e6deb6a0aaf3573bacffe51e83bef944b4e67c8909db780b2cb775f452bcac"
+    },
+    {
+      "path": "scripts/export_debug_scene_cam_batch.sh",
+      "size_bytes": 3071,
+      "sha256": "c1d706d877d9acee9e991c16380dabc62bc6542d0bd9ea1b92e7ebbf6d4d9df7"
+    },
+    {
+      "path": "scripts/export_environment.py",
+      "size_bytes": 2207,
+      "sha256": "965e1b2e6e172461b0eceb02f0396dd78f94836f0e69b37d2969ac98821ddda2"
+    },
+    {
+      "path": "scripts/export_geometric_inference_trajectory_dataset.py",
+      "size_bytes": 5880,
+      "sha256": "bdb5093ad72606bfabe78d552730c6e3af445ae82067f41aaf7a186ab74cab07"
+    },
+    {
+      "path": "scripts/export_lighting_pool_headless.sh",
+      "size_bytes": 762,
+      "sha256": "13b7a0a46fe9df8cd75c5e949de23fdc2e9c6f50c2e0d2b26fe6eb66d757910d"
+    },
+    {
+      "path": "scripts/export_paper_appendix_data.py",
+      "size_bytes": 21646,
+      "sha256": "ce923fdf09a7a61190c08bf509430242afca9fecad96f114f6f50bb36b8c623e"
+    },
+    {
+      "path": "scripts/export_scene_check_images_markdown.py",
+      "size_bytes": 3473,
+      "sha256": "9aa24ac94eb758abec61a374b946953a3d03a5c22d0e72481267bb5f1255f4da"
+    },
+    {
+      "path": "scripts/export_simple_task_trajectory_dataset.py",
+      "size_bytes": 7026,
+      "sha256": "973ec57dbef289e760dd32765f88f1f117e3f5740793ed54040868adc78ef8ae"
+    },
+    {
+      "path": "scripts/generate.sh",
+      "size_bytes": 80,
+      "sha256": "781d4fb0d5eb5cba1fc5ab7b850d11b5d4e5968c1664c56b9ea9cb1e07192d5b"
+    },
+    {
+      "path": "scripts/generate_geometric_inference_matrix.py",
+      "size_bytes": 19858,
+      "sha256": "07d89608adeadf8ca52c43883a293ab68f7d911dc7c7ee1375d5bdd111fec51b"
+    },
+    {
+      "path": "scripts/generate_state_reindexing_matrix.py",
+      "size_bytes": 25855,
+      "sha256": "96654b8bc60c241499551b1a730c0dbdca1ec66622f0412638aba547c31c5b76"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/README.md",
+      "size_bytes": 470,
+      "sha256": "7948c68396be4d374ec471423362f1fb51a8d42c41874478d6a8dd24746b5ddb"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/_run_single_task.sh",
+      "size_bytes": 3378,
+      "sha256": "60917e1a112a7cfa2b696c275037a24ac2790b2cb3dcab88d391587f696142da"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_extension_grid_left_column.sh",
+      "size_bytes": 312,
+      "sha256": "ee99b96c2d0c894b822c9fc9bc8c97ee42cc1ce83b6f6d3ce4fcd8a8ee9e06c8"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_extension_grid_top_row.sh",
+      "size_bytes": 309,
+      "sha256": "f41a20516e7c6ec302df91e8a62aff47137d8a1586a1cc9f157295a376ed1aa6"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_extension_primary.sh",
+      "size_bytes": 298,
+      "sha256": "85911e3226e28241089f02c674fd4d9f664816abbae8845434bab937f366a8ca"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_extension_vertical_primary.sh",
+      "size_bytes": 307,
+      "sha256": "fe000c5ba6a7c13804beb1e522fd5ab5bdaa8d7dc8a34ea246b49d1eb3cd18b4"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_implicit_trend_primary.sh",
+      "size_bytes": 299,
+      "sha256": "e2bb700eb2f31458ff8ca69c41600398e3aac9b838dec3a349058fc6aceaca4c"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_implicit_trend_stress.sh",
+      "size_bytes": 307,
+      "sha256": "880f4b352ff6361c7fc851f80ca3c7f8b917001e3750a7b94cbff90aee183949"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_implicit_trend_weak_destruction.sh",
+      "size_bytes": 322,
+      "sha256": "86effdee7d3b6c356dec571f0ef4efa666aeb4fdcecff03f7b4852e99a6dbb94"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_implicit_trend_weak_destruction_stress.sh",
+      "size_bytes": 330,
+      "sha256": "b7205f3d490f077af5c4df2fd9a8e19e33b8c6deab68a4a68de389d34d64a542"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_isometric_extension_primary.sh",
+      "size_bytes": 309,
+      "sha256": "62788dd014e47451b325b7640e5c71a94f722446b1f880084df0ef8db14e6051"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_midpoint_primary.sh",
+      "size_bytes": 304,
+      "sha256": "67e70f7e3a570e354a69455399fd140d66cf4074ce51d1cacc8a94c3c505447d"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_perfect_midpoint_primary.sh",
+      "size_bytes": 302,
+      "sha256": "cb585517838ce6a226565d1895b1b458faa739656501bb85ce2d7d04ede41226"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_square_completion_primary.sh",
+      "size_bytes": 288,
+      "sha256": "5aa995ba436699f57525ca9ab7bad379d437eabbe2db5536dc2fcf098ffd6f2c"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_square_completion_skill.sh",
+      "size_bytes": 321,
+      "sha256": "409aa3237661ce21169b07da04733a0cd59b0060cb4d52b59d12340acdfaa333"
+    },
+    {
+      "path": "scripts/geometric_structure_runners/run_geometric_inference_square_completion_stress.sh",
+      "size_bytes": 386,
+      "sha256": "9dcccebce72cd748863d020aebbb876d9dc101a5a1d1644903a0703ebd17071e"
+    },
+    {
+      "path": "scripts/geomind_eval_diagnostics.py",
+      "size_bytes": 46979,
+      "sha256": "be3701fdecc60d2f430a9a672cf14f4f60604b1207409d14a50cc87ad39e4698"
+    },
+    {
+      "path": "scripts/human_review_run_videos.py",
+      "size_bytes": 44176,
+      "sha256": "c42d6b6afdbf6016605c4090027c2f6a72952e9b622472d4a09aae43301da2b1"
+    },
+    {
+      "path": "scripts/inspect_geomind_env_cfg.py",
+      "size_bytes": 27216,
+      "sha256": "b88971eeb14820aa96d93fc23c428015845ef61917019dfcd29a99c39c41dcc4"
+    },
+    {
+      "path": "scripts/inspect_geomind_env_cfg.sh",
+      "size_bytes": 1118,
+      "sha256": "13c92788f024e029f8add1892d505cecc115efccc15758fa1650c6b9db0159b3"
+    },
+    {
+      "path": "scripts/lib/geomind_conda.sh",
+      "size_bytes": 1630,
+      "sha256": "f3cb92acfb6b6c9c6d5acb2a3ae711c66c3a27e0fd749619c7744b490bc7616b"
+    },
+    {
+      "path": "scripts/lib/geomind_debug_task_common.sh",
+      "size_bytes": 6429,
+      "sha256": "d1278be60786321c0766d02630c87abbf3a5bb9de7d15902b4fcdb8ae0119632"
+    },
+    {
+      "path": "scripts/localize_atlas_mdl.py",
+      "size_bytes": 1201,
+      "sha256": "4a2c8ca2dbb855fc02e3b530b4367ebb3f9e9f6ae5da3bb68fdea6c21174d08c"
+    },
+    {
+      "path": "scripts/merge_human_review_into_task_level_matrix.py",
+      "size_bytes": 7004,
+      "sha256": "848c399037a0cfbc99e86e2ef9ec2cb32a286e7f248f722a6ad60f0675f6fdf9"
+    },
+    {
+      "path": "scripts/merge_human_review_summary_task_level.py",
+      "size_bytes": 7187,
+      "sha256": "be2346fc5a108fcbcc248e2c92d272ec8b8fd34615ea0e3e6ce4479231b5bd19"
+    },
+    {
+      "path": "scripts/metrics_lite.py",
+      "size_bytes": 20200,
+      "sha256": "7a3ba2b3b28530f17df29e676e34aaf80a25b277fd010db6423b321c9c96169e"
+    },
+    {
+      "path": "scripts/metrics_lite_sanity_check.py",
+      "size_bytes": 16338,
+      "sha256": "4d00f6e639e4abd9d4e291ebd576c978356e68253dffe4f2a2f19cb2e5e8de3e"
+    },
+    {
+      "path": "scripts/metrics_trajectory.py",
+      "size_bytes": 21283,
+      "sha256": "3cf0a5a237a7d73feb220cd6d0a06103cdf93b0637cd21bef7433eadcc8a5db9"
+    },
+    {
+      "path": "scripts/openpi_client_all_models_main.py",
+      "size_bytes": 8139,
+      "sha256": "3546310731e7267feab4b885ca42445bbeef8c65be452974d2e892b29047cadc"
+    },
+    {
+      "path": "scripts/paper_method_recheck_report.py",
+      "size_bytes": 7859,
+      "sha256": "51525db03e9e4138da55fdfcc5b0e727e8e522b18c7e9c2fa65486fd00909c4d"
+    },
+    {
+      "path": "scripts/paper_q2_q3_ability_tables.py",
+      "size_bytes": 11746,
+      "sha256": "a7e4192c70321f6825939d27f179f220eb95eeff930af7f9581f3e3bbf445f93"
+    },
+    {
+      "path": "scripts/pi05_direct_family_sge_tte.py",
+      "size_bytes": 15862,
+      "sha256": "0fd75e5503bf2ac7f98f31d6366f3cf012cbd9e4305be1cc5fd59f0cb568c0de"
+    },
+    {
+      "path": "scripts/pi05_reach_false_positive_audit.py",
+      "size_bytes": 12759,
+      "sha256": "d54ae38c05ad38e04d7725fc04e0e51dcdd4643b38981630a0c82b7abd11cee9"
+    },
+    {
+      "path": "scripts/plot_app_aug_drop_bar.py",
+      "size_bytes": 446,
+      "sha256": "6e95bdc475a4d539aec2bf3217978b11f979d82619b18d0b99daf127263d6ae6"
+    },
+    {
+      "path": "scripts/plot_app_base_heatmap.py",
+      "size_bytes": 446,
+      "sha256": "3bf8c36c424c00bd2829b7073c14134395246aeac84d0a793aa5e29ac423c825"
+    },
+    {
+      "path": "scripts/plot_app_result_dashboard.py",
+      "size_bytes": 443,
+      "sha256": "4fbf75567d3a30161c060c1877d342cc3d2ac0e55bf43e4b41f7f022072e149f"
+    },
+    {
+      "path": "scripts/plot_appendix_dashboard.py",
+      "size_bytes": 9189,
+      "sha256": "5123a2f0cca7d89f5d49b893b215bcfd32ec48bf5873b826f92b1a57b05ef43b"
+    },
+    {
+      "path": "scripts/preserve_cleared_scene_metadata.py",
+      "size_bytes": 2401,
+      "sha256": "cea240c3dc4109ff8eeee47917a0b416513ab28c108c6fa035dc6ae9c47daa07"
+    },
+    {
+      "path": "scripts/preview_layout_randomization.py",
+      "size_bytes": 9133,
+      "sha256": "5669ab5f8db849b0a4d8c5599d6d32d827b6ac05043986acaff06488a3a78269"
+    },
+    {
+      "path": "scripts/print_task_instructions.py",
+      "size_bytes": 2256,
+      "sha256": "cc14abc1768437d3c83af031b623acf926a0220d4f4dfcb93911db21b9827f53"
+    },
+    {
+      "path": "scripts/randomize_scene_wall_materials.py",
+      "size_bytes": 4799,
+      "sha256": "c955b795c0a82e02541f5bf947d2c6490f7e423ef62d68459d85ad6fa60dda82"
+    },
+    {
+      "path": "scripts/reach_dwell_audit.py",
+      "size_bytes": 25013,
+      "sha256": "cce96fc267f4a7ae4760ffc4b9300b8823584af5b1c92e4d77a56dbe8f0302d5"
+    },
+    {
+      "path": "scripts/rebuttal_metrics.py",
+      "size_bytes": 10293,
+      "sha256": "020b99c2ba77aef938bd21b4e4a5cebfd71d481538670b4087a2ec5a74988147"
+    },
+    {
+      "path": "scripts/render_appendix_tex_tables.py",
+      "size_bytes": 7695,
+      "sha256": "c85ecb3a1884b0fe0d3dde3602a3de1d83036d250254104aa954da039dc61961"
+    },
+    {
+      "path": "scripts/render_cleared_scene_atlas_batch.py",
+      "size_bytes": 1673,
+      "sha256": "a479c5624fbef122f8e89eef09baa182d3d63decd21812d8f0c131be64633145"
+    },
+    {
+      "path": "scripts/render_random_scene.py",
+      "size_bytes": 34135,
+      "sha256": "2fa97d0c969ece2dc6e6d85838512356ba7280df529c973d686d4f68234c0bf4"
+    },
+    {
+      "path": "scripts/render_scene_atlas.py",
+      "size_bytes": 8665,
+      "sha256": "27a83e1e0b3e0c8c967cdfebe86a2a7db6331658b251a098cf624a38346d402a"
+    },
+    {
+      "path": "scripts/render_scene_atlas_batch.py",
+      "size_bytes": 1770,
+      "sha256": "7f2eac20609a9027c248ea1a207d8a40cd7372b91a4c0f528547c0bf96e6225e"
+    },
+    {
+      "path": "scripts/repack_annotated_tasks_core.py",
+      "size_bytes": 1361,
+      "sha256": "3ada31f656b8d3bbc219caf03d9c6f5a4403b3b6cc72cb2e5bb2541fb8cd0134"
+    },
+    {
+      "path": "scripts/replay.sh",
+      "size_bytes": 78,
+      "sha256": "cd01c0084350ca5100fdef6b7e4999bd8c506797091da40536263e8b87a4d474"
+    },
+    {
+      "path": "scripts/report_suite_summary_by_taxonomy.py",
+      "size_bytes": 12123,
+      "sha256": "ea1550f1ac23072cafa523859a27373052d0714b4cfcd94eec5e628a0cecf7a5"
+    },
+    {
+      "path": "scripts/reproduce_canonical27.py",
+      "size_bytes": 8845,
+      "sha256": "26dfe752cdcbaf6c5f050f3455157c8d0fbebab91df589858b80f40d993a9e6b"
+    },
+    {
+      "path": "scripts/review_run_eval_openvla_all.sh",
+      "size_bytes": 497,
+      "sha256": "ddb132542d8d8c456fc86872b49bd6f7b52a348eee416ddbdaf431333c8d9100"
+    },
+    {
+      "path": "scripts/run_capture_geometric_randomized_scene_cam_tmux.sh",
+      "size_bytes": 2231,
+      "sha256": "0fd623e325b0ef3510842859b8f0cd412e661c92aa153285dc645d3fae14f765"
+    },
+    {
+      "path": "scripts/run_debug_wrappers_headless_video_batch.sh",
+      "size_bytes": 4068,
+      "sha256": "b2f02fbc236de070489d0f557e632f7dd2e3be32aa547bd08d6bbc63d2dac3c1"
+    },
+    {
+      "path": "scripts/run_direct_pairing_dump.sh",
+      "size_bytes": 3600,
+      "sha256": "0c66a2d1e10d5e8c42a2fe01aaa29f661a2af8a3330b3d442159e9391f259eb9"
+    },
+    {
+      "path": "scripts/run_geometric_explicit_baselines.sh",
+      "size_bytes": 16537,
+      "sha256": "2b5eecc2ee6798e84414abf7518ec7e60e25f055d5a698f90ae28c9499325299"
+    },
+    {
+      "path": "scripts/run_geometric_explicit_minimal.sh",
+      "size_bytes": 2707,
+      "sha256": "758c7d46f540ba80bffa2b90e397715a35c6761a34b5e9f7340ca8d6b4db1aab"
+    },
+    {
+      "path": "scripts/run_geometric_inference_matrix.sh",
+      "size_bytes": 15910,
+      "sha256": "c4a633d621e098c22acac3746ca61152f4d8a526e3871157d06d9a22c698521c"
+    },
+    {
+      "path": "scripts/run_geometric_structure_protocol_baselines.sh",
+      "size_bytes": 11497,
+      "sha256": "a3e59d6d7a9457a9b8c6d87c936737f40cb455e4c02aeb650ce1984f5f89dd4b"
+    },
+    {
+      "path": "scripts/run_geomind_benchmark.sh",
+      "size_bytes": 25569,
+      "sha256": "a45e777572aaab111b8a097337312ac1456f34efe124ccbdfef7e59dc6bf1bfc"
+    },
+    {
+      "path": "scripts/run_geomind_new_task_probe.sh",
+      "size_bytes": 6000,
+      "sha256": "22d2eb0c551d732e924ee90df25f62aa6fd98d820d88885b23646888d02ab899"
+    },
+    {
+      "path": "scripts/run_geomind_smoke.sh",
+      "size_bytes": 2721,
+      "sha256": "bcc6e2d608930a48d7930823f59ad01c63dff3544f8cb594569cbd76f6f5d386"
+    },
+    {
+      "path": "scripts/run_geomind_suite.sh",
+      "size_bytes": 6014,
+      "sha256": "d3269c00128838f627021065f108a8871cb86ca061dc04e40ff3a7b48a003239"
+    },
+    {
+      "path": "scripts/run_new_registry_tasks.sh",
+      "size_bytes": 3533,
+      "sha256": "7b9228c880e75f062c56e8a684226876c3115bc57f0cdf560c16107d71671c42"
+    },
+    {
+      "path": "scripts/run_openpi_client_all_models.sh",
+      "size_bytes": 396,
+      "sha256": "d0b233faa09db8e92ebce3a078a24e689cdabf43a5a82af472188edbb1f4793a"
+    },
+    {
+      "path": "scripts/run_openpi_vla_eval_all_models.sh",
+      "size_bytes": 4300,
+      "sha256": "3b8a9011a347e2a8a4ce0afc7d38a496daa6a781d7cfb4e75a22909adcb3d87b"
+    },
+    {
+      "path": "scripts/run_place_on_top.sh",
+      "size_bytes": 3530,
+      "sha256": "142ef16d079beba7359c4c5a2c05e729f36ef2f9028f2aba016509f323124b2d"
+    },
+    {
+      "path": "scripts/run_protocol_smoke_regression.sh",
+      "size_bytes": 4576,
+      "sha256": "f100b7234601c9ca526755cc7d768c498f2ce9219298ebf23fb26751a82af095"
+    },
+    {
+      "path": "scripts/run_remote_policy_isaaclab.sh",
+      "size_bytes": 219,
+      "sha256": "022709bb240152f649e0c2b37ed8f70369f822985c76c733c5deff2fcc05577c"
+    },
+    {
+      "path": "scripts/run_remote_policy_isaaclab_vla.sh",
+      "size_bytes": 223,
+      "sha256": "811e5971a52e2c8e85e3200a5f197f375022493a2edd55731d51d64bc2bd29e4"
+    },
+    {
+      "path": "scripts/run_semantic_protocol_baselines.sh",
+      "size_bytes": 6901,
+      "sha256": "84f543f34c4d4be2a31223c27158842173ad9c11766e0196caea125b4ab0d1b9"
+    },
+    {
+      "path": "scripts/run_state_refresh_protocol_baselines.sh",
+      "size_bytes": 10018,
+      "sha256": "4b634c8bde47c652fd517b047254138d657e71797706542c22dca2a263a00267"
+    },
+    {
+      "path": "scripts/run_state_reindexing_matrix.sh",
+      "size_bytes": 18432,
+      "sha256": "be2f6f9206e8f0dc5118edd99a462952cd132a13ec58948351f3718e21ca86a2"
+    },
+    {
+      "path": "scripts/run_unified_debug_task.sh",
+      "size_bytes": 3859,
+      "sha256": "c081aece93919d41f709d99a3ffe994ed283830d0032f088c30bf01d6450405b"
+    },
+    {
+      "path": "scripts/run_vla_eval.py",
+      "size_bytes": 41095,
+      "sha256": "a34a12d34f06b677d62d1a0434f95568e427baf5a768de28ca653dee382211f0"
+    },
+    {
+      "path": "scripts/run_vla_eval_all_models.sh",
+      "size_bytes": 3738,
+      "sha256": "2a60ce43f23dfbedbbdd2a91afecc32eeb80cca9cbdcf5fd10cdd873eeee2d83"
+    },
+    {
+      "path": "scripts/run_vla_motion_regression.sh",
+      "size_bytes": 9655,
+      "sha256": "9c1d76c61c2d5be7c6cf057911cc510a6d85b514f2091da6c1a2df1cd46bceab"
+    },
+    {
+      "path": "scripts/serve_delivery.py",
+      "size_bytes": 6651,
+      "sha256": "bfa9ffc461c43db57b5524053b2b4a46ad84a422fcbf8249a25916a3723580e0"
+    },
+    {
+      "path": "scripts/setup.sh",
+      "size_bytes": 67,
+      "sha256": "482fa7721d0bd0b8a373c6c9dabd7abb8e93042dd91102f73915e0ff33f7fc7e"
+    },
+    {
+      "path": "scripts/smoke_place_on_top_headless.sh",
+      "size_bytes": 1614,
+      "sha256": "fc05076a57e49747d0ac415bb9d6d9120e48417e3540950d3884f713434c6064"
+    },
+    {
+      "path": "scripts/state_refresh_runners/README.md",
+      "size_bytes": 399,
+      "sha256": "48a957bdd5e4847c5df09124a2f7725a3d8ffb6896e115f3005ca141861b1862"
+    },
+    {
+      "path": "scripts/state_refresh_runners/_run_single_task.sh",
+      "size_bytes": 4244,
+      "sha256": "16cc3d8c0fb820b17c9f5b3f532e696b97a3c865f78f71c27e0435e115c8d5df"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_historical_identity_tracking_original_middle.sh",
+      "size_bytes": 270,
+      "sha256": "82be858ac42195d80cd42f43e21346d9f8763693774441f6db71a1294c7b315b"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_object_identity_tracking_original_frontmost_multistep.sh",
+      "size_bytes": 316,
+      "sha256": "382aed26696605c6e9c2a07d390304a688730d22e4c0451f3ee9782038b521cb"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_object_identity_tracking_original_middle_single_step.sh",
+      "size_bytes": 276,
+      "sha256": "31b8df868ddb5a98a9d425b5bc2eb3c81d47d30a9e49246cb18ec86d0c94c66f"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_object_position_update_edge_frontmost.sh",
+      "size_bytes": 274,
+      "sha256": "358ee5829dea2b4143cd52e8383933025c97e9ea88c75ef5b3b6b9827f45defe"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_object_position_update_insert_second.sh",
+      "size_bytes": 274,
+      "sha256": "36a8065f20ad0fd38186d238c3b4683a64e94a2bd43d2096a0699947a24c76b7"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_extreme_primary.sh",
+      "size_bytes": 267,
+      "sha256": "3e97ae8cbe79eae6a30ba5ef18e49355319a6e30a82f16d14d92af9306471432"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_extreme_stress.sh",
+      "size_bytes": 273,
+      "sha256": "c19b4072ae82b3afafd1e990aa80a40f37bce55e5184889de7224a2733a7824a"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_insert_primary.sh",
+      "size_bytes": 273,
+      "sha256": "92cb7e5529e91a32d0de41d1034432d590daff59957b16712700e557bdea2b15"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_insert_stress.sh",
+      "size_bytes": 279,
+      "sha256": "bc4896941e3f55927f0c03b36c85af75c063dc1027237073b8b1e04ad571d20b"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_neighbor_primary.sh",
+      "size_bytes": 282,
+      "sha256": "17d671e6ef90c5cb689198b2d3eae41e33b05c270651ce7d9938f77a949cf95f"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_neighbor_stress.sh",
+      "size_bytes": 288,
+      "sha256": "c3fbd041f569b01f49a9579e8764c401992281303cac0a81fedad244294a7d5f"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_subset_primary.sh",
+      "size_bytes": 277,
+      "sha256": "d0eae510d18d448f85ab09468c4d5bd016288f281a80aa97518029c187b706f0"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reindex_subset_stress.sh",
+      "size_bytes": 283,
+      "sha256": "131a2c1fe90ef2121f75d3128f6d73e399f60bcfc3b63f7694753b66f5bc01c5"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reorder_with_distractors_filtered_frontmost.sh",
+      "size_bytes": 277,
+      "sha256": "191b3a8e62b94b87a07fd37fe1c95a128efcb3051036a95988855a4dd1274c3e"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_reorder_with_distractors_middle_of_subset.sh",
+      "size_bytes": 277,
+      "sha256": "9e467f8a4fe9b46a79e7ef4168dd0f525f1fb93aedd1d6c4106a506e3f0765e0"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_state_reindexing_current_leftmost.sh",
+      "size_bytes": 259,
+      "sha256": "5a7472e2711f5061466c889506db858aefa660f14ec6ea80e1b8c1700e1f80ee"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_state_reindexing_current_leftmost_after_rightmost_shift.sh",
+      "size_bytes": 259,
+      "sha256": "396a1fa37aaf605a6258b86a5e7b1ec280d1a8de3be53855564a896f92e5931d"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_state_reindexing_current_rightmost.sh",
+      "size_bytes": 259,
+      "sha256": "122d2d7cf51437931c380128d3c5910aefd8aff5082ab163bd7b4ab364eb7b66"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_track_clutter_primary.sh",
+      "size_bytes": 281,
+      "sha256": "758d15968f32ea8097611c2ee7d490b23de6efe762b278f82ceed6fab17102c8"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_track_clutter_stress.sh",
+      "size_bytes": 289,
+      "sha256": "e9ab76dea04632c882a8ba47cfc62ef86a168e2413955b445562229005d6700d"
+    },
+    {
+      "path": "scripts/state_refresh_runners/run_track_multi_stress.sh",
+      "size_bytes": 322,
+      "sha256": "699c03b557df9103ea7a4283733676b3e0af89e2c0b3fff91dee71e9169dbdd0"
+    },
+    {
+      "path": "scripts/summarize_geometric_inference_results.py",
+      "size_bytes": 23160,
+      "sha256": "647f5234f189081e71e5f44b5a44a8ae1c3303695bce976d63f733e09cda6bb4"
+    },
+    {
+      "path": "scripts/summarize_geomind_benchmark_results.py",
+      "size_bytes": 12780,
+      "sha256": "88df6092f8d7016f21f116b591d5aca8947ee173a2d287ae0592a29e7767e04e"
+    },
+    {
+      "path": "scripts/summarize_state_reindexing_results.py",
+      "size_bytes": 21143,
+      "sha256": "3e4811fcbaae11d99d0fc594a54e0e6553d49a20c9e92dfbfa2c8af2d6c5dd90"
+    },
+    {
+      "path": "scripts/tte_branch_unified.py",
+      "size_bytes": 6145,
+      "sha256": "2cc73b12f3a2ea0e53d5cad4fbff07368853794a3cef9ce565f9113330a466d2"
+    },
+    {
+      "path": "scripts/tte_recompute.py",
+      "size_bytes": 11822,
+      "sha256": "527820ccfd3f8b12bfdc5d04cd04e3e7ac1cce8a3a2d2ddfdc7070326e92aed4"
+    },
+    {
+      "path": "scripts/update_cleared_scene_atlas.py",
+      "size_bytes": 2502,
+      "sha256": "e9c5cdf0ca1e04c2827c09ad1fddad3e73c3f06e0d33788440d4718b2df6936e"
+    },
+    {
+      "path": "scripts/update_scene_atlas_previews.py",
+      "size_bytes": 2290,
+      "sha256": "9ad0586559fd85d2053e8d6e2faef4e0676274716f0b8185a0064ac61e4281da"
+    },
+    {
+      "path": "scripts/useful_cli.sh",
+      "size_bytes": 215,
+      "sha256": "d811f690d084f0670d1919f4428d6dac08139bdeac852c87cf234a4280d7122b"
+    },
+    {
+      "path": "scripts/view_geomind_env.py",
+      "size_bytes": 27003,
+      "sha256": "5f9b4fb44c603a5144651fa7b2cfeed3de36f47a7ca0848776833822e0b7f605"
+    },
+    {
+      "path": "scripts/view_geomind_env.sh",
+      "size_bytes": 2099,
+      "sha256": "bc3793e0cc0fae0f8479613e68b1fd62cd25618b7015a06efe56af7a68b1c6bb"
+    },
+    {
+      "path": "scripts/write_task_info.py",
+      "size_bytes": 1778,
+      "sha256": "9b3b8b7e3951c285d7650016e6ec9ee0a9442c48c72ed41ed7a83f25137fa0f0"
+    },
+    {
+      "path": "source_export_policy.json",
+      "size_bytes": 2835,
+      "sha256": "be16b5207065859cac2f08b5286acca49f4b02d12b901ae87a3f6a17c6d56363"
+    },
+    {
+      "path": "tests/render_static_arrangement_scene.py",
+      "size_bytes": 41495,
+      "sha256": "4ec110893d22cc5101e59ec7992402248d372b176638e962efb47dc2d672307f"
+    },
+    {
+      "path": "tests/run_all_base_tasks_once.sh",
+      "size_bytes": 3288,
+      "sha256": "e3661a9d2c5055cc8e473341d5b6f1711c3515b32fd65a93b8787cc266bca142"
+    },
+    {
+      "path": "tests/test_anchor_reference_layout_validation.py",
+      "size_bytes": 3827,
+      "sha256": "ec12c2a55ec97f4c6743d94964896ff0486546b3728617455cbb4c9cef4b58fc"
+    },
+    {
+      "path": "tests/test_anchor_reference_protocol.py",
+      "size_bytes": 4185,
+      "sha256": "22aa758723ad099ad10b9afe6dbca0cefa2751241e9c5015236dfd918f2e26eb"
+    },
+    {
+      "path": "tests/test_assembled_actions.py",
+      "size_bytes": 7122,
+      "sha256": "ea523547cff6aa01b183fc9e4e7cfbe3f9a3751957107ffb704e43264f5fc852"
+    },
+    {
+      "path": "tests/test_assembled_relations.py",
+      "size_bytes": 1874,
+      "sha256": "56a54d7d11661a2de6f16f92d597affe9125c418dde3d531056ee54b8937631d"
+    },
+    {
+      "path": "tests/test_assembled_robot_audit.py",
+      "size_bytes": 17325,
+      "sha256": "c3f31a8bab98f9c5b8506aa69dd685231647d184d41db7f39cc3a21bb100947d"
+    },
+    {
+      "path": "tests/test_assembled_robot_config.py",
+      "size_bytes": 3613,
+      "sha256": "0c3d2ecf688ed6073ed3ff375c7763949f77e8e9d14b11bf2b0d158294c8a58d"
+    },
+    {
+      "path": "tests/test_assembled_scene_robot_contract.py",
+      "size_bytes": 7256,
+      "sha256": "f63dc559fef5626024b3007719cb2a8b758a2afbd2d89d16319107a3ab8bd801"
+    },
+    {
+      "path": "tests/test_assembled_task_binding.py",
+      "size_bytes": 16608,
+      "sha256": "857a3b1ec558da2a811608f05db1fe9807b96239bcb8a37bea85cd08018291a6"
+    },
+    {
+      "path": "tests/test_assembled_task_geometry.py",
+      "size_bytes": 3088,
+      "sha256": "e91e329e9fe3f2a09b0d50bcf4683a2c8c8d5ffa889a2412d363d3a49c2441ae"
+    },
+    {
+      "path": "tests/test_assembled_task_request.py",
+      "size_bytes": 11116,
+      "sha256": "7ed4bae726b429af445a63a322c41c4392f16d3cdb3daed95d9ed31f37e3fb3d"
+    },
+    {
+      "path": "tests/test_benchmark_manifest_utils.py",
+      "size_bytes": 13081,
+      "sha256": "768c03aa2021b05024d61a6d980c84651e3e16cc88b3d51d1f28c34a4401a138"
+    },
+    {
+      "path": "tests/test_body_geometry.py",
+      "size_bytes": 7396,
+      "sha256": "5649696432baddec7654a2347520f08ee3958ca440052e910a31e3b3e83fb4d1"
+    },
+    {
+      "path": "tests/test_canonical_capability_menu.py",
+      "size_bytes": 2052,
+      "sha256": "0aae1139aa88c33bab06937d868e28f81a17cd87aa8ed80a256ee8a406bc00a7"
+    },
+    {
+      "path": "tests/test_canonical_contact_height.py",
+      "size_bytes": 4355,
+      "sha256": "04db37509d880e7e061bcb4277c44bd95f6a43ec9268615b2c615940d3d82efa"
+    },
+    {
+      "path": "tests/test_canonical_hold_policy.py",
+      "size_bytes": 3875,
+      "sha256": "45b9057084e6387bb9945921d94b525f68e2d2e025dab2ef011334456374ef4a"
+    },
+    {
+      "path": "tests/test_canonical_task_families.py",
+      "size_bytes": 2278,
+      "sha256": "b64e5add2d7b521a6b283cae90377ed3ed1065e83e02c4988eb4ceb647a44b9e"
+    },
+    {
+      "path": "tests/test_collect_anchor_reference_trajectory_dataset.py",
+      "size_bytes": 4550,
+      "sha256": "0f4e04305d02fc27058bd647a8f0adab910cbe0240de8821108e907e283b5be0"
+    },
+    {
+      "path": "tests/test_constraint_selection_protocol.py",
+      "size_bytes": 11486,
+      "sha256": "106992953ce696a59ab135c8d40e9475714f161045f840bd24cebfc7607d5447"
+    },
+    {
+      "path": "tests/test_cylinder_collisions.py",
+      "size_bytes": 12683,
+      "sha256": "6cdba02524b4320cd36301737dce2ab7af49d054299361816a3f4efbf3563e05"
+    },
+    {
+      "path": "tests/test_dashboard.py",
+      "size_bytes": 5212,
+      "sha256": "51b73357d311d2dc4dddcdb98d0162d90e598156ae53f514b5bf19689e53ee77"
+    },
+    {
+      "path": "tests/test_deliver_canonical27.py",
+      "size_bytes": 8342,
+      "sha256": "6e3e10c8428d3f7aae7f6cd574f73f6e60c1dedb4b30e873d49e378aa5bba9ca"
+    },
+    {
+      "path": "tests/test_deliver_registered_tasks.py",
+      "size_bytes": 19682,
+      "sha256": "0edf3d9ba4bd54a7fe66ed08cf16e3f36e902d24f6f09d2f6c7238b69ff12877"
+    },
+    {
+      "path": "tests/test_dual_piper_audit.py",
+      "size_bytes": 2137,
+      "sha256": "679da93f63d9d67c360b6311ce2f9f840fccd4c40e04a41c129537ca2f41d1cc"
+    },
+    {
+      "path": "tests/test_episode_contract_v3.py",
+      "size_bytes": 6852,
+      "sha256": "60a6f15712d91d420597a54b8227abf5c636b2e6e14c6c5dae124ea3e8a2579e"
+    },
+    {
+      "path": "tests/test_episode_object_assets.py",
+      "size_bytes": 2855,
+      "sha256": "684508d29b5f6007b37cf8c4dbe3114fb34382297e07cbc3aee5b52991dc1577"
+    },
+    {
+      "path": "tests/test_episode_physics_contract.py",
+      "size_bytes": 9246,
+      "sha256": "bb9cb67dd83a1d404c08d93143edf05503f1d662dfb98650b169cb07afdd4823"
+    },
+    {
+      "path": "tests/test_episode_video.py",
+      "size_bytes": 10333,
+      "sha256": "131db3e21549cb6d01c6cec818f6b5546d9d7aa5e6aeb4c47e7ff2f3f0191b2e"
+    },
+    {
+      "path": "tests/test_explicit_negative_pick_candidate.py",
+      "size_bytes": 3393,
+      "sha256": "d356ccb1715e06bcff8d9d2286c9833500faae34043c80e97885a81a627de3dd"
+    },
+    {
+      "path": "tests/test_extended_geometry_tasks.py",
+      "size_bytes": 6601,
+      "sha256": "6112247b12aaf1bf6f1b79f5e7b17aaeb87d61af792eaa8b9da195439b5610a5"
+    },
+    {
+      "path": "tests/test_extended_static_tasks.py",
+      "size_bytes": 7377,
+      "sha256": "6d4b1e151f89aa1b2f2c927dd744dba65c78625d6b29a1d365849dc352c588ac"
+    },
+    {
+      "path": "tests/test_extended_temporal_tasks.py",
+      "size_bytes": 7415,
+      "sha256": "ec752a68fb10b689e92fe88c170624686c9d1bc7cd7cb75d8105eafe22a4c7b4"
+    },
+    {
+      "path": "tests/test_family_runner_registry.py",
+      "size_bytes": 2497,
+      "sha256": "1c3d963409314df93eff7c16980d0c9ed0103a75746b85056294b5b593f9b883"
+    },
+    {
+      "path": "tests/test_geometric_inference_protocol.py",
+      "size_bytes": 19874,
+      "sha256": "76d0f66b8468a747344c8d867a0636fee6f250c01a823b56ac26c94855ab9c0a"
+    },
+    {
+      "path": "tests/test_grasp_orientation.py",
+      "size_bytes": 5802,
+      "sha256": "65536a3b7065003627972984cd106306e7b71d917ff810d317446bec12fd1e00"
+    },
+    {
+      "path": "tests/test_gripper_profiles.py",
+      "size_bytes": 12196,
+      "sha256": "07df11497fa23552063db3e472681c6a59f4bd379e195cdd74121d2593b55397"
+    },
+    {
+      "path": "tests/test_headless_camera_video.py",
+      "size_bytes": 5271,
+      "sha256": "b7a7e383908de6e38d04b9299a29aef8a7dec398638a77f78a5161c39b931942"
+    },
+    {
+      "path": "tests/test_indirect_candidate_height.py",
+      "size_bytes": 4422,
+      "sha256": "049dcf0c7a3dc61a9a7e01b6843e00a2d13c4abab4d967eae9ac8b9b2fdb86ec"
+    },
+    {
+      "path": "tests/test_indirect_default_hold_recipe.py",
+      "size_bytes": 4663,
+      "sha256": "dd6617330de69430221d1403f5a8cf8ef0de08536b246d75dcea04b8a2c4edd5"
+    },
+    {
+      "path": "tests/test_instruction_zh.py",
+      "size_bytes": 1654,
+      "sha256": "321525eff203496dfb03f108c9662b1c83a4a5e7609804eab53ca8ca1213dcee"
+    },
+    {
+      "path": "tests/test_isolated_robot_controls.py",
+      "size_bytes": 2537,
+      "sha256": "5168abebe2196fb387831d1df07ca34f61661ee6b0d9a642dc5f1af1b66ff9f9"
+    },
+    {
+      "path": "tests/test_layout_randomizer.py",
+      "size_bytes": 4778,
+      "sha256": "7bd3a627f2a9c672cfda943d4967b89fd34902b5ce8a0ca29fe257de3785b960"
+    },
+    {
+      "path": "tests/test_midpoint_placement_contract.py",
+      "size_bytes": 1070,
+      "sha256": "b7ea235b8f773bacef4425c540bdc08b72e777fa1b2ecf111d3ef14a575787a7"
+    },
+    {
+      "path": "tests/test_native_registration_routing.py",
+      "size_bytes": 3435,
+      "sha256": "49c437338e65778411842153fb0b2cfd5a2c928b6b44b2f15380ea416eac9e50"
+    },
+    {
+      "path": "tests/test_negative_controls.py",
+      "size_bytes": 9202,
+      "sha256": "b44226c37efcad107032f0226cd71fdafeff695c017c4c4691574014f9f51710"
+    },
+    {
+      "path": "tests/test_negative_pick_command_audit.py",
+      "size_bytes": 9542,
+      "sha256": "5620bce166d6a8977a8c5c15d562f5f724fa159d1299cdf1118b1accc2fc78a8"
+    },
+    {
+      "path": "tests/test_placeholder_task_registration.py",
+      "size_bytes": 5272,
+      "sha256": "d08a432bbd4c8512a91e8beb18b2f7206b55dfccc6a73eb20ebf31d11adc69e0"
+    },
+    {
+      "path": "tests/test_portable_assets.py",
+      "size_bytes": 11825,
+      "sha256": "dc16b5621f06e6901ee45896d9fca28f9677a0cd8cfa4fb2631db7aa149e652d"
+    },
+    {
+      "path": "tests/test_post_action_relocation_logic.py",
+      "size_bytes": 10179,
+      "sha256": "f8ae4921281371c38e7c833179400c2f3b9498864ebe4e5bc3b23470bf4c236e"
+    },
+    {
+      "path": "tests/test_public_task_ids.py",
+      "size_bytes": 5133,
+      "sha256": "a1410fef73216da03118227c2a1308a7e212337862127cda43d2acaae3762dc8"
+    },
+    {
+      "path": "tests/test_regenerate_registered_tasks.py",
+      "size_bytes": 13391,
+      "sha256": "b6ca4eba1bdbbdfe1388e2b06a7befb6f0ffa700e63ac561e844143bc704d7db"
+    },
+    {
+      "path": "tests/test_registered_binding.py",
+      "size_bytes": 15103,
+      "sha256": "1224f09c097f849d1ce05f679e50c77e1d847d2353dffdb9db1296a659ed6009"
+    },
+    {
+      "path": "tests/test_registered_episode_scene.py",
+      "size_bytes": 6428,
+      "sha256": "cda97e43d8eea639ab46501b8470ea967ce8840ececdd9ab3e3d3a563d4b37e3"
+    },
+    {
+      "path": "tests/test_registered_export.py",
+      "size_bytes": 18736,
+      "sha256": "5e11959d02435cdbfce23ee89653ca9fa76d55798740916751e7190eb59a4127"
+    },
+    {
+      "path": "tests/test_registered_layout_constraints.py",
+      "size_bytes": 7101,
+      "sha256": "9088ef45bba08f3b03b6727e9d233c5fda8fffffb5f86bb77e335eef0b76df4c"
+    },
+    {
+      "path": "tests/test_registered_physics_boundaries.py",
+      "size_bytes": 2795,
+      "sha256": "9cfd471141daf3673bc053315981efde9d0167f46dc0cbed84095cd20563e959"
+    },
+    {
+      "path": "tests/test_registered_task_gt.py",
+      "size_bytes": 17624,
+      "sha256": "b8abf64f1c68f61084dbcc415241f59a71e6ea13ad8b38fa28d28b3bde40f2f9"
+    },
+    {
+      "path": "tests/test_release_versions.py",
+      "size_bytes": 1536,
+      "sha256": "09d226cf2efc13d2d9663b8d45648e0d06f734cd70abfe6c92634f7195f9540e"
+    },
+    {
+      "path": "tests/test_research_pairs.py",
+      "size_bytes": 5417,
+      "sha256": "791144b1f68640a8531ba091bd2d350b155ad70049cdae149cb327afc01db067"
+    },
+    {
+      "path": "tests/test_research_pipeline.py",
+      "size_bytes": 4175,
+      "sha256": "aadf4752c50ffbb1497238b34fa859b3b6f2f2311c329c67548adc5c3579e02c"
+    },
+    {
+      "path": "tests/test_research_projection.py",
+      "size_bytes": 1717,
+      "sha256": "cf354444c2fe4eb2084ec5286dbb3dbdd3506ac63dc880c851d16b3a9fdda803"
+    },
+    {
+      "path": "tests/test_robotiq_mount_filter.py",
+      "size_bytes": 1353,
+      "sha256": "678220a0b4f5f1d94ebb813ff4d66a620719bef70baeba5edb8b06be1b31a3bd"
+    },
+    {
+      "path": "tests/test_robotiq_solver_precision.py",
+      "size_bytes": 3424,
+      "sha256": "9c43cbab10891d954d942f64ae5cae33b924e25a1fc9dc43af73cdbbdeed2d05"
+    },
+    {
+      "path": "tests/test_scene_assembly_audit.py",
+      "size_bytes": 2268,
+      "sha256": "6d7951761c02dd970299e8c1bdb09246c50da254f60d0d780d4b7962cf14abe6"
+    },
+    {
+      "path": "tests/test_scene_assembly_randomization.py",
+      "size_bytes": 5295,
+      "sha256": "91a7ba6f7b2165d2c9ec1bd5eb109d7f298a6394bd6dae76f9ee82467446e0e3"
+    },
+    {
+      "path": "tests/test_scene_assembly_request.py",
+      "size_bytes": 12111,
+      "sha256": "215c7f79690c702bb04cbe14871f9762a1d2d28c4aadd511b701a1a2a3bf4e83"
+    },
+    {
+      "path": "tests/test_scene_assembly_usd.py",
+      "size_bytes": 10351,
+      "sha256": "043e085b1ebd765f765865f5d9477f262d90075a2176479910b63b6d44e8ffcb"
+    },
+    {
+      "path": "tests/test_scene_visibility.py",
+      "size_bytes": 2634,
+      "sha256": "11b4475cbbfea778662b1296b4e197c4d15ebb9367080f776eaca05de7c874e4"
+    },
+    {
+      "path": "tests/test_serve_delivery.py",
+      "size_bytes": 7758,
+      "sha256": "3890fae245507a9e2e47286c0f0a9edc0c136a04c72e3a99cf686b07db0c6d52"
+    },
+    {
+      "path": "tests/test_spatial_episode_pipeline.py",
+      "size_bytes": 15880,
+      "sha256": "4665134bb5333c43e017a3fd85d6b9b25a932b81b7568d10e097ab8ae094c181"
+    },
+    {
+      "path": "tests/test_state_reindexing_protocol.py",
+      "size_bytes": 17780,
+      "sha256": "1f57bd9b90e6d05f25ddcd3cf6c2bd9215d306240166d8917fc1599d21ac1733"
+    },
+    {
+      "path": "tests/test_task_definition_schema.py",
+      "size_bytes": 5646,
+      "sha256": "e7c4adfbb6b0a341eb2e85333f53237b915f5692ca8b283c022845ae39f1c1a3"
+    },
+    {
+      "path": "tests/test_task_evolution.py",
+      "size_bytes": 5873,
+      "sha256": "71520e2e8b11baf32fafeadc5e8d922e673fb77a1042e0e35dc5563a1f7c8a22"
+    },
+    {
+      "path": "tests/test_task_metadata_registry.py",
+      "size_bytes": 25940,
+      "sha256": "0a730eb9d62513eb81644399256c940a3df2975b71e34c300c57e92bff8265f9"
+    },
+    {
+      "path": "tests/test_trajectory_augmentation.py",
+      "size_bytes": 4945,
+      "sha256": "a30557f897e19a8381dbd4c9cb9fcb58f8da5801d866f454b659e59fe5800c42"
+    },
+    {
+      "path": "tests/test_trajectory_hdf5_exporter.py",
+      "size_bytes": 3197,
+      "sha256": "7ec9db5dea3109aa6c800a604294716eef393c868687863d6cf7c40aecceb82e"
+    },
+    {
+      "path": "tests/test_trajectory_metadata.py",
+      "size_bytes": 1398,
+      "sha256": "4ac1435ffc1e3a7f22b3d8c878bd38a2a22b541cdf3f085d593ac0da78b93f06"
+    },
+    {
+      "path": "tests/test_trajectory_resample.py",
+      "size_bytes": 5450,
+      "sha256": "542080e01d3908c7235da698166027816c65dbf3fba1683b3ad745a93dd35ae6"
+    },
+    {
+      "path": "tests/test_trajectory_segmenter.py",
+      "size_bytes": 5739,
+      "sha256": "5a1f3a032b89e16101966f972e415d8290c7317b9c23dd35124dcb833ebf9e08"
+    },
+    {
+      "path": "tests/test_trajectory_validator.py",
+      "size_bytes": 3902,
+      "sha256": "0d73f306c9804288998c7f373569e8a3686cafaffbccdcaeb3fb245660d2edf2"
+    },
+    {
+      "path": "tests/test_wrist_camera_audit.py",
+      "size_bytes": 4139,
+      "sha256": "2ff06f15a23899f9998c0670c4d4c39f7569c003ae530ab80fa295b302dfb44b"
+    },
+    {
+      "path": "tests/test_wrist_camera_profiles.py",
+      "size_bytes": 6352,
+      "sha256": "ac4f9fab593d45a2fb05c43f8d7a667530f4ef313e5a65a21cff6cffda0e6b36"
+    },
+    {
+      "path": "tests/test_wrist_runtime.py",
+      "size_bytes": 1645,
+      "sha256": "a3e0000d0fe6c8325e25df102b86a265244983ceaa84d3225504e2b60ee6597f"
+    },
+    {
+      "path": "tests/test_wrist_scene_audit.py",
+      "size_bytes": 5206,
+      "sha256": "7a6d16ee3231f501e435b66d06a69b8adef5e9bb61c17d86b021f270789cc0f6"
+    },
+    {
+      "path": "tests/test_wrist_tabletop_fixture.py",
+      "size_bytes": 2791,
+      "sha256": "7683d67af75ccba79843302954e309faf4bf54eaeafa3f569b28deb32decf7a5"
+    },
+    {
+      "path": "view_scene_images.py",
+      "size_bytes": 3515,
+      "sha256": "008a7ff1be79550ee14c492790b9f408dfea069653b4b4e4d1ad07f809b212e3"
+    }
+  ],
+  "copied": true
+}

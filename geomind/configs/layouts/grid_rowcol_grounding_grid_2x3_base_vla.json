@@ -1,0 +1,194 @@
+{
+  "layout_id": "grid_rowcol_grounding_grid_2x3_base_vla",
+  "format": "LegacyInitialization",
+  "category": "Grid",
+  "source_layout": "grid_rowcol_grounding_grid_2x3_base_vla",
+  "scene_structure": {
+    "layout": "Grid Row-Col Static 2x3",
+    "num_of_objects": 6,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "grid_cell_0": {
+        "position": [
+          0.37,
+          -0.15
+        ]
+      },
+      "grid_cell_1": {
+        "position": [
+          0.37,
+          -0.03
+        ]
+      },
+      "grid_cell_2": {
+        "position": [
+          0.37,
+          0.09
+        ]
+      },
+      "grid_cell_3": {
+        "position": [
+          0.5,
+          -0.15
+        ]
+      },
+      "grid_cell_4": {
+        "position": [
+          0.5,
+          -0.03
+        ]
+      },
+      "grid_cell_5": {
+        "position": [
+          0.5,
+          0.09
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "grid_cell_0",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.37,
+            -0.15
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "grid_cell_1",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.37,
+            -0.03
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "grid_cell_2",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.37,
+            0.09
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "grid_cell_3",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.5,
+            -0.15
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "grid_cell_4",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.5,
+            -0.03
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "grid_cell_5",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.5,
+            0.09
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

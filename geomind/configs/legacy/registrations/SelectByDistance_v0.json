@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectByDistance",
+  "family": "RelationalGrounding",
+  "condition": "Semantic",
+  "layout": "Scatter",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "grasp_anchor_distance",
+    "split": "aug",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 10,
+    "instruction": "Pick up the ball closest to the red cylinder.",
+    "evaluator_key": "anchor_reference_evaluator",
+    "semantic_module": "anchor_reference",
+    "skill_type": "distance_anchor_grasp",
+    "phase": "phase1",
+    "annotation_layout_key": "grasp_anchor_distance_scene10_base",
+    "annotation_task_index": 0,
+    "object_set": "geometric_anchor_objects",
+    "assets_group": "stage_10",
+    "tags": [
+      "anchor_reference",
+      "distance"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "SelectByDistance_v0",
+    "protocol_family": "anchor_reference",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "AnchorDistance_v0",
+    "grasp_anchor_distance",
+    "AnchorDistanceSem_v0",
+    "BindingAugStress_AnchorDistance_v0",
+    "BindingAugBase_AnchorDistance_v0",
+    "BindingAugSem_AnchorDistance_v0",
+    "SelectByDistanceSem_v0",
+    "AnchorDistance"
+  ]
+}

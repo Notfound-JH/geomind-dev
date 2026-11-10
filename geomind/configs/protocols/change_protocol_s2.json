@@ -1,0 +1,37 @@
+{
+  "protocol_id": "change_protocol_s2",
+  "query_at": "recall",
+  "allow_history_replay": false,
+  "phases": [
+    {
+      "id": "observe",
+      "type": "Observe",
+      "duration_steps": 2,
+      "scene_visible": true
+    },
+    {
+      "id": "delay",
+      "type": "Delay",
+      "duration_steps": 3,
+      "scene_visible": false,
+      "events": [
+        {
+          "type": "MoveObject",
+          "object_id": "block_2",
+          "after_steps": 1,
+          "position_m": [
+            0.15,
+            0.072498473997065,
+            0.011649691321335177
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recall",
+      "type": "Respond",
+      "scene_visible": true,
+      "allow_response": true
+    }
+  ]
+}

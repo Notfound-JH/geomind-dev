@@ -1,0 +1,40 @@
+{
+  "task_id": "TrackMovingObject",
+  "family": "IdentityTracking",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "track_single",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Pick up the block that was initially in the center.",
+    "evaluator_key": "identity_tracking_evaluator",
+    "semantic_module": "identity_tracking",
+    "skill_type": "single_step_identity_tracking",
+    "phase": "phase1",
+    "annotation_layout_key": "historical_identity_blocks_line_3",
+    "annotation_task_index": 0,
+    "object_set": "runtime_blocks",
+    "assets_group": "stage_65",
+    "tags": [
+      "historical_identity_tracking"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "TrackMovingObject_v0",
+    "protocol_family": "historical_identity_tracking",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "TrackMovingObject_v0",
+    "track_single",
+    "TrackSingle_v0",
+    "TrackBaseBase_TrackMovingObject_v0",
+    "TrackBaseBase_TrackSingle_v0"
+  ]
+}

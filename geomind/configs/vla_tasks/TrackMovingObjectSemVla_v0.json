@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "TrackMovingObjectSemVla_v0",
+  "task_id": "TrackMovingObject",
+  "execution": "LegacyIsaacLab",
+  "condition": "Semantic",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "TrackMovingObjectSemVla_v0",
+    "track_single:semantic",
+    "track_single:vla",
+    "TrackSingleSemVla_v0",
+    "TrackBaseSem_TrackMovingObjectVla_v0",
+    "TrackBaseSem_TrackSingleVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "historical_identity_blocks_line_3_vla",
+  "release_version": "1.0"
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "PlaceDirectional",
+  "family": "RelationalGrounding",
+  "condition": "Semantic",
+  "layout": "Pair",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "place_directional",
+    "split": "aug",
+    "variant": "semantic",
+    "task_version": "semantic",
+    "scene_id": 65,
+    "instruction": "Place the block in your hand in the front region of the blue plate.",
+    "evaluator_key": "directional_placement_evaluator",
+    "semantic_module": "spatial_placement",
+    "skill_type": "directional_region_placement",
+    "phase": "phase1",
+    "legacy_task_id": "place_directional",
+    "annotation_layout_key": "place_directional_scene65_semantic",
+    "annotation_task_index": 0,
+    "object_set": "placement_objects",
+    "assets_group": "stage_65",
+    "tags": [
+      "spatial_placement",
+      "semantic"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "PlaceDirectionalSem_v0",
+    "protocol_family": "spatial_placement",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "PlaceDirectionalSem_v0",
+    "place_directional:semantic",
+    "RelationAugSem_PlaceDirectional_v0"
+  ],
+  "status": "Deprecated",
+  "deprecation_reason": "Directional placement is retired from task registration and evaluation."
+}

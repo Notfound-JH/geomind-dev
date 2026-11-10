@@ -1,0 +1,148 @@
+{
+  "layout_id": "historical_identity_blocks_line_3_visual_occlusion",
+  "format": "LegacyInitialization",
+  "category": "Line",
+  "source_layout": "historical_identity_blocks_line_3_visual_occlusion",
+  "scene_structure": {
+    "layout": "Historical Identity Runtime Injection Visual Occlusion",
+    "num_of_objects": 4,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "identity_block_0": {
+        "position": [
+          0.41,
+          -0.1
+        ]
+      },
+      "identity_block_1": {
+        "position": [
+          0.41,
+          -0.01
+        ]
+      },
+      "identity_block_2": {
+        "position": [
+          0.41,
+          0.09
+        ]
+      },
+      "visual_occlusion_pole": {
+        "position": [
+          0.328,
+          -0.055
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "identity_block_0",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.41,
+            -0.1
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "identity_block_1",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.41,
+            -0.01
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "identity_block_2",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.41,
+            0.09
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "visual_occlusion_pole",
+        "kind": "primitive_cylinder",
+        "radius": 0.0192,
+        "height": 0.14,
+        "visual_color": [
+          0.48,
+          0.48,
+          0.49
+        ],
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "material": {
+            "static_friction": 1.2,
+            "dynamic_friction": 1.0,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.328,
+            -0.055
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

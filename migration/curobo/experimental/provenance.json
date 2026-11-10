@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "upstream_url": "https://github.com/NVlabs/curobo.git",
+  "upstream_commit": "ebb71702f3f70e767f40fd8e050674af0288abe8",
+  "original_checkout_role": "experimental",
+  "required_for_canonical27_pipeline": false,
+  "installed_in_observed_sim51_environment": false,
+  "untracked_source_config_paths": [
+    "examples/isaac_sim/utils/convert_urdf_to_usd.py",
+    "examples/isaac_sim/utils/dowload_assets.py",
+    "src/curobo/content/configs/robot/fr3.yml",
+    "src/curobo/content/configs/robot/fr3_test_isaac.yml",
+    "src/curobo/content/configs/robot/fr3_test_3.yml",
+    "src/curobo/content/configs/robot/fr3_test.yml",
+    "src/curobo/content/configs/robot/fr3_test_2.yml",
+    "src/curobo/content/configs/robot/spheres/franka_mesh_fr3.yml"
+  ],
+  "large_assets_in_separate_bundle": [
+    "fr3_description",
+    "non_shipping where referenced"
+  ],
+  "patch_sha256": "fcf2e9931edf2bd91f0b41bdc529d1bc521f2656cb3a9c243fbaef95d35e8f7c"
+}

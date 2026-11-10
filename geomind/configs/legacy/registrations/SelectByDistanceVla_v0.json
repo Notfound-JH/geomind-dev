@@ -1,0 +1,43 @@
+{
+  "task_id": "SelectByDistance",
+  "family": "RelationalGrounding",
+  "condition": "Semantic",
+  "layout": "Scatter",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "grasp_anchor_distance",
+    "split": "aug",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 10,
+    "instruction": "Move the end effector near the sphere closest to the red cylinder.",
+    "semantic_module": "anchor_reference",
+    "phase": "phase1",
+    "annotation_layout_key": "grasp_anchor_distance_scene10_base_vla",
+    "annotation_task_index": 0,
+    "object_set": "geometric_anchor_objects",
+    "assets_group": "stage_10",
+    "tags": [
+      "anchor_reference",
+      "distance",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "SelectByDistanceVla_v0",
+    "protocol_family": "anchor_reference",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "AnchorDistanceVla_v0",
+    "grasp_anchor_distance",
+    "AnchorDistanceSemVla_v0",
+    "BindingAugStress_AnchorDistanceVla_v0",
+    "grasp_anchor_distance:vla",
+    "BindingAugBase_AnchorDistanceVla_v0",
+    "BindingAugSem_AnchorDistanceVla_v0",
+    "SelectByDistanceSemVla_v0"
+  ]
+}

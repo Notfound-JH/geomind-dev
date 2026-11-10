@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectWithVisualCue_v0",
+  "task_id": "SelectWithVisualCue",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectVisualSpatial_v0",
+    "select_visual_spatial",
+    "ConstraintBaseBase_SelectVisualSpatial_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "select_visual_spatial_scene65_base",
+  "release_version": "1.0"
+}

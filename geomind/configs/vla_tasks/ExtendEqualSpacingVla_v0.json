@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "ExtendEqualSpacingVla_v0",
+  "task_id": "ExtendEqualSpacing",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "ExtendEqualSpacingVla_v0",
+    "isometric_extension",
+    "isometric_extension:vla",
+    "IsometricExtensionVla_v0",
+    "GeometricBaseBase_ExtendEqualSpacingVla_v0",
+    "GeometricBaseBase_IsometricExtensionVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "geometric_inference_isometric_extension_line_2_vla",
+  "release_version": "1.0"
+}

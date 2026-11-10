@@ -1,0 +1,9 @@
+# 操作任务默认路由回归
+
+用户原始类别生成请求重测发现仍输出坐标题。根因：此前只增加 skill 原则，parse_request 仍自动选择 ProjectOntoLine/ReportPoint 与 ReachAboveTarget，生成器及物理评分没有操作模式契约。
+
+本次修正：GeometricInference 默认 interaction_mode=manipulation；当前缺少抓取、搬运、释放和松爪后物体评分，故在生成前明确拒绝，不再静默选诊断代表。指定 task_id 也不自动降级；只有显式 interaction_mode=diagnostic 可复现旧链。SceneUpdating既有诊断路径保持。skill与参考接口已同步。显式semantic_table仍使用程序化桌面，不静默改注册场景。
+
+已执行：流水线与中文指令测试共9项通过，skill格式校验通过；临时独立目录运行与用户重测相同字段的真实CLI，确认非零退出、generated=false、physical_executed=false、无configs与physical_command，无GPU启动。仅output替换为临时目录以保留用户已有产物。此测试证明不再错误降级，不证明操作任务已实现。
+
+尚未完成：自然操作实例生成、真实抓放执行与物体末态评分。本次未新增物理运行，不宣称已能按原指令生成并完成放置。下一实施项为独立中点放置契约及抓取释放执行链、受支撑布局和实测物体稳定判据；不得用改中文或到达目标上方替代。

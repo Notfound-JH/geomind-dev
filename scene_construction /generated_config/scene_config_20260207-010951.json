@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "name": "table_1",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "table"
+        },
+        {
+            "name": "basket_1",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "container"
+        },
+        {
+            "name": "chair_1",
+            "pos_xy": [
+                1,
+                -1
+            ],
+            "yaw_deg": 90,
+            "type": "furniture"
+        },
+        {
+            "name": "plant_2",
+            "pos_xy": [
+                -1.5,
+                1.5
+            ],
+            "yaw_deg": 0,
+            "type": "decoration"
+        }
+    ],
+    "arrangement_config": {
+        "pattern": "Ring",
+        "object_count": 3
+    },
+    "furniture": [],
+    "decoration": []
+}

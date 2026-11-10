@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectAfterExclusion",
+  "family": "ConstraintComposition",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "select_exclusion_unique",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the red cube closest to the blue plate that is not the leftmost.",
+    "semantic_module": "constraint_selection",
+    "phase": "phase1",
+    "annotation_layout_key": "select_exclusion_unique_scene65_base_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "constraint_selection",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "select_exclusion_unique"
+    },
+    "registration_id": "SelectAfterExclusionVla_v0",
+    "protocol_family": "constraint_selection",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "SelectAfterExclusionVla_v0",
+    "select_exclusion_unique",
+    "select_exclusion_unique:vla",
+    "SelectExclusionUniqueVla_v0",
+    "ConstraintBaseBase_SelectAfterExclusionVla_v0",
+    "ConstraintBaseBase_SelectExclusionUniqueVla_v0"
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "layout_id": "track_single_scene65_semantic_anchors",
+  "format": "LegacyInitialization",
+  "category": "Line",
+  "source_layout": "track_single_scene65_semantic_anchors",
+  "scene_structure": {
+    "layout": "Historical Identity Runtime Injection Semantic Anchors",
+    "num_of_objects": 5,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "identity_block_0": {
+        "position": [
+          0.405,
+          -0.155
+        ]
+      },
+      "identity_block_1": {
+        "position": [
+          0.438,
+          -0.018
+        ]
+      },
+      "identity_block_2": {
+        "position": [
+          0.392,
+          0.138
+        ]
+      },
+      "semantic_red_bowl": {
+        "position": [
+          0.52,
+          -0.1
+        ]
+      },
+      "semantic_blue_can": {
+        "position": [
+          0.52,
+          0.1
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "object_mode": "concrete",
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "identity_block_0",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.405,
+            -0.155
+          ],
+          "yaw": 0.05
+        }
+      },
+      {
+        "name": "identity_block_1",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.438,
+            -0.018
+          ],
+          "yaw": -0.08
+        }
+      },
+      {
+        "name": "identity_block_2",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.392,
+            0.138
+          ],
+          "yaw": 0.12
+        }
+      },
+      {
+        "name": "semantic_red_bowl",
+        "kind": "usd",
+        "asset_category": "container",
+        "asset_key": "bowl_1",
+        "scale": [
+          0.0085,
+          0.0085,
+          0.0085
+        ],
+        "dimensions": [
+          0.1511,
+          0.135,
+          0.0612
+        ],
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "collision": {
+            "type": "static_mesh",
+            "contact_offset": 0.0015,
+            "rest_offset": 0.0,
+            "sdf_resolution": 192,
+            "sdf_subgrid_resolution": 6,
+            "sdf_margin": 0.01,
+            "sdf_narrow_band_thickness": 0.01
+          }
+        },
+        "material_override": {
+          "diffuse_color": [
+            0.82,
+            0.14,
+            0.12
+          ]
+        },
+        "pose": {
+          "xy": [
+            0.52,
+            -0.1
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "semantic_blue_can",
+        "kind": "usd",
+        "asset_category": "catch_object",
+        "asset_key": "blue_can",
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "collision": {
+            "type": "static_mesh",
+            "contact_offset": 0.0015,
+            "rest_offset": 0.0
+          },
+          "material": {
+            "static_friction": 1.2,
+            "dynamic_friction": 1.0,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.52,
+            0.1
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

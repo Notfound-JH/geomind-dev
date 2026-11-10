@@ -1,0 +1,44 @@
+{
+  "task_id": "ContinueSpatialPattern",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "trend_continuation",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Following the blocks' arrangement, place the block in your hand in the next position along the pattern.",
+    "evaluator_key": "trend_continuation_evaluator",
+    "semantic_module": "structure_inference",
+    "skill_type": "implicit_trend_extrapolation",
+    "phase": "phase1",
+    "annotation_layout_key": "",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "implicit_trend_fitting",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "trend_continuation"
+    },
+    "registration_id": "ContinueSpatialPattern_v0",
+    "protocol_family": "implicit_trend_fitting",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "ContinueSpatialPattern_v0",
+    "trend_continuation",
+    "TrendContinuation_v0",
+    "GeometricBaseBase_ContinueSpatialPattern_v0",
+    "GeometricBaseBase_TrendContinuation_v0"
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "layout_id": "state_reindex_blocks_line_4_vla",
+  "format": "LegacyInitialization",
+  "category": "Line",
+  "source_layout": "state_reindex_blocks_line_4_vla",
+  "scene_structure": {
+    "layout": "State Reindex Runtime Injection",
+    "num_of_objects": 4,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "reindex_block_0": {
+        "position": [
+          0.42,
+          -0.14
+        ]
+      },
+      "reindex_block_1": {
+        "position": [
+          0.42,
+          -0.05
+        ]
+      },
+      "reindex_block_2": {
+        "position": [
+          0.42,
+          0.04
+        ]
+      },
+      "reindex_block_3": {
+        "position": [
+          0.42,
+          0.13
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "reindex_block_0",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.9,
+          0.25,
+          0.22
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.9,
+            0.25,
+            0.22
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.15,
+            "dynamic_friction": 0.96,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.42,
+            -0.14
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "reindex_block_1",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.18,
+          0.72,
+          0.36
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.18,
+            0.72,
+            0.36
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.15,
+            "dynamic_friction": 0.96,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.42,
+            -0.05
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "reindex_block_2",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.22,
+          0.45,
+          0.95
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.22,
+            0.45,
+            0.95
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.15,
+            "dynamic_friction": 0.96,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.42,
+            0.04
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "reindex_block_3",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.92,
+          0.72,
+          0.14
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.92,
+            0.72,
+            0.14
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.15,
+            "dynamic_friction": 0.96,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.42,
+            0.13
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

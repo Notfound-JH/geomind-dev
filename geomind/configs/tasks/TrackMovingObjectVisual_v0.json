@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "TrackMovingObjectVisual_v0",
+  "task_id": "TrackMovingObject",
+  "execution": "LegacyIsaacLab",
+  "condition": "Visual",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "TrackMovingObjectVisual_v0",
+    "track_single:visual",
+    "TrackSingleVisual_v0",
+    "TrackBaseVisual_TrackMovingObject_v0",
+    "TrackBaseVisual_TrackSingle_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "historical_identity_blocks_line_3_visual_occlusion",
+  "release_version": "1.0"
+}

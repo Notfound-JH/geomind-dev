@@ -1,0 +1,43 @@
+{
+  "task_id": "TrackClutter",
+  "family": "IdentityTracking",
+  "condition": "Base",
+  "layout": "Clutter",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "track_clutter",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the cube that started in the middle after clutter settles.",
+    "semantic_module": "identity_tracking",
+    "phase": "phase1",
+    "legacy_task_id": "track_clutter",
+    "annotation_layout_key": "clutter_robust_identity_blocks_line_3_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "historical_identity_tracking",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "track_clutter"
+    },
+    "registration_id": "TrackClutterVla_v0",
+    "protocol_family": "historical_identity_tracking",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "TrackClutterVla_v0",
+    "track_clutter",
+    "track_clutter:vla",
+    "TrackBaseBase_TrackClutterVla_v0"
+  ]
+}

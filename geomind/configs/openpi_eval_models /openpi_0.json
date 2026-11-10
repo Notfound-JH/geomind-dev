@@ -1,0 +1,10 @@
+{
+  "model_name": "openpi_0",
+  "host":"0.0.0.0",
+  "port": 8091,
+  "remote_policy_action_scale": 0.1,
+  "remote_policy_disable_rotation": true,
+  "remote_policy_gripper_mode": "hold_initial",
+  "remote_policy_overshoot_guard": false,
+  "output_dir_name": "run_eval_openpi_0"
+}

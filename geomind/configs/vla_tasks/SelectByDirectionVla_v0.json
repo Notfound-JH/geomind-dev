@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByDirectionVla_v0",
+  "task_id": "SelectByDirection",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectByDirectionVla_v0",
+    "grasp_anchor_direction",
+    "grasp_anchor_direction:vla",
+    "AnchorDirectionVla_v0",
+    "BindingBaseBase_SelectByDirectionVla_v0",
+    "BindingBaseBase_AnchorDirectionVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "grasp_anchor_direction_scene65_base_vla",
+  "release_version": "1.0"
+}

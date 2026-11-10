@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "episode_id": "recall_blue_location",
+  "task_id": "RecallObjectLocation",
+  "scene_id": "table_65",
+  "layout_id": "four_blocks_line",
+  "parameters": {
+    "objects": [
+      "block_a",
+      "block_b",
+      "block_c",
+      "block_d"
+    ],
+    "query_object": "block_b",
+    "frame": "table",
+    "reference": {
+      "phase": "observe",
+      "boundary": "End"
+    }
+  },
+  "response": "ReportPoint",
+  "seed": 0,
+  "protocol_id": "observe_delay_recall",
+  "evaluation": {
+    "position_tolerance_m": 0.001
+  }
+}

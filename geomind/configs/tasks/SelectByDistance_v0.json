@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByDistance_v0",
+  "task_id": "SelectByDistance",
+  "execution": "LegacyIsaacLab",
+  "condition": "Semantic",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "AnchorDistance_v0",
+    "grasp_anchor_distance",
+    "AnchorDistanceSem_v0",
+    "BindingAugStress_AnchorDistance_v0",
+    "BindingAugBase_AnchorDistance_v0",
+    "BindingAugSem_AnchorDistance_v0",
+    "SelectByDistanceSem_v0",
+    "AnchorDistance"
+  ],
+  "seed": 0,
+  "scene_id": "scene_10",
+  "layout_id": "grasp_anchor_distance_scene10_base",
+  "release_version": "1.0"
+}

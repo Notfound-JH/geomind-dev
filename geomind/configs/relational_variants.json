@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "family": "RelationalGrounding",
+  "relations": {
+    "Between": {
+      "kind": "RelationVariant",
+      "standalone_task": false,
+      "legacy_task_id": "SelectBetweenObjects",
+      "description": "Between is a relational-grounding relation variant, not a canonical task."
+    }
+  }
+}

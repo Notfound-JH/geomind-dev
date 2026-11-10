@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectWithinSubset",
+  "family": "ConstraintComposition",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "reindex_subset",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the middle cube among the red cubes only.",
+    "semantic_module": "state_refresh",
+    "phase": "phase1",
+    "annotation_layout_key": "state_reindex_red_subset_blocks_line_5_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "state_reindexing",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "reindex_subset"
+    },
+    "registration_id": "SelectWithinSubsetVla_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "SelectWithinSubsetVla_v0",
+    "reindex_subset",
+    "reindex_subset:vla",
+    "ReindexSubsetVla_v0",
+    "ReindexBaseBase_SelectWithinSubsetVla_v0",
+    "ReindexBaseBase_ReindexSubsetVla_v0"
+  ]
+}

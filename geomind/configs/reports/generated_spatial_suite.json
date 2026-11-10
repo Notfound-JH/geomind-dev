@@ -1,0 +1,551 @@
+{
+  "backend": "semantic",
+  "physical_execution_verified": false,
+  "python_version": "3.13.9",
+  "generator_hash": "e44623faf5967599d25579d76a47215ec99aa3cac07ade51cd6c4833ccff9c25",
+  "verified_cases": 9,
+  "passed": true,
+  "by_domain": {
+    "SpatialReasoning": 6,
+    "SpatialMemory": 3
+  },
+  "results": [
+    {
+      "episode_id": "ProjectOntoLine_v0",
+      "task_id": "ProjectOntoLine",
+      "domain": "SpatialReasoning",
+      "configuration_valid": true,
+      "oracle_error_m": 2.2551405187698492e-17,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Report the orthogonal projection of the reference point of the yellow mustard bottle using the infinite 3D line through the reference points of the coffee can and the meat tin, in frame table, in metres. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Point",
+        "position_m": [
+          -0.009917137762001677,
+          -0.021180414547081805,
+          0.2007392679365108
+        ],
+        "frame": "table"
+      },
+      "provenance": {
+        "contract_hash": "1045e5b69e8c930df99d57f4bb87c3c18af96e9f1dea8cc9b20db3034c5f7625",
+        "source_hashes": {
+          "episode": "0af94bc0b6513ed6357cca5042b46feda6ed8dbb45e343bd75d7929574460316",
+          "task": "8b670bfe8d94d29a5d77b2d77447e58e8942f45b220aaf48eedd8f5748948162",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "f5df62b626e4a4f4b7b472c5184986a619ce658f0ace88cdce0afc4b3283e1ca",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_4b76f5e623dd47369d53a61a993ec9ee",
+        "reference": "Current",
+        "evidence_step": 0,
+        "query_step": 0,
+        "evidence_hash": "cc7f0be774599ecd5b1cc67326e581d5a146c90d90a545ed3894ff4bcb550410",
+        "current_state_hash": "cc7f0be774599ecd5b1cc67326e581d5a146c90d90a545ed3894ff4bcb550410",
+        "parameters": {
+          "point": "point",
+          "line": [
+            "line_a",
+            "line_b"
+          ],
+          "frame": "table",
+          "geometry": "InfiniteLine3D",
+          "degeneracy_tolerance_m": 0.0001
+        },
+        "calculation": {
+          "line_parameter": 0.5180395541897735,
+          "projection_m": [
+            -0.009917137762001677,
+            -0.021180414547081805,
+            0.2007392679365108
+          ],
+          "geometry": "InfiniteLine3D",
+          "object_reference_points": {
+            "line_a": "RigidBodyOrigin",
+            "line_b": "RigidBodyOrigin",
+            "point": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "ReflectAcrossLine_v0",
+      "task_id": "ReflectAcrossLine",
+      "domain": "SpatialReasoning",
+      "configuration_valid": true,
+      "oracle_error_m": 4.3885418357208765e-17,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Report the axial reflection (a 180-degree rotation about the line) of the reference point of the yellow mustard bottle using the infinite 3D line through the reference points of the coffee can and the meat tin, in frame table, in metres. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Point",
+        "position_m": [
+          0.048121048367657446,
+          0.01795485025052808,
+          0.2007392679365108
+        ],
+        "frame": "table"
+      },
+      "provenance": {
+        "contract_hash": "eec4ea705875b24060f489289b21151ac7447a2a8d6dd9b677ad3c8e44c9e2d8",
+        "source_hashes": {
+          "episode": "5d6ca129a6539153c11767d6323e72e98c3fc9876507df466ad744d482f44ad0",
+          "task": "19cd72863e817d4786387faa8e2b134696389c6030bccd6b998819868fad0102",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "f5df62b626e4a4f4b7b472c5184986a619ce658f0ace88cdce0afc4b3283e1ca",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_eeea8a77b1384538907c2eed924a13ed",
+        "reference": "Current",
+        "evidence_step": 0,
+        "query_step": 0,
+        "evidence_hash": "1c1eb744c4e66eb53fd21d960a99213e066d1f201eafd09ad21a175397fc0547",
+        "current_state_hash": "1c1eb744c4e66eb53fd21d960a99213e066d1f201eafd09ad21a175397fc0547",
+        "parameters": {
+          "point": "point",
+          "line": [
+            "line_a",
+            "line_b"
+          ],
+          "frame": "table",
+          "geometry": "InfiniteLine3D",
+          "degeneracy_tolerance_m": 0.0001
+        },
+        "calculation": {
+          "line_parameter": 0.5180395541897735,
+          "projection_m": [
+            -0.009917137762001677,
+            -0.021180414547081805,
+            0.2007392679365108
+          ],
+          "geometry": "InfiniteLine3D",
+          "object_reference_points": {
+            "line_a": "RigidBodyOrigin",
+            "line_b": "RigidBodyOrigin",
+            "point": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "DetectSceneChange_v0",
+      "task_id": "DetectSceneChange",
+      "domain": "SpatialMemory",
+      "configuration_valid": true,
+      "oracle_error_m": 0.0,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Select the one object among the coffee can, the meat tin, the yellow mustard bottle whose reference point moved more than 0.03 metres since the end of phase observe, in frame table. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Object",
+        "object_id": "block_1"
+      },
+      "provenance": {
+        "contract_hash": "6eefbeb64ae3fe0c6fdd221a6541e49d27556ca81e56a8ab424e46fbe01fe56c",
+        "source_hashes": {
+          "episode": "e028c6bd9e3fa5ea75a59f5d3e97592bd2702fcec93d063e5d32b8647eb6fade",
+          "task": "a6c0e1fcdda4ce73bd40b4dd23979df5a9fb76637e00940f820ddf2105aad255",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "04bc36af0acd5588f36f42c5cbce0cac906c459d47c74deb2d506e838cbd47ca",
+          "protocol": "753f7f874b2f7cfa2260da16eef791e6bdf704a74a80c728fae6e0bfb3675a61",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_85077d2cd332432295ea5a037ad6e359",
+        "reference": "observe.End",
+        "evidence_step": 2,
+        "query_step": 5,
+        "evidence_hash": "b1e02d4f4687e16090adb261fd932c0a78dedb3c65ea7cdd43e525a4aed93ca3",
+        "current_state_hash": "f2c00d309645b7cd53e48febd7d10f79c02233282b4f5aac499c3febe235740f",
+        "parameters": {
+          "objects": [
+            "block_0",
+            "block_1",
+            "block_2"
+          ],
+          "frame": "table",
+          "reference": {
+            "phase": "observe",
+            "boundary": "End"
+          },
+          "change_threshold_m": 0.03,
+          "ambiguity_tolerance_m": 0.001
+        },
+        "calculation": {
+          "displacements_m": {
+            "block_0": 0.0,
+            "block_1": 0.18872141158560127,
+            "block_2": 0.0
+          },
+          "change_threshold_m": 0.03,
+          "object_reference_points": {
+            "block_0": "RigidBodyOrigin",
+            "block_1": "RigidBodyOrigin",
+            "block_2": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "ProjectOntoLine_s1_v0",
+      "task_id": "ProjectOntoLine",
+      "domain": "SpatialReasoning",
+      "configuration_valid": true,
+      "oracle_error_m": 1.471961680016039e-17,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Report the orthogonal projection of the reference point of the yellow mustard bottle using the infinite 3D line through the reference points of the coffee can and the meat tin, in frame table, in metres. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Point",
+        "position_m": [
+          0.027310614120352558,
+          -0.02344312894279875,
+          0.1995991904056472
+        ],
+        "frame": "table"
+      },
+      "provenance": {
+        "contract_hash": "8de8cd49f55be6764f6eec52c1c111aca99b3820b6b702d6eeef63237010109a",
+        "source_hashes": {
+          "episode": "e35e1e73c27f3e957f02b1665e48d83eb39ae76cc4365ff920e31fa32500f31a",
+          "task": "8b670bfe8d94d29a5d77b2d77447e58e8942f45b220aaf48eedd8f5748948162",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "227d601e66bb645e838783e68af56d77fec7012df1790a506b58cbbe0b3026e9",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_cf5a5843bf894d69a74c1929aeeb9d0a",
+        "reference": "Current",
+        "evidence_step": 0,
+        "query_step": 0,
+        "evidence_hash": "7dc5f08c2b10e520e6847580013bfa9d35eb7a4d158b59219f2e6bad6e508138",
+        "current_state_hash": "7dc5f08c2b10e520e6847580013bfa9d35eb7a4d158b59219f2e6bad6e508138",
+        "parameters": {
+          "point": "point",
+          "line": [
+            "line_a",
+            "line_b"
+          ],
+          "frame": "table",
+          "geometry": "InfiniteLine3D",
+          "degeneracy_tolerance_m": 0.0001
+        },
+        "calculation": {
+          "line_parameter": 0.4926961393471054,
+          "projection_m": [
+            0.027310614120352558,
+            -0.02344312894279875,
+            0.1995991904056472
+          ],
+          "geometry": "InfiniteLine3D",
+          "object_reference_points": {
+            "line_a": "RigidBodyOrigin",
+            "line_b": "RigidBodyOrigin",
+            "point": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "ReflectAcrossLine_s1_v0",
+      "task_id": "ReflectAcrossLine",
+      "domain": "SpatialReasoning",
+      "configuration_valid": true,
+      "oracle_error_m": 2.4532694666933986e-17,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Report the axial reflection (a 180-degree rotation about the line) of the reference point of the yellow mustard bottle using the infinite 3D line through the reference points of the coffee can and the meat tin, in frame table, in metres. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Point",
+        "position_m": [
+          -0.02501182627053633,
+          0.02305807783231495,
+          0.1995991904056472
+        ],
+        "frame": "table"
+      },
+      "provenance": {
+        "contract_hash": "179e5b17c6b7ef37e55efca38521507ddd35d8f3521799f162a26791a3e20048",
+        "source_hashes": {
+          "episode": "2ca69b5a08f38d3e79d0d712c5becd6630dc2e953c459f93ec02f538c7720855",
+          "task": "19cd72863e817d4786387faa8e2b134696389c6030bccd6b998819868fad0102",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "227d601e66bb645e838783e68af56d77fec7012df1790a506b58cbbe0b3026e9",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_f142438145324cc99c524eb9e441380a",
+        "reference": "Current",
+        "evidence_step": 0,
+        "query_step": 0,
+        "evidence_hash": "7ef86d43c51151f645d41473dd90ddc06f65be76cc2c6939592c89dcbb9112e4",
+        "current_state_hash": "7ef86d43c51151f645d41473dd90ddc06f65be76cc2c6939592c89dcbb9112e4",
+        "parameters": {
+          "point": "point",
+          "line": [
+            "line_a",
+            "line_b"
+          ],
+          "frame": "table",
+          "geometry": "InfiniteLine3D",
+          "degeneracy_tolerance_m": 0.0001
+        },
+        "calculation": {
+          "line_parameter": 0.4926961393471054,
+          "projection_m": [
+            0.027310614120352558,
+            -0.02344312894279875,
+            0.1995991904056472
+          ],
+          "geometry": "InfiniteLine3D",
+          "object_reference_points": {
+            "line_a": "RigidBodyOrigin",
+            "line_b": "RigidBodyOrigin",
+            "point": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "DetectSceneChange_s1_v0",
+      "task_id": "DetectSceneChange",
+      "domain": "SpatialMemory",
+      "configuration_valid": true,
+      "oracle_error_m": 0.0,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Select the one object among the coffee can, the meat tin, the yellow mustard bottle whose reference point moved more than 0.03 metres since the end of phase observe, in frame table. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Object",
+        "object_id": "block_1"
+      },
+      "provenance": {
+        "contract_hash": "36832903fba4d805907c45dad26ca2715152dfd2c987d611982e1c00c2df0a63",
+        "source_hashes": {
+          "episode": "fcc77ee65a0fbd2e2cfd22d795701957502564dc5b2805f6bf225d7b8c34959d",
+          "task": "a6c0e1fcdda4ce73bd40b4dd23979df5a9fb76637e00940f820ddf2105aad255",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "422946c2a4eb5472f19f623941b4a8ff7c44fb649e24433f0398eeb25d14a79e",
+          "protocol": "bbf6ae7af877d3dfbc2cc4f1c6bb1d8e557cbeca8171d558a50007f8decc3d68",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_836b7a75b69445089eb4ab757713efe0",
+        "reference": "observe.End",
+        "evidence_step": 2,
+        "query_step": 5,
+        "evidence_hash": "f66b47fc8fb4f9d56e782846d76c49173b798a217479ee3ac3f079ebbccddcec",
+        "current_state_hash": "bb802a675747aea920acfcfd8e7f74c31d0a15b70800ac79383a19011e5e5a62",
+        "parameters": {
+          "objects": [
+            "block_0",
+            "block_1",
+            "block_2"
+          ],
+          "frame": "table",
+          "reference": {
+            "phase": "observe",
+            "boundary": "End"
+          },
+          "change_threshold_m": 0.03,
+          "ambiguity_tolerance_m": 0.001
+        },
+        "calculation": {
+          "displacements_m": {
+            "block_0": 0.0,
+            "block_1": 0.20548072769356296,
+            "block_2": 0.0
+          },
+          "change_threshold_m": 0.03,
+          "object_reference_points": {
+            "block_0": "RigidBodyOrigin",
+            "block_1": "RigidBodyOrigin",
+            "block_2": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "ProjectOntoLine_s2_v0",
+      "task_id": "ProjectOntoLine",
+      "domain": "SpatialReasoning",
+      "configuration_valid": true,
+      "oracle_error_m": 3.1031676915590914e-17,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Report the orthogonal projection of the reference point of the yellow mustard bottle using the infinite 3D line through the reference points of the coffee can and the meat tin, in frame table, in metres. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Point",
+        "position_m": [
+          -0.14107604076000643,
+          -0.014090188543133118,
+          0.237645347168396
+        ],
+        "frame": "table"
+      },
+      "provenance": {
+        "contract_hash": "c511ccc3084b57a2dd36c7f2320e2aec429ae740ecc6a78300d657a7a934c8ce",
+        "source_hashes": {
+          "episode": "06675932ffd31c107243f279a70f8391ba99ec94e4a5c994f8259202c2a655d4",
+          "task": "8b670bfe8d94d29a5d77b2d77447e58e8942f45b220aaf48eedd8f5748948162",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "28fd2c5f0ea8fc8291c71caeb87f1525827b396f5bbb49fd7bfb51fffd1b2519",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_2ac17aafc5a742d68b5f4ff025d9f107",
+        "reference": "Current",
+        "evidence_step": 0,
+        "query_step": 0,
+        "evidence_hash": "b46e9bbe459c43626ce1d1bf5a8aa1e691355fd437640e2363b0f4fab25add72",
+        "current_state_hash": "b46e9bbe459c43626ce1d1bf5a8aa1e691355fd437640e2363b0f4fab25add72",
+        "parameters": {
+          "point": "point",
+          "line": [
+            "line_a",
+            "line_b"
+          ],
+          "frame": "table",
+          "geometry": "InfiniteLine3D",
+          "degeneracy_tolerance_m": 0.0001
+        },
+        "calculation": {
+          "line_parameter": 1.0367982050071194,
+          "projection_m": [
+            -0.14107604076000643,
+            -0.014090188543133118,
+            0.237645347168396
+          ],
+          "geometry": "InfiniteLine3D",
+          "object_reference_points": {
+            "line_a": "RigidBodyOrigin",
+            "line_b": "RigidBodyOrigin",
+            "point": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "ReflectAcrossLine_s2_v0",
+      "task_id": "ReflectAcrossLine",
+      "domain": "SpatialReasoning",
+      "configuration_valid": true,
+      "oracle_error_m": 6.546139416680338e-17,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Report the axial reflection (a 180-degree rotation about the line) of the reference point of the yellow mustard bottle using the infinite 3D line through the reference points of the coffee can and the meat tin, in frame table, in metres. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Point",
+        "position_m": [
+          -0.12198390690250735,
+          0.053255861265057866,
+          0.237645347168396
+        ],
+        "frame": "table"
+      },
+      "provenance": {
+        "contract_hash": "9b6a5b2b9b69ce173ea8b91fe86d3ef940fa3878906cf267b5d0ef910c53398c",
+        "source_hashes": {
+          "episode": "00b82d0db8ccbece465d66a602038e7711197c212aa80f2ed15f5e087493a01e",
+          "task": "19cd72863e817d4786387faa8e2b134696389c6030bccd6b998819868fad0102",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "28fd2c5f0ea8fc8291c71caeb87f1525827b396f5bbb49fd7bfb51fffd1b2519",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_73ca86de3f1f4a5c8c6bcad003d15627",
+        "reference": "Current",
+        "evidence_step": 0,
+        "query_step": 0,
+        "evidence_hash": "fb6863d5d2f4654416dcfd41b6b64be7637810b67250d6e0b8f4a7d8b9467f11",
+        "current_state_hash": "fb6863d5d2f4654416dcfd41b6b64be7637810b67250d6e0b8f4a7d8b9467f11",
+        "parameters": {
+          "point": "point",
+          "line": [
+            "line_a",
+            "line_b"
+          ],
+          "frame": "table",
+          "geometry": "InfiniteLine3D",
+          "degeneracy_tolerance_m": 0.0001
+        },
+        "calculation": {
+          "line_parameter": 1.0367982050071194,
+          "projection_m": [
+            -0.14107604076000643,
+            -0.014090188543133118,
+            0.237645347168396
+          ],
+          "geometry": "InfiniteLine3D",
+          "object_reference_points": {
+            "line_a": "RigidBodyOrigin",
+            "line_b": "RigidBodyOrigin",
+            "point": "RigidBodyOrigin"
+          }
+        }
+      }
+    },
+    {
+      "episode_id": "DetectSceneChange_s2_v0",
+      "task_id": "DetectSceneChange",
+      "domain": "SpatialMemory",
+      "configuration_valid": true,
+      "oracle_error_m": 0.0,
+      "incorrect_answer_rejected": true,
+      "evidence_replay_equal": true,
+      "end_to_end_success": true,
+      "instruction": "Select the one object among the coffee can, the meat tin, the yellow mustard bottle whose reference point moved more than 0.03 metres since the end of phase observe, in frame table. Each object's reference point is its configured rigid-body origin.",
+      "ground_truth": {
+        "type": "Object",
+        "object_id": "block_2"
+      },
+      "provenance": {
+        "contract_hash": "99b9ee710e71d118974c189f4da02928004f5d40a8fe61b7455492cdd1577b7e",
+        "source_hashes": {
+          "episode": "708c1ea5a5f88a42c2f650233d8c4418a5bf00df6c91dd376794bbd6ae3181df",
+          "task": "a6c0e1fcdda4ce73bd40b4dd23979df5a9fb76637e00940f820ddf2105aad255",
+          "scene": "8875831ba59d097f400fca7ad42578bde466e7a97ccb1ac0e684fb9895d903bc",
+          "layout": "04569473a9a193473c44e8e19decb95364c281d2221e491d590aa1a48838f559",
+          "protocol": "47df99a8681f079a1666949b5cabb40e80dfd4f693a0cfbe74e603a9376e2c71",
+          "implementation": "d4cd3eab01cbff47c79d280e9246cf2a557f3078aa87cc666ab23741e6274ed5"
+        },
+        "instance_id": "run_a16d2f6abb3a42fa886f3d8a8e4c6983",
+        "reference": "observe.End",
+        "evidence_step": 2,
+        "query_step": 5,
+        "evidence_hash": "658eea8eb80fbf299708bb575d01659a865ce0150e01fb3a44466be956a7d9c6",
+        "current_state_hash": "3adb19964f02dda2b77d9651d0360f525534d821fb28dba53c8e38d5b4cfdb1e",
+        "parameters": {
+          "objects": [
+            "block_0",
+            "block_1",
+            "block_2"
+          ],
+          "frame": "table",
+          "reference": {
+            "phase": "observe",
+            "boundary": "End"
+          },
+          "change_threshold_m": 0.03,
+          "ambiguity_tolerance_m": 0.001
+        },
+        "calculation": {
+          "displacements_m": {
+            "block_0": 0.0,
+            "block_1": 0.0,
+            "block_2": 0.17186515495907873
+          },
+          "change_threshold_m": 0.03,
+          "object_reference_points": {
+            "block_0": "RigidBodyOrigin",
+            "block_1": "RigidBodyOrigin",
+            "block_2": "RigidBodyOrigin"
+          }
+        }
+      }
+    }
+  ]
+}

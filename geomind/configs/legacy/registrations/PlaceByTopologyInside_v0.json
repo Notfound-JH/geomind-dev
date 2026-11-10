@@ -1,0 +1,43 @@
+{
+  "task_id": "PlaceByTopology",
+  "family": "RelationalGrounding",
+  "condition": "Base",
+  "layout": "Containment",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "place_inside",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Put the block in your hand inside the blue box.",
+    "evaluator_key": "containment_evaluator",
+    "semantic_module": "spatial_placement",
+    "skill_type": "container_placement",
+    "phase": "phase2",
+    "annotation_layout_key": "place_inside_scene65_skill",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "spatial_placement",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "place_inside"
+    },
+    "registration_id": "PlaceByTopologyInside_v0",
+    "protocol_family": "spatial_placement",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "PlaceInside_v0",
+    "place_inside",
+    "RelationBaseBase_PlaceInside_v0"
+  ],
+  "variant": "Inside"
+}

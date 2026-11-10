@@ -1,0 +1,1875 @@
+diff --git a/examples/isaac_sim/batch_motion_gen_reacher.py b/examples/isaac_sim/batch_motion_gen_reacher.py
+index 67928fd..5fd6cad 100644
+--- a/examples/isaac_sim/batch_motion_gen_reacher.py
++++ b/examples/isaac_sim/batch_motion_gen_reacher.py
+@@ -42,7 +42,7 @@ parser.add_argument(
+     default=False,
+ )
+ 
+-parser.add_argument("--robot", type=str, default="franka.yml", help="robot configuration to load")
++parser.add_argument("--robot", type=str, default="/home/elm/projects/IsaacLab/curobo/src/curobo/content/configs/robot/fr3_test_isaac.yml", help="robot configuration to load")
+ args = parser.parse_args()
+ # Third Party
+ from omni.isaac.kit import SimulationApp
+@@ -135,7 +135,7 @@ def main():
+     # warmup curobo instance
+ 
+     tensor_args = TensorDeviceType()
+-    robot_file = "franka.yml"
++    robot_file = "/home/elm/projects/IsaacLab/curobo/src/curobo/content/configs/robot/fr3_test_isaac.yml"
+ 
+     world_file = ["collision_test.yml", "collision_thin_walls.yml"]
+     world_cfg_list = []
+@@ -213,6 +213,7 @@ def main():
+         sq_buffer = []
+         for k in target_list:
+             sph_position, sph_orientation = k.get_local_pose()
++            # print(sph_position, sph_orientation)
+             sp_buffer.append(sph_position)
+             sq_buffer.append(sph_orientation)
+ 
+diff --git a/examples/isaac_sim/collision_checker.py b/examples/isaac_sim/collision_checker.py
+index 7e0d943..09d3db7 100644
+--- a/examples/isaac_sim/collision_checker.py
++++ b/examples/isaac_sim/collision_checker.py
+@@ -129,7 +129,7 @@ def main():
+     # warmup curobo instance
+ 
+     tensor_args = TensorDeviceType()
+-    robot_file = "franka.yml"
++    robot_file = "/home/elm/projects/IsaacLab/curobo/src/curobo/content/configs/robot/franka.yml"
+     world_file = ["collision_thin_walls.yml", "collision_test.yml"][-1]
+     collision_checker_type = CollisionCheckerType.MESH
+     world_cfg = WorldConfig.from_dict(load_yaml(join_path(get_world_configs_path(), world_file)))
+diff --git a/examples/isaac_sim/motion_gen_reacher.py b/examples/isaac_sim/motion_gen_reacher.py
+index 77cc43d..2d4805d 100644
+--- a/examples/isaac_sim/motion_gen_reacher.py
++++ b/examples/isaac_sim/motion_gen_reacher.py
+@@ -179,7 +179,7 @@ def main():
+     if args.external_robot_configs_path is not None:
+         robot_cfg_path = args.external_robot_configs_path
+     robot_cfg = load_yaml(join_path(robot_cfg_path, args.robot))["robot_cfg"]
+-
++    
+     if args.external_asset_path is not None:
+         robot_cfg["kinematics"]["external_asset_path"] = args.external_asset_path
+     if args.external_robot_configs_path is not None:
+@@ -188,9 +188,38 @@ def main():
+     default_config = robot_cfg["kinematics"]["cspace"]["retract_config"]
+ 
+     robot, robot_prim_path = add_robot_to_scene(robot_cfg, my_world)
+-
++    from pxr import UsdGeom
++    def _dump_stage_and_robot(stage, robot_prim_path: str):
++        print("\n===== [DEBUG] Stage basic info =====")
++        print("UpAxis:", UsdGeom.GetStageUpAxis(stage))
++        print("MetersPerUnit:", UsdGeom.GetStageMetersPerUnit(stage))  # stage unit check  [oai_citation:1‡NVIDIA Developer Forums](https://forums.developer.nvidia.com/t/how-to-get-usd-dimensions-in-code/270610?utm_source=chatgpt.com)
++
++        prim = stage.GetPrimAtPath(robot_prim_path)
++        print("\n===== [DEBUG] Robot prim =====")
++        print("robot_prim_path:", robot_prim_path, "exists:", bool(prim))
++
++        if prim and prim.IsValid():
++            xf = UsdGeom.Xformable(prim)
++            ops = xf.GetOrderedXformOps()
++            print("[Robot XformOps]")
++            for op in ops:
++                try:
++                    print(" ", op.GetOpName(), op.GetOpType(), "=", op.GetAttr().Get())
++                except Exception:
++                    print(" ", op.GetOpName(), op.GetOpType(), "= <unreadable>")
++
++    _dump_stage_and_robot(stage, robot_prim_path)
++
++    # also print runtime pose (wxyz quat in Isaac Sim)  [oai_citation:2‡Isaac Sim](https://isaac-sim.github.io/IsaacLab/main/source/migration/migrating_from_isaacgymenvs.html?utm_source=chatgpt.com)
++    try:
++        rpos, rquat = robot.get_world_pose()
++        print("\n===== [DEBUG] robot.get_world_pose() =====")
++        print("world_pos:", np.array(rpos))
++        print("world_quat(wxyz):", np.array(rquat))
++    except Exception as e:
++        print("[WARN] robot.get_world_pose failed:", e)
++    
+     articulation_controller = None
+-
+     world_cfg_table = WorldConfig.from_dict(
+         load_yaml(join_path(get_world_configs_path(), "collision_table.yml"))
+     )
+@@ -316,6 +345,7 @@ def main():
+             past_orientation = cube_orientation
+ 
+         sim_js = robot.get_joints_state()
++        # print("sim_js:", sim_js.positions)
+         if sim_js is None:
+             print("sim_js is None")
+             continue
+@@ -339,28 +369,95 @@ def main():
+             cu_js.velocity[:] = past_cmd.velocity
+             cu_js.acceleration[:] = past_cmd.acceleration
+         cu_js = cu_js.get_ordered_joint_state(motion_gen.kinematics.joint_names)
++        def quat_wxyz_to_rotmat(q):
++            # Isaac Sim uses wxyz in many APIs/docs  [oai_citation:1‡Isaac Sim Documentation](https://docs.isaacsim.omniverse.nvidia.com/4.2.0/replicator_tutorials/ext_replicator-object/transformation.html?utm_source=chatgpt.com)
++            w, x, y, z = [float(v) for v in q]
++            return np.array([
++                [1 - 2*(y*y + z*z),     2*(x*y - z*w),     2*(x*z + y*w)],
++                [    2*(x*y + z*w), 1 - 2*(x*x + z*z),     2*(y*z - x*w)],
++                [    2*(x*z - y*w),     2*(y*z + x*w), 1 - 2*(x*x + y*y)],
++            ], dtype=np.float64)
++
++        def transform_base_to_world(p_base_xyz, base_pos_w, base_quat_wxyz):
++            """p_base_xyz: np.array shape (3,) in XYZ order."""
++            R = quat_wxyz_to_rotmat(base_quat_wxyz)
++            return (base_pos_w.reshape(3,) + R @ p_base_xyz.reshape(3,)).reshape(3,)
++
++        def vec_zxy_to_xyz(v_zxy):
++            """
++            Input order: (z, x, y)
++            Output order: (x, y, z)
++            """
++            v = np.asarray(v_zxy, dtype=np.float64).reshape(3,)
++            return np.array([v[1], v[2], v[0]], dtype=np.float64)
++
++        def vec_zyx_to_xyz(v_zyx):
++            """
++            Input order: (z, y, x)
++            Output order: (x, y, z)
++            """
++            v = np.asarray(v_zyx, dtype=np.float64).reshape(3,)
++            return np.array([v[2], v[1], v[0]], dtype=np.float64)
++
++        def vec_xyz_identity(v_xyz):
++            v = np.asarray(v_xyz, dtype=np.float64).reshape(3,)
++            return v
+ 
+         if args.visualize_spheres and step_index % 2 == 0:
+             sph_list = motion_gen.kinematics.get_robot_as_spheres(cu_js.position)
++            # sph_list[0] is list of spheres
++
++            # base pose in world (from the simulated robot prim)
++            base_pos_w, base_quat_w = robot.get_world_pose()
++            base_pos_w = np.array(base_pos_w, dtype=np.float64)
++            base_quat_w = np.array(base_quat_w, dtype=np.float64)
++
++            # One-time debug prints every N steps:
++            if step_index % 200 == 0:
++                print("\n===== [DEBUG] cuRobo spheres frame check =====")
++                print("robot base world pos:", base_pos_w)
++                print("robot base world quat(wxyz):", base_quat_w)
++                # print first 3 spheres raw + transformed
++                for si in range(min(3, len(sph_list[0]))):
++                    p_raw = np.array(sph_list[0][si].position, dtype=np.float64).reshape(3,)
++                    p_w = transform_base_to_world(p_raw, base_pos_w, base_quat_w)
++                    print(f"Sphere[{si}] raw(base?): {p_raw}  -> world: {p_w}")
+ 
+             if spheres is None:
+                 spheres = []
+-                # create spheres:
+-
++                spheres_world = []  # second set: transformed
+                 for si, s in enumerate(sph_list[0]):
+-                    sp = sphere.VisualSphere(
+-                        prim_path="/curobo/robot_sphere_" + str(si),
+-                        position=np.ravel(s.position),
++                    p_raw = np.array(s.position, dtype=np.float64).reshape(3,)
++                    p_w = transform_base_to_world(p_raw, base_pos_w, base_quat_w)
++
++                    sp_raw = sphere.VisualSphere(
++                        prim_path=f"/curobo/robot_sphere_raw_{si}",
++                        position=p_raw,              # raw (assumed world) -> likely wrong on FR3
+                         radius=float(s.radius),
+-                        color=np.array([0, 0.8, 0.2]),
++                        color=np.array([1.0, 0.2, 0.2]),
+                     )
+-                    spheres.append(sp)
++                    sp_w = sphere.VisualSphere(
++                        prim_path=f"/curobo/robot_sphere_world_{si}",
++                        position=p_w,                # transformed -> should match robot mesh in world
++                        radius=float(s.radius),
++                        color=np.array([0.2, 0.8, 0.2]),
++                    )
++                    spheres.append(sp_raw)
++                    spheres_world.append(sp_w)
++
++                print("[DEBUG] Created two sphere sets: raw(red) vs world(green)")
+             else:
+                 for si, s in enumerate(sph_list[0]):
+-                    if not np.isnan(s.position[0]):
+-                        spheres[si].set_world_pose(position=np.ravel(s.position))
++                    p_raw = np.array(s.position, dtype=np.float64).reshape(3,)
++                    p_w = transform_base_to_world(p_raw, base_pos_w, base_quat_w)
++
++                    if not np.isnan(p_raw[0]):
++                        spheres[si].set_world_pose(position=p_raw)
+                         spheres[si].set_radius(float(s.radius))
+ 
++                    if not np.isnan(p_w[0]):
++                        spheres_world[si].set_world_pose(position=p_w)
++                        spheres_world[si].set_radius(float(s.radius))
+         robot_static = False
+         if (np.max(np.abs(sim_js.velocities)) < 0.5) or args.reactive:
+             robot_static = True
+diff --git a/examples/isaac_sim/simple_stacking.py b/examples/isaac_sim/simple_stacking.py
+index 790987d..ad55d5a 100644
+--- a/examples/isaac_sim/simple_stacking.py
++++ b/examples/isaac_sim/simple_stacking.py
+@@ -263,7 +263,7 @@ class CuroboController(BaseController):
+             self._step_idx = 0
+             # Set EE goals
+             ee_translation_goal = self.my_task.target_position
+-            ee_orientation_goal = np.array([0, 0, -1, 0])
++            ee_orientation_goal = np.array([0, 1, 0, 0])
+             # compute curobo solution:
+             result = self.plan(ee_translation_goal, ee_orientation_goal, sim_js, js_names)
+             succ = result.success.item()
+@@ -534,6 +534,7 @@ while simulation_app.is_running():
+ 
+     else:  # target position has been set
+         sim_js = my_franka.get_joints_state()
++        print(f"Step {i}: dof namess: {my_franka.dof_names}")
+         art_action = my_controller.forward(sim_js, my_franka.dof_names)
+         if art_action is not None:
+             articulation_controller.apply_action(art_action)
+diff --git a/examples/isaac_sim/util/convert_urdf_to_usd.py b/examples/isaac_sim/util/convert_urdf_to_usd.py
+deleted file mode 100644
+index 5648941..0000000
+--- a/examples/isaac_sim/util/convert_urdf_to_usd.py
++++ /dev/null
+@@ -1,179 +0,0 @@
+-#
+-# Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+-#
+-# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+-# property and proprietary rights in and to this material, related
+-# documentation and any modifications thereto. Any use, reproduction,
+-# disclosure or distribution of this material and related documentation
+-# without an express license agreement from NVIDIA CORPORATION or
+-# its affiliates is strictly prohibited.
+-#
+-
+-
+-try:
+-    # Third Party
+-    import isaacsim
+-except ImportError:
+-    pass
+-
+-# Third Party
+-import torch
+-
+-a = torch.zeros(4, device="cuda:0")
+-
+-# Standard Library
+-import argparse
+-
+-parser = argparse.ArgumentParser()
+-parser.add_argument(
+-    "--robot",
+-    type=str,
+-    default="franka.yml",
+-    help="Robot configuration to download",
+-)
+-parser.add_argument("--save_usd", default=False, action="store_true")
+-args = parser.parse_args()
+-
+-# Third Party
+-from omni.isaac.kit import SimulationApp
+-
+-simulation_app = SimulationApp({"headless": args.save_usd})
+-
+-# Third Party
+-import omni.usd
+-from omni.isaac.core import World
+-from omni.isaac.core.robots import Robot
+-from omni.isaac.core.utils.types import ArticulationAction
+-
+-try:
+-    # Third Party
+-    from omni.isaac.urdf import _urdf  # isaacsim 2022.2
+-except ImportError:
+-    from omni.importer.urdf import _urdf  # isaac sim 2023.1
+-
+-# CuRobo
+-from curobo.util.usd_helper import UsdHelper
+-from curobo.util_file import (
+-    get_assets_path,
+-    get_filename,
+-    get_path_of_dir,
+-    get_robot_configs_path,
+-    join_path,
+-    load_yaml,
+-)
+-
+-
+-def save_usd():
+-    my_world = World(stage_units_in_meters=1.0)
+-
+-    import_config = _urdf.ImportConfig()
+-    import_config.merge_fixed_joints = False
+-    import_config.convex_decomp = False
+-    import_config.import_inertia_tensor = True
+-    import_config.fix_base = True
+-    import_config.make_default_prim = True
+-    import_config.self_collision = False
+-    import_config.create_physics_scene = True
+-    import_config.import_inertia_tensor = False
+-    import_config.default_drive_strength = 10000
+-    import_config.default_position_drive_damping = 100
+-    import_config.default_drive_type = _urdf.UrdfJointTargetType.JOINT_DRIVE_POSITION
+-    import_config.distance_scale = 1
+-    import_config.density = 0.0
+-    # Get the urdf file path
+-    robot_config = load_yaml(join_path(get_robot_configs_path(), args.robot))
+-    urdf_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
+-    asset_path = join_path(
+-        get_assets_path(), robot_config["robot_cfg"]["kinematics"]["asset_root_path"]
+-    )
+-    urdf_interface = _urdf.acquire_urdf_interface()
+-    full_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
+-    default_config = robot_config["robot_cfg"]["kinematics"]["cspace"]["retract_config"]
+-    j_names = robot_config["robot_cfg"]["kinematics"]["cspace"]["joint_names"]
+-
+-    robot_path = get_path_of_dir(full_path)
+-    filename = get_filename(full_path)
+-    imported_robot = urdf_interface.parse_urdf(robot_path, filename, import_config)
+-    robot_path = urdf_interface.import_robot(
+-        robot_path, filename, imported_robot, import_config, ""
+-    )
+-    robot = my_world.scene.add(Robot(prim_path=robot_path, name="robot"))
+-    # robot.disable_gravity()
+-    i = 0
+-
+-    my_world.reset()
+-
+-    usd_help = UsdHelper()
+-    usd_help.load_stage(my_world.stage)
+-    save_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["usd_path"])
+-    usd_help.write_stage_to_file(save_path, True)
+-    print("Wrote usd file to " + save_path)
+-    simulation_app.close()
+-
+-
+-def debug_usd():
+-    my_world = World(stage_units_in_meters=1.0)
+-
+-    import_config = _urdf.ImportConfig()
+-    import_config.merge_fixed_joints = False
+-    import_config.convex_decomp = False
+-    import_config.import_inertia_tensor = True
+-    import_config.fix_base = True
+-    import_config.make_default_prim = True
+-    import_config.self_collision = False
+-    import_config.create_physics_scene = True
+-    import_config.import_inertia_tensor = False
+-    import_config.default_drive_strength = 10000
+-    import_config.default_position_drive_damping = 100
+-    import_config.default_drive_type = _urdf.UrdfJointTargetType.JOINT_DRIVE_POSITION
+-    import_config.distance_scale = 1
+-    import_config.density = 0.0
+-    # Get the urdf file path
+-    robot_config = load_yaml(join_path(get_robot_configs_path(), args.robot))
+-    urdf_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
+-    asset_path = join_path(
+-        get_assets_path(), robot_config["robot_cfg"]["kinematics"]["asset_root_path"]
+-    )
+-    urdf_interface = _urdf.acquire_urdf_interface()
+-    full_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
+-    default_config = robot_config["robot_cfg"]["kinematics"]["cspace"]["retract_config"]
+-    j_names = robot_config["robot_cfg"]["kinematics"]["cspace"]["joint_names"]
+-
+-    robot_path = get_path_of_dir(full_path)
+-    filename = get_filename(full_path)
+-    imported_robot = urdf_interface.parse_urdf(robot_path, filename, import_config)
+-    robot_path = urdf_interface.import_robot(
+-        robot_path, filename, imported_robot, import_config, ""
+-    )
+-    robot = my_world.scene.add(Robot(prim_path=robot_path, name="robot"))
+-    # robot.disable_gravity()
+-    i = 0
+-
+-    articulation_controller = robot.get_articulation_controller()
+-    my_world.reset()
+-
+-    while simulation_app.is_running():
+-        my_world.step(render=True)
+-        if i == 0:
+-            idx_list = [robot.get_dof_index(x) for x in j_names]
+-            robot.set_joint_positions(default_config, idx_list)
+-            i += 1
+-        # if dof_n is not None:
+-        #    dof_i = [robot.get_dof_index(x) for x in j_names]
+-        #
+-        #    robot.set_joint_positions(default_config, dof_i)
+-        if robot.is_valid():
+-            art_action = ArticulationAction(default_config, joint_indices=idx_list)
+-            articulation_controller.apply_action(art_action)
+-    usd_help = UsdHelper()
+-    usd_help.load_stage(my_world.stage)
+-    save_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["usd_path"])
+-    usd_help.write_stage_to_file(save_path, True)
+-    simulation_app.close()
+-
+-
+-if __name__ == "__main__":
+-    if args.save_usd:
+-        save_usd()
+-    else:
+-        debug_usd()
+diff --git a/examples/isaac_sim/util/dowload_assets.py b/examples/isaac_sim/util/dowload_assets.py
+deleted file mode 100644
+index f8458f7..0000000
+--- a/examples/isaac_sim/util/dowload_assets.py
++++ /dev/null
+@@ -1,76 +0,0 @@
+-#
+-# Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+-#
+-# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+-# property and proprietary rights in and to this material, related
+-# documentation and any modifications thereto. Any use, reproduction,
+-# disclosure or distribution of this material and related documentation
+-# without an express license agreement from NVIDIA CORPORATION or
+-# its affiliates is strictly prohibited.
+-#
+-
+-# This script downloads robot usd assets from isaac sim for using in CuRobo.
+-
+-
+-try:
+-    # Third Party
+-    import isaacsim
+-except ImportError:
+-    pass
+-
+-
+-# Third Party
+-import torch
+-
+-a = torch.zeros(4, device="cuda:0")
+-
+-# Third Party
+-from omni.isaac.kit import SimulationApp
+-
+-simulation_app = SimulationApp({"headless": True})
+-# Third Party
+-from omni.isaac.core import World
+-from omni.isaac.core.robots import Robot
+-from omni.isaac.core.utils.nucleus import get_assets_root_path as nucleus_path
+-from omni.isaac.core.utils.stage import add_reference_to_stage
+-
+-# CuRobo
+-from curobo.util.usd_helper import UsdHelper
+-from curobo.util_file import get_assets_path, get_robot_configs_path, join_path, load_yaml
+-
+-# supported robots:
+-robots = ["franka.yml", "ur10.yml"]
+-# Standard Library
+-import argparse
+-
+-parser = argparse.ArgumentParser()
+-parser.add_argument(
+-    "--robot",
+-    type=str,
+-    default="franka.yml",
+-    help="Robot configuration to download",
+-)
+-args = parser.parse_args()
+-
+-if __name__ == "__main__":
+-    r = args.robot
+-    my_world = World(stage_units_in_meters=1.0)
+-    robot_config = load_yaml(join_path(get_robot_configs_path(), r))
+-    usd_path = nucleus_path() + robot_config["robot_cfg"]["kinematics"]["isaac_usd_path"]
+-
+-    usd_help = UsdHelper()
+-    robot_name = r
+-    prim_path = robot_config["robot_cfg"]["kinematics"]["usd_robot_root"]
+-    add_reference_to_stage(usd_path=usd_path, prim_path=prim_path)
+-    robot = my_world.scene.add(Robot(prim_path=prim_path, name=robot_name))
+-    usd_help.load_stage(my_world.stage)
+-
+-    my_world.reset()
+-    articulation_controller = robot.get_articulation_controller()
+-
+-    # create a new stage and add robot to usd path:
+-    save_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["usd_path"])
+-    usd_help.write_stage_to_file(save_path, True)
+-    my_world.clear()
+-    my_world.clear_instance()
+-    simulation_app.close()
+diff --git a/src/curobo/content/configs/robot/franka.yml b/src/curobo/content/configs/robot/franka.yml
+index 351bbd0..0c5bd2c 100644
+--- a/src/curobo/content/configs/robot/franka.yml
++++ b/src/curobo/content/configs/robot/franka.yml
+@@ -13,7 +13,7 @@ robot_cfg:
+   kinematics:
+     use_usd_kinematics: False
+     isaac_usd_path: "/Isaac/Robots/Franka/franka.usd"
+-    usd_path: "robot/non_shipping/franka/franka_panda_meters.usda"
++    usd_path: "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Franka/franka.usd"
+     usd_robot_root: "/panda"
+     usd_flip_joints: ["panda_joint1","panda_joint2","panda_joint3","panda_joint4", "panda_joint5",
+       "panda_joint6","panda_joint7","panda_finger_joint1", "panda_finger_joint2"]
+@@ -22,11 +22,11 @@ robot_cfg:
+     "panda_joint2": "Z",
+     "panda_joint3": "Z",
+     "panda_joint4": "Z",
+-     "panda_joint5": "Z",
++    "panda_joint5": "Z",
+     "panda_joint6": "Z",
+     "panda_joint7": "Z",
+     "panda_finger_joint1": "Y",
+-     "panda_finger_joint2":  "Y",
++    "panda_finger_joint2":  "Y",
+     }
+ 
+     usd_flip_joint_limits: ["panda_finger_joint2"]
+@@ -101,9 +101,7 @@ robot_cfg:
+         "panda_rightfinger",
+       ]
+     lock_joints: {"panda_finger_joint1": 0.04, "panda_finger_joint2": 0.04}
+-    extra_links: {"attached_object":{"parent_link_name": "panda_hand" ,
+-    "link_name": "attached_object", "fixed_transform": [0,0,0,1,0,0,0], "joint_type":"FIXED",
+-    "joint_name": "attach_joint" }}
++    extra_links: {"attached_object":{"parent_link_name":"panda_hand" ,"link_name": "attached_object", "fixed_transform":[0,0,0,1,0,0,0], "joint_type":"FIXED","joint_name": "attach_joint" }}
+     cspace:
+       joint_names: ["panda_joint1","panda_joint2","panda_joint3","panda_joint4", "panda_joint5",
+       "panda_joint6","panda_joint7","panda_finger_joint1", "panda_finger_joint2"]
+diff --git a/examples/isaac_sim/utils/convert_urdf_to_usd.py b/examples/isaac_sim/utils/convert_urdf_to_usd.py
+new file mode 100644
+index 0000000..8def611
+--- /dev/null
++++ b/examples/isaac_sim/utils/convert_urdf_to_usd.py
+@@ -0,0 +1,180 @@
++#
++# Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++#
++# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++# property and proprietary rights in and to this material, related
++# documentation and any modifications thereto. Any use, reproduction,
++# disclosure or distribution of this material and related documentation
++# without an express license agreement from NVIDIA CORPORATION or
++# its affiliates is strictly prohibited.
++#
++
++
++try:
++    # Third Party
++    import isaacsim
++except ImportError:
++    pass
++
++# Third Party
++import torch
++
++a = torch.zeros(4, device="cuda:0")
++
++# Standard Library
++import argparse
++
++parser = argparse.ArgumentParser()
++parser.add_argument(
++    "--robot",
++    type=str,
++    default="franka.yml",
++    help="Robot configuration to download",
++)
++parser.add_argument("--save_usd", default=False, action="store_true")
++args = parser.parse_args()
++
++# Third Party
++from omni.isaac.kit import SimulationApp
++
++simulation_app = SimulationApp({"headless": args.save_usd})
++
++# Third Party
++import omni.usd
++from omni.isaac.core import World
++from omni.isaac.core.robots import Robot
++from omni.isaac.core.utils.types import ArticulationAction
++
++try:
++    # Third Party
++    from omni.importer.urdf import _urdf  # isaacsim 2022.2
++except ImportError:
++  # isaac sim 2023.1
++    from isaacsim.asset.importer.urdf import _urdf
++# CuRobo
++from curobo.util.usd_helper import UsdHelper
++from curobo.util_file import (
++    get_assets_path,
++    get_filename,
++    get_path_of_dir,
++    get_robot_configs_path,
++    join_path,
++    load_yaml,
++)
++
++from isaacsim.storage.native import get_assets_root_path
++def save_usd():
++    my_world = World(stage_units_in_meters=1.0)
++
++    import_config = _urdf.ImportConfig()
++    import_config.merge_fixed_joints = False
++    import_config.convex_decomp = False
++    import_config.import_inertia_tensor = True
++    import_config.fix_base = True
++    import_config.make_default_prim = True
++    import_config.self_collision = False
++    import_config.create_physics_scene = True
++    import_config.import_inertia_tensor = False
++    import_config.default_drive_strength = 10000
++    import_config.default_position_drive_damping = 100
++    import_config.default_drive_type = _urdf.UrdfJointTargetType.JOINT_DRIVE_POSITION
++    import_config.distance_scale = 1
++    import_config.density = 0.0
++    # Get the urdf file path
++    robot_config = load_yaml(join_path(get_robot_configs_path(), args.robot))
++    urdf_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
++    asset_path = join_path(
++        get_assets_path(), robot_config["robot_cfg"]["kinematics"]["asset_root_path"]
++    )
++    urdf_interface = _urdf.acquire_urdf_interface()
++    full_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
++    default_config = robot_config["robot_cfg"]["kinematics"]["cspace"]["retract_config"]
++    j_names = robot_config["robot_cfg"]["kinematics"]["cspace"]["joint_names"]
++
++    robot_path = get_path_of_dir(full_path)
++    print("robot path:", robot_path)
++    filename = get_filename(full_path)
++    imported_robot = urdf_interface.parse_urdf(robot_path, filename, import_config)
++    robot_path = urdf_interface.import_robot(
++        robot_path, filename, imported_robot, import_config, ""
++    )
++    robot = my_world.scene.add(Robot(prim_path=robot_path, name="fr3"))
++    # robot.disable_gravity()
++    i = 0
++
++    my_world.reset()
++
++    usd_help = UsdHelper()
++    usd_help.load_stage(my_world.stage)
++    save_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["usd_path"])
++    usd_help.write_stage_to_file(save_path, True)
++    print("Wrote usd file to " + save_path)
++    simulation_app.close()
++
++
++def debug_usd():
++    my_world = World(stage_units_in_meters=1.0)
++
++    import_config = _urdf.ImportConfig()
++    import_config.merge_fixed_joints = False
++    import_config.convex_decomp = False
++    import_config.import_inertia_tensor = True
++    import_config.fix_base = True
++    import_config.make_default_prim = True
++    import_config.self_collision = False
++    import_config.create_physics_scene = True
++    import_config.import_inertia_tensor = False
++    import_config.default_drive_strength = 10000
++    import_config.default_position_drive_damping = 100
++    import_config.default_drive_type = _urdf.UrdfJointTargetType.JOINT_DRIVE_POSITION
++    import_config.distance_scale = 1
++    import_config.density = 0.0
++    # Get the urdf file path
++    robot_config = load_yaml(join_path(get_robot_configs_path(), args.robot))
++    urdf_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
++    asset_path = join_path(
++        get_assets_path(), robot_config["robot_cfg"]["kinematics"]["asset_root_path"]
++    )
++    urdf_interface = _urdf.acquire_urdf_interface()
++    full_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["urdf_path"])
++    default_config = robot_config["robot_cfg"]["kinematics"]["cspace"]["retract_config"]
++    j_names = robot_config["robot_cfg"]["kinematics"]["cspace"]["joint_names"]
++
++    robot_path = get_path_of_dir(full_path)
++    filename = get_filename(full_path)
++    imported_robot = urdf_interface.parse_urdf(robot_path, filename, import_config)
++    robot_path = urdf_interface.import_robot(
++        robot_path, filename, imported_robot, import_config, ""
++    )
++    robot = my_world.scene.add(Robot(prim_path=robot_path, name="robot"))
++    # robot.disable_gravity()
++    i = 0
++
++    articulation_controller = robot.get_articulation_controller()
++    my_world.reset()
++
++    while simulation_app.is_running():
++        my_world.step(render=True)
++        if i == 0:
++            idx_list = [robot.get_dof_index(x) for x in j_names]
++            robot.set_joint_positions(default_config, idx_list)
++            i += 1
++        # if dof_n is not None:
++        #    dof_i = [robot.get_dof_index(x) for x in j_names]
++        #
++        #    robot.set_joint_positions(default_config, dof_i)
++        if robot.is_valid():
++            art_action = ArticulationAction(default_config, joint_indices=idx_list)
++            articulation_controller.apply_action(art_action)
++    usd_help = UsdHelper()
++    usd_help.load_stage(my_world.stage)
++    save_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["usd_path"])
++    usd_help.write_stage_to_file(save_path, True)
++    simulation_app.close()
++
++
++if __name__ == "__main__":
++    if args.save_usd:
++        save_usd()
++    else:
++        debug_usd()
+diff --git a/examples/isaac_sim/utils/dowload_assets.py b/examples/isaac_sim/utils/dowload_assets.py
+new file mode 100644
+index 0000000..f8458f7
+--- /dev/null
++++ b/examples/isaac_sim/utils/dowload_assets.py
+@@ -0,0 +1,76 @@
++#
++# Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++#
++# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++# property and proprietary rights in and to this material, related
++# documentation and any modifications thereto. Any use, reproduction,
++# disclosure or distribution of this material and related documentation
++# without an express license agreement from NVIDIA CORPORATION or
++# its affiliates is strictly prohibited.
++#
++
++# This script downloads robot usd assets from isaac sim for using in CuRobo.
++
++
++try:
++    # Third Party
++    import isaacsim
++except ImportError:
++    pass
++
++
++# Third Party
++import torch
++
++a = torch.zeros(4, device="cuda:0")
++
++# Third Party
++from omni.isaac.kit import SimulationApp
++
++simulation_app = SimulationApp({"headless": True})
++# Third Party
++from omni.isaac.core import World
++from omni.isaac.core.robots import Robot
++from omni.isaac.core.utils.nucleus import get_assets_root_path as nucleus_path
++from omni.isaac.core.utils.stage import add_reference_to_stage
++
++# CuRobo
++from curobo.util.usd_helper import UsdHelper
++from curobo.util_file import get_assets_path, get_robot_configs_path, join_path, load_yaml
++
++# supported robots:
++robots = ["franka.yml", "ur10.yml"]
++# Standard Library
++import argparse
++
++parser = argparse.ArgumentParser()
++parser.add_argument(
++    "--robot",
++    type=str,
++    default="franka.yml",
++    help="Robot configuration to download",
++)
++args = parser.parse_args()
++
++if __name__ == "__main__":
++    r = args.robot
++    my_world = World(stage_units_in_meters=1.0)
++    robot_config = load_yaml(join_path(get_robot_configs_path(), r))
++    usd_path = nucleus_path() + robot_config["robot_cfg"]["kinematics"]["isaac_usd_path"]
++
++    usd_help = UsdHelper()
++    robot_name = r
++    prim_path = robot_config["robot_cfg"]["kinematics"]["usd_robot_root"]
++    add_reference_to_stage(usd_path=usd_path, prim_path=prim_path)
++    robot = my_world.scene.add(Robot(prim_path=prim_path, name=robot_name))
++    usd_help.load_stage(my_world.stage)
++
++    my_world.reset()
++    articulation_controller = robot.get_articulation_controller()
++
++    # create a new stage and add robot to usd path:
++    save_path = join_path(get_assets_path(), robot_config["robot_cfg"]["kinematics"]["usd_path"])
++    usd_help.write_stage_to_file(save_path, True)
++    my_world.clear()
++    my_world.clear_instance()
++    simulation_app.close()
+diff --git a/src/curobo/content/configs/robot/fr3.yml b/src/curobo/content/configs/robot/fr3.yml
+new file mode 100644
+index 0000000..77c68a0
+--- /dev/null
++++ b/src/curobo/content/configs/robot/fr3.yml
+@@ -0,0 +1,194 @@
++##
++## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++##
++## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++## property and proprietary rights in and to this material, related
++## documentation and any modifications thereto. Any use, reproduction,
++## disclosure or distribution of this material and related documentation
++## without an express license agreement from NVIDIA CORPORATION or
++## its affiliates is strictly prohibited.
++##
++
++robot_cfg:
++  kinematics:
++    usd_path: "robot/non_shipping/fr3/fr3.usda"
++    usd_robot_root: "/fr3"
++    isaac_usd_path: "/Isaac/Robots/Franka/fr3.usd"
++    
++    urdf_path: "/home/elm/projects/IsaacLab/src/nvidia-curobo/src/curobo/content/assets/robot/fr3_description/fr3.urdf"
++    asset_root_path: "robot/fr3_description"
++    
++    base_link: "fr3_link0"
++    ee_link: "fr3_hand_tcp"
++    link_names: null
++    lock_joints: null
++    extra_links: null
++
++    
++    collision_link_names: ["fr3_link0", "fr3_link1", "fr3_link2", "fr3_link3", "fr3_link4", "fr3_link5", "fr3_link6", "fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"] # List[str]
++    collision_spheres:
++      fr3_link0:
++      - "center": [-0.014, 0.004, 0.063]
++        "radius": 0.07612
++      - "center": [-0.073, -0.0, 0.047]
++        "radius": 0.0584
++      - "center": [-0.002, -0.0, 0.081]
++        "radius": 0.07359
++      - "center": [0.014, -0.001, 0.047]
++        "radius": 0.06156
++      - "center": [-0.095, 0.02, 0.037]
++        "radius": 0.04701
++      - "center": [-0.089, -0.014, 0.041]
++        "radius": 0.05207
++      fr3_link2:
++      - "center": [-0.0, -0.002, 0.057]
++        "radius": 0.06937
++      - "center": [0.001, -0.135, 0.006]
++        "radius": 0.06555
++      - "center": [0.001, -0.031, 0.051]
++        "radius": 0.06428
++      - "center": [0.0, -0.003, 0.078]
++        "radius": 0.06555
++      - "center": [0.001, -0.145, -0.007]
++        "radius": 0.06238
++      - "center": [0.006, -0.088, 0.035]
++        "radius": 0.0465
++      fr3_link3:
++      - "center": [-0.0, 0.0, -0.066]
++        "radius": 0.06477
++      - "center": [0.084, 0.055, 0.002]
++        "radius": 0.06416
++      - "center": [0.056, 0.035, -0.013]
++        "radius": 0.04971
++      - "center": [0.083, 0.063, -0.0]
++        "radius": 0.06236
++      - "center": [0.084, 0.049, 0.005]
++        "radius": 0.06296
++      - "center": [0.006, -0.003, -0.076]
++        "radius": 0.05995
++      fr3_link4:
++      - "center": [-0.083, 0.068, 0.0]
++        "radius": 0.06477
++      - "center": [0.001, 0.0, 0.055]
++        "radius": 0.06416
++      - "center": [-0.027, 0.015, 0.035]
++        "radius": 0.04971
++      - "center": [0.001, 0.002, 0.063]
++        "radius": 0.06236
++      - "center": [-0.001, -0.015, 0.038]
++        "radius": 0.05273
++      - "center": [-0.081, 0.074, 0.003]
++        "radius": 0.06296
++      fr3_link5:
++      - "center": [-0.0, 0.069, 0.0]
++        "radius": 0.06242
++      - "center": [0.001, 0.019, -0.21]
++        "radius": 0.06021
++      - "center": [-0.003, -0.01, -0.219]
++        "radius": 0.05431
++      - "center": [-0.005, 0.056, -0.18]
++        "radius": 0.04621
++      - "center": [0.001, 0.085, 0.006]
++        "radius": 0.05947
++      - "center": [0.006, 0.087, -0.1]
++        "radius": 0.03295
++      - "center": [-0.004, 0.079, -0.138]
++        "radius": 0.03368
++      - "center": [-0.006, 0.093, -0.065]
++        "radius": 0.03295
++      fr3_link6:
++      - "center": [0.088, 0.028, -0.001]
++        "radius": 0.05689
++      - "center": [0.011, -0.0, 0.02]
++        "radius": 0.04833
++      - "center": [0.09, -0.004, -0.001]
++        "radius": 0.05594
++      - "center": [-0.016, 0.0, 0.017]
++        "radius": 0.04643
++      - "center": [0.068, 0.047, 0.005]
++        "radius": 0.04643
++      - "center": [0.008, 0.014, 0.018]
++        "radius": 0.04738
++      fr3_link7:
++      - "center": [-0.004, -0.006, 0.075]
++        "radius": 0.03822
++      - "center": [0.006, 0.021, 0.074]
++        "radius": 0.03678
++      - "center": [-0.021, 0.006, 0.074]
++        "radius": 0.03678
++      - "center": [0.017, -0.008, 0.074]
++        "radius": 0.03678
++      - "center": [0.053, 0.03, 0.085]
++        "radius": 0.0289
++      - "center": [0.027, 0.052, 0.085]
++        "radius": 0.0289
++      fr3_hand:
++      - "center": [0.001, 0.051, 0.037]
++        "radius": 0.03224
++      - "center": [-0.001, -0.006, 0.04]
++        "radius": 0.03224
++      - "center": [-0.001, -0.075, 0.039]
++        "radius": 0.03224
++      - "center": [0.001, -0.035, 0.037]
++        "radius": 0.03224
++      - "center": [-0.001, 0.079, 0.044]
++        "radius": 0.03224
++      - "center": [0.001, 0.022, 0.041]
++        "radius": 0.03224
++      - "center": [-0.001, 0.08, 0.015]
++        "radius": 0.03134
++      - "center": [-0.001, -0.063, 0.012]
++        "radius": 0.02953
++      fr3_leftfinger:
++      - "center": [-0.005, 0.018, 0.026]
++        "radius": 0.01792
++      - "center": [0.0, 0.022, 0.007]
++        "radius": 0.01792
++      fr3_rightfinger:
++      - "center": [-0.004, -0.022, 0.02]
++        "radius": 0.01792
++      - "center": [-0.0, -0.022, 0.007]
++        "radius": 0.01792
++      fr3_link1:
++      - "center": [-0.0, -0.057, -0.001]
++        "radius": 0.06937
++      - "center": [0.001, -0.006, -0.134]
++        "radius": 0.06555
++      - "center": [0.001, -0.051, -0.03]
++        "radius": 0.06428
++      - "center": [0.0, -0.078, -0.002]
++        "radius": 0.06555
++      - "center": [0.001, 0.007, -0.144]
++        "radius": 0.06238
++      - "center": [0.006, -0.035, -0.087]
++        "radius": 0.0465
++    collision_sphere_buffer: 0.005 # float or Dict[str, float]
++    extra_collision_spheres: {}
++    self_collision_ignore: {
++        "fr3_link0": ["fr3_link1", "fr3_link2"],
++        "fr3_link1": ["fr3_link2", "fr3_link3", "fr3_link4"],
++        "fr3_link2": ["fr3_link3", "fr3_link4"],
++        "fr3_link3": ["fr3_link4", "fr3_link6"],
++        "fr3_link4":
++          ["fr3_link5", "fr3_link6", "fr3_link7", "fr3_link8"],
++        "fr3_link5": ["fr3_link6", "fr3_link7", "fr3_hand","fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link6": ["fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link7": ["fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_hand": ["fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_leftfinger": ["fr3_rightfinger"],
++        "fr3_rightfinger": ["fr3_leftfinger"],
++
++      } # Dict[str, List[str]]
++    self_collision_buffer: {} # Dict[str, float]
++
++    use_global_cumul: True
++    mesh_link_names: null # List[str]
++    external_asset_path: null # Use this to add path for externally located assets/robot folder.
++
++    cspace:
++      joint_names: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5","fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"] # List[str]
++      retract_config: [0.0, -1.3, 0.0, -2.5, 0.0, 1.0, 0., 0.04, 0.04] # List[float]
++      null_space_weight: [1,1,1,1,1,1,1,1,1]
++      cspace_distance_weight: [1,1,1,1,1,1,1,1,1]
++      max_acceleration: 15.0
++      max_jerk: 500.0
+diff --git a/src/curobo/content/configs/robot/fr3_test_isaac.yml b/src/curobo/content/configs/robot/fr3_test_isaac.yml
+new file mode 100644
+index 0000000..d59cf75
+--- /dev/null
++++ b/src/curobo/content/configs/robot/fr3_test_isaac.yml
+@@ -0,0 +1,233 @@
++##
++## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++##
++## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++## property and proprietary rights in and to this material, related
++## documentation and any modifications thereto. Any use, reproduction,
++## disclosure or distribution of this material and related documentation
++## without an express license agreement from NVIDIA CORPORATION or
++## its affiliates is strictly prohibited.
++##
++
++robot_cfg:
++  kinematics:
++    use_usd_kinematics: False
++    usd_path: "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Franka/FR3/fr3.usd"
++    usd_robot_root: "/fr3"
++    isaac_usd_path: "/Isaac/Robots/Franka/fr3.usd"
++    usd_flip_joints: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5",
++      "fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"]
++    usd_flip_joints: {
++    "fr3_joint1": "Z",
++    "fr3_joint2": "Z",
++    "fr3_joint3": "Z",
++    "fr3_joint4": "Z",
++    "fr3_joint5": "Z",
++    "fr3_joint6": "Z",
++    "fr3_joint7": "Z",
++    "fr3_finger_joint1": "Y",
++    "fr3_finger_joint2":  "Y",
++    }
++
++    usd_flip_joint_limits: ["fr3_finger_joint2"]
++    urdf_path: "/home/elm/projects/IsaacLab/src/nvidia-curobo/src/curobo/content/assets/robot/fr3_description/fr3.urdf"
++    
++    asset_root_path: "robot/fr3_description"
++    
++    base_link: "fr3_link0"
++    ee_link: "fr3_hand"
++    # link_names: null
++    lock_joints: {"fr3_finger_joint1": 0.04, "fr3_finger_joint2": 0.04}
++    # extra_links: null
++    
++    collision_link_names: ["fr3_link0", "fr3_link1", "fr3_link2", "fr3_link3", "fr3_link4", "fr3_link5", "fr3_link6", "fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger","attached_object"] # List[str]
++    extra_collision_spheres: {"attached_object": 4}
++    use_global_cumul: True
++    collision_spheres:
++      fr3_link0:
++      - "center": [0.0, 0.0, 0.05]
++        "radius": 0.045
++      fr3_link1:
++      - "center": [0.0, -0.08, 0.0]
++        "radius": 0.06
++      - "center": [0.0, -0.03, 0.0]#xz
++        "radius": 0.06
++      - "center": [-0.12, 0.0, -0.0]
++        "radius": 0.06
++      - "center": [-0.17, 0.0, 0.0]
++        "radius": 0.06
++
++      fr3_link2:
++      - "center": [0.03, 0.0, 0.0]#xz,6
++        "radius": 0.06
++      - "center": [0.08, 0.0, 0.0]
++        "radius": 0.06
++      - "center": [0.008, -0.12, 0.0]#7
++        "radius": 0.06
++      - "center": [0.0, -0.17, 0.0]
++        "radius": 0.06
++      - "center": [0.026, -0.058, 0.002]
++        "radius": 0.06
++      fr3_link3:
++      - "center": [-0.06, 0.0, 0.0]#xz,10
++        "radius": 0.05
++      - "center": [-0.1,0.0, 0.0]
++        "radius": 0.06
++      - "center": [0.0, 0.059, -0.081]
++        "radius": 0.055
++      - "center": [0.0, 0.02,-0.08]
++        "radius": 0.055
++      fr3_link4:
++      - "center": [0.02,0.0, 0.0]
++        "radius": 0.06
++      - "center": [0.06, -0.003,-0.0]
++        "radius": 0.06
++      - "center": [0.0, 0.095, 0.08]
++        "radius": 0.06
++      - "center": [0.0,0.06,0.08]
++        "radius": 0.06
++      fr3_link5:
++      - "center": [0.0, 0.055, 0.0]
++        "radius": 0.06
++      - "center": [0.0, 0.075, 0.0]
++        "radius": 0.06
++      - "center": [-0.22,0.0, 0.0]
++        "radius": 0.06
++      - "center": [-0.18, 0.05, 0.0]
++        "radius": 0.06
++      - "center": [-0.14, 0.08, 0.01]
++        "radius": 0.025
++      - "center": [-0.11, 0.085, 0.01]
++        "radius": 0.025
++      - "center": [-0.08, 0.09, 0.01]
++        "radius": 0.025
++      - "center": [-0.05, 0.095, 0.01]
++        "radius": 0.025
++      - "center": [ -0.14, 0.08, -0.01]
++        "radius": 0.025
++      - "center": [-0.11, 0.085, -0.01]
++        "radius": 0.025
++      - "center": [-0.08, 0.09, -0.01]
++        "radius": 0.025
++      - "center": [-0.05, 0.095, -0.01]
++        "radius": 0.025
++      fr3_link6:
++      - "center": [0.0, 0.0, 0.0]
++        "radius": 0.052
++      - "center": [0.0, 0.03, -0.08]
++        "radius": 0.05
++      - "center": [0.00, -0.01, -0.08]
++        "radius": 0.05
++      fr3_link7:
++      - "center": [0.07, 0.0, 0.0]
++        "radius": 0.045
++      - "center": [0.08, 0.04, -0.02]
++        "radius": 0.025      
++      - "center": [0.08, 0.02, -0.04]
++        "radius": 0.025
++      - "center": [0.085,0.04, -0.06]
++        "radius": 0.02
++      - "center": [0.085,0.06, -0.04]
++        "radius": 0.02
++      fr3_hand:
++      - "center": [0.0, -0.075, 0.01]
++        "radius": 0.024
++      - "center": [0.0, -0.045, 0.01]
++        "radius": 0.024
++      - "center": [0.0, -0.015, 0.01]
++        "radius": 0.024
++      - "center": [0.0, 0.015, 0.01]
++        "radius": 0.024
++      - "center": [0.0, 0.045, 0.01]
++        "radius": 0.024
++      - "center": [0.0, 0.075, 0.01]
++        "radius": 0.024
++      - "center": [0.0, -0.075, 0.03]
++        "radius": 0.022
++      - "center": [0.0, -0.045, 0.03]
++        "radius": 0.022
++      - "center": [0.0, -0.015, 0.03]
++        "radius": 0.022
++      - "center": [0.0, 0.015, 0.03]
++        "radius": 0.022
++      - "center": [0.0, 0.045, 0.03]
++        "radius": 0.022
++      - "center": [0.0, 0.075, 0.03]
++        "radius": 0.022
++      - "center": [0.0, -0.075, 0.05]
++        "radius": 0.022
++      - "center": [0.0, -0.045, 0.05]
++        "radius": 0.022
++      - "center": [0.0, -0.015, 0.05]
++        "radius": 0.022
++      - "center": [0.0, 0.015, 0.05]
++        "radius": 0.022
++      - "center": [0.0, 0.045, 0.05]
++        "radius": 0.022
++      - "center": [0.0, 0.075, 0.05]
++        "radius": 0.022
++      fr3_leftfinger:
++      - "center": [0.01, 0.01, 0.043]
++        "radius": 0.011 
++      - "center": [0.01, 0.02, 0.015]
++        "radius": 0.011 
++      fr3_rightfinger:
++      - "center": [0.01, -0.01, 0.043]
++        "radius": 0.011 
++      - "center": [0.01, -0.02, 0.015]
++        "radius": 0.011 
++    collision_sphere_buffer: 0.004 # float or Dict[str, float]
++    extra_collision_spheres: {"attached_object": 4}
++    self_collision_ignore: {
++        "fr3_link0": ["fr3_link1", "fr3_link2"],
++        "fr3_link1": ["fr3_link2", "fr3_link3", "fr3_link4"],
++        "fr3_link2": ["fr3_link3", "fr3_link4"],
++        "fr3_link3": ["fr3_link4", "fr3_link6"],
++        "fr3_link4":
++          ["fr3_link5", "fr3_link6", "fr3_link7", "fr3_link8"],
++        "fr3_link5": ["fr3_link6", "fr3_link7", "fr3_hand","fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link6": ["fr3_link7", "fr3_hand", "attached_object", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link7": ["fr3_hand", "attached_object", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_hand": ["fr3_leftfinger", "fr3_rightfinger","attached_object"],
++        "fr3_leftfinger": ["fr3_rightfinger", "attached_object"],
++        "fr3_rightfinger": ["attached_object"],
++
++      } # Dict[str, List[str]]
++    self_collision_buffer:
++      {
++        "fr3_link0": 0.1,
++        "fr3_link1": 0.05,
++        "fr3_link2": 0.0,
++        "fr3_link3": 0.0,
++        "fr3_link4": 0.0,
++        "fr3_link5": 0.0,
++        "fr3_link6": 0.0,
++        "fr3_link7": 0.0,
++        "fr3_hand": 0.02,
++        "fr3_leftfinger": 0.01,
++        "fr3_rightfinger": 0.01,
++        "attached_object": 0.0,
++      }
++    mesh_link_names:
++      [
++        "fr3_link0",
++        "fr3_link1",
++        "fr3_link2",
++        "fr3_link3",
++        "fr3_link4",
++        "fr3_link5",
++        "fr3_link6",
++        "fr3_link7",
++        "fr3_hand",
++        "fr3_leftfinger",
++        "fr3_rightfinger",
++      ]
++    external_asset_path: null # Use this to add path for externally located assets/robot folder.
++    extra_links: {"attached_object":{"parent_link_name":"fr3_hand" ,"link_name": "attached_object", "fixed_transform":[0,0,0,1,0,0,0], "joint_type":"FIXED","joint_name": "attach_joint" }}
++    cspace:
++      joint_names: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5","fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"] # List[str]
++      retract_config: [0.0,-1.3,0.0,-2.87,0.0,2.0,0.75,0.025,0.025] # List[float]
++      null_space_weight: [1,1,1,1,1,1,1,1,1]
++      cspace_distance_weight: [1,1,1,1,1,1,1,1,1]
++      max_acceleration: 10.0
++      max_jerk: 500.0
+diff --git a/src/curobo/content/configs/robot/fr3_test_3.yml b/src/curobo/content/configs/robot/fr3_test_3.yml
+new file mode 100644
+index 0000000..876caa3
+--- /dev/null
++++ b/src/curobo/content/configs/robot/fr3_test_3.yml
+@@ -0,0 +1,74 @@
++##
++## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++##
++## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++## property and proprietary rights in and to this material, related
++## documentation and any modifications thereto. Any use, reproduction,
++## disclosure or distribution of this material and related documentation
++## without an express license agreement from NVIDIA CORPORATION or
++## its affiliates is strictly prohibited.
++##
++
++robot_cfg:
++  kinematics:
++    use_usd_kinematics: False
++    usd_path: "robot/non_shipping/fr3/fr3.usda"
++    usd_robot_root: "/fr3"
++    isaac_usd_path: "/Isaac/Robots/Franka/FR3/fr3.usd"
++    usd_flip_joints: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5",
++      "fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"]
++    usd_flip_joints: {
++    "fr3_joint1": "Z",
++    "fr3_joint2": "Z",
++    "fr3_joint3": "Z",
++    "fr3_joint4": "Z",
++    "fr3_joint5": "Y",
++    "fr3_joint6": "Z",
++    "fr3_joint7": "Z",
++    "fr3_finger_joint1": "Y",
++    "fr3_finger_joint2":  "Y",
++    }
++
++    usd_flip_joint_limits: ["fr3_finger_joint2","fr3_joint5"]
++    urdf_path: "/home/elm/projects/IsaacLab/src/nvidia-curobo/src/curobo/content/assets/robot/fr3_description/fr3.urdf"
++    asset_root_path: "robot/fr3_description"
++    
++    base_link: "fr3_link0"
++    ee_link: "fr3_hand_tcp"
++    link_names: null
++    lock_joints: null
++    extra_links: null
++    
++    collision_link_names: ["fr3_link0", "fr3_link1", "fr3_link2", "fr3_link3", "fr3_link4", "fr3_link5", "fr3_link6", "fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"] # List[str]
++    collision_spheres: "/home/elm/projects/IsaacLab/curobo/src/curobo/content/configs/robot/spheres/franka_mesh_fr3.yml"
++      
++    collision_sphere_buffer: 0.005 # float or Dict[str, float]
++    extra_collision_spheres: {}
++    self_collision_ignore: {
++        "fr3_link0": ["fr3_link1", "fr3_link2"],
++        "fr3_link1": ["fr3_link2", "fr3_link3", "fr3_link4"],
++        "fr3_link2": ["fr3_link3", "fr3_link4"],
++        "fr3_link3": ["fr3_link4", "fr3_link6"],
++        "fr3_link4":
++          ["fr3_link5", "fr3_link6", "fr3_link7", "fr3_link8"],
++        "fr3_link5": ["fr3_link6", "fr3_link7", "fr3_hand","fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link6": ["fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link7": ["fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_hand": ["fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_leftfinger": ["fr3_rightfinger"],
++        "fr3_rightfinger": ["fr3_leftfinger"],
++
++      } # Dict[str, List[str]]
++    self_collision_buffer: {} # Dict[str, float]
++
++    use_global_cumul: True
++    mesh_link_names: null # List[str]
++    external_asset_path: null # Use this to add path for externally located assets/robot folder.
++
++    cspace:
++      joint_names: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5","fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"] # List[str]
++      retract_config: [0.0, -1.3, 0.0, -2.5, 0.0, 1.0, 0., 0.04, 0.04] # List[float]
++      null_space_weight: [1,1,1,1,1,1,1,1,1]
++      cspace_distance_weight: [1,1,1,1,1,1,1,1,1]
++      max_acceleration: 15.0
++      max_jerk: 500.0
+diff --git a/src/curobo/content/configs/robot/fr3_test.yml b/src/curobo/content/configs/robot/fr3_test.yml
+new file mode 100644
+index 0000000..1abd87a
+--- /dev/null
++++ b/src/curobo/content/configs/robot/fr3_test.yml
+@@ -0,0 +1,199 @@
++##
++## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++##
++## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++## property and proprietary rights in and to this material, related
++## documentation and any modifications thereto. Any use, reproduction,
++## disclosure or distribution of this material and related documentation
++## without an express license agreement from NVIDIA CORPORATION or
++## its affiliates is strictly prohibited.
++##
++
++robot_cfg:
++  kinematics:
++    usd_path: "robot/non_shipping/fr3/fr3.usda"
++    usd_robot_root: "/fr3"
++    isaac_usd_path: "/Isaac/Robots/Franka/fr3.usd"
++    usd_flip_joints: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5",
++      "fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"]
++    usd_flip_joints: {
++    "fr3_joint1": "Z",
++    "fr3_joint2": "Z",
++    "fr3_joint3": "Z",
++    "fr3_joint4": "Z",
++    "fr3_joint5": "Y",
++    "fr3_joint6": "Z",
++    "fr3_joint7": "Z",
++    "fr3_finger_joint1": "Y",
++    "fr3_finger_joint2":  "Y",
++    }
++
++    usd_flip_joint_limits: ["fr3_finger_joint2","fr3_joint5"]
++    urdf_path: "/home/elm/projects/IsaacLab/src/nvidia-curobo/src/curobo/content/assets/robot/fr3_description/fr3.urdf"
++    asset_root_path: "robot/fr3_description"
++    
++    base_link: "fr3_link0"
++    ee_link: "fr3_hand_tcp"
++    link_names: null
++    lock_joints: null
++    extra_links: null
++    
++    collision_link_names: ["fr3_link0", "fr3_link1", "fr3_link2", "fr3_link3", "fr3_link4", "fr3_link5", "fr3_link6", "fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"] # List[str]
++    collision_spheres:
++      fr3_link0:
++      - "center": [-0.014, 0.004, 0.063]
++        "radius": 0.07612
++    
++      fr3_link1:
++      - "center": [-0.0, -0.057, -0.001]
++        "radius": 0.06937
++      - "center": [-0.134, -0.006, 0.001]
++        "radius": 0.06555
++      - "center": [-0.03, -0.051, 0.001]
++        "radius": 0.06428
++      - "center": [-0.002, -0.078, 0]
++        "radius": 0.06555
++      - "center": [-0.144, 0.007, 0.001]
++        "radius": 0.06238
++      - "center": [-0.087, -0.035, 0.006]
++        "radius": 0.0465
++      fr3_link2:
++      - "center": [-0.0, -0.002, 0.057]
++        "radius": 0.06937
++      - "center": [0.006, -0.135, 0.001]
++        "radius": 0.06555
++      - "center": [0.051, -0.031, 0.001]
++        "radius": 0.06428
++      - "center": [0.078, -0.003, 0]
++        "radius": 0.06555 
++      - "center": [0.007, -0.145, -0.001]
++        "radius": 0.06238
++      - "center": [0.035, -0.088, 0.006]
++        "radius": 0.0465
++      fr3_link3:
++      - "center": [-0.0, 0.0, -0.066]
++        "radius": 0.06477
++      - "center": [0.002, 0.055, 0.084]
++        "radius": 0.06416
++      - "center": [-0.013, 0.035, 0.056]
++        "radius": 0.04971
++      - "center": [0.0, 0.063, 0.083]
++        "radius": 0.06236
++      - "center": [0.005, 0.049, 0.084]
++        "radius": 0.06296
++      - "center": [-0.076, -0.003, 0.006]
++        "radius": 0.05995
++      fr3_link4:
++      - "center": [-0.083, 0.068, 0.0]
++        "radius": 0.06477
++      - "center": [0.055, 0.0, 0.001]
++        "radius": 0.06416
++      - "center": [0.035, 0.015,-0.027]
++        "radius": 0.04971
++      - "center": [0.063, 0.002, 0.001]
++        "radius": 0.06236
++      - "center": [-0.038, -0.015, -0.001]
++        "radius": 0.05273
++      - "center": [0.003, 0.074,-0.081]
++        "radius": 0.06296
++      fr3_link5:
++      - "center": [-0.0, 0.069, 0.0]
++        "radius": 0.06242
++      - "center": [0, 0.019, -0.21]
++        "radius": 0.06021
++      - "center": [-0.003 , -0.01,-0.219]
++        "radius": 0.05431
++      - "center": [-0.005, 0.056, -0.18]
++        "radius": 0.04621
++      - "center": [0.006, 0.085, 0.001]
++        "radius": 0.05947
++      - "center": [0.006, 0.087,-0.1]
++        "radius": 0.03295
++      - "center": [-0.004, 0.079, -0.138] 
++        "radius": 0.03368
++      - "center": [-0.006, 0.093, -0.065]
++        "radius": 0.03295
++      fr3_link6:
++      - "center": [0.088, 0.028, -0.001]
++        "radius": 0.05689
++      - "center": [0.011, -0.0, 0.02]
++        "radius": 0.04833
++      - "center": [0.09, -0.004, -0.001]
++        "radius": 0.05594
++      - "center": [-0.016, 0.0, 0.017]
++        "radius": 0.04643
++      - "center": [0.068, 0.047, 0.005]
++        "radius": 0.04643
++      - "center": [0.008, 0.014, 0.018]
++        "radius": 0.04738
++      fr3_link7:
++      - "center": [-0.004, -0.006, 0.075]
++        "radius": 0.03822
++      - "center": [0.074, 0.021, 0.006]
++        "radius": 0.03678
++      - "center": [0.074, 0.006,-0.021]
++        "radius": 0.03678
++      - "center": [0.074, -0.008, 0.017]
++        "radius": 0.03678
++      - "center": [0.085, 0.03,0.053]
++        "radius": 0.0289
++      - "center": [0.085, 0.052, 0.027]
++        "radius": 0.0289
++      fr3_hand:
++      - "center": [0.001, 0.051, 0.037]
++        "radius": 0.03224
++      - "center": [0.04, -0.006, -0.001]
++        "radius": 0.03224
++      - "center": [0.039, -0.075, -0.001]
++        "radius": 0.03224
++      - "center": [0.037, -0.035, 0.001]
++        "radius": 0.03224
++      - "center": [0.044, 0.079, -0.001]
++        "radius": 0.03224
++      - "center": [0.041, 0.022, 0.001]
++        "radius": 0.03224
++      - "center": [0.015, 0.08, -0.001]
++        "radius": 0.03134
++      - "center": [0.012, -0.063, -0.001]
++        "radius": 0.02953
++      fr3_leftfinger:
++      - "center": [-0.005, 0.018, 0.026]
++        "radius": 0.01792
++      - "center": [0.007, 0.022, 0.0]
++        "radius": 0.01792
++      fr3_rightfinger:
++      - "center": [-0.004, -0.022, 0.02]
++        "radius": 0.01792
++      - "center": [0.007, 0.022, 0.0]
++        "radius": 0.01792
++      
++    collision_sphere_buffer: 0.005 # float or Dict[str, float]
++    extra_collision_spheres: {}
++    self_collision_ignore: {
++        "fr3_link0": ["fr3_link1", "fr3_link2"],
++        "fr3_link1": ["fr3_link2", "fr3_link3", "fr3_link4"],
++        "fr3_link2": ["fr3_link3", "fr3_link4"],
++        "fr3_link3": ["fr3_link4", "fr3_link6"],
++        "fr3_link4":
++          ["fr3_link5", "fr3_link6", "fr3_link7", "fr3_link8"],
++        "fr3_link5": ["fr3_link6", "fr3_link7", "fr3_hand","fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link6": ["fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link7": ["fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_hand": ["fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_leftfinger": ["fr3_rightfinger"],
++        "fr3_rightfinger": ["fr3_leftfinger"],
++
++      } # Dict[str, List[str]]
++    self_collision_buffer: {} # Dict[str, float]
++
++    use_global_cumul: True
++    mesh_link_names: null # List[str]
++    external_asset_path: null # Use this to add path for externally located assets/robot folder.
++
++    cspace:
++      joint_names: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5","fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"] # List[str]
++      retract_config: [0.0, -1.3, 0.0, -2.5, 0.0, 1.0, 0., 0.04, 0.04] # List[float]
++      null_space_weight: [1,1,1,1,1,1,1,1,1]
++      cspace_distance_weight: [1,1,1,1,1,1,1,1,1]
++      max_acceleration: 15.0
++      max_jerk: 500.0
+diff --git a/src/curobo/content/configs/robot/fr3_test_2.yml b/src/curobo/content/configs/robot/fr3_test_2.yml
+new file mode 100644
+index 0000000..a6f4c2c
+--- /dev/null
++++ b/src/curobo/content/configs/robot/fr3_test_2.yml
+@@ -0,0 +1,190 @@
++##
++## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++##
++## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++## property and proprietary rights in and to this material, related
++## documentation and any modifications thereto. Any use, reproduction,
++## disclosure or distribution of this material and related documentation
++## without an express license agreement from NVIDIA CORPORATION or
++## its affiliates is strictly prohibited.
++##
++
++robot_cfg:
++  kinematics:
++    use_usd_kinematics: False
++    usd_path: "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Franka/FR3/fr3.usd"
++    usd_robot_root: "/fr3"
++    isaac_usd_path: "/Isaac/Robots/Franka/fr3.usd"
++    
++    urdf_path: "/home/elm/projects/IsaacLab/src/nvidia-curobo/src/curobo/content/assets/robot/fr3_description/fr3.urdf"
++    asset_root_path: "robot/fr3_description"
++    
++    base_link: "fr3_link0"
++    ee_link: "fr3_hand_tcp"
++    link_names: null
++    lock_joints: null
++    extra_links: null
++    
++    collision_link_names: ["fr3_link0", "fr3_link1", "fr3_link2", "fr3_link3", "fr3_link4", "fr3_link5", "fr3_link6", "fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"] # List[str]
++    collision_spheres:
++      fr3_link0:
++          - "center": [0.0, 0.0, 0.05]
++            "radius": 0.03 #0.07
++      fr3_link1:
++          - "center": [0.0, -0.08, 0.0]
++            "radius": 0.055
++          - "center": [0.0, -0.03, 0.0]
++            "radius": 0.06z
++          - "center": [0.0, 0.0, -0.12]
++            "radius": 0.06
++          - "center": [0.0, 0.0, -0.17]
++            "radius": 0.06
++      fr3_link2:
++          - "center": [0.0, 0.0, 0.03]
++            "radius": 0.055
++          - "center": [0.0, 0.0, 0.08]
++            "radius": 0.055
++          - "center": [0.0, -0.12, 0.0]
++            "radius": 0.055
++          - "center": [0.0, -0.17, 0.0]
++            "radius": 0.055
++      fr3_link3:
++          - "center": [0.0, 0.0, -0.06]
++            "radius": 0.05
++          - "center": [0.0, 0.0, -0.1]
++            "radius": 0.06
++          - "center": [0.08, 0.06, 0.0]
++            "radius": 0.052
++          - "center": [0.08, 0.02, 0.0]
++            "radius": 0.052
++      fr3_link4:
++          - "center": [0.0, 0.0, 0.02]
++            "radius": 0.052
++          - "center": [0.0, 0.0, 0.06]
++            "radius": 0.052
++          - "center": [-0.08, 0.095, 0.0]
++            "radius": 0.055
++          - "center": [-0.08, 0.06, 0.0]
++            "radius": 0.052
++      fr3_link5:
++          - "center": [0.0, 0.03, 0.0]
++            "radius": 0.05
++          - "center": [0.0, 0.082, 0.0]
++            "radius": 0.05
++          - "center": [0.0, 0.000, -0.22]
++            "radius": 0.05
++          - "center": [0.0, 0.052, -0.18]
++            "radius": 0.04
++          - "center": [0.01, 0.08, -0.14]
++            "radius": 0.022
++          - "center": [0.01, 0.085, -0.11]
++            "radius": 0.022
++          - "center": [0.01, 0.09, -0.08]
++            "radius": 0.022
++          - "center": [0.01, 0.095, -0.05]
++            "radius": 0.022
++          - "center": [-0.01, 0.08, -0.14]
++            "radius": 0.022
++          - "center": [-0.01, 0.085, -0.11]
++            "radius": 0.022
++          - "center": [-0.01, 0.09, -0.08]
++            "radius": 0.022
++          - "center": [-0.01, 0.095, -0.05]
++            "radius": 0.022
++          - "center": [0.0, -0.009, 0.0]
++            "radius": 0.05
++      fr3_link6:
++          - "center": [0.085, 0.035, 0.0]
++            "radius": 0.045 
++          - "center": [0.085, 0.0, 0.0]
++            "radius": 0.045 
++          - "center": [0.085, -0.015, 0.0]
++            "radius": 0.045 
++      fr3_link7:
++          - "center": [0.0, 0.0, 0.07]
++            "radius": 0.045
++          - "center": [0.02, 0.04, 0.08]
++            "radius": 0.024
++          - "center": [0.04, 0.02, 0.08]
++            "radius": 0.024
++          - "center": [0.04, 0.06, 0.085]
++            "radius": 0.02
++          - "center": [0.06, 0.04, 0.085]
++            "radius": 0.02
++      fr3_hand:
++          - "center": [0.0, -0.075, 0.01]
++            "radius": 0.023
++          - "center": [0.0, -0.045, 0.01]
++            "radius": 0.023
++          - "center": [0.0, -0.015, 0.01]
++            "radius": 0.023
++          - "center": [0.0, 0.015, 0.01]
++            "radius": 0.023
++          - "center": [0.0, 0.045, 0.01]
++            "radius": 0.023
++          - "center": [0.0, 0.075, 0.01]
++            "radius": 0.023
++          - "center": [0.0, -0.08, 0.03]
++            "radius": 0.022
++          - "center": [0.0, -0.045, 0.03]
++            "radius": 0.022
++          - "center": [0.0, -0.015, 0.03]
++            "radius": 0.022
++          - "center": [0.0, 0.015, 0.03]
++            "radius": 0.022
++          - "center": [0.0, 0.045, 0.03]
++            "radius": 0.022
++          - "center": [0.0, 0.08, 0.03]
++            "radius": 0.022
++          - "center": [0.0, -0.08, 0.045]
++            "radius": 0.022
++          - "center": [0.0, -0.045, 0.045]
++            "radius": 0.022
++          - "center": [0.0, -0.015, 0.045]
++            "radius": 0.022
++          - "center": [0.0, 0.015, 0.045]
++            "radius": 0.022
++          - "center": [0.0, 0.045, 0.045]
++            "radius": 0.022
++          - "center": [0.0, 0.08, 0.045]
++            "radius": 0.022
++      fr3_leftfinger:
++          - "center": [0.0, 0.01, 0.043]
++            "radius": 0.011 
++          - "center": [0.0, 0.02, 0.015]
++            "radius": 0.011 
++      fr3_rightfinger:
++          - "center": [0.0, -0.01, 0.043]
++            "radius": 0.011 
++          - "center": [0.0, -0.02, 0.015]
++            "radius": 0.011 
++    collision_sphere_buffer: 0.005 # float or Dict[str, float]
++    extra_collision_spheres: {}
++    self_collision_ignore: {
++        "fr3_link0": ["fr3_link1", "fr3_link2"],
++        "fr3_link1": ["fr3_link2", "fr3_link3", "fr3_link4"],
++        "fr3_link2": ["fr3_link3", "fr3_link4"],
++        "fr3_link3": ["fr3_link4", "fr3_link6"],
++        "fr3_link4":
++          ["fr3_link5", "fr3_link6", "fr3_link7", "fr3_link8"],
++        "fr3_link5": ["fr3_link6", "fr3_link7", "fr3_hand","fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link6": ["fr3_link7", "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_link7": ["fr3_hand", "fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_hand": ["fr3_leftfinger", "fr3_rightfinger"],
++        "fr3_leftfinger": ["fr3_rightfinger"],
++        "fr3_rightfinger": ["fr3_leftfinger"],
++
++      } # Dict[str, List[str]]
++    self_collision_buffer: {} # Dict[str, float]
++
++    use_global_cumul: True
++    mesh_link_names: null # List[str]
++    external_asset_path: null # Use this to add path for externally located assets/robot folder.
++
++    cspace:
++      joint_names: ["fr3_joint1","fr3_joint2","fr3_joint3","fr3_joint4", "fr3_joint5","fr3_joint6","fr3_joint7","fr3_finger_joint1", "fr3_finger_joint2"] # List[str]
++      retract_config: [0.0, -1.3, 0.0, -2.5, 0.0, 1.0, 0., 0.04, 0.04] # List[float]
++      null_space_weight: [1,1,1,1,1,1,1,1,1]
++      cspace_distance_weight: [1,1,1,1,1,1,1,1,1]
++      max_acceleration: 15.0
++      max_jerk: 500.0
+diff --git a/src/curobo/content/configs/robot/spheres/franka_mesh_fr3.yml b/src/curobo/content/configs/robot/spheres/franka_mesh_fr3.yml
+new file mode 100644
+index 0000000..f104cb9
+--- /dev/null
++++ b/src/curobo/content/configs/robot/spheres/franka_mesh_fr3.yml
+@@ -0,0 +1,144 @@
++##
++## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
++##
++## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
++## property and proprietary rights in and to this material, related
++## documentation and any modifications thereto. Any use, reproduction,
++## disclosure or distribution of this material and related documentation
++## without an express license agreement from NVIDIA CORPORATION or
++## its affiliates is strictly prohibited.
++##
++collision_spheres:
++    fr3_link0:
++        - "center": [0.0, 0.0, 0.085]
++          "radius": 0.03 #0.07
++        - "center": [-0.1, -0.0, 0.085]
++          "radius": 0.03 #0.07
++    fr3_link1:
++        - "center": [0.0, -0.08, 0.0]
++          "radius": 0.055
++        - "center": [0.0, -0.03, 0.0]
++          "radius": 0.06
++        - "center": [0.0, 0.0, -0.12]
++          "radius": 0.06
++        - "center": [0.0, 0.0, -0.17]
++          "radius": 0.06
++    fr3_link2:
++        - "center": [0.0, 0.0, 0.03]
++          "radius": 0.055
++        - "center": [0.0, 0.0, 0.08]
++          "radius": 0.055
++        - "center": [0.0, -0.12, 0.0]
++          "radius": 0.055
++        - "center": [0.0, -0.17, 0.0]
++          "radius": 0.055
++    fr3_link3:
++        - "center": [0.0, 0.0, -0.06]
++          "radius": 0.05
++        - "center": [0.0, 0.0, -0.1]
++          "radius": 0.06
++        - "center": [0.08, 0.06, 0.0]
++          "radius": 0.052
++        - "center": [0.08, 0.02, 0.0]
++          "radius": 0.052
++    fr3_link4:
++        - "center": [0.0, 0.0, 0.02]
++          "radius": 0.052
++        - "center": [0.0, 0.0, 0.06]
++          "radius": 0.052
++        - "center": [-0.08, 0.095, 0.0]
++          "radius": 0.055
++        - "center": [-0.08, 0.06, 0.0]
++          "radius": 0.052
++    fr3_link5:
++        - "center": [0.0, 0.03, 0.0]
++          "radius": 0.05
++        - "center": [0.0, 0.082, 0.0]
++          "radius": 0.05
++        - "center": [0.0, 0.000, -0.22]
++          "radius": 0.05
++        - "center": [0.0, 0.052, -0.18]
++          "radius": 0.04
++        - "center": [0.01, 0.08, -0.14]
++          "radius": 0.022
++        - "center": [0.01, 0.085, -0.11]
++          "radius": 0.022
++        - "center": [0.01, 0.09, -0.08]
++          "radius": 0.022
++        - "center": [0.01, 0.095, -0.05]
++          "radius": 0.022
++        - "center": [-0.01, 0.08, -0.14]
++          "radius": 0.022
++        - "center": [-0.01, 0.085, -0.11]
++          "radius": 0.022
++        - "center": [-0.01, 0.09, -0.08]
++          "radius": 0.022
++        - "center": [-0.01, 0.095, -0.05]
++          "radius": 0.022
++        - "center": [0.0, -0.009, 0.0]
++          "radius": 0.05
++    fr3_link6:
++        - "center": [0.085, 0.035, 0.0]
++          "radius": 0.045 
++        - "center": [0.085, 0.0, 0.0]
++          "radius": 0.045 
++        - "center": [0.085, -0.015, 0.0]
++          "radius": 0.045 
++    fr3_link7:
++        - "center": [0.0, 0.0, 0.07]
++          "radius": 0.045
++        - "center": [0.02, 0.04, 0.08]
++          "radius": 0.024
++        - "center": [0.04, 0.02, 0.08]
++          "radius": 0.024
++        - "center": [0.04, 0.06, 0.085]
++          "radius": 0.02
++        - "center": [0.06, 0.04, 0.085]
++          "radius": 0.02
++    fr3_hand:
++        - "center": [0.0, -0.075, 0.01]
++          "radius": 0.023
++        - "center": [0.0, -0.045, 0.01]
++          "radius": 0.023
++        - "center": [0.0, -0.015, 0.01]
++          "radius": 0.023
++        - "center": [0.0, 0.015, 0.01]
++          "radius": 0.023
++        - "center": [0.0, 0.045, 0.01]
++          "radius": 0.023
++        - "center": [0.0, 0.075, 0.01]
++          "radius": 0.023
++        - "center": [0.0, -0.08, 0.03]
++          "radius": 0.022
++        - "center": [0.0, -0.045, 0.03]
++          "radius": 0.022
++        - "center": [0.0, -0.015, 0.03]
++          "radius": 0.022
++        - "center": [0.0, 0.015, 0.03]
++          "radius": 0.022
++        - "center": [0.0, 0.045, 0.03]
++          "radius": 0.022
++        - "center": [0.0, 0.08, 0.03]
++          "radius": 0.022
++        - "center": [0.0, -0.08, 0.045]
++          "radius": 0.022
++        - "center": [0.0, -0.045, 0.045]
++          "radius": 0.022
++        - "center": [0.0, -0.015, 0.045]
++          "radius": 0.022
++        - "center": [0.0, 0.015, 0.045]
++          "radius": 0.022
++        - "center": [0.0, 0.045, 0.045]
++          "radius": 0.022
++        - "center": [0.0, 0.08, 0.045]
++          "radius": 0.022
++    fr3_leftfinger:
++        - "center": [0.0, 0.01, 0.043]
++          "radius": 0.011 
++        - "center": [0.0, 0.02, 0.015]
++          "radius": 0.011 
++    fr3_rightfinger:
++        - "center": [0.0, -0.01, 0.043]
++          "radius": 0.011 
++        - "center": [0.0, -0.02, 0.015]
++          "radius": 0.011 
+\ No newline at end of file

@@ -1,0 +1,11 @@
+{
+  "default_policy": "random",
+  "policies": {
+    "random": {
+      "type": "action_space_sample"
+    },
+    "zero": {
+      "type": "constant_zero"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "task_id": "InferPointSymmetry",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "point_symmetry",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the cube. Place it symmetrically to the blue cube about the red cube.",
+    "semantic_module": "structure_inference",
+    "phase": "phase2",
+    "annotation_layout_key": "geometric_inference_point_symmetry_line_2_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "explicit_rule_extrapolation",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "point_symmetry"
+    },
+    "registration_id": "InferPointSymmetryVla_v0",
+    "protocol_family": "explicit_rule_extrapolation",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "InferPointSymmetryVla_v0",
+    "point_symmetry",
+    "point_symmetry:vla",
+    "PointSymmetryVla_v0",
+    "GeometricBaseBase_InferPointSymmetryVla_v0",
+    "GeometricBaseBase_PointSymmetryVla_v0"
+  ]
+}

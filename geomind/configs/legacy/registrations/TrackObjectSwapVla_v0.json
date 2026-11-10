@@ -1,0 +1,44 @@
+{
+  "task_id": "TrackObjectSwap",
+  "family": "IdentityTracking",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "track_multi",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the cube that started at the far left.",
+    "semantic_module": "identity_tracking",
+    "phase": "phase2",
+    "annotation_layout_key": "historical_identity_multistep_blocks_line_5_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "historical_identity_tracking",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "track_multi"
+    },
+    "registration_id": "TrackObjectSwapVla_v0",
+    "protocol_family": "historical_identity_tracking",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "TrackObjectSwapVla_v0",
+    "track_multi",
+    "track_multi:vla",
+    "TrackMultiVla_v0",
+    "TrackBaseBase_TrackObjectSwapVla_v0",
+    "TrackBaseBase_TrackMultiVla_v0"
+  ]
+}

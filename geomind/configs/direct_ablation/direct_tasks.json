@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "ablation_id": "direct",
+  "description": "Direct-reference ablation for the 27 GeoMind VLA tasks. Scene, object poses, intervention scripts and seeds are identical to the base task; only the instruction text and the GT target appearance (recolor) or an added visual-only marker change.",
+  "colors": {
+    "green": [
+      0.05,
+      0.75,
+      0.2
+    ],
+    "magenta": [
+      0.85,
+      0.1,
+      0.75
+    ]
+  },
+  "marker": {
+    "name": "direct_marker",
+    "kind": "primitive_cylinder",
+    "radius": 0.04,
+    "height": 0.002,
+    "role": "direct_marker"
+  },
+  "gradient_tiers": {
+    "unchanged": "mechanism=none: nothing changes at all. Sanity anchor: base and direct must score identically.",
+    "instruction_only": "mechanism=recolor but the GT target is already the unique green object, so the applied color is a no-op. Only the instruction text differs.",
+    "instruction_plus_recolor": "mechanism=recolor with a real appearance change on the GT target.",
+    "instruction_plus_marker": "mechanism=marker: a visual-only green/magenta disc is added at the GT goal point."
+  },
+  "tasks": {
+    "SelectByDistanceVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green sphere.",
+      "expected_target_object_id": "ball_nearest",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "SelectByDirectionVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "block_right",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor",
+      "notes": "Target carries an MDL wood material; the override must clear visual_material or the color change is invisible."
+    },
+    "SelectAfterExclusionVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "red_block_target",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "SelectWithVisualCueVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cylinder.",
+      "expected_target_object_id": "wood_cylinder_target",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor",
+      "notes": "Target carries an MDL wood material; the override must clear visual_material."
+    },
+    "ExtendEqualSpacingVla_v0": {
+      "mechanism": "marker",
+      "instruction": "You already hold the cube. Place it on the green marker.",
+      "marker_source": "goal_sequence",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_marker"
+    },
+    "InferMidpointVla_v0": {
+      "mechanism": "marker",
+      "instruction": "You already hold the cube. Place it on the green marker.",
+      "marker_source": "goal_sequence",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_marker"
+    },
+    "InferPointSymmetryVla_v0": {
+      "mechanism": "marker",
+      "instruction": "You already hold the cube. Place it on the green marker.",
+      "marker_source": "goal_sequence",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_marker"
+    },
+    "CompleteSquareVla_v0": {
+      "mechanism": "marker",
+      "instruction": "You already hold the fourth cube. Place it on the magenta marker.",
+      "marker_source": "goal_sequence",
+      "expected_color": "magenta",
+      "gradient_tier": "instruction_plus_marker",
+      "notes": "square_anchor_block_C is already green ([0.18, 0.66, 0.36]); the marker must be magenta to stay unique."
+    },
+    "ContinueSpatialPatternVla_v0": {
+      "mechanism": "marker",
+      "instruction": "You already hold the next cube. Place it on the green marker.",
+      "marker_source": "goal_sequence",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_marker"
+    },
+    "SelectByGridIndexVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "grid_cell_1",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "SelectByOrderSecondVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor",
+      "dynamic_target_binding": "task_contract"
+    },
+    "SelectByOrderFirstVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_color": "green",
+      "gradient_tier": "instruction_only",
+      "notes": "Target is already the unique green object ([0.18, 0.72, 0.36]); the recolor is visually a no-op.",
+      "dynamic_target_binding": "task_contract"
+    },
+    "UpdateObjectOrderVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor",
+      "dynamic_target_binding": "task_contract"
+    },
+    "SelectByAdjacencyVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor",
+      "dynamic_target_binding": "task_contract"
+    },
+    "SelectWithinSubsetVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "red_subset_block_2",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor",
+      "notes": "Recoloring removes the target from the 'red subset'. Scoring uses gt_spec.target_object_id, so this is harmless; verified by check_direct_pairing.py."
+    },
+    "SelectByOrderFirstSemVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_color": "green",
+      "gradient_tier": "instruction_only",
+      "notes": "Target is already the unique green object; the recolor is visually a no-op.",
+      "dynamic_target_binding": "task_contract"
+    },
+    "SelectByOrderFirstVisualVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_color": "green",
+      "gradient_tier": "instruction_only",
+      "notes": "Target is already the unique green object; the recolor is visually a no-op.",
+      "dynamic_target_binding": "task_contract"
+    },
+    "PlaceByTopologyInsideVla_v0": {
+      "mechanism": "none",
+      "instruction": "",
+      "gradient_tier": "unchanged",
+      "notes": "Instruction is already a direct reference; nothing changes."
+    },
+    "PlaceByTopologyOnTopVla_v0": {
+      "mechanism": "none",
+      "instruction": "",
+      "gradient_tier": "unchanged",
+      "notes": "Instruction is already a direct reference; nothing changes."
+    },
+    "TrackObjectSwapVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "identity_block_0",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "TrackMovingObjectVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "identity_block_1",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "TrackMovingObjectSemVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "identity_block_1",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "TrackMovingObjectVisualVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the green cube.",
+      "expected_target_object_id": "identity_block_1",
+      "expected_color": "green",
+      "gradient_tier": "instruction_plus_recolor"
+    },
+    "SelectByOrderLastVla_v0": {
+      "mechanism": "recolor",
+      "instruction": "Move the end effector near the magenta cube.",
+      "expected_color": "magenta",
+      "gradient_tier": "instruction_only",
+      "notes": "Target is already the unique green object ([0.18, 0.72, 0.36]); the recolor is visually a no-op.",
+      "dynamic_target_binding": "task_contract"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "stage": "assemble_solve_execute",
+  "output": "outputs/research/assembled_robot_v4/panda_place_scene60",
+  "assembly_manifest": "outputs/research/assembled_tasks_v2/midpoint_scene60_grid/assembly/manifest.json",
+  "task": {
+    "task_id": "InferMidpoint",
+    "parameters": {"endpoints": ["blue_can_001", "blue_can_004"]},
+    "operation": {"type": "place", "moving_object": "blue_can_002"}
+  },
+  "selection": {
+    "actor": "agent",
+    "reason": "在60号随机2×2蓝罐网格中抓取独立移动物体，放到两对角参考罐的中心正中间；Panda按实际资产包络抓取，真实松爪和退离后重新检查目标和参考物体保持。",
+    "considered_scene_ids": [60, 65],
+    "considered_layouts": ["grid", "line"]
+  },
+  "robot": {"embodiment": "franka", "base_position_w_m": [0, -0.45, 0.5948966878655334]},
+  "execution": {"action": "PickPlaceObject", "negative_controls": true, "timeout_s": 420, "max_steps": 6000}
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "episode_id": "infer_midpoint",
+  "task_id": "InferMidpoint",
+  "scene_id": "table_65",
+  "layout_id": "four_blocks_line",
+  "parameters": {
+    "endpoints": [
+      "block_a",
+      "block_d"
+    ],
+    "frame": "table"
+  },
+  "response": "ReportPoint",
+  "seed": 0,
+  "evaluation": {
+    "position_tolerance_m": 0.001
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "TrackObjectSwap_v0",
+  "task_id": "TrackObjectSwap",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "TrackObjectSwap_v0",
+    "track_multi",
+    "TrackMulti_v0",
+    "TrackBaseBase_TrackObjectSwap_v0",
+    "TrackBaseBase_TrackMulti_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "historical_identity_multistep_blocks_line_5",
+  "release_version": "1.0"
+}

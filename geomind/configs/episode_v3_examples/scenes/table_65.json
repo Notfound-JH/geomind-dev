@@ -1,0 +1,31 @@
+{
+  "scene_id": "table_65",
+  "usd_path": "assets/stage/65/65_new.usda",
+  "robot": "franka",
+  "workspace": {
+    "frame": "table",
+    "axes": {
+      "right": "+x",
+      "forward": "+y",
+      "up": "+z"
+    },
+    "bounds_m": {
+      "x": [
+        -0.3,
+        0.3
+      ],
+      "y": [
+        -0.25,
+        0.25
+      ],
+      "z": [
+        0,
+        0.4
+      ]
+    }
+  },
+  "cameras": [
+    "table_cam",
+    "ego_view"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "layout_id": "ordinal_insert_static_blocks_base",
+  "format": "LegacyInitialization",
+  "category": "Line",
+  "source_layout": "ordinal_insert_static_blocks_base",
+  "scene_structure": {
+    "layout": "Ordinal Insert Static Runtime Injection",
+    "num_of_objects": 5,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "ordinal_static_0": {
+        "position": [
+          0.43,
+          -0.18
+        ]
+      },
+      "ordinal_static_1": {
+        "position": [
+          0.43,
+          -0.06
+        ]
+      },
+      "ordinal_static_2": {
+        "position": [
+          0.43,
+          0.05
+        ]
+      },
+      "ordinal_static_3": {
+        "position": [
+          0.43,
+          0.16
+        ]
+      },
+      "ordinal_static_4": {
+        "position": [
+          0.43,
+          0.27
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "ordinal_static_0",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            -0.18
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ordinal_static_1",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            -0.06
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ordinal_static_2",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            0.05
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ordinal_static_3",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            0.16
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ordinal_static_4",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            0.27
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "name": "桌子_1",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "table"
+        },
+        {
+            "name": "生活用品竹篮",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "container"
+        },
+        {
+            "name": "万年青植物盆栽",
+            "pos_xy": [
+                1,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "decoration"
+        },
+        {
+            "name": "椅子_1",
+            "pos_xy": [
+                1,
+                -1
+            ],
+            "yaw_deg": 0,
+            "type": "furniture"
+        }
+    ],
+    "furniture": [],
+    "decoration": []
+}

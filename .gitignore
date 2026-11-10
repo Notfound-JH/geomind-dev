@@ -1,0 +1,57 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+outputs/*
+!outputs/.gitkeep
+logs/
+!logs/.gitkeep
+geomind/outputs/
+IsaacLab/
+vla_eval_spatiaforcing/
+
+# Local environments, credentials, editor state and build products.
+.env
+.env.*
+!.env.example
+.vscode/
+*.egg-info/
+build/
+dist/
+*.bak
+*.log
+.~lock.*
+.codex
+
+# Experiment outputs are transferred separately, not through Git.
+/run_eval_*/
+/run_eval_*.csv
+/run_eval_*.xlsx
+/vla_eval_*/
+/analysis_outputs/
+/statistics/
+/paper/
+/docs/direct_ablation/
+/task_layout_structure_*.csv
+/task_structure_current_planned*.csv
+/wg.png
+/0
+/1
+/24
+/geomind_assets/
+/migration-check/
+# Portable installation data and machine-local state.
+/external/
+/.geomind_local/
+/scene_atlas/
+/assets/materials/
+/assets/robots/
+/assets/scenes/
+*.zip
+
+# Generated dashboard session state.
+/data/dashboard/

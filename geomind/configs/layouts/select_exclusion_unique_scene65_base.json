@@ -1,0 +1,309 @@
+{
+  "layout_id": "select_exclusion_unique_scene65_base",
+  "format": "LegacyInitialization",
+  "category": "Line",
+  "source_layout": "select_exclusion_unique_scene65_base",
+  "scene_structure": {
+    "layout": "Constraint Selection Runtime Injection",
+    "num_of_objects": 6,
+    "object_asset": "MIXED_RUNTIME_PRIMITIVES",
+    "object_positions": {
+      "blue_plate": {
+        "position": [
+          0.39,
+          0.02
+        ]
+      },
+      "red_block_leftmost": {
+        "position": [
+          0.2,
+          -0.15
+        ]
+      },
+      "red_block_target": {
+        "position": [
+          0.56,
+          0.02
+        ]
+      },
+      "red_block_second": {
+        "position": [
+          0.48,
+          0.19
+        ]
+      },
+      "red_block_far": {
+        "position": [
+          0.6,
+          -0.12
+        ]
+      },
+      "orange_block_near_plate": {
+        "position": [
+          0.55,
+          0.12
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 1,
+      "plate_position": [
+        [
+          0.39,
+          0.02
+        ]
+      ],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "blue_plate",
+        "kind": "usd",
+        "asset_category": "catch_object",
+        "asset_key": "plate_2",
+        "scale": [
+          0.01,
+          0.01,
+          0.01
+        ],
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": true,
+            "kinematic_enabled": true,
+            "disable_gravity": true,
+            "linear_damping": 6.0,
+            "angular_damping": 8.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4
+          },
+          "collision": {
+            "collision_enabled": true,
+            "contact_offset": 0.0015,
+            "rest_offset": 0.0
+          }
+        },
+        "material_override": {
+          "diffuse_color": [
+            0.12,
+            0.28,
+            0.82
+          ]
+        },
+        "pose": {
+          "xy": [
+            0.39,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "red_block_leftmost",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.84,
+          0.14,
+          0.12
+        ],
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.12,
+            "dynamic_friction": 0.94,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.2,
+            -0.15
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "red_block_target",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.84,
+          0.14,
+          0.12
+        ],
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.12,
+            "dynamic_friction": 0.94,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.56,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "red_block_second",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.82,
+          0.16,
+          0.14
+        ],
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.1,
+            "dynamic_friction": 0.92,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.48,
+            0.19
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "red_block_far",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.8,
+          0.18,
+          0.16
+        ],
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.08,
+            "dynamic_friction": 0.9,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.6,
+            -0.12
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "orange_block_near_plate",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.86,
+          0.46,
+          0.16
+        ],
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.1,
+            "dynamic_friction": 0.92,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.55,
+            0.12
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

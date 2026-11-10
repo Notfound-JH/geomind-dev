@@ -1,0 +1,143 @@
+diff --git a/examples/isaac_sim/motion_gen_reacher.py b/examples/isaac_sim/motion_gen_reacher.py
+index 77cc43d..9c6c0c3 100644
+--- a/examples/isaac_sim/motion_gen_reacher.py
++++ b/examples/isaac_sim/motion_gen_reacher.py
+@@ -1,14 +1,8 @@
+-#
+-# Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+-#
+-# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+-# property and proprietary rights in and to this material, related
+-# documentation and any modifications thereto. Any use, reproduction,
+-# disclosure or distribution of this material and related documentation
+-# without an express license agreement from NVIDIA CORPORATION or
+-# its affiliates is strictly prohibited.
+-#
+-
++# Modified robot control script
++# This script extends the original motion planning example from NVIDIA's Isaac Sim and CuRobo
++# by printing the current joint positions of the robot arm and the world positions of the
++# collision spheres.  These prints help visualize and debug the robot's state during
++# simulation.
+ 
+ try:
+     # Third Party
+@@ -111,7 +105,6 @@ from omni.isaac.core.objects import cuboid, sphere
+ from omni.isaac.core.utils.types import ArticulationAction
+ 
+ # CuRobo
+-# from curobo.wrap.reacher.ik_solver import IKSolver, IKSolverConfig
+ from curobo.geom.sdf.world import CollisionCheckerType
+ from curobo.geom.types import WorldConfig
+ from curobo.types.base import TensorDeviceType
+@@ -121,9 +114,6 @@ from curobo.types.state import JointState
+ from curobo.util.logger import log_error, setup_curobo_logger
+ from curobo.util.usd_helper import UsdHelper
+ from curobo.util_file import (
+-    get_assets_path,
+-    get_filename,
+-    get_path_of_dir,
+     get_robot_configs_path,
+     get_world_configs_path,
+     join_path,
+@@ -143,6 +133,12 @@ from curobo.wrap.reacher.motion_gen import (
+ 
+ 
+ def main():
++    """
++    Main function to set up the simulation, initialize the CuRobo motion generator,
++    and step through the simulation.  This version prints the current joint
++    positions of the robot and the world positions of the collision spheres during
++    simulation to aid debugging and understanding of the robot's state.
++    """
+     # create a curobo motion gen instance:
+     num_targets = 0
+     # assuming obstacles are in objects_path:
+@@ -188,7 +184,36 @@ def main():
+     default_config = robot_cfg["kinematics"]["cspace"]["retract_config"]
+ 
+     robot, robot_prim_path = add_robot_to_scene(robot_cfg, my_world)
+-
++    def _dump_stage_and_robot(stage, robot_prim_path: str):
++        print("\n===== [DEBUG] Stage basic info =====")
++        print("UpAxis:", UsdGeom.GetStageUpAxis(stage))
++        print("MetersPerUnit:", UsdGeom.GetStageMetersPerUnit(stage))  # stage unit check  [oai_citation:1‡NVIDIA Developer Forums](https://forums.developer.nvidia.com/t/how-to-get-usd-dimensions-in-code/270610?utm_source=chatgpt.com)
++
++        prim = stage.GetPrimAtPath(robot_prim_path)
++        print("\n===== [DEBUG] Robot prim =====")
++        print("robot_prim_path:", robot_prim_path, "exists:", bool(prim))
++
++        if prim and prim.IsValid():
++            xf = UsdGeom.Xformable(prim)
++            ops = xf.GetOrderedXformOps()
++            print("[Robot XformOps]")
++            for op in ops:
++                try:
++                    print(" ", op.GetOpName(), op.GetOpType(), "=", op.GetAttr().Get())
++                except Exception:
++                    print(" ", op.GetOpName(), op.GetOpType(), "= <unreadable>")
++
++    _dump_stage_and_robot(stage, robot_prim_path)
++
++    # also print runtime pose (wxyz quat in Isaac Sim)  [oai_citation:2‡Isaac Sim](https://isaac-sim.github.io/IsaacLab/main/source/migration/migrating_from_isaacgymenvs.html?utm_source=chatgpt.com)
++    try:
++        rpos, rquat = robot.get_world_pose()
++        print("\n===== [DEBUG] robot.get_world_pose() =====")
++        print("world_pos:", np.array(rpos))
++        print("world_quat(wxyz):", np.array(rquat))
++    except Exception as e:
++        print("[WARN] robot.get_world_pose failed:", e)
++        
+     articulation_controller = None
+ 
+     world_cfg_table = WorldConfig.from_dict(
+@@ -330,6 +355,13 @@ def main():
+             joint_names=sim_js_names,
+         )
+ 
++        # --- Added printing of joint positions ---
++        # Create a dictionary mapping joint names to their current positions
++        joint_positions_dict = {name: float(pos) for name, pos in zip(sim_js_names, sim_js.positions)}
++        print("Joint positions:")
++        for jname, jpos in joint_positions_dict.items():
++            print(f"  {jname}: {jpos:.6f}")
++
+         if not args.reactive:
+             cu_js.velocity *= 0.0
+             cu_js.acceleration *= 0.0
+@@ -355,11 +387,15 @@ def main():
+                         color=np.array([0, 0.8, 0.2]),
+                     )
+                     spheres.append(sp)
++                    # --- Print initial sphere world positions ---
++                    print(f"Sphere {si} initial world position: {s.position.tolist()}")
+             else:
+                 for si, s in enumerate(sph_list[0]):
+                     if not np.isnan(s.position[0]):
+                         spheres[si].set_world_pose(position=np.ravel(s.position))
+                         spheres[si].set_radius(float(s.radius))
++                        # --- Print updated sphere world positions ---
++                        print(f"Sphere {si} world position: {s.position.tolist()}")
+ 
+         robot_static = False
+         if (np.max(np.abs(sim_js.velocities)) < 0.5) or args.reactive:
+@@ -443,4 +479,4 @@ def main():
+ 
+ 
+ if __name__ == "__main__":
+-    main()
++    main()
+\ No newline at end of file
+diff --git a/src/curobo/content/configs/robot/franka.yml b/src/curobo/content/configs/robot/franka.yml
+index 351bbd0..2170bae 100644
+--- a/src/curobo/content/configs/robot/franka.yml
++++ b/src/curobo/content/configs/robot/franka.yml
+@@ -49,7 +49,7 @@ robot_cfg:
+         "panda_rightfinger",
+         "attached_object",
+       ]
+-    collision_spheres: "spheres/franka_mesh.yml"
++    collision_spheres: "spheres/franka_collision_mesh.yml"
+     collision_sphere_buffer: 0.004 # 0.0025
+     extra_collision_spheres: {"attached_object": 4}
+     use_global_cumul: True

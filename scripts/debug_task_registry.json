@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "description": "Lightweight registry for scripts/debug_task.sh — maps logical task ids to wrapper entry scripts under scripts/.",
+  "categories": {
+    "anchor_reference": {
+      "label_en": "Anchor reference",
+      "label_zh": "一阶参照"
+    },
+    "spatial_placement": {
+      "label_en": "Spatial placement",
+      "label_zh": "空间放置"
+    },
+    "constraint_selection": {
+      "label_en": "Constraint selection",
+      "label_zh": "多条件筛选"
+    },
+    "state_reindex": {
+      "label_en": "State reindex",
+      "label_zh": "状态刷新"
+    },
+    "identity_tracking": {
+      "label_en": "Identity tracking",
+      "label_zh": "身份追踪"
+    },
+    "geometric_inference": {
+      "label_en": "Geometric inference",
+      "label_zh": "结构推断"
+    },
+    "protocol_backend": {
+      "label_en": "Protocol backend (low-level)",
+      "label_zh": "协议层 / 公共后端"
+    }
+  },
+  "tasks": [
+    {
+      "id": "grasp_anchor_direction",
+      "category": "anchor_reference",
+      "entry": "debug_grasp_anchor_direction.sh",
+      "backend": "debug_protocol_anchor_reference.sh",
+      "note": "Direction variant; TASK_VERSION base|stress maps to scene65/scene17 layouts."
+    },
+    {
+      "id": "grasp_anchor_distance",
+      "category": "anchor_reference",
+      "entry": "debug_grasp_anchor_distance.sh",
+      "backend": "debug_protocol_anchor_reference.sh",
+      "note": "Task wrapper; sets TASK_ID=grasp_anchor_distance and delegates to anchor-reference protocol."
+    },
+    {
+      "id": "anchor_reference_protocol",
+      "category": "protocol_backend",
+      "entry": "debug_protocol_anchor_reference.sh",
+      "backend": null,
+      "note": "Direct Python/protocol runner for anchor-reference family; expects TASK_ID/LAYOUT_KEY/SCENE_ID via env."
+    },
+    {
+      "id": "place_directional",
+      "category": "spatial_placement",
+      "entry": "debug_place_directional.sh",
+      "backend": "debug_protocol_spatial_placement.sh",
+      "note": "Wrapper for directional placement; uses TASK_VERSION (base/skill/stress)."
+    },
+    {
+      "id": "place_on_top",
+      "category": "spatial_placement",
+      "entry": "debug_place_on_top.sh",
+      "backend": "debug_protocol_spatial_placement.sh",
+      "note": ""
+    },
+    {
+      "id": "place_inside",
+      "category": "spatial_placement",
+      "entry": "debug_place_inside.sh",
+      "backend": "debug_protocol_spatial_placement.sh",
+      "note": ""
+    },
+    {
+      "id": "spatial_placement_protocol",
+      "category": "protocol_backend",
+      "entry": "debug_protocol_spatial_placement.sh",
+      "backend": null,
+      "note": "Low-level spatial-placement protocol runner."
+    },
+    {
+      "id": "select_visual_spatial",
+      "category": "constraint_selection",
+      "entry": "debug_select_visual_spatial.sh",
+      "backend": "debug_protocol_constraint_selection.sh",
+      "note": ""
+    },
+    {
+      "id": "select_exclusion_unique",
+      "category": "constraint_selection",
+      "entry": "debug_select_exclusion_unique.sh",
+      "backend": "debug_protocol_constraint_selection.sh",
+      "note": ""
+    },
+    {
+      "id": "constraint_selection_protocol",
+      "category": "protocol_backend",
+      "entry": "debug_protocol_constraint_selection.sh",
+      "backend": null,
+      "note": "Low-level constraint-selection protocol runner."
+    },
+    {
+      "id": "reindex_extreme",
+      "category": "state_reindex",
+      "entry": "debug_reindex_extreme.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Uses PRESET standard|stress and TASK_ID=reindex_extreme."
+    },
+    {
+      "id": "reindex_insert",
+      "category": "state_reindex",
+      "entry": "debug_reindex_insert.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": ""
+    },
+    {
+      "id": "reindex_subset",
+      "category": "state_reindex",
+      "entry": "debug_reindex_subset.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": ""
+    },
+    {
+      "id": "reindex_neighbor",
+      "category": "state_reindex",
+      "entry": "debug_reindex_neighbor.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": ""
+    },
+    {
+      "id": "ordinal_insert_static",
+      "category": "state_reindex",
+      "entry": "debug_ordinal_insert_static.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Static no-anchor 1D ordinal; PRESET standard|stress|skill maps layouts base/stress/skill."
+    },
+    {
+      "id": "grid_rowcol_grounding",
+      "category": "state_reindex",
+      "entry": "debug_grid_rowcol_grounding.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Static 2x3 or 3x3 grid row/col; PRESET standard|stress|skill."
+    },
+    {
+      "id": "state_reindex_protocol",
+      "category": "protocol_backend",
+      "entry": "debug_protocol_state_reindex.sh",
+      "backend": null,
+      "note": "Low-level state-reindex / historical-identity protocol (Python AppLauncher)."
+    },
+    {
+      "id": "track_single",
+      "category": "identity_tracking",
+      "entry": "debug_track_single.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": ""
+    },
+    {
+      "id": "track_multi",
+      "category": "identity_tracking",
+      "entry": "debug_track_multi.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": ""
+    },
+    {
+      "id": "track_clutter",
+      "category": "identity_tracking",
+      "entry": "debug_track_clutter.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Uses PRESET standard|stress; annotation task ids track_clutter_base / track_clutter_stress inside wrapper."
+    },
+    {
+      "id": "perfect_midpoint",
+      "category": "geometric_inference",
+      "entry": "debug_perfect_midpoint.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": ""
+    },
+    {
+      "id": "isometric_extension",
+      "category": "geometric_inference",
+      "entry": "debug_isometric_extension.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": ""
+    },
+    {
+      "id": "point_symmetry",
+      "category": "geometric_inference",
+      "entry": "debug_point_symmetry.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": ""
+    },
+    {
+      "id": "trend_continuation",
+      "category": "geometric_inference",
+      "entry": "debug_trend_continuation.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": "Filename: debug_trend_continuation.sh (.sh)"
+    },
+    {
+      "id": "weak_destruction_control",
+      "category": "geometric_inference",
+      "entry": "debug_weak_destruction_control.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": ""
+    },
+    {
+      "id": "square_completion",
+      "category": "geometric_inference",
+      "entry": "debug_square_completion.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": ""
+    },
+    {
+      "id": "select_visual_spatial_control",
+      "category": "constraint_selection",
+      "entry": "debug_select_visual_spatial_control.sh",
+      "backend": "debug_protocol_constraint_selection.sh",
+      "note": "Paired control; TASK_VERSION control|stress."
+    },
+    {
+      "id": "track_single_control",
+      "category": "identity_tracking",
+      "entry": "debug_track_single_control.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Paired control; PRESET standard|stress."
+    },
+    {
+      "id": "place_inside_boundary_control",
+      "category": "spatial_placement",
+      "entry": "debug_place_inside_boundary_control.sh",
+      "backend": "debug_protocol_spatial_placement.sh",
+      "note": "Paired control; TASK_VERSION control|stress."
+    },
+    {
+      "id": "square_completion_decoy_control",
+      "category": "geometric_inference",
+      "entry": "debug_square_completion_decoy_control.sh",
+      "backend": "debug_protocol_geometric_inference.sh",
+      "note": "Paired control; TASK_VERSION control|skill|stress."
+    },
+    {
+      "id": "reindex_neighbor_control",
+      "category": "state_reindex",
+      "entry": "debug_reindex_neighbor_control.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Paired control; PRESET standard|stress."
+    },
+    {
+      "id": "reindex_subset_control",
+      "category": "state_reindex",
+      "entry": "debug_reindex_subset_control.sh",
+      "backend": "debug_protocol_state_reindex.sh",
+      "note": "Paired control; PRESET standard|stress."
+    },
+    {
+      "id": "geometric_inference_protocol",
+      "category": "protocol_backend",
+      "entry": "debug_protocol_geometric_inference.sh",
+      "backend": null,
+      "note": "Low-level geometric-inference protocol runner."
+    }
+  ]
+}

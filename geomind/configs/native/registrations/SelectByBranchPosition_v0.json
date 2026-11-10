@@ -1,0 +1,35 @@
+{
+  "task_id": "SelectByBranchPosition",
+  "family": "TargetIdentification",
+  "condition": "Base",
+  "layout": "RootedBranchGraph",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "registration_id": "SelectByBranchPosition_v0",
+    "interface": "Standard",
+    "implementation_status": "implemented",
+    "protocol_family": "canonical_extension",
+    "split": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "backend": "assembled_native",
+    "max_episode_steps": 12000,
+    "native_assembly": {
+      "recipe_module": "geomind.episodes.extended_static_tasks",
+      "registration_id": "SelectByBranchPosition_v0",
+      "runner_entrypoint": "geomind.tools.regenerate_registered_tasks",
+      "action": "PickLiftSelectedObject",
+      "source_scene_id": 65,
+      "backend_kind": "IsaacLabNativeAssembledScene",
+      "supports_legacy_manager_environment": false
+    },
+    "backend_kwargs": {
+      "native_assembly": true
+    },
+    "previous_placeholder_binding": "legacy/registrations/SelectByBranchPosition_v0.json"
+  },
+  "aliases": [
+    "SelectByBranchPosition_v0"
+  ]
+}

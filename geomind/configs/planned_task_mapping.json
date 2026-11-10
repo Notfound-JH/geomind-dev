@@ -1,0 +1,128 @@
+{
+  "schema_version": "geomind_task_taxonomy_planned_v1",
+  "description": "Planned task taxonomy mapping: 7 semantic aug + 7 visual aug (merged with current → 34 raw configs). Relational Grounding 2/2; Constraint Composition 1/1; Scene Updating 1/1 (Reindex Extreme only, no neighbor aug).",
+  "counts": {
+    "base_tasks": 20,
+    "semantic_aug_tasks": 7,
+    "visual_aug_tasks": 7,
+    "execution_strict_eval_units": 20,
+    "raw_task_configs": 34,
+    "total_eval_units": 54
+  },
+  "execution_burden": {
+    "type": "criterion_level_variant",
+    "applies_to": "base_tasks_only",
+    "num_eval_units": 20,
+    "standard_metric": "success_standard",
+    "strict_metric": "success_strict",
+    "sensitivity_definition": "execution_sensitivity = success_standard - success_strict",
+    "note": "Execution burden is not represented as separate task JSON files. It is evaluated by applying stricter success criteria to the same 20 Base tasks."
+  },
+  "planned_aug_distribution": {
+    "semantic": {
+      "Target Identification": 2,
+      "Relational Grounding": 2,
+      "Constraint Composition": 1,
+      "Geometric Inference": 0,
+      "Scene Updating": 1,
+      "Identity Tracking": 1,
+      "total": 7
+    },
+    "visual": {
+      "Target Identification": 1,
+      "Relational Grounding": 2,
+      "Constraint Composition": 1,
+      "Geometric Inference": 1,
+      "Scene Updating": 1,
+      "Identity Tracking": 1,
+      "total": 7
+    }
+  },
+  "current_tasks": "Same as geomind_task_taxonomy_current_v1.",
+  "planned_additions": [
+    {
+      "task_id": "SelectByDirectionSem_v0",
+      "taxonomy_family": "Relational Grounding",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "semantic",
+      "parent_task_id": "SelectByDirection_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "RelationalGrounding",
+      "domain": "SpatialReasoning"
+    },
+    {
+      "task_id": "PlaceOnTopSem_v0",
+      "taxonomy_family": "Relational Grounding",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "semantic",
+      "parent_task_id": "PlaceByTopologyOnTop_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "RelationalGrounding",
+      "domain": "SpatialReasoning"
+    },
+    {
+      "task_id": "SelectAfterExclusionSem_v0",
+      "taxonomy_family": "Constraint Composition",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "semantic",
+      "parent_task_id": "SelectAfterExclusion_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "ConstraintComposition",
+      "domain": "SpatialReasoning"
+    },
+    {
+      "task_id": "SelectByDirectionVisual_v0",
+      "taxonomy_family": "Relational Grounding",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "visual",
+      "parent_task_id": "SelectByDirection_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "RelationalGrounding",
+      "domain": "SpatialReasoning"
+    },
+    {
+      "task_id": "PlaceOnTopVisual_v0",
+      "taxonomy_family": "Relational Grounding",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "visual",
+      "parent_task_id": "PlaceByTopologyOnTop_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "RelationalGrounding",
+      "domain": "SpatialReasoning"
+    },
+    {
+      "task_id": "SelectVisualSpatialVisual_v0",
+      "taxonomy_family": "Constraint Composition",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "visual",
+      "parent_task_id": "SelectWithVisualCue_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "ConstraintComposition",
+      "domain": "SpatialReasoning"
+    },
+    {
+      "task_id": "InferMidpointVisual_v0",
+      "taxonomy_family": "Geometric Inference",
+      "dimension": "spatial_reasoning",
+      "suite": "augmented",
+      "augmentation_axis": "visual",
+      "parent_task_id": "InferMidpoint_v0",
+      "status": "planned",
+      "execution_strict_available": false,
+      "family": "GeometricInference",
+      "domain": "SpatialReasoning"
+    }
+  ]
+}

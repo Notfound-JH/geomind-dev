@@ -1,0 +1,297 @@
+diff --git a/source/isaaclab/isaaclab/envs/mimic_env_cfg.py b/source/isaaclab/isaaclab/envs/mimic_env_cfg.py
+index d6dced3bbc..2b3f6e99ae 100644
+--- a/source/isaaclab/isaaclab/envs/mimic_env_cfg.py
++++ b/source/isaaclab/isaaclab/envs/mimic_env_cfg.py
+@@ -95,6 +95,12 @@ class SubTaskConfig:
+     Set to None if no object is involved (this is rarely the case).
+     """
+ 
++    object_name: str = None
++    """Alias of :attr:`object_ref` used by newer SkillGen task specs."""
++
++    subtask_start_signal: str | None = None
++    """Subtask start signal name used by SkillGen."""
++
+     subtask_term_signal: str = None
+     """Subtask termination signal name."""
+ 
+@@ -149,6 +155,29 @@ class SubTaskConfig:
+     next_subtask_description: str = ""
+     """Instructions for the next subtask"""
+ 
++    def __post_init__(self):
++        """Normalize aliases and validate offset range settings."""
++        if self.object_name is None and self.object_ref is not None:
++            self.object_name = self.object_ref
++        elif self.object_ref is None and self.object_name is not None:
++            self.object_ref = self.object_name
++        elif self.object_name is not None and self.object_ref is not None and self.object_name != self.object_ref:
++            raise ValueError(
++                f"SubTaskConfig object mismatch: object_name='{self.object_name}' != object_ref='{self.object_ref}'"
++            )
++
++        self._validate_offset_range(self.first_subtask_start_offset_range, "first_subtask_start_offset_range")
++        self._validate_offset_range(self.subtask_start_offset_range, "subtask_start_offset_range")
++        self._validate_offset_range(self.subtask_term_offset_range, "subtask_term_offset_range")
++
++    @staticmethod
++    def _validate_offset_range(value: tuple, field_name: str) -> None:
++        if not isinstance(value, tuple) or len(value) != 2:
++            raise ValueError(f"{field_name} must be a tuple(int, int), got: {value}")
++        low, high = value
++        if low > high:
++            raise ValueError(f"{field_name} has invalid bounds: low={low} must be <= high={high}")
++
+ 
+ class SubTaskConstraintType(enum.IntEnum):
+     """Enum for subtask constraint types."""
+diff --git a/source/isaaclab_assets/isaaclab_assets/robots/__init__.py b/source/isaaclab_assets/isaaclab_assets/robots/__init__.py
+index 77bcf04d0a..fc3e8fb2aa 100644
+--- a/source/isaaclab_assets/isaaclab_assets/robots/__init__.py
++++ b/source/isaaclab_assets/isaaclab_assets/robots/__init__.py
+@@ -30,3 +30,4 @@ from .shadow_hand import *
+ from .spot import *
+ from .unitree import *
+ from .universal_robots import *
++from .fr3 import *
+\ No newline at end of file
+diff --git a/source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py b/source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py
+index a6f8538842..dbaa8b0b42 100644
+--- a/source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py
++++ b/source/isaaclab_mimic/isaaclab_mimic/datagen/data_generator.py
+@@ -375,9 +375,16 @@ class DataGenerator:
+         subtask_configs = self.env_cfg.subtask_configs[eef_name]
+         # name of object for this subtask
+         subtask_object_name = self.env_cfg.subtask_configs[eef_name][subtask_ind].object_ref
++        current_subtask_object_name = subtask_object_name
++        if hasattr(self.env, "get_current_skillgen_object_ref"):
++            current_subtask_object_name = self.env.get_current_skillgen_object_ref(
++                eef_name=eef_name,
++                subtask_index=subtask_ind,
++                source_object_ref=subtask_object_name,
++            )
+         subtask_object_pose = (
+-            self.env.get_object_poses(env_ids=[env_id])[subtask_object_name][0]
+-            if (subtask_object_name is not None)
++            self.env.get_object_poses(env_ids=[env_id])[current_subtask_object_name][0]
++            if (current_subtask_object_name is not None)
+             else None
+         )
+ 
+diff --git a/source/isaaclab_assets/isaaclab_assets/robots/fr3.py b/source/isaaclab_assets/isaaclab_assets/robots/fr3.py
+new file mode 100644
+index 0000000000..e6e99d39c9
+--- /dev/null
++++ b/source/isaaclab_assets/isaaclab_assets/robots/fr3.py
+@@ -0,0 +1,203 @@
++# # Copyright (c) 2022-2026, The Isaac Lab Project Developers.
++# # SPDX-License-Identifier: BSD-3-Clause
++
++# """Configuration for Franka Research 3 (FR3) robot in Isaac Lab style."""
++
++# import isaaclab.sim as sim_utils
++# from isaaclab.actuators import ImplicitActuatorCfg
++# from isaaclab.assets.articulation import ArticulationCfg
++# from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
++
++# ##
++# # Configuration
++# ##
++
++# FRANKA_FR3_CFG = ArticulationCfg(
++#     spawn=sim_utils.UsdFileCfg(
++#         # FR3 asset path in Isaac Sim nucleus
++#         # usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/FrankaRobotics/FrankaFR3/fr3.usd",
++#         usd_path=f"/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Franka/FR3/fr3.usd",
++#         activate_contact_sensors=False,
++#         rigid_props=sim_utils.RigidBodyPropertiesCfg(
++#             disable_gravity=False,
++#             max_depenetration_velocity=5.0,
++#         ),
++#         articulation_props=sim_utils.ArticulationRootPropertiesCfg(
++#             enabled_self_collisions=True,
++#             solver_position_iteration_count=8,
++#             solver_velocity_iteration_count=0,
++#         ),
++#         # collision_props=sim_utils.CollisionPropertiesCfg(contact_offset=0.005, rest_offset=0.0),
++#     ),
++
++#     # A safe "home-ish" pose (within FR3 joint limits).
++#     # FR3 limits reference: URDF snippet (effort/limits/velocity). See citations below.
++#     init_state=ArticulationCfg.InitialStateCfg(
++#         joint_pos={
++#             "fr3_joint1": 0.0,
++#             "fr3_joint2": -1.3,   # within [-1.5133, 1.5133]
++#             "fr3_joint3": 0.0,      # within [-2.4937, 2.4937]
++#             "fr3_joint4": -2.87,   # IMPORTANT: must be within [-2.7478, -0.4461]
++#             "fr3_joint5": 0.0,      # within [-2.48, 2.48]
++#             "fr3_joint6": 2.0,    # within [0.8521, 4.2094]
++#             "fr3_joint7": 0.75,    # within [-2.6895, 2.6895]
++#             # Gripper (prismatic)
++#             "fr3_finger_joint.*": 0.04,  # open
++#         }
++#     ),
++
++#     # Actuators: split groups to respect different velocity limits.
++#     actuators={
++#         # joints 1-4: effort 87, velocity (min among 1-4 is 1.0 from joint2)
++#         "fr3_shoulder": ImplicitActuatorCfg(
++#             joint_names_expr=["fr3_joint[1-4]"],
++#             effort_limit_sim=5200.0,
++#             velocity_limit_sim=2.175,
++#             stiffness=1100.0,
++#             damping=80.0,
++#         ),
++#         # joint 6 is slower (1.5)
++#         "fr3_wrist_slow": ImplicitActuatorCfg(
++#             joint_names_expr=["fr3_joint6"],
++#             effort_limit_sim=720.0,
++#             velocity_limit_sim=2.61,
++#             stiffness=1000.0,
++#             damping=80.0,
++#         ),
++#         # joints 5 and 7 are faster (3.0)
++#         "fr3_wrist_fast": ImplicitActuatorCfg(
++#             joint_names_expr=["fr3_joint[5|7]"],  # regex: 5 or 7
++#             effort_limit_sim=500,
++#             velocity_limit_sim=3.0,
++#             stiffness=800,
++#             damping=60,
++#         ),
++#         # gripper: effort 100, velocity 0.2, stroke [0, 0.04]
++#         "fr3_hand": ImplicitActuatorCfg(
++#             joint_names_expr=["fr3_finger_joint[1|2]"],
++#             effort_limit_sim=1650,
++#             velocity_limit_sim=10.0,
++#             stiffness=17,
++#             damping=0.02,
++#         ),
++#     },
++
++#     soft_joint_pos_limit_factor=1.0,
++# )
++# """Configuration of Franka Research 3 (FR3) robot."""
++
++# Copyright (c) 2022-2026, The Isaac Lab Project Developers.
++# SPDX-License-Identifier: BSD-3-Clause
++
++"""Configuration for Franka Research 3 (FR3) robot in Isaac Lab style."""
++
++import math
++import isaaclab.sim as sim_utils
++from isaaclab.actuators import ImplicitActuatorCfg
++from isaaclab.assets.articulation import ArticulationCfg
++
++# ---------------------------
++# Real-spec constants (FR3)
++# From FR3 datasheet:
++# - A1-A4 torque: ±87 Nm
++# - A5-A7 torque: ±12 Nm
++# - A1-A4 vel: 150 deg/s
++# - A5-A7 vel: 301 deg/s (FCI: A6 239 deg/s)
++# ---------------------------
++FR3_TAU_ARM = 87.0
++FR3_TAU_WRIST = 12.0
++
++FR3_VEL_ARM = math.radians(150.0)          # 2.61799 rad/s
++FR3_VEL_WRIST = math.radians(301.0)        # 5.25344 rad/s
++FR3_VEL_J6_FCI = math.radians(239.0)       # 4.17134 rad/s (optional, if you care)
++
++# Franka Hand (if you are using the 2-finger Franka Hand):
++# - continuous grasping force: 30-70 N
++# - travel speed per finger: 50 mm/s
++FRANKA_HAND_FORCE = 70.0      # N  (prismatic joint effort)
++FRANKA_HAND_VEL = 0.05        # m/s (50 mm/s)
++
++FRANKA_FR3_CFG = ArticulationCfg(
++    spawn=sim_utils.UsdFileCfg(
++        usd_path="/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Franka/FR3/fr3.usd",
++        activate_contact_sensors=False,
++        rigid_props=sim_utils.RigidBodyPropertiesCfg(
++            disable_gravity=False,
++            max_depenetration_velocity=5.0,
++        ),
++        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
++            # Self-collision ON can be noisy for RL; if you see jitter, try False.
++            enabled_self_collisions=True,
++            # Slightly stronger than your original for stability
++            solver_position_iteration_count=12,
++            solver_velocity_iteration_count=1,
++        ),
++        # If you see penetration at contacts, you can enable:
++        # collision_props=sim_utils.CollisionPropertiesCfg(contact_offset=0.005, rest_offset=0.0),
++    ),
++
++    # A "home-ish" pose (keep it away from extreme limits)
++    init_state=ArticulationCfg.InitialStateCfg(
++        joint_pos={
++            "fr3_joint1": 0.0,
++            "fr3_joint2": -1.0,
++            "fr3_joint3": 0.0,
++            "fr3_joint4": -2.3,
++            "fr3_joint5": 0.0,
++            "fr3_joint6": 1.8,
++            "fr3_joint7": 0.8,
++            # 0.04 m per finger -> 0.08 m total opening matches Franka Hand travel range
++            "fr3_finger_joint.*": 0.04,
++        }
++    ),
++
++    actuators={
++        # ---- Arm: joints 1-4 (87 Nm, 150 deg/s) ----
++        "fr3_arm": ImplicitActuatorCfg(
++            joint_names_expr=["fr3_joint[1-4]"],
++            effort_limit_sim=FR3_TAU_ARM,
++            velocity_limit_sim=FR3_VEL_ARM,
++            # Start from "Isaac-Lab-like" conservative gains (stable, not too stiff)
++            stiffness=80.0,
++            damping=4.0,
++        ),
++
++        # ---- Wrist: joints 5-7 (12 Nm, 301 deg/s; optional special-casing for j6) ----
++        "fr3_wrist": ImplicitActuatorCfg(
++            joint_names_expr=["fr3_joint[5|7]"],
++            effort_limit_sim=FR3_TAU_WRIST,
++            velocity_limit_sim=FR3_VEL_WRIST,
++            stiffness=40.0,
++            damping=2.0,
++        ),
++        "fr3_wrist_j6": ImplicitActuatorCfg(
++            joint_names_expr=["fr3_joint6"],
++            effort_limit_sim=FR3_TAU_WRIST,
++            # If you want to match the datasheet "FCI use" note, use FR3_VEL_J6_FCI.
++            velocity_limit_sim=FR3_VEL_WRIST,
++            stiffness=40.0,
++            damping=2.0,
++        ),
++
++        # ---- Gripper (prismatic): force in N, velocity in m/s ----
++        "fr3_hand": ImplicitActuatorCfg(
++            joint_names_expr=["fr3_finger_joint[1|2]"],
++            effort_limit_sim=FRANKA_HAND_FORCE,
++            velocity_limit_sim=FRANKA_HAND_VEL,
++            # Gripper usually needs higher stiffness than arm joints to hold objects firmly.
++            stiffness=5000.0,
++            damping=200.0,
++        ),
++    },
++
++    soft_joint_pos_limit_factor=1.0,
++)
++"""Configuration of Franka Research 3 (FR3) robot."""
++FRANKA_FR3_HIGH_PD_CFG = FRANKA_FR3_CFG.copy()
++FRANKA_FR3_HIGH_PD_CFG.spawn.rigid_props.disable_gravity = True
++FRANKA_FR3_HIGH_PD_CFG.actuators["fr3_arm"].stiffness = 400.0
++FRANKA_FR3_HIGH_PD_CFG.actuators["fr3_arm"].damping = 80.0
++FRANKA_FR3_HIGH_PD_CFG.actuators["fr3_wrist"].stiffness = 400.0
++FRANKA_FR3_HIGH_PD_CFG.actuators["fr3_wrist"].damping = 80.0
++FRANKA_FR3_HIGH_PD_CFG.actuators["fr3_wrist_j6"].stiffness = 400.0
++FRANKA_FR3_HIGH_PD_CFG.actuators["fr3_wrist_j6"].damping = 80.0
+\ No newline at end of file
+diff --git a/apps/isaacsim_4_5/rendering_modes/extension.toml b/apps/isaacsim_4_5/rendering_modes/extension.toml
+new file mode 100644
+index 0000000000..f0668b9184
+--- /dev/null
++++ b/apps/isaacsim_4_5/rendering_modes/extension.toml
+@@ -0,0 +1 @@
++# This is not an extension

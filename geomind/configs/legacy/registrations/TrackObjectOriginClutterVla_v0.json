@@ -1,0 +1,32 @@
+{
+  "task_id": "TrackObjectOrigin",
+  "family": "IdentityTracking",
+  "condition": "Base",
+  "layout": "Clutter",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "registration_id": "TrackObjectOriginClutterVla_v0",
+    "interface": "Vla",
+    "implementation_status": "placeholder",
+    "protocol_family": "unimplemented",
+    "split": "base",
+    "task_version": "vla",
+    "history_requirement_status": "deferred",
+    "legacy_source": "geomind/configs/legacy/vla_tasks/TrackClutterVla_v0.json"
+  },
+  "aliases": [
+    "TrackClutterVla_v0",
+    "track_clutter",
+    "track_clutter:vla",
+    "TrackBaseBase_TrackClutterVla_v0"
+  ],
+  "variant": "Clutter",
+  "parameters": {
+    "source": "InitialRegion",
+    "target_region": "SourceA",
+    "source_assignment": "Seeded",
+    "require_movement": true
+  },
+  "migration_status": "HistoryDeferred"
+}

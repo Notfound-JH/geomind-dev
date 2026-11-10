@@ -1,0 +1,25 @@
+{
+  "protocol_id": "observe_delay_recall",
+  "phases": [
+    {
+      "id": "observe",
+      "type": "Observe",
+      "duration_steps": 60,
+      "scene_visible": true
+    },
+    {
+      "id": "delay",
+      "type": "Delay",
+      "duration_steps": 120,
+      "scene_visible": false
+    },
+    {
+      "id": "recall",
+      "type": "Respond",
+      "scene_visible": false,
+      "allow_response": true
+    }
+  ],
+  "query_at": "recall",
+  "allow_history_replay": false
+}

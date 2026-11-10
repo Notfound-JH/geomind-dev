@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "InferPointSymmetryVla_v0",
+  "task_id": "InferPointSymmetry",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "InferPointSymmetryVla_v0",
+    "point_symmetry",
+    "point_symmetry:vla",
+    "PointSymmetryVla_v0",
+    "GeometricBaseBase_InferPointSymmetryVla_v0",
+    "GeometricBaseBase_PointSymmetryVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "geometric_inference_point_symmetry_line_2_vla",
+  "release_version": "1.0"
+}

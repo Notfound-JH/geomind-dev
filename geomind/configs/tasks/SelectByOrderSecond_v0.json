@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByOrderSecond_v0",
+  "task_id": "SelectByOrder",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {
+    "index": 2,
+    "from": "Left",
+    "reference_time": "Current"
+  },
+  "aliases": [
+    "SelectByOrder_v0",
+    "ordinal_insert_static",
+    "OrdinalInsertStatic_v0",
+    "ReindexBaseBase_SelectByOrder_v0",
+    "ReindexBaseBase_OrdinalInsertStatic_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "ordinal_insert_static_blocks_base",
+  "release_version": "1.0"
+}

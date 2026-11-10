@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "PlaceByTopologyOnTopVla_v0",
+  "task_id": "PlaceByTopology",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "PlaceOnTopVla_v0",
+    "place_on_top",
+    "place_on_top:vla",
+    "RelationBaseBase_PlaceOnTopVla_v0"
+  ],
+  "seed": 0,
+  "variant": "OnTop",
+  "scene_id": "scene_65",
+  "layout_id": "place_on_top_scene65_skill_vla",
+  "release_version": "1.0"
+}

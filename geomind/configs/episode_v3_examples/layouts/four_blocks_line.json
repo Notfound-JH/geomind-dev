@@ -1,0 +1,49 @@
+{
+  "layout_id": "four_blocks_line",
+  "frame": "table",
+  "objects": [
+    {
+      "id": "block_a",
+      "asset": "red_block",
+      "position_m": [
+        -0.12,
+        0,
+        0.02
+      ],
+      "label": "the red block"
+    },
+    {
+      "id": "block_b",
+      "asset": "blue_block",
+      "position_m": [
+        -0.04,
+        0,
+        0.02
+      ],
+      "label": "the blue block"
+    },
+    {
+      "id": "block_c",
+      "asset": "green_block",
+      "position_m": [
+        0.04,
+        0,
+        0.02
+      ],
+      "label": "the green block"
+    },
+    {
+      "id": "block_d",
+      "asset": "yellow_block",
+      "position_m": [
+        0.12,
+        0,
+        0.02
+      ],
+      "label": "the yellow block"
+    }
+  ],
+  "randomization": {
+    "position_jitter_m": 0.005
+  }
+}

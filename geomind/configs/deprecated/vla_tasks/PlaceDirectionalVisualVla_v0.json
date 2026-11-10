@@ -1,0 +1,42 @@
+{
+  "task_id": "PlaceDirectional",
+  "family": "RelationalGrounding",
+  "condition": "Visual",
+  "layout": "Pair",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "place_directional",
+    "split": "aug",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+    "semantic_module": "spatial_placement",
+    "phase": "phase1",
+    "legacy_task_id": "place_directional",
+    "annotation_layout_key": "place_directional_scene65_visual_vla",
+    "annotation_task_index": 0,
+    "object_set": "placement_objects",
+    "assets_group": "stage_65",
+    "tags": [
+      "spatial_placement",
+      "visual",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "PlaceDirectionalVisualVla_v0",
+    "protocol_family": "spatial_placement",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "PlaceDirectionalVisualVla_v0",
+    "place_directional:visual",
+    "place_directional:vla",
+    "RelationAugVisual_PlaceDirectionalVla_v0"
+  ],
+  "status": "Deprecated",
+  "deprecation_reason": "Directional placement is retired from task registration and evaluation."
+}

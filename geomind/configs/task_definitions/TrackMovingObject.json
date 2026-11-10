@@ -1,0 +1,5 @@
+{
+  "task_id": "TrackMovingObject",
+  "domain": "SpatialMemory",
+  "family": "IdentityTracking"
+}

@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "name": "wooden office desk",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "table"
+        },
+        {
+            "name": "ceramic coffee mug",
+            "pos_xy": [
+                0.5,
+                -0.5
+            ],
+            "yaw_deg": 0,
+            "type": "decoration"
+        },
+        {
+            "name": "adjustable wooden chair",
+            "pos_xy": [
+                0,
+                -1.2
+            ],
+            "yaw_deg": 15,
+            "type": "furniture"
+        },
+        {
+            "name": "rectangular plastic storage box",
+            "pos_xy": [
+                -0.3,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "container"
+        }
+    ],
+    "furniture": [],
+    "decoration": []
+}

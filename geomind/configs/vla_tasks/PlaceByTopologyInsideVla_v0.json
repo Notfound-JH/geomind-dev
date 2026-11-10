@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "PlaceByTopologyInsideVla_v0",
+  "task_id": "PlaceByTopology",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "PlaceInsideVla_v0",
+    "place_inside",
+    "place_inside:vla",
+    "RelationBaseBase_PlaceInsideVla_v0"
+  ],
+  "seed": 0,
+  "variant": "Inside",
+  "scene_id": "scene_65",
+  "layout_id": "place_inside_scene65_skill_vla",
+  "release_version": "1.0"
+}

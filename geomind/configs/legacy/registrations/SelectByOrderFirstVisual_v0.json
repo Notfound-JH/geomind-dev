@@ -1,0 +1,44 @@
+{
+  "task_id": "SelectByOrder",
+  "family": "TargetIdentification",
+  "condition": "Visual",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "reindex_extreme",
+    "split": "base",
+    "variant": "visual",
+    "task_version": "visual",
+    "scene_id": 65,
+    "instruction": "Pick up the first block from the left in the current order.",
+    "evaluator_key": "state_reindexing_evaluator",
+    "semantic_module": "state_refresh",
+    "skill_type": "extreme_state_reindexing",
+    "phase": "phase1",
+    "annotation_layout_key": "state_reindex_blocks_line_4",
+    "annotation_task_index": 0,
+    "object_set": "runtime_blocks",
+    "assets_group": "stage_65",
+    "tags": [
+      "state_reindexing",
+      "visual"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "SelectByOrderFirstVisual_v0",
+    "protocol_family": "state_reindexing",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "ReindexExtremeVisual_v0",
+    "reindex_extreme:visual",
+    "ReindexBaseVisual_ReindexExtreme_v0"
+  ],
+  "parameters": {
+    "index": 1,
+    "from": "Left",
+    "reference_time": "Current"
+  }
+}

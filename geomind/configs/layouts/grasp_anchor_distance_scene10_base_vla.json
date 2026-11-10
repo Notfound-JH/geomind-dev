@@ -1,0 +1,271 @@
+{
+  "layout_id": "grasp_anchor_distance_scene10_base_vla",
+  "format": "LegacyInitialization",
+  "category": "Scatter",
+  "source_layout": "grasp_anchor_distance_scene10_base_vla",
+  "scene_structure": {
+    "layout": "Anchor Distance Runtime Injection",
+    "num_of_objects": 5,
+    "object_asset": "STANDARD_SPHERE",
+    "object_positions": {
+      "anchor_cylinder": {
+        "position": [
+          0.4,
+          0.02
+        ]
+      },
+      "ball_nearest": {
+        "position": [
+          0.485,
+          0.02
+        ]
+      },
+      "ball_second": {
+        "position": [
+          0.34,
+          0.12
+        ]
+      },
+      "ball_third": {
+        "position": [
+          0.56,
+          -0.09
+        ]
+      },
+      "ball_fourth": {
+        "position": [
+          0.24,
+          0.0
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "anchor_cylinder",
+        "kind": "primitive_cylinder",
+        "radius": 0.03,
+        "height": 0.12,
+        "visual_color": [
+          0.82,
+          0.12,
+          0.12
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.82,
+            0.12,
+            0.12
+          ],
+          "fallback_roughness": 0.5
+        },
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "material": {
+            "static_friction": 1.4,
+            "dynamic_friction": 1.2,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.4,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ball_nearest",
+        "kind": "primitive_sphere",
+        "radius": 0.03,
+        "visual_color": [
+          0.66,
+          0.64,
+          0.58
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.66,
+            0.64,
+            0.58
+          ],
+          "fallback_roughness": 0.55
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.4,
+            "dynamic_friction": 1.2,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.485,
+            0.02
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ball_second",
+        "kind": "primitive_sphere",
+        "radius": 0.03,
+        "visual_color": [
+          0.66,
+          0.64,
+          0.58
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.66,
+            0.64,
+            0.58
+          ],
+          "fallback_roughness": 0.55
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.4,
+            "dynamic_friction": 1.2,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.34,
+            0.12
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ball_third",
+        "kind": "primitive_sphere",
+        "radius": 0.03,
+        "visual_color": [
+          0.66,
+          0.64,
+          0.58
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.66,
+            0.64,
+            0.58
+          ],
+          "fallback_roughness": 0.55
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.4,
+            "dynamic_friction": 1.2,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.56,
+            -0.09
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "ball_fourth",
+        "kind": "primitive_sphere",
+        "radius": 0.03,
+        "visual_color": [
+          0.66,
+          0.64,
+          0.58
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.66,
+            0.64,
+            0.58
+          ],
+          "fallback_roughness": 0.55
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 2,
+            "dynamic_friction": 1.2,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.24,
+            0.0
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

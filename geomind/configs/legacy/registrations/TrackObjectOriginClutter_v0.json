@@ -1,0 +1,31 @@
+{
+  "task_id": "TrackObjectOrigin",
+  "family": "IdentityTracking",
+  "condition": "Base",
+  "layout": "Clutter",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "registration_id": "TrackObjectOriginClutter_v0",
+    "interface": "Standard",
+    "implementation_status": "placeholder",
+    "protocol_family": "unimplemented",
+    "split": "base",
+    "task_version": "base",
+    "history_requirement_status": "deferred",
+    "legacy_source": "geomind/configs/legacy/tasks/TrackClutter_v0.json"
+  },
+  "aliases": [
+    "TrackClutter_v0",
+    "track_clutter",
+    "TrackBaseBase_TrackClutter_v0"
+  ],
+  "variant": "Clutter",
+  "parameters": {
+    "source": "InitialRegion",
+    "target_region": "SourceA",
+    "source_assignment": "Seeded",
+    "require_movement": true
+  },
+  "migration_status": "HistoryDeferred"
+}

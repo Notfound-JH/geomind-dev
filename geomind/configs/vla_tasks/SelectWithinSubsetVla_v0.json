@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectWithinSubsetVla_v0",
+  "task_id": "SelectWithinSubset",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectWithinSubsetVla_v0",
+    "reindex_subset",
+    "reindex_subset:vla",
+    "ReindexSubsetVla_v0",
+    "ReindexBaseBase_SelectWithinSubsetVla_v0",
+    "ReindexBaseBase_ReindexSubsetVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "state_reindex_red_subset_blocks_line_5_vla",
+  "release_version": "1.0"
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "patch": "minimal-runtime.patch",
+      "apply_check_passed": true,
+      "reconstructed_source_matches_original": true,
+      "files": 4,
+      "source_mismatches": [],
+      "python_syntax_errors": [],
+      "default_install": true
+    },
+    {
+      "patch": "full_source.patch",
+      "apply_check_passed": true,
+      "reconstructed_source_matches_original": true,
+      "files": 53,
+      "source_mismatches": [],
+      "python_syntax_errors": [
+        {
+          "path": "scripts/tools/record_demos.py",
+          "kind": "IndentationError"
+        }
+      ],
+      "default_install": false
+    }
+  ],
+  "scope": "Reconstruction against pinned baseline in isolated temporary paths; no framework/working tree changed; no simulator started"
+}

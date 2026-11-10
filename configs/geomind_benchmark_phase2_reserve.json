@@ -1,0 +1,148 @@
+{
+  "benchmark_name": "geomind_spatial_benchmark",
+  "suite_name": "phase2_reserve",
+  "runner_dispatch_mode": "permissive",
+  "description": "Phase 2 reserve suite capturing deferred task carriers and reserve upgrades without forcing immediate runtime support.",
+  "diagnostic_tags": [
+    "phase2_reserve",
+    "deferred_runtime_support"
+  ],
+  "declared_task_matrix": [
+    {
+      "task_id": "place_on_top",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "place_inside",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "point_symmetry",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "reindex_insert",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "reindex_neighbor",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "track_multi",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "isometric_extension",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    }
+  ],
+  "task_ids": [
+    "place_on_top",
+    "place_inside",
+    "point_symmetry",
+    "reindex_insert",
+    "reindex_neighbor",
+    "track_multi",
+    "isometric_extension"
+  ],
+  "phase_filter": [
+    "phase2"
+  ],
+  "agent_names": [
+    "state_refresh_core_oracle",
+    "historical_oracle",
+    "historical_final_frame_only",
+    "explicit_extension_oracle",
+    "explicit_random"
+  ],
+  "default_agent_groups": {
+    "state_refresh": [
+      "state_refresh_core_oracle",
+      "historical_oracle",
+      "historical_final_frame_only"
+    ],
+    "geometric_structure": [
+      "explicit_extension_oracle",
+      "explicit_random"
+    ]
+  },
+  "default_thresholds": {
+    "min_valid_rate": 0.7,
+    "min_success_rate": 0.55,
+    "max_accidental_displacement_rate": 0.25,
+    "max_mean_l2_error": 0.06
+  },
+  "output_layout": {
+    "state_refresh_root": "logs/state_reindexing_matrix/<timestamp>",
+    "geometric_structure_root": "logs/geometric_inference_matrix/<timestamp>",
+    "manifest_file": "run_manifest.tsv",
+    "aggregate_text": "aggregate.txt",
+    "aggregate_csv": "aggregate.csv"
+  },
+  "summary_preset": {
+    "joint_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "skill_type",
+      "phase",
+      "agent_name",
+      "task_type"
+    ],
+    "joint_common_fields": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "episode_count",
+      "valid_rate",
+      "success_rate",
+      "task_type"
+    ],
+    "state_refresh_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "object_count",
+      "distractor_count",
+      "visual_mode"
+    ],
+    "geometric_structure_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "noise_level",
+      "anchor_count"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "episode_id": "ReflectAcrossLine_v0",
+  "task_id": "ReflectAcrossLine",
+  "scene_id": "registered_scene_65",
+  "layout_id": "geometry_s0",
+  "parameters": {
+    "point": "point",
+    "line": [
+      "line_a",
+      "line_b"
+    ],
+    "frame": "table",
+    "geometry": "InfiniteLine3D",
+    "degeneracy_tolerance_m": 0.0001
+  },
+  "response": "ReportPoint",
+  "evaluation": {
+    "position_tolerance_m": 1e-06
+  },
+  "seed": 0,
+  "physical_execution": {
+    "action": "ReachAboveTarget",
+    "target_offset_m": [
+      0.0,
+      0.0,
+      0.1
+    ],
+    "position_tolerance_m": 0.012,
+    "orientation_tolerance_rad": 0.15,
+    "dwell_steps": 20,
+    "max_steps": 1800,
+    "joint_step_limit_rad": 0.04,
+    "approach_clearance_m": 0.15
+  },
+  "release_version": "2.0"
+}

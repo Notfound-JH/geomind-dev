@@ -1,0 +1,44 @@
+{
+  "task_id": "ContinueSpatialPattern",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "trend_continuation",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the next cube. Place it to continue the visible row/column pattern.",
+    "semantic_module": "structure_inference",
+    "phase": "phase1",
+    "annotation_layout_key": "geometric_inference_implicit_trend_line_3_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "implicit_trend_fitting",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "trend_continuation"
+    },
+    "registration_id": "ContinueSpatialPatternVla_v0",
+    "protocol_family": "implicit_trend_fitting",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "ContinueSpatialPatternVla_v0",
+    "trend_continuation",
+    "trend_continuation:vla",
+    "TrendContinuationVla_v0",
+    "GeometricBaseBase_ContinueSpatialPatternVla_v0",
+    "GeometricBaseBase_TrendContinuationVla_v0"
+  ]
+}

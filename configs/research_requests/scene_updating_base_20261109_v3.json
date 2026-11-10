@@ -1,0 +1,10 @@
+{
+  "task_family": "SceneUpdating",
+  "condition": "Base",
+  "scene_id": "semantic_table",
+  "seed": 0,
+  "count": 1,
+  "backend": "isaaclab",
+  "timeout_s": 420,
+  "output": "outputs/research/next_base_scene_updating_single_v3"
+}

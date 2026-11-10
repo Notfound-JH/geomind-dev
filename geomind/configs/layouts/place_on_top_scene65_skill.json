@@ -1,0 +1,147 @@
+{
+  "layout_id": "place_on_top_scene65_skill",
+  "format": "LegacyInitialization",
+  "category": "Stack",
+  "source_layout": "place_on_top_scene65_skill",
+  "scene_structure": {
+    "layout": "Spatial Placement Runtime Injection",
+    "num_of_objects": 2,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "red_support_block": {
+        "position": [
+          0.41,
+          0.03
+        ]
+      },
+      "movable_cube": {
+        "position": [
+          0.24,
+          -0.11
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "red_support_block",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.09,
+          0.09,
+          0.05
+        ],
+        "visual_color": [
+          0.77,
+          0.24,
+          0.18
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.1,
+            0.1
+          ],
+          "albedo_brightness": 0.82,
+          "fallback_diffuse_color": [
+            0.77,
+            0.24,
+            0.18
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "material": {
+            "static_friction": 1.2,
+            "dynamic_friction": 1.0,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.41,
+            0.03
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "movable_cube",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.9,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.6
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.4,
+            "dynamic_friction": 1.2,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.24,
+            -0.11
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

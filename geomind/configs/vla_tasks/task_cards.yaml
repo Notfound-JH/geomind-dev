@@ -1,0 +1,426 @@
+- task_id: SelectByDistanceVla_v0
+  suite: GeoMind-Aug
+  family: Relational Grounding
+  image: paper_appendix/figures/appendix/scenes/BindingAugBase_AnchorDistanceVla_v0.pdf
+  instruction: "Move the end effector near the sphere closest to the red cylinder."
+  structure: anchor_distance_injected structure.
+  gt_target: Protocol target object ball_nearest proximity region.
+  gt_pose:
+    x: 0.485
+    y: 0.02
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.065
+    unit: m
+    stability_time: 1.0
+  notes: The base instance preserves the background scene shell and injects one red cylinder plus four same-looking spheres
+    at runtime.
+- task_id: SelectByDirectionVla_v0
+  suite: GeoMind-Base
+  family: Relational Grounding
+  image: paper_appendix/figures/appendix/scenes/BindingBaseBase_AnchorDirectionVla_v0.pdf
+  instruction: "Move the end effector near the cube to the right of the blue bowl."
+  structure: anchor_direction_injected structure.
+  gt_target: Protocol target object block_right proximity region.
+  gt_pose:
+    x: 0.4
+    y: -0.15
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.055
+    unit: m
+    stability_time: 1.0
+  notes: The base instance preserves the background scene shell and injects one blue bowl plus four same-looking cubes at
+    runtime.
+- task_id: SelectAfterExclusionVla_v0
+  suite: GeoMind-Base
+  family: Constraint Composition
+  image: paper_appendix/figures/appendix/scenes/ConstraintBaseBase_SelectExclusionUniqueVla_v0.pdf
+  instruction: "Move the end effector near the red cube closest to the blue plate that is not the leftmost."
+  structure: exclusion_distance_constraint_injected structure.
+  gt_target: Protocol target object red_block_target proximity region.
+  gt_pose:
+    x: 0.56
+    y: 0.02
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.055
+    unit: m
+    stability_time: 1.0
+  notes: The base instance injects one static blue plate plus four red cuboid candidates and one non-red cuboid distractor,
+    so the legal candidate set is visually clear.
+- task_id: SelectWithVisualCueVla_v0
+  suite: GeoMind-Base
+  family: Constraint Composition
+  image: paper_appendix/figures/appendix/scenes/ConstraintBaseBase_SelectVisualSpatialVla_v0.pdf
+  instruction: "Move the end effector near the wood-grain cylinder to the right of the red block."
+  structure: visual_spatial_constraint_injected structure.
+  gt_target: Protocol target object wood_cylinder_target proximity region.
+  gt_pose:
+    x: 0.402
+    y: -0.082
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0624
+    unit: m
+    stability_time: 1.0
+  notes: The base instance injects one unique red cuboid anchor plus four candidate objects, so the anchor and the valid right-side
+    target are both visually and semantically unambiguous.
+- task_id: ExtendEqualSpacingVla_v0
+  suite: GeoMind-Base
+  family: Geometric Inference
+  image: paper_appendix/figures/appendix/scenes/GeometricBaseBase_IsometricExtensionVla_v0.pdf
+  instruction: "You already hold the cube. Place it on the red\u2013blue line extension at equal spacing."
+  structure: 2-anchor line_blocks_runtime_injected structure.
+  gt_target: Implicit equal-spacing extension point beyond the second anchor.
+  gt_pose:
+    x: 0.66
+    y: 0.02
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object center distance
+    threshold: 0.05
+    unit: m
+    stability_time: 1.0
+  notes: Anchor A is the red runtime-injected cuboid and anchor B is the blue runtime-injected cuboid; no scene-native tabletop
+    object participates in the task.
+- task_id: InferMidpointVla_v0
+  suite: GeoMind-Base
+  family: Geometric Inference
+  image: paper_appendix/figures/appendix/scenes/GeometricBaseBase_PerfectMidpointVla_v0.pdf
+  instruction: "You already hold the cube. Place it midway between the red and blue reference cubes."
+  structure: 2-anchor line_blocks_runtime_injected structure.
+  gt_target: Implicit midpoint region between the two colored anchor blocks.
+  gt_pose:
+    x: 0.42
+    y: 0.02
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object center distance
+    threshold: 0.05
+    unit: m
+    stability_time: 1.0
+  notes: Anchor A is the red runtime-injected cuboid and anchor B is the blue runtime-injected cuboid; no scene-native tabletop
+    object participates in the task.
+- task_id: InferPointSymmetryVla_v0
+  suite: GeoMind-Base
+  family: Geometric Inference
+  image: paper_appendix/figures/appendix/scenes/GeometricBaseBase_PointSymmetryVla_v0.pdf
+  instruction: "You already hold the cube. Place it symmetrically to the blue cube about the red cube."
+  structure: 2-anchor diagonal_blocks_runtime_injected structure.
+  gt_target: Implicit point-symmetric reflection of the reference anchor across the center anchor.
+  gt_pose:
+    x: 0.3
+    y: -0.08
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object center distance
+    threshold: 0.05
+    unit: m
+    stability_time: 1.0
+  notes: red_center_block is the only symmetry center anchor and blue_reference_block is the only reflected reference anchor;
+    no scene-native tabletop object participates in the task.
+- task_id: CompleteSquareVla_v0
+  suite: GeoMind-Base
+  family: Geometric Inference
+  image: paper_appendix/figures/appendix/scenes/GeometricBaseBase_SquareCompletionVla_v0.pdf
+  instruction: "You already hold the fourth cube. Place it to complete a square with the three anchor cubes."
+  structure: 3-anchor square_corner_runtime_injected structure.
+  gt_target: Implicit missing square corner inferred from three anchors.
+  gt_pose:
+    x: 0.48
+    y: 0.12
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object center distance
+    threshold: 0.05
+    unit: m
+    stability_time: 1.0
+  notes: square_anchor_block_A is the shared corner, while square_anchor_block_B and square_anchor_block_C are the two adjacent
+    corners of the intended square.
+- task_id: ContinueSpatialPatternVla_v0
+  suite: GeoMind-Base
+  family: Geometric Inference
+  image: paper_appendix/figures/appendix/scenes/GeometricBaseBase_TrendContinuationVla_v0.pdf
+  instruction: "You already hold the next cube. Place it to continue the visible row/column pattern."
+  structure: 3-anchor diagonal_trend_blocks_runtime_injected structure.
+  gt_target: Implicit next point in the anchor trend.
+  gt_pose:
+    x: 0.61
+    y: 0.148
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object center distance
+    threshold: 0.05
+    unit: m
+    stability_time: 1.0
+  notes: Only runtime-injected cuboid blocks participate in the task; no scene-native tabletop object is part of the trend
+    reasoning.
+- task_id: SelectByGridIndexVla_v0
+  suite: GeoMind-Base
+  family: Target Identification
+  image: paper_appendix/figures/appendix/scenes/ReindexBaseBase_GridRowcolGroundingVla_v0.pdf
+  instruction: "Move the end effector near the cube at row 1, column 2."
+  structure: runtime_grid_2x3_static structure.
+  gt_target: Protocol target object grid_cell_1 proximity region.
+  gt_pose:
+    x: 0.37
+    y: -0.03
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 2x3 grid on tabletop; row index 1 uses smallest world x (front/near row), columns use increasing y (left to right).
+- task_id: SelectByOrderSecondVla_v0
+  suite: GeoMind-Base
+  family: Target Identification
+  image: paper_appendix/figures/appendix/scenes/ReindexBaseBase_OrdinalInsertStaticVla_v0.pdf
+  instruction: "Move the end effector near the second block from the left in the current order."
+  structure: runtime_block_line_static_ordinal structure.
+  gt_target: Validated protocol runtime identity from the task contract.
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: Five homogeneous runtime cuboids sit on a fixed line; no anchor object and no scripted reorder.
+- task_id: SelectByOrderFirstVla_v0
+  suite: GeoMind-Base
+  family: Target Identification
+  image: paper_appendix/figures/appendix/scenes/ReindexBaseBase_ReindexExtremeVla_v0.pdf
+  instruction: "Move the end effector near the first block from the left in the current order."
+  structure: runtime_block_line structure.
+  gt_target: Validated protocol runtime identity from the task contract.
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only runtime-injected cuboid blocks participate in the current-rank query; no scene-native tabletop object is part
+    of the candidate set. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: UpdateObjectOrderVla_v0
+  suite: GeoMind-Base
+  family: Scene Updating
+  instruction: "Move the end effector near the second block from the left after the insertion."
+  structure: runtime_block_line_insert structure.
+  gt_target: Validated protocol runtime identity from the task contract.
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: Only runtime-injected cuboid blocks participate in the ordinal query; no scene-native tabletop object is part of
+    the candidate set.
+- task_id: SelectByAdjacencyVla_v0
+  suite: GeoMind-Base
+  family: Relational Grounding
+  instruction: "Move the end effector near the node directly preceding the red node in the directed chain."
+  structure: runtime_red_anchor_neighbor structure.
+  gt_target: Validated protocol runtime identity from the task contract.
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only runtime-injected cuboid blocks are used, with one unique red anchor block and one designated direct-left neighbor
+    candidate. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: SelectWithinSubsetVla_v0
+  suite: GeoMind-Base
+  family: Constraint Composition
+  image: paper_appendix/figures/appendix/scenes/ReindexBaseBase_ReindexSubsetVla_v0.pdf
+  instruction: "Move the end effector near the middle cube among the red cubes only."
+  structure: runtime_red_subset_with_distractors structure.
+  gt_target: Protocol target object red_subset_block_2 proximity region.
+  gt_pose:
+    x: 0.4
+    y: 0.11
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only the three red runtime-injected blocks participate in ranking and GT resolution; the gray and blue blocks are
+    visible distractors only. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: SelectByOrderFirstSemVla_v0
+  suite: GeoMind-Base
+  family: Target Identification
+  image: paper_appendix/figures/appendix/scenes/ReindexBaseSem_ReindexExtremeVla_v0.pdf
+  instruction: "Move the end effector near the first block from the left in the current order."
+  structure: runtime_block_line structure.
+  gt_target: Validated protocol runtime identity from the task contract.
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only runtime-injected cuboid blocks participate in the current-rank query; no scene-native tabletop object is part
+    of the candidate set. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: SelectByOrderFirstVisualVla_v0
+  suite: GeoMind-Base
+  family: Target Identification
+  image: paper_appendix/figures/appendix/scenes/ReindexBaseVisual_ReindexExtremeVla_v0.pdf
+  instruction: "Move the end effector near the first block from the left in the current order."
+  structure: runtime_block_line structure.
+  gt_target: Validated protocol runtime identity from the task contract.
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only runtime-injected cuboid blocks participate in the current-rank query; no scene-native tabletop object is part
+    of the candidate set. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: PlaceByTopologyInsideVla_v0
+  suite: GeoMind-Base
+  family: Relational Grounding
+  image: paper_appendix/figures/appendix/scenes/RelationBaseBase_PlaceInsideVla_v0.pdf
+  instruction: "You already hold the cube. Put it fully inside the blue box."
+  structure: containment_standard_injected structure.
+  gt_target: Stable containment inside blue_box_floor.
+  gt_pose:
+    x: 0.43
+    y: 0.04
+    z: 0.0285
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object containment stability and center error
+    threshold: 0.063
+    unit: m
+    stability_time: 1.0
+  notes: The standard containment instance injects exactly one blue open-top box built from five static cuboids plus one movable
+    cube, so the blue container is visually unique and semantically unambiguous.
+- task_id: PlaceByTopologyOnTopVla_v0
+  suite: GeoMind-Base
+  family: Relational Grounding
+  image: paper_appendix/figures/appendix/scenes/RelationBaseBase_PlaceOnTopVla_v0.pdf
+  instruction: "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably."
+  structure: support_top_injected structure.
+  gt_target: Stable top placement on red_support_block.
+  gt_pose:
+    x: 0.41
+    y: 0.03
+    z: 0.0725
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final object support-top stability and placement error
+    threshold: 0.015
+    unit: m
+    stability_time: 1.0
+  notes: The skill preview/debug instance preserves the background scene shell and injects only one static red support block
+    plus one movable cube at runtime.
+- task_id: TrackObjectSwapVla_v0
+  suite: GeoMind-Base
+  family: Identity Tracking
+  image: paper_appendix/figures/appendix/scenes/TrackBaseBase_TrackMultiVla_v0.pdf
+  instruction: "Move the end effector near the cube that started at the far left."
+  structure: runtime_identity_multistep_line structure.
+  gt_target: Protocol target object identity_block_0 proximity region.
+  gt_pose:
+    x: 0.4
+    y: -0.2
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Five runtime-injected movable cuboid blocks form the identity set, and the initial leftmost object is unique on
+    y axis. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: TrackMovingObjectVla_v0
+  suite: GeoMind-Base
+  family: Identity Tracking
+  image: paper_appendix/figures/appendix/scenes/TrackBaseBase_TrackSingleVla_v0.pdf
+  instruction: "Move the end effector near the cube that started in the middle."
+  structure: runtime_identity_line structure.
+  gt_target: Protocol target object identity_block_1 proximity region.
+  gt_pose:
+    x: 0.41
+    y: -0.01
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only three runtime-injected movable cuboid blocks are part of the identity set, and the initially middle object
+    is uniquely defined along y. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: TrackMovingObjectSemVla_v0
+  suite: GeoMind-Base
+  family: Identity Tracking
+  image: paper_appendix/figures/appendix/scenes/TrackBaseSem_TrackSingleVla_v0.pdf
+  instruction: "Move the end effector near the cube that started in the middle."
+  structure: runtime_identity_line structure.
+  gt_target: Protocol target object identity_block_1 proximity region.
+  gt_pose:
+    x: 0.41
+    y: -0.01
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only three runtime-injected movable cuboid blocks are part of the identity set, and the initially middle object
+    is uniquely defined along y. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+- task_id: TrackMovingObjectVisualVla_v0
+  suite: GeoMind-Base
+  family: Identity Tracking
+  image: paper_appendix/figures/appendix/scenes/TrackBaseVisual_TrackSingleVla_v0.pdf
+  instruction: "Move the end effector near the cube that started in the middle."
+  structure: runtime_identity_line structure.
+  gt_target: Protocol target object identity_block_1 proximity region.
+  gt_pose:
+    x: 0.41
+    y: -0.01
+    z: 0.03
+    yaw: 0.0
+    unit: m
+  eval:
+    metric: final end-effector distance to target object center
+    threshold: 0.0552
+    unit: m
+    stability_time: 1.0
+  notes: 'Only three runtime-injected movable cuboid blocks are part of the identity set, and the initially middle object
+    is uniquely defined along y. Dynamic task: final target identity or pose may be resolved at runtime after scripted motion.'
+
+- task_id: SelectByOrderLastVla_v0
+  suite: GeoMind-Base
+  family: Target Identification
+  instruction: "Move the end effector near the first block from the right in the current order."
+  gt_target: Runtime order query with index 1 from Right.

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scene_id": 60,
+  "object": {"asset": "blue_can", "count": 4},
+  "layout": {"type": "grid", "rows": 2, "cols": 2},
+  "seed": 7,
+  "randomization": {
+    "enabled": true,
+    "jitter_xy_m": 0.02,
+    "shift_max_m": 0.15,
+    "yaw_deg": 7.5
+  }
+}

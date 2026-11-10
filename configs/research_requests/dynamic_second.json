@@ -1,0 +1,10 @@
+{
+  "task_family": "SceneUpdating",
+  "scene_id": "semantic_table",
+  "condition": "Base",
+  "count": 1,
+  "seed": 1,
+  "backend": "isaaclab",
+  "timeout_s": 420,
+  "output": "outputs/research/pipeline_20261107/dynamic_second"
+}

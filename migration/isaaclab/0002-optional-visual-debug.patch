@@ -1,0 +1,26 @@
+diff --git a/source/isaaclab/isaaclab/sim/spawners/from_files/from_files_cfg.py b/source/isaaclab/isaaclab/sim/spawners/from_files/from_files_cfg.py
+index 43fc25c1ed..68865495ae 100644
+--- a/source/isaaclab/isaaclab/sim/spawners/from_files/from_files_cfg.py
++++ b/source/isaaclab/isaaclab/sim/spawners/from_files/from_files_cfg.py
+@@ -171,7 +171,7 @@ class GroundPlaneCfg(SpawnerCfg):
+     usd_path: str = f"{ISAAC_NUCLEUS_DIR}/Environments/Grid/default_environment.usd"
+     """Path to the USD file to spawn asset from. Defaults to the grid-world ground plane."""
+ 
+-    color: tuple[float, float, float] | None = (0.0, 0.0, 0.0)
++    color: tuple[float, float, float] | None = (0.0, 0.0, 0.5)
+     """The color of the ground plane. Defaults to (0.0, 0.0, 0.0).
+ 
+     If None, then the color remains unchanged.
+diff --git a/source/isaaclab_mimic/isaaclab_mimic/motion_planners/curobo/curobo_planner.py b/source/isaaclab_mimic/isaaclab_mimic/motion_planners/curobo/curobo_planner.py
+index 7382da37b1..294c636d1c 100644
+--- a/source/isaaclab_mimic/isaaclab_mimic/motion_planners/curobo/curobo_planner.py
++++ b/source/isaaclab_mimic/isaaclab_mimic/motion_planners/curobo/curobo_planner.py
+@@ -1234,6 +1234,8 @@ class CuroboPlanner(MotionPlannerBase):
+         planning_success = False
+         try:
+             result: Any = self.motion_gen.plan_single(start_state, goal_pose, self.plan_config)
++            print(f"DEBUG_CUROBO_STATUS = {result.status}")
++            print(f"DEBUG_CUROBO_STATUS_NAME = {str(result.status)}")
+ 
+             if result.success.item():
+                 if result.optimized_plan is not None and len(result.optimized_plan.position) != 0:

@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByDirection_v0",
+  "task_id": "SelectByDirection",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectByDirection_v0",
+    "grasp_anchor_direction",
+    "AnchorDirection_v0",
+    "BindingBaseBase_SelectByDirection_v0",
+    "BindingBaseBase_AnchorDirection_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "grasp_anchor_direction_scene65_base",
+  "release_version": "1.0"
+}

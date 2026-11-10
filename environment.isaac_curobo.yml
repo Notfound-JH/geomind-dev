@@ -1,0 +1,69 @@
+name: isaac_curobo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Match the inspected isaac_curobo environment (Isaac Sim 4.5).
+  - python=3.10.19
+  - pip
+  - importlib_metadata
+  - cmake
+  - ninja
+  - git
+
+  # 常用数值与可视化基础包（项目与 curobo 都会用到）
+  - numpy=1.26.4
+  - scipy
+  - pyyaml
+  - tqdm
+  - matplotlib
+  - pillow
+  - imageio
+  - opencv
+  - networkx
+  - scikit-image
+
+  # CuRobo 依赖（优先走 conda，避免编译时缺包）
+  - pybind11
+  - trimesh
+  - setuptools
+  - wheel
+  - setuptools_scm
+
+  # 可选但在 Isaac 侧常见
+  - gymnasium=1.2.1
+  - pinocchio
+
+  - pip:
+      # CuRobo 直接依赖
+      - numpy-quaternion
+      - yourdfpy>=0.0.53
+      - warp-lang>=0.9.0
+      - importlib_resources
+      # Geomind 脚本中会用到
+      - tabulate
+      - prettytable
+      - h5py
+
+# -------------------- 使用说明 --------------------
+# 1) 创建环境:
+#    conda env create -f environment.isaac_curobo.yml
+#
+# 2) 激活环境:
+#    conda activate isaac_curobo
+#
+# Isaac Sim, CUDA-enabled PyTorch and cuRobo are installed separately.
+# Follow docs/migration.md before installing IsaacLab.
+# 3) 在 IsaacLab 根目录安装 IsaacLab 扩展:
+#    cd IsaacLab
+#    ./isaaclab.sh -i
+#
+# 4) 安装 curobo（源码可编辑安装）:
+#    pip install -e src/nvidia-curobo
+#
+# 5) 安装当前项目:
+#    cd ..
+#    pip install -e .
+#
+# 6) 验证:
+#    python -c "import isaacsim, isaaclab, curobo; print('ok')"

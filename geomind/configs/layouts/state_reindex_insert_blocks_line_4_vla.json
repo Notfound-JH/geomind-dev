@@ -1,0 +1,140 @@
+{
+  "layout_id": "state_reindex_insert_blocks_line_4_vla",
+  "format": "LegacyInitialization",
+  "category": "Line",
+  "source_layout": "state_reindex_insert_blocks_line_4_vla",
+  "scene_structure": {
+    "layout": "State Reindex Insert Runtime Injection",
+    "num_of_objects": 4,
+    "object_asset": "STANDARD_CUBE",
+    "object_positions": {
+      "insert_block_0": {
+        "position": [
+          0.43,
+          -0.15
+        ]
+      },
+      "insert_block_1": {
+        "position": [
+          0.43,
+          -0.03
+        ]
+      },
+      "insert_block_2": {
+        "position": [
+          0.43,
+          0.08
+        ]
+      },
+      "insert_block_3": {
+        "position": [
+          0.43,
+          0.18
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "insert_block_0",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            -0.15
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "insert_block_1",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            -0.03
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "insert_block_2",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            0.08
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "insert_block_3",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.046,
+          0.046,
+          0.045
+        ],
+        "visual_color": [
+          0.62,
+          0.49,
+          0.34
+        ],
+        "pose": {
+          "xy": [
+            0.43,
+            0.18
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

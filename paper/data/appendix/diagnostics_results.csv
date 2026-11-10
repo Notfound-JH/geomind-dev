@@ -1,0 +1,7 @@
+family,capability_dimension,failure_rate,sge,tte,main_failure_type
+Target Identification,Spatial Reasoning,58.3,0.0930,,Spatial Relation Grounding Error
+Relational Grounding,Spatial Reasoning,91.7,0.2900,,Spatial Relation Reasoning Error
+Constraint Composition,Spatial Reasoning,87.5,0.1906,,Spatial Relation Reasoning Error
+Geometric Inference,Spatial Reasoning,73.3,0.0808,,Spatial Relation Reasoning Error
+Scene Updating,Spatial Memory,68.8,0.1782,,Historical State Memory Error
+Identity Tracking,Spatial Memory,77.8,0.1956,,Object Identity Error

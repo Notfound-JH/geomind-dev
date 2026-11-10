@@ -1,0 +1,42 @@
+{
+  "task_id": "SelectWithVisualCue",
+  "family": "ConstraintComposition",
+  "condition": "Base",
+  "layout": "Cross",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "select_visual_spatial",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the wood-grain cylinder to the right of the red block.",
+    "semantic_module": "constraint_selection",
+    "phase": "phase1",
+    "annotation_layout_key": "select_visual_spatial_scene65_base_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "constraint_selection",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "select_visual_spatial"
+    },
+    "registration_id": "SelectWithVisualCueVla_v0",
+    "protocol_family": "constraint_selection",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "SelectVisualSpatialVla_v0",
+    "select_visual_spatial",
+    "select_visual_spatial:vla",
+    "ConstraintBaseBase_SelectVisualSpatialVla_v0"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "task_family": "GeometricInference",
+  "condition": "Base",
+  "augmentation": null,
+  "scene_id": "semantic_table",
+  "layout": "spatial_generator_v1",
+  "seed": 0,
+  "count": 2,
+  "time_protocol": "static_query",
+  "artifacts": [
+    "gt",
+    "observations",
+    "events",
+    "robot_trajectory"
+  ],
+  "backend": "isaaclab",
+  "timeout_s": 420,
+  "coverage": "representative",
+  "split": null,
+  "output": "outputs/research/next_base"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "episode_id": "InferMidpointVla_v0",
+  "task_id": "InferMidpoint",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "InferMidpointVla_v0",
+    "perfect_midpoint",
+    "perfect_midpoint:vla",
+    "PerfectMidpointVla_v0",
+    "GeometricBaseBase_InferMidpointVla_v0",
+    "GeometricBaseBase_PerfectMidpointVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "geometric_inference_perfect_midpoint_line_2_vla",
+  "release_version": "1.0"
+}

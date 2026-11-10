@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByAdjacencyVla_v0",
+  "task_id": "SelectByAdjacency",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {
+    "relation": "Predecessor",
+    "reference_object_id": "red_anchor_block",
+    "structure": "DirectedChain"
+  },
+  "aliases": [
+    "ReindexNeighborVla_v0",
+    "reindex_neighbor",
+    "reindex_neighbor:vla",
+    "ReindexBaseBase_ReindexNeighborVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "state_reindex_neighbor_red_left_blocks_5_vla",
+  "release_version": "1.0"
+}

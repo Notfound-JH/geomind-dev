@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "stage": "assemble_solve_execute",
+  "output": "outputs/research/assembled_robot_v4/panda_pick_scene65",
+  "assembly_manifest": "outputs/research/assembled_tasks_v2/order_scene65_line/assembly/manifest.json",
+  "task": {
+    "task_id": "SelectByOrder",
+    "parameters": {
+      "index": 2,
+      "from": "Left",
+      "candidates": ["blue_can_001", "blue_can_002", "blue_can_003", "blue_can_004"]
+    },
+    "operation": {"type": "pick"}
+  },
+  "selection": {
+    "actor": "agent",
+    "reason": "复用65号椭圆桌上已经落稳的X直线蓝罐，以可审计的顺序GT选中左起第2个；Panda夹爪开口匹配蓝罐宽度，基座放在桌面前侧，用实际夹爪接触抬升和持稳验收，并以错误物体对照检查评分。",
+    "considered_scene_ids": [60, 65],
+    "considered_layouts": ["line", "grid"]
+  },
+  "robot": {"embodiment": "franka", "base_position_w_m": [0, -0.45, 0.9328504589976385]},
+  "execution": {"action": "PickLiftSelectedObject", "negative_controls": true, "timeout_s": 420}
+}

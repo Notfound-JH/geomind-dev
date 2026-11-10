@@ -1,0 +1,44 @@
+{
+  "task_id": "InferMidpoint",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "perfect_midpoint",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the cube. Place it midway between the red and blue reference cubes.",
+    "semantic_module": "structure_inference",
+    "phase": "phase1",
+    "annotation_layout_key": "geometric_inference_perfect_midpoint_line_2_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "explicit_rule_extrapolation",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "perfect_midpoint"
+    },
+    "registration_id": "InferMidpointVla_v0",
+    "protocol_family": "explicit_rule_extrapolation",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "InferMidpointVla_v0",
+    "perfect_midpoint",
+    "perfect_midpoint:vla",
+    "PerfectMidpointVla_v0",
+    "GeometricBaseBase_InferMidpointVla_v0",
+    "GeometricBaseBase_PerfectMidpointVla_v0"
+  ]
+}

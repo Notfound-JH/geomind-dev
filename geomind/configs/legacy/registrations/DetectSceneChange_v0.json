@@ -1,0 +1,19 @@
+{
+  "task_id": "DetectSceneChange",
+  "family": "SceneUpdating",
+  "condition": "Base",
+  "layout": "Custom",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "registration_id": "DetectSceneChange_v0",
+    "interface": "Standard",
+    "implementation_status": "placeholder",
+    "protocol_family": "unimplemented",
+    "split": "base",
+    "task_version": "base"
+  },
+  "aliases": [
+    "DetectSceneChange_v0"
+  ]
+}

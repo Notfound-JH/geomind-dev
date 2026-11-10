@@ -1,0 +1,297 @@
+{
+  "layout_id": "select_visual_spatial_scene65_base_vla",
+  "format": "LegacyInitialization",
+  "category": "Cross",
+  "source_layout": "select_visual_spatial_scene65_base_vla",
+  "scene_structure": {
+    "layout": "Constraint Selection Runtime Injection",
+    "num_of_objects": 5,
+    "object_asset": "MIXED_RUNTIME_PRIMITIVES",
+    "object_positions": {
+      "red_anchor_block": {
+        "position": [
+          0.4,
+          0.03
+        ]
+      },
+      "wood_cylinder_target": {
+        "position": [
+          0.402,
+          -0.082
+        ]
+      },
+      "plain_brown_cylinder_oblique": {
+        "position": [
+          0.455,
+          -0.074
+        ]
+      },
+      "wood_cylinder_left": {
+        "position": [
+          0.398,
+          0.115
+        ]
+      },
+      "wood_block_right": {
+        "position": [
+          0.404,
+          -0.158
+        ]
+      }
+    },
+    "container": {
+      "basket": 0,
+      "basket_position": [],
+      "plate": 0,
+      "plate_position": [],
+      "bowl": 0,
+      "bowl_position": []
+    },
+    "shelf": {
+      "shelf": 0,
+      "shelf_position": []
+    }
+  },
+  "initialization": {
+    "background_overrides": {
+      "hide_basket": true
+    },
+    "runtime_objects": [
+      {
+        "name": "red_anchor_block",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.052,
+          0.052,
+          0.045
+        ],
+        "visual_color": [
+          0.84,
+          0.14,
+          0.12
+        ],
+        "physics": {
+          "rigid_body": {
+            "rigid_body_enabled": false
+          },
+          "material": {
+            "static_friction": 1.2,
+            "dynamic_friction": 1.0,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.4,
+            0.03
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "wood_cylinder_target",
+        "kind": "primitive_cylinder",
+        "radius": 0.026,
+        "height": 0.09,
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.92,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.1,
+            "dynamic_friction": 0.92,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.402,
+            -0.082
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "plain_brown_cylinder_oblique",
+        "kind": "primitive_cylinder",
+        "radius": 0.026,
+        "height": 0.09,
+        "visual_color": [
+          0.52,
+          0.38,
+          0.24
+        ],
+        "visual_material": {
+          "fallback_diffuse_color": [
+            0.52,
+            0.38,
+            0.24
+          ],
+          "fallback_roughness": 0.6
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.05,
+            "dynamic_friction": 0.88,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.455,
+            -0.074
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "wood_cylinder_left",
+        "kind": "primitive_cylinder",
+        "radius": 0.026,
+        "height": 0.09,
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.92,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.1,
+            "dynamic_friction": 0.92,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.398,
+            0.115
+          ],
+          "yaw": 0.0
+        }
+      },
+      {
+        "name": "wood_block_right",
+        "kind": "primitive_cuboid",
+        "size": [
+          0.045,
+          0.045,
+          0.045
+        ],
+        "visual_color": [
+          0.63,
+          0.48,
+          0.33
+        ],
+        "visual_material": {
+          "type": "mdl",
+          "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+          "project_uvw": true,
+          "texture_scale": [
+            0.08,
+            0.08
+          ],
+          "albedo_brightness": 0.9,
+          "fallback_diffuse_color": [
+            0.63,
+            0.48,
+            0.33
+          ],
+          "fallback_roughness": 0.58
+        },
+        "physics": {
+          "rigid_body": {
+            "linear_damping": 1.2,
+            "angular_damping": 4.0,
+            "max_linear_velocity": 2.0,
+            "max_angular_velocity": 20.0,
+            "solver_position_iteration_count": 16,
+            "solver_velocity_iteration_count": 4,
+            "sleep_threshold": 0.002,
+            "stabilization_threshold": 0.001
+          },
+          "material": {
+            "static_friction": 1.15,
+            "dynamic_friction": 0.95,
+            "restitution": 0.0,
+            "friction_combine_mode": "max"
+          }
+        },
+        "pose": {
+          "xy": [
+            0.404,
+            -0.158
+          ],
+          "yaw": 0.0
+        }
+      }
+    ]
+  }
+}

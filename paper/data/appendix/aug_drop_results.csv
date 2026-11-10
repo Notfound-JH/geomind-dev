@@ -1,0 +1,7 @@
+method,semantic_drop,visual_drop,execution_drop
+OpenVLA,-0.0,8.3,-50.0
+pi_0,-12.5,-0.0,0.0
+pi_0_5,-12.5,-0.0,0.0
+SpatialVLA,-0.0,-0.0,-75.0
+InternVLA-M1,-8.3,-8.3,-75.0
+Spatial-Forcing,8.3,-0.0,-0.0

@@ -1,0 +1,362 @@
+{
+  "coverage": {
+    "checked": [
+      "protocol.query_text -> resolve_task_instruction agrees with the override",
+      "delegate instruction -> build_raw_observation -> build_payload['instruction']",
+      "no residual spatial-relation wording in the direct instruction"
+    ],
+    "not_checked": [
+      "the live HTTP/WebSocket frame (needs a running policy server)",
+      "server-side prompt tokenisation"
+    ],
+    "note": "_build_openpi_infer_element sets prompt = payload['instruction'], so asserting payload['instruction'] is equivalent to asserting the OpenPI prompt."
+  },
+  "tasks": [
+    {
+      "task_id": "BindingAugBase_AnchorDistanceVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the sphere closest to the red cylinder.",
+      "direct_instruction": "Move the end effector near the green sphere.",
+      "payload_instruction": "Move the end effector near the green sphere.",
+      "env_cfg_task_instruction": "Move the end effector near the green sphere.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "BindingBaseBase_AnchorDirectionVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube to the right of the blue bowl.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ConstraintBaseBase_SelectExclusionUniqueVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the red cube closest to the blue plate that is not the leftmost.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ConstraintBaseBase_SelectVisualSpatialVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the wood-grain cylinder to the right of the red block.",
+      "direct_instruction": "Move the end effector near the green cylinder.",
+      "payload_instruction": "Move the end effector near the green cylinder.",
+      "env_cfg_task_instruction": "Move the end effector near the green cylinder.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "GeometricBaseBase_IsometricExtensionVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the cube. Place it on the red–blue line extension at equal spacing.",
+      "direct_instruction": "You already hold the cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "GeometricBaseBase_PerfectMidpointVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the cube. Place it midway between the red and blue reference cubes.",
+      "direct_instruction": "You already hold the cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "GeometricBaseBase_PointSymmetryVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the cube. Place it symmetrically to the blue cube about the red cube.",
+      "direct_instruction": "You already hold the cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "GeometricBaseBase_SquareCompletionVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the fourth cube. Place it to complete a square with the three anchor cubes.",
+      "direct_instruction": "You already hold the fourth cube. Place it on the magenta marker.",
+      "payload_instruction": "You already hold the fourth cube. Place it on the magenta marker.",
+      "env_cfg_task_instruction": "You already hold the fourth cube. Place it on the magenta marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "GeometricBaseBase_TrendContinuationVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the next cube. Place it to continue the visible row/column pattern.",
+      "direct_instruction": "You already hold the next cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the next cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the next cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseBase_GridRowcolGroundingVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube at row 1, column 2.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseBase_OrdinalInsertStaticVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the second cube from the left.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseBase_ReindexExtremeVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the leftmost cube after reordering.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseBase_ReindexInsertVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the second-from-left cube.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseBase_ReindexNeighborVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube immediately left of the red cube.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseBase_ReindexSubsetVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the middle cube among the red cubes only.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseSem_ReindexExtremeVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the leftmost cube after reordering.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "ReindexBaseVisual_ReindexExtremeVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the leftmost cube after reordering.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "RelationAugSem_PlaceDirectionalVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+      "direct_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "RelationAugVisual_PlaceDirectionalVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+      "direct_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "RelationBaseBase_PlaceDirectionalVla_v0",
+      "mechanism": "marker",
+      "base_instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+      "direct_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "payload_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "env_cfg_task_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "RelationBaseBase_PlaceInsideVla_v0",
+      "mechanism": "none",
+      "base_instruction": "You already hold the cube. Put it fully inside the blue box.",
+      "direct_instruction": "You already hold the cube. Put it fully inside the blue box.",
+      "payload_instruction": "You already hold the cube. Put it fully inside the blue box.",
+      "env_cfg_task_instruction": "You already hold the cube. Put it fully inside the blue box.",
+      "instruction_sources_patched": [],
+      "problems": []
+    },
+    {
+      "task_id": "RelationBaseBase_PlaceOnTopVla_v0",
+      "mechanism": "none",
+      "base_instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+      "direct_instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+      "payload_instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+      "env_cfg_task_instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+      "instruction_sources_patched": [],
+      "problems": []
+    },
+    {
+      "task_id": "TrackBaseBase_TrackClutterVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube that started in the middle after clutter settles.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "TrackBaseBase_TrackMultiVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube that started at the far left.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "TrackBaseBase_TrackSingleVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube that started in the middle.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "TrackBaseSem_TrackSingleVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube that started in the middle.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    },
+    {
+      "task_id": "TrackBaseVisual_TrackSingleVla_v0",
+      "mechanism": "recolor",
+      "base_instruction": "Move the end effector near the cube that started in the middle.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "payload_instruction": "Move the end effector near the green cube.",
+      "env_cfg_task_instruction": "Move the end effector near the green cube.",
+      "instruction_sources_patched": [
+        "protocol.query_text",
+        "task_spec.instruction"
+      ],
+      "problems": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "name": "office_table",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "table"
+        },
+        {
+            "name": "pc_monitor",
+            "pos_xy": [
+                0,
+                0
+            ],
+            "yaw_deg": 0,
+            "type": "decoration"
+        },
+        {
+            "name": "coffee_mug",
+            "pos_xy": [
+                0.5,
+                -0.3
+            ],
+            "yaw_deg": 0,
+            "type": "container"
+        },
+        {
+            "name": "office_chair",
+            "pos_xy": [
+                0,
+                -1
+            ],
+            "yaw_deg": 30,
+            "type": "furniture"
+        }
+    ],
+    "furniture": [],
+    "decoration": []
+}

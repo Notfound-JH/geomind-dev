@@ -1,0 +1,2391 @@
+{
+  "geometric_inference_square_completion_corner_3": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "Geometric Inference Runtime Injection",
+      "num_of_objects": 4,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "held_target_block": {
+          "position": [
+            0.22,
+            -0.18
+          ]
+        },
+        "square_anchor_block_A": {
+          "position": [
+            0.34,
+            -0.02
+          ]
+        },
+        "square_anchor_block_B": {
+          "position": [
+            0.34,
+            0.12
+          ]
+        },
+        "square_anchor_block_C": {
+          "position": [
+            0.48,
+            -0.02
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 0,
+        "plate_position": [],
+        "bowl": 0,
+        "bowl_position": []
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Geometric Inference",
+        "instruction": "Place the held block in the correct position so that the four blocks form a square.",
+        "annotation": {
+          "task_id": "square_completion",
+          "reference_frame": "world",
+          "targets": [],
+          "goal_sequence": [],
+          "assumptions": [
+            "square_anchor_block_A is the shared corner, while square_anchor_block_B and square_anchor_block_C are the two adjacent corners of the intended square.",
+            "The missing fourth corner lies at the upper-right corner of the implied square and remains empty in the authored layout.",
+            "held_target_block is the only movable object and all task-relevant geometry comes from runtime-injected blocks only."
+          ],
+          "validation_checks": [
+            "all object_id referenced by anchors and target_object exist in scene_adaptation.runtime_objects",
+            "goal_sequence is intentionally empty because the protocol evaluator resolves GT from anchors at runtime",
+            "scene_adaptation.runtime_objects names are unique",
+            "missing square corner region stays clear for stable placement"
+          ],
+          "instance_semantics": {
+            "instance_id": "square_completion__scene65__base_blocks",
+            "layout": "square_corner_runtime_injected",
+            "axis_variant": "axis_aligned_open_corner"
+          },
+          "protocol": {
+            "module_name": "geometric_inference",
+            "track_name": "shape_completion",
+            "family": "shape_completion",
+            "variant": "square_completion",
+            "subtask_name": "square_completion",
+            "task_version": "base",
+            "query_family": "shape_completion_query",
+            "query_text": "Place the held block in the correct position so that the four blocks form a square.",
+            "anchor_count": 3,
+            "anchor_layout": "open_square_corner",
+            "spacing": "runtime_from_shared_corner_and_adjacent_edges",
+            "control_mode": "deterministic_completion",
+            "noise_level": "zero_noise",
+            "sigma_parallel": 0.0,
+            "sigma_perpendicular": 0.0,
+            "pre_attached_obj": "held_target_block",
+            "success_tolerance_l2": 0.05,
+            "success_tolerance_orthogonal": 0.02,
+            "anchors": [
+              {
+                "anchor_id": "A",
+                "object_id": "square_anchor_block_A",
+                "role": "shared_corner"
+              },
+              {
+                "anchor_id": "B",
+                "object_id": "square_anchor_block_B",
+                "role": "adjacent_corner"
+              },
+              {
+                "anchor_id": "C",
+                "object_id": "square_anchor_block_C",
+                "role": "adjacent_corner"
+              }
+            ],
+            "target_object": {
+              "object_id": "held_target_block",
+              "carrier": "gripper",
+              "preloaded": true
+            },
+            "gt_spec": {
+              "rule_type": "square_completion"
+            }
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "only_runtime_blocks_used": true,
+              "unique_missing_square_corner": true,
+              "target_corner_clear": true
+            },
+            "runtime_objects": [
+              {
+                "name": "held_target_block",
+                "kind": "primitive_cuboid",
+                "role": "target",
+                "size": [
+                  0.058,
+                  0.04,
+                  0.045
+                ],
+                "visual_color": [
+                  0.64,
+                  0.52,
+                  0.38
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.64,
+                    0.52,
+                    0.38
+                  ],
+                  "fallback_roughness": 0.58
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.15,
+                    "dynamic_friction": 0.96,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.22,
+                    -0.18
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "square_anchor_block_A",
+                "kind": "primitive_cuboid",
+                "role": "anchor",
+                "size": [
+                  0.05,
+                  0.05,
+                  0.045
+                ],
+                "visual_color": [
+                  0.82,
+                  0.24,
+                  0.2
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.2,
+                    "dynamic_friction": 1.0,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.34,
+                    -0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "square_anchor_block_B",
+                "kind": "primitive_cuboid",
+                "role": "anchor",
+                "size": [
+                  0.05,
+                  0.05,
+                  0.045
+                ],
+                "visual_color": [
+                  0.16,
+                  0.54,
+                  0.7
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.2,
+                    "dynamic_friction": 1.0,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.34,
+                    0.12
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "square_anchor_block_C",
+                "kind": "primitive_cuboid",
+                "role": "anchor",
+                "size": [
+                  0.05,
+                  0.05,
+                  0.045
+                ],
+                "visual_color": [
+                  0.18,
+                  0.66,
+                  0.36
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.2,
+                    "dynamic_friction": 1.0,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.48,
+                    -0.02
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "geometric_inference_square_completion_corner_3",
+          "scene_layout": "Geometric Inference Runtime Injection",
+          "instance_layout": "square_corner_runtime_injected",
+          "axis_variant": "axis_aligned_open_corner",
+          "task_category": "Geometric Inference"
+        }
+      }
+    ]
+  },
+  "historical_identity_blocks_line_3": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "Historical Identity Runtime Injection",
+      "num_of_objects": 3,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "identity_block_0": {
+          "position": [
+            0.41,
+            -0.12
+          ]
+        },
+        "identity_block_1": {
+          "position": [
+            0.41,
+            -0.01
+          ]
+        },
+        "identity_block_2": {
+          "position": [
+            0.41,
+            0.11
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 0,
+        "plate_position": [],
+        "bowl": 0,
+        "bowl_position": []
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Historical Identity Tracking",
+        "instruction": "Pick up the block that was initially in the center.",
+        "annotation": {
+          "task_id": "track_single",
+          "reference_frame": "world",
+          "targets": [],
+          "goal_sequence": [],
+          "assumptions": [
+            "Only three runtime-injected movable cuboid blocks are part of the identity set, and the initially middle object is uniquely defined along y.",
+            "Over 2.0 seconds, the initially middle block swaps with either the left or right neighbor with 50/50 seeded probability, while the remaining block stays fixed.",
+            "GT is resolved from initial ranking instead of current rank, so the robot must keep following the block that started in the middle."
+          ],
+          "validation_checks": [
+            "scene_adaptation.runtime_objects names are unique",
+            "goal_sequence remains empty because GT is resolved by protocol",
+            "protocol intervention script_name equals swap_middle_with_seeded_neighbor_over_2s",
+            "protocol intervention duration_s equals 2.0",
+            "initial identity set contains exactly three movable blocks"
+          ],
+          "instance_semantics": {
+            "instance_id": "track_single__scene65__base_blocks",
+            "layout": "runtime_identity_line",
+            "axis_variant": "y"
+          },
+          "protocol": {
+            "module_name": "post_action_relocation",
+            "track_name": "historical_identity_tracking",
+            "query_family": "historical_identity_query",
+            "query_text": "拿起最初在中间的那个方块。",
+            "task_version": "base",
+            "intervention": {
+              "type": "timed_dynamic_swap",
+              "script_name": "swap_middle_with_seeded_neighbor_over_2s",
+              "duration_s": 2.0
+            },
+            "gt_spec": {
+              "resolver": "initial_rank",
+              "order_axis": "y",
+              "target_rank": "middle"
+            },
+            "control_mode": null
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "only_runtime_blocks_used": true,
+              "identity_set_size_is_three": true,
+              "negative_y_means_left": true,
+              "initial_middle_is_unique": true,
+              "first_and_second_swap_over_two_seconds": true,
+              "final_current_middle_can_change": true
+            },
+            "runtime_objects": [
+              {
+                "name": "identity_block_0",
+                "kind": "primitive_cuboid",
+                "role": "identity_set",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.62,
+                  0.49,
+                  0.34
+                ],
+                "pose": {
+                  "xy": [
+                    0.41,
+                    -0.12
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "identity_block_1",
+                "kind": "primitive_cuboid",
+                "role": "identity_target",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.62,
+                  0.49,
+                  0.34
+                ],
+                "pose": {
+                  "xy": [
+                    0.41,
+                    -0.01
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "identity_block_2",
+                "kind": "primitive_cuboid",
+                "role": "identity_set",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.62,
+                  0.49,
+                  0.34
+                ],
+                "pose": {
+                  "xy": [
+                    0.41,
+                    0.11
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "historical_identity_blocks_line_3",
+          "scene_layout": "Historical Identity Runtime Injection",
+          "instance_layout": "runtime_identity_line",
+          "axis_variant": "y",
+          "task_category": "Historical Identity Tracking"
+        }
+      }
+    ]
+  },
+  "state_reindex_blocks_line_4": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "State Reindex Runtime Injection",
+      "num_of_objects": 4,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "reindex_block_0": {
+          "position": [
+            0.42,
+            -0.14
+          ]
+        },
+        "reindex_block_1": {
+          "position": [
+            0.42,
+            -0.05
+          ]
+        },
+        "reindex_block_2": {
+          "position": [
+            0.42,
+            0.04
+          ]
+        },
+        "reindex_block_3": {
+          "position": [
+            0.42,
+            0.13
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 0,
+        "plate_position": [],
+        "bowl": 0,
+        "bowl_position": []
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Post Action Relocation",
+        "instruction": "Pick up the leftmost block.",
+        "annotation": {
+          "task_id": "reindex_extreme",
+          "reference_frame": "world",
+          "targets": [],
+          "goal_sequence": [],
+          "assumptions": [
+            "Only runtime-injected cuboid blocks participate in the current-rank query; no scene-native tabletop object is part of the candidate set.",
+            "The scripted intervention swaps the two leftmost blocks with each other and swaps the two rightmost blocks with each other along the ordering axis, so the queried target must be recomputed from the post-intervention state.",
+            "All four candidate blocks remain aligned along the tabletop y axis, where more-negative y denotes farther left, so the post-intervention current leftmost block stays unique."
+          ],
+          "validation_checks": [
+            "all object_id referenced by scene_adaptation.runtime_objects exist and are unique",
+            "goal_sequence is intentionally empty because the protocol evaluator resolves GT from the post-intervention ranking",
+            "candidate block centers are strictly increasing along y before intervention",
+            "ignore z height by design"
+          ],
+          "instance_semantics": {
+            "instance_id": "reindex_extreme__scene65__base_blocks",
+            "layout": "runtime_block_line",
+            "axis_variant": "y"
+          },
+          "protocol": {
+            "module_name": "post_action_relocation",
+            "track_name": "state_reindexing",
+            "query_family": "state_reindex_query",
+            "query_text": "拿起当前最左侧的方块。",
+            "task_version": "base",
+            "intervention": {
+              "type": "scripted_reorder",
+              "script_name": "swap_adjacent_pairs_over_4"
+            },
+            "gt_spec": {
+              "resolver": "rank_after_intervention",
+              "order_axis": "y",
+              "target_rank": "leftmost"
+            },
+            "control_mode": null
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "only_runtime_blocks_used": true,
+              "linear_y_order_preserved": true,
+              "negative_y_means_left": true,
+              "post_intervention_unique_leftmost": true
+            },
+            "runtime_objects": [
+              {
+                "name": "reindex_block_0",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.9,
+                  0.25,
+                  0.22
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.9,
+                    0.25,
+                    0.22
+                  ],
+                  "fallback_roughness": 0.58
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.15,
+                    "dynamic_friction": 0.96,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.42,
+                    -0.14
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "reindex_block_1",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.18,
+                  0.72,
+                  0.36
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.18,
+                    0.72,
+                    0.36
+                  ],
+                  "fallback_roughness": 0.58
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.15,
+                    "dynamic_friction": 0.96,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.42,
+                    -0.05
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "reindex_block_2",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.22,
+                  0.45,
+                  0.95
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.22,
+                    0.45,
+                    0.95
+                  ],
+                  "fallback_roughness": 0.58
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.15,
+                    "dynamic_friction": 0.96,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.42,
+                    0.04
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "reindex_block_3",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.046,
+                  0.046,
+                  0.045
+                ],
+                "visual_color": [
+                  0.92,
+                  0.72,
+                  0.14
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.92,
+                    0.72,
+                    0.14
+                  ],
+                  "fallback_roughness": 0.58
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.15,
+                    "dynamic_friction": 0.96,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.42,
+                    0.13
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "state_reindex_blocks_line_4",
+          "scene_layout": "State Reindex Runtime Injection",
+          "instance_layout": "runtime_block_line",
+          "axis_variant": "y",
+          "task_category": "Post Action Relocation"
+        }
+      }
+    ]
+  },
+  "place_directional_scene65_visual": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "Spatial Placement Runtime Injection",
+      "num_of_objects": 11,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "blue_plate": {
+          "position": [
+            0.39,
+            0.02
+          ]
+        },
+        "movable_cube": {
+          "position": [
+            0.24,
+            -0.11
+          ]
+        },
+        "viz_clutter_1": {
+          "position": [
+            0.6,
+            0.145
+          ]
+        },
+        "viz_clutter_2": {
+          "position": [
+            0.6,
+            -0.105
+          ]
+        },
+        "viz_clutter_3": {
+          "position": [
+            0.49,
+            0.16
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 1,
+        "plate_position": [
+          [
+            0.39,
+            0.02
+          ]
+        ],
+        "bowl": 0,
+        "bowl_position": []
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Spatial Placement",
+        "instruction": "Place the block in your hand in the front region of the blue plate.",
+        "annotation": {
+          "task_id": "place_directional",
+          "reference_frame": "world",
+          "targets": [
+            "movable_cube"
+          ],
+          "goal_sequence": [],
+          "assumptions": [
+            "Single anchor blue plate at the same XY as base; instruction and protocol.gt_spec match base including target_zone half_extents.",
+            "Static viz_clutter_* distractors (three slots): random can (blue_can/red_can), bottle, or bowl USD per slot with static-mesh collision only (no rigid dynamics); XY is sampled outside the legal placement rect, away from the initial movable_cube, and at a radial distance from the blue plate center that clears the plate mesh plus the clutter footprint (at least ~12 cm, larger if needed). GEOMIND_VISUAL_CLUTTER_SEED / GEOMIND_VISUAL_CLUTTER_KIND control replay.",
+            "plate_trinket_* are small colored dynamic rigid primitives (cuboid/sphere/cylinder/cone, ~4× prior linear size) on the blue plate for decoration only (4–6 pieces) with collision; XY is sampled inside the plate disk (inset from rim), outside the legal placement rect, with pairwise footprint clearance so trinkets do not overlap.",
+            "Front remains world +X; right remains world negative Y."
+          ],
+          "validation_checks": [
+            "annotation.task_id stays canonical at place_directional",
+            "goal_sequence remains empty so preview-only data does not leak into formal success logic",
+            "scene_adaptation.preview_proxy_goal exists and derives from protocol.gt_spec.target_zone.center_offset_from_anchor",
+            "protocol.gt_spec matches the base instance field-for-field on placement semantics",
+            "exactly one blue_plate anchor is injected",
+            "scene_adaptation.runtime_objects names are unique",
+            "viz_clutter_* distractors are rewritten at load_task_spec time to random can/bottle/bowl with constrained XY and plate_trinket_* may be appended (see GEOMIND_VISUAL_CLUTTER_SEED, GEOMIND_VISUAL_CLUTTER_KIND)"
+          ],
+          "instance_semantics": {
+            "instance_id": "place_directional__scene65__visual",
+            "layout": "directional_region_visual_clutter"
+          },
+          "protocol": {
+            "module_name": "spatial_placement",
+            "family": "spatial_placement",
+            "variant": "place_directional",
+            "task_version": "visual",
+            "query_family": "directional_region_placement",
+            "query_text": "将手中的方块放到蓝盘前侧区域。",
+            "target_object": {
+              "object_id": "movable_cube"
+            },
+            "anchor_object": {
+              "object_id": "blue_plate"
+            },
+            "gt_spec": {
+              "resolver": "directional_region_placement",
+              "reference_frame": "world",
+              "anchor_mode": "anchor_xy_only",
+              "anchor_object_id": "blue_plate",
+              "primary_axis": "x",
+              "primary_direction": "positive",
+              "target_zone": {
+                "shape": "rect",
+                "center_offset_from_anchor": [
+                  0.18,
+                  0.0
+                ],
+                "half_extents": [
+                  0.05,
+                  0.06
+                ]
+              },
+              "support_surface": "table",
+              "must_be_released": true
+            }
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "world_direction_convention": {
+                "front": "positive_x",
+                "right": "negative_y"
+              },
+              "preview_proxy_derived_from_gt": true
+            },
+            "preview_proxy_goal": {
+              "type": "zone_center_xy",
+              "object_id": "movable_cube",
+              "anchor_object_id": "blue_plate",
+              "tolerance": {
+                "pos_r": 0.035
+              },
+              "usage": [
+                "inspect",
+                "preview",
+                "scene_validation"
+              ]
+            },
+            "runtime_objects": [
+              {
+                "name": "blue_plate",
+                "kind": "usd",
+                "asset_category": "catch_object",
+                "asset_key": "plate_2",
+                "role": "anchor",
+                "scale": [
+                  0.01,
+                  0.01,
+                  0.01
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": true,
+                    "kinematic_enabled": true,
+                    "disable_gravity": true,
+                    "linear_damping": 6.0,
+                    "angular_damping": 8.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4
+                  },
+                  "collision": {
+                    "collision_enabled": true,
+                    "contact_offset": 0.0015,
+                    "rest_offset": 0.0
+                  }
+                },
+                "material_override": {
+                  "diffuse_color": [
+                    0.12,
+                    0.28,
+                    0.82
+                  ]
+                },
+                "pose": {
+                  "xy": [
+                    0.39,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "movable_cube",
+                "kind": "primitive_cuboid",
+                "role": "target",
+                "size": [
+                  0.054,
+                  0.054,
+                  0.054
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.24,
+                    -0.11
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "viz_clutter_1",
+                "kind": "primitive_cuboid",
+                "role": "distractor",
+                "size": [
+                  0.016,
+                  0.02,
+                  0.042
+                ],
+                "visual_color": [
+                  0.4,
+                  0.41,
+                  0.44
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.4,
+                    0.41,
+                    0.44
+                  ],
+                  "fallback_roughness": 0.78
+                },
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.2,
+                    "dynamic_friction": 1.0,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.6,
+                    0.145
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "viz_clutter_2",
+                "kind": "primitive_cuboid",
+                "role": "distractor",
+                "size": [
+                  0.018,
+                  0.022,
+                  0.038
+                ],
+                "visual_color": [
+                  0.48,
+                  0.46,
+                  0.5
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.48,
+                    0.46,
+                    0.5
+                  ],
+                  "fallback_roughness": 0.72
+                },
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.2,
+                    "dynamic_friction": 1.0,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.6,
+                    -0.105
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "viz_clutter_3",
+                "kind": "primitive_cuboid",
+                "role": "distractor",
+                "size": [
+                  0.022,
+                  0.026,
+                  0.028
+                ],
+                "visual_color": [
+                  0.36,
+                  0.38,
+                  0.42
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.36,
+                    0.38,
+                    0.42
+                  ],
+                  "fallback_roughness": 0.8
+                },
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.2,
+                    "dynamic_friction": 1.0,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.49,
+                    0.16
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "place_directional_scene65_visual",
+          "scene_layout": "Spatial Placement Runtime Injection",
+          "instance_layout": "directional_region_visual_clutter",
+          "axis_variant": null,
+          "task_category": "Spatial Placement"
+        }
+      }
+    ]
+  },
+  "place_directional_scene65_semantic": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "Spatial Placement Runtime Injection",
+      "num_of_objects": 4,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "blue_plate": {
+          "position": [
+            0.39,
+            0.02
+          ]
+        },
+        "blue_plate_2": {
+          "position": [
+            0.255,
+            0.273
+          ]
+        },
+        "red_bowl": {
+          "position": [
+            0.255,
+            0.105
+          ]
+        },
+        "movable_cube": {
+          "position": [
+            0.24,
+            -0.11
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 2,
+        "plate_position": [
+          [
+            0.39,
+            0.02
+          ],
+          [
+            0.255,
+            0.273
+          ]
+        ],
+        "bowl": 1,
+        "bowl_position": [
+          [
+            0.255,
+            0.105
+          ]
+        ]
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Spatial Placement",
+        "instruction": "Place the block in your hand in the front region of the blue plate.",
+        "annotation": {
+          "task_id": "place_directional",
+          "reference_frame": "world",
+          "targets": [
+            "movable_cube"
+          ],
+          "goal_sequence": [],
+          "assumptions": [
+            "The preserved background scene shell remains unchanged; two smaller blue plates, one smaller red bowl, and one movable cube are injected at runtime.",
+            "Front is world +X; the anchor `blue_plate` sits ahead of the bowl in X; `blue_plate_2` shares the bowl's X and lies along the prior bowl→plate2 direction at 0.8× the previous center-to-center separation from `red_bowl`.",
+            "The second blue plate and red bowl are static distractors; `protocol.gt_spec` matches the base instance."
+          ],
+          "validation_checks": [
+            "annotation.task_id stays canonical at place_directional",
+            "goal_sequence remains empty so preview-only data does not leak into formal success logic",
+            "scene_adaptation.preview_proxy_goal exists and derives from protocol.gt_spec.target_zone.center_offset_from_anchor",
+            "protocol.gt_spec matches the base instance field-for-field on placement semantics",
+            "blue_plate anchor center has strictly larger world X than red_bowl center (bowl lies behind the anchor along +X front convention)",
+            "blue_plate_2 and red_bowl share world X; vector from red_bowl to blue_plate_2 equals 0.8 times the vector from red_bowl to the previous blue_plate_2 center (0.255, 0.315)",
+            "scene_adaptation.runtime_objects names are unique"
+          ],
+          "instance_semantics": {
+            "instance_id": "place_directional__scene65__semantic",
+            "layout": "directional_region_semantic_distractors"
+          },
+          "protocol": {
+            "module_name": "spatial_placement",
+            "family": "spatial_placement",
+            "variant": "place_directional",
+            "task_version": "semantic",
+            "query_family": "directional_region_placement",
+            "query_text": "将手中的方块放到蓝盘前侧区域。",
+            "target_object": {
+              "object_id": "movable_cube"
+            },
+            "anchor_object": {
+              "object_id": "blue_plate"
+            },
+            "gt_spec": {
+              "resolver": "directional_region_placement",
+              "reference_frame": "world",
+              "anchor_mode": "anchor_xy_only",
+              "anchor_object_id": "blue_plate",
+              "primary_axis": "x",
+              "primary_direction": "positive",
+              "target_zone": {
+                "shape": "rect",
+                "center_offset_from_anchor": [
+                  0.18,
+                  0.0
+                ],
+                "half_extents": [
+                  0.05,
+                  0.06
+                ]
+              },
+              "support_surface": "table",
+              "must_be_released": true
+            }
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "world_direction_convention": {
+                "front": "positive_x",
+                "right": "negative_y"
+              },
+              "preview_proxy_derived_from_gt": true
+            },
+            "preview_proxy_goal": {
+              "type": "zone_center_xy",
+              "object_id": "movable_cube",
+              "anchor_object_id": "blue_plate",
+              "tolerance": {
+                "pos_r": 0.035
+              },
+              "usage": [
+                "inspect",
+                "preview",
+                "scene_validation"
+              ]
+            },
+            "runtime_objects": [
+              {
+                "name": "blue_plate",
+                "kind": "usd",
+                "asset_category": "catch_object",
+                "asset_key": "plate_2",
+                "role": "anchor",
+                "scale": [
+                  0.007,
+                  0.007,
+                  0.007
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": true,
+                    "kinematic_enabled": true,
+                    "disable_gravity": true,
+                    "linear_damping": 6.0,
+                    "angular_damping": 8.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4
+                  },
+                  "collision": {
+                    "collision_enabled": true,
+                    "contact_offset": 0.0015,
+                    "rest_offset": 0.0
+                  }
+                },
+                "material_override": {
+                  "diffuse_color": [
+                    0.12,
+                    0.28,
+                    0.82
+                  ]
+                },
+                "pose": {
+                  "xy": [
+                    0.39,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "blue_plate_2",
+                "kind": "usd",
+                "asset_category": "catch_object",
+                "asset_key": "plate_2",
+                "role": "distractor",
+                "scale": [
+                  0.007,
+                  0.007,
+                  0.007
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": true,
+                    "kinematic_enabled": true,
+                    "disable_gravity": true,
+                    "linear_damping": 6.0,
+                    "angular_damping": 8.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4
+                  },
+                  "collision": {
+                    "collision_enabled": true,
+                    "contact_offset": 0.0015,
+                    "rest_offset": 0.0
+                  }
+                },
+                "material_override": {
+                  "diffuse_color": [
+                    0.12,
+                    0.28,
+                    0.82
+                  ]
+                },
+                "pose": {
+                  "xy": [
+                    0.255,
+                    0.273
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "red_bowl",
+                "kind": "usd",
+                "asset_category": "container",
+                "asset_key": "bowl_1",
+                "role": "distractor",
+                "scale": [
+                  0.006,
+                  0.006,
+                  0.006
+                ],
+                "dimensions": [
+                  0.1065,
+                  0.0951,
+                  0.0431
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "collision": {
+                    "type": "static_mesh",
+                    "contact_offset": 0.0015,
+                    "rest_offset": 0.0,
+                    "sdf_resolution": 192,
+                    "sdf_subgrid_resolution": 6,
+                    "sdf_margin": 0.01,
+                    "sdf_narrow_band_thickness": 0.01
+                  }
+                },
+                "material_override": {
+                  "diffuse_color": [
+                    0.82,
+                    0.14,
+                    0.12
+                  ]
+                },
+                "pose": {
+                  "xy": [
+                    0.255,
+                    0.105
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "movable_cube",
+                "kind": "primitive_cuboid",
+                "role": "target",
+                "size": [
+                  0.054,
+                  0.054,
+                  0.054
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.24,
+                    -0.11
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "place_directional_scene65_semantic",
+          "scene_layout": "Spatial Placement Runtime Injection",
+          "instance_layout": "directional_region_semantic_distractors",
+          "axis_variant": null,
+          "task_category": "Spatial Placement"
+        }
+      }
+    ]
+  },
+  "place_directional_scene65_base": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "Spatial Placement Runtime Injection",
+      "num_of_objects": 2,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "blue_plate": {
+          "position": [
+            0.39,
+            0.02
+          ]
+        },
+        "movable_cube": {
+          "position": [
+            0.24,
+            -0.11
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 1,
+        "plate_position": [
+          [
+            0.39,
+            0.02
+          ]
+        ],
+        "bowl": 0,
+        "bowl_position": []
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Spatial Placement",
+        "instruction": "Move near the block.",
+        "annotation": {
+          "task_id": "place_directional",
+          "reference_frame": "world",
+          "targets": [
+            "movable_cube"
+          ],
+          "goal_sequence": [],
+          "assumptions": [
+            "The preserved background scene shell remains unchanged and only a blue plate plus one movable cube are injected at runtime.",
+            "Front is defined in the tabletop world frame as positive X, and right is defined as negative Y; the blue plate contributes anchor position only, not orientation semantics.",
+            "The base instance has no obstacle and uses a plate-diameter-sized rectangular legal target zone strictly in front of the plate."
+          ],
+          "validation_checks": [
+            "annotation.task_id stays canonical at place_directional",
+            "goal_sequence remains empty so preview-only data does not leak into formal success logic",
+            "scene_adaptation.preview_proxy_goal exists and derives from protocol.gt_spec.target_zone.center_offset_from_anchor",
+            "protocol.gt_spec.reference_frame is world and does not depend on blue_plate yaw",
+            "scene_adaptation.runtime_objects names are unique"
+          ],
+          "instance_semantics": {
+            "instance_id": "place_directional__scene65__base",
+            "layout": "directional_region_injected"
+          },
+          "protocol": {
+            "module_name": "spatial_placement",
+            "family": "spatial_placement",
+            "variant": "place_directional",
+            "task_version": "base",
+            "query_family": "move_to_object",
+            "query_text": "移动到方块附近。",
+            "target_object": {
+              "object_id": "movable_cube"
+            },
+            "anchor_object": {
+              "object_id": "blue_plate"
+            },
+            "gt_spec": {
+              "resolver": "move_to_object_proximity",
+              "reference_frame": "world",
+              "anchor_mode": "anchor_xy_only",
+              "anchor_object_id": "blue_plate",
+              "primary_axis": "x",
+              "primary_direction": "positive",
+              "target_zone": {
+                "shape": "rect",
+                "center_offset_from_anchor": [
+                  0.26,
+                  0.0
+                ],
+                "half_extents": [
+                  0.126,
+                  0.126
+                ]
+              },
+              "success_radius": 0.085,
+              "xy_only": false,
+              "support_surface": "table"
+            }
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "world_direction_convention": {
+                "front": "positive_x",
+                "right": "negative_y"
+              },
+              "preview_proxy_derived_from_gt": true
+            },
+            "preview_proxy_goal": {
+              "type": "zone_center_xy",
+              "object_id": "movable_cube",
+              "anchor_object_id": "blue_plate",
+              "tolerance": {
+                "pos_r": 0.035
+              },
+              "usage": [
+                "inspect",
+                "preview",
+                "scene_validation"
+              ]
+            },
+            "runtime_objects": [
+              {
+                "name": "blue_plate",
+                "kind": "usd",
+                "asset_category": "catch_object",
+                "asset_key": "plate_2",
+                "role": "anchor",
+                "scale": [
+                  0.01,
+                  0.01,
+                  0.01
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": true,
+                    "kinematic_enabled": true,
+                    "disable_gravity": true,
+                    "linear_damping": 6.0,
+                    "angular_damping": 8.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4
+                  },
+                  "collision": {
+                    "collision_enabled": true,
+                    "contact_offset": 0.0015,
+                    "rest_offset": 0.0
+                  }
+                },
+                "material_override": {
+                  "diffuse_color": [
+                    0.12,
+                    0.28,
+                    0.82
+                  ]
+                },
+                "pose": {
+                  "xy": [
+                    0.39,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "movable_cube",
+                "kind": "primitive_cuboid",
+                "role": "target",
+                "size": [
+                  0.054,
+                  0.054,
+                  0.054
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.24,
+                    -0.11
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "place_directional_scene65_base",
+          "scene_layout": "Spatial Placement Runtime Injection",
+          "instance_layout": "directional_region_injected",
+          "axis_variant": null,
+          "task_category": "Spatial Placement"
+        }
+      }
+    ]
+  },
+  "grasp_anchor_direction_scene65_base": {
+    "scene_id": 65,
+    "scene_structure": {
+      "layout": "Anchor Direction Runtime Injection",
+      "num_of_objects": 5,
+      "object_asset": "STANDARD_CUBE",
+      "object_positions": {
+        "anchor_bowl": {
+          "position": [
+            0.4,
+            0.02
+          ]
+        },
+        "block_front": {
+          "position": [
+            0.57,
+            0.02
+          ]
+        },
+        "block_back": {
+          "position": [
+            0.21,
+            0.02
+          ]
+        },
+        "block_left": {
+          "position": [
+            0.4,
+            0.19
+          ]
+        },
+        "block_right": {
+          "position": [
+            0.4,
+            -0.15
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 0,
+        "plate_position": [],
+        "bowl": 1,
+        "bowl_position": [
+          [
+            0.4,
+            0.02
+          ]
+        ]
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Anchor Reference",
+        "instruction": "Pick up the block to the right of the blue bowl.",
+        "annotation": {
+          "task_id": "grasp_anchor_direction",
+          "reference_frame": "world",
+          "targets": [
+            "block_right"
+          ],
+          "goal_sequence": [],
+          "assumptions": [
+            "The base instance preserves the background scene shell and injects one blue bowl plus four same-looking cubes at runtime.",
+            "Only one candidate cube satisfies the formal right-side predicate relative to the bowl in the tabletop world frame, where negative Y denotes rightward offset.",
+            "Target identity is determined by directional relation only, not by color, size, or material differences among cubes."
+          ],
+          "validation_checks": [
+            "annotation.task_id stays canonical at grasp_anchor_direction",
+            "scene_adaptation.runtime_objects names are unique",
+            "exactly one candidate cube satisfies -dy >= 0.06 and abs(dx) <= 0.03 relative to anchor_bowl",
+            "all other candidate cubes fall outside the formal right-side acceptance band"
+          ],
+          "instance_semantics": {
+            "instance_id": "grasp_anchor_direction__scene65__base",
+            "layout": "anchor_direction_injected"
+          },
+          "protocol": {
+            "module_name": "anchor_reference",
+            "family": "anchor_reference",
+            "variant": "grasp_anchor_direction",
+            "task_version": "base",
+            "query_family": "directional_anchor_query",
+            "query_text": "拿起蓝色碗右边的那个方块。",
+            "anchor_object": {
+              "object_id": "anchor_bowl"
+            },
+            "candidate_object_ids": [
+              "block_front",
+              "block_back",
+              "block_left",
+              "block_right"
+            ],
+            "gt_spec": {
+              "resolver": "directional_anchor_selection",
+              "reference_frame": "world",
+              "axis": "y",
+              "direction": "negative",
+              "min_primary_offset": 0.06,
+              "max_abs_secondary_offset": 0.03,
+              "expected_target": "block_right"
+            }
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "runtime_objects": [
+              {
+                "name": "anchor_bowl",
+                "kind": "usd",
+                "asset_category": "container",
+                "asset_key": "bowl_1",
+                "role": "anchor",
+                "scale": [
+                  0.0085,
+                  0.0085,
+                  0.0085
+                ],
+                "dimensions": [
+                  0.1511,
+                  0.135,
+                  0.0612
+                ],
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "collision": {
+                    "type": "static_mesh",
+                    "contact_offset": 0.0015,
+                    "rest_offset": 0.0,
+                    "sdf_resolution": 192,
+                    "sdf_subgrid_resolution": 6,
+                    "sdf_margin": 0.01,
+                    "sdf_narrow_band_thickness": 0.01
+                  }
+                },
+                "material_override": {
+                  "diffuse_color": [
+                    0.12,
+                    0.28,
+                    0.82
+                  ]
+                },
+                "pose": {
+                  "xy": [
+                    0.4,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "block_front",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.045,
+                  0.045,
+                  0.045
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "pose": {
+                  "xy": [
+                    0.57,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "block_back",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.045,
+                  0.045,
+                  0.045
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "pose": {
+                  "xy": [
+                    0.21,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "block_left",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.045,
+                  0.045,
+                  0.045
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "pose": {
+                  "xy": [
+                    0.4,
+                    0.19
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "block_right",
+                "kind": "primitive_cuboid",
+                "role": "candidate",
+                "size": [
+                  0.045,
+                  0.045,
+                  0.045
+                ],
+                "visual_color": [
+                  0.63,
+                  0.48,
+                  0.33
+                ],
+                "visual_material": {
+                  "type": "mdl",
+                  "mdl_path": "{NVIDIA_NUCLEUS_DIR}/Materials/Base/Wood/Walnut_Planks.mdl",
+                  "project_uvw": true,
+                  "texture_scale": [
+                    0.08,
+                    0.08
+                  ],
+                  "albedo_brightness": 0.9,
+                  "fallback_diffuse_color": [
+                    0.63,
+                    0.48,
+                    0.33
+                  ],
+                  "fallback_roughness": 0.6
+                },
+                "pose": {
+                  "xy": [
+                    0.4,
+                    -0.15
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "grasp_anchor_direction_scene65_base",
+          "scene_layout": "Anchor Direction Runtime Injection",
+          "instance_layout": "anchor_direction_injected",
+          "axis_variant": null,
+          "task_category": "Anchor Reference"
+        }
+      }
+    ]
+  },
+  "grasp_anchor_distance_scene10_base": {
+    "scene_id": 10,
+    "scene_structure": {
+      "layout": "Anchor Distance Runtime Injection",
+      "num_of_objects": 5,
+      "object_asset": "STANDARD_SPHERE",
+      "object_positions": {
+        "anchor_cylinder": {
+          "position": [
+            0.4,
+            0.02
+          ]
+        },
+        "ball_nearest": {
+          "position": [
+            0.485,
+            0.02
+          ]
+        },
+        "ball_second": {
+          "position": [
+            0.34,
+            0.12
+          ]
+        },
+        "ball_third": {
+          "position": [
+            0.56,
+            -0.09
+          ]
+        },
+        "ball_fourth": {
+          "position": [
+            0.24,
+            0.0
+          ]
+        }
+      },
+      "container": {
+        "basket": 0,
+        "basket_position": [],
+        "plate": 0,
+        "plate_position": [],
+        "bowl": 0,
+        "bowl_position": []
+      },
+      "shelf": {
+        "shelf": 0,
+        "shelf_position": []
+      }
+    },
+    "tasks": [
+      {
+        "task_category": "Anchor Reference",
+        "instruction": "Pick up the ball closest to the red cylinder.",
+        "annotation": {
+          "task_id": "grasp_anchor_distance",
+          "reference_frame": "world",
+          "targets": [
+            "ball_nearest"
+          ],
+          "goal_sequence": [],
+          "assumptions": [
+            "The base instance preserves the background scene shell and injects one red cylinder plus four same-looking spheres at runtime.",
+            "Task semantics use planar Euclidean distance in the tabletop world frame and select the unique nearest sphere to the anchor cylinder.",
+            "The larger nearest-versus-second-nearest gap is a layout-quality property for the base scene, not part of the evaluator semantics."
+          ],
+          "validation_checks": [
+            "annotation.task_id stays canonical at grasp_anchor_distance",
+            "scene_adaptation.runtime_objects names are unique",
+            "protocol.gt_spec keeps only nearest-anchor semantic fields and does not encode layout gap thresholds",
+            "layout_constraints.min_gap_to_second is satisfied by the authored object positions",
+            "exactly one candidate sphere is nearest to anchor_cylinder under planar Euclidean distance"
+          ],
+          "instance_semantics": {
+            "instance_id": "grasp_anchor_distance__scene10__base",
+            "layout": "anchor_distance_injected"
+          },
+          "protocol": {
+            "module_name": "anchor_reference",
+            "family": "anchor_reference",
+            "variant": "grasp_anchor_distance",
+            "task_version": "base",
+            "query_family": "distance_anchor_query",
+            "query_text": "拿起离红色圆柱体最近的小球。",
+            "anchor_object": {
+              "object_id": "anchor_cylinder"
+            },
+            "candidate_object_ids": [
+              "ball_nearest",
+              "ball_second",
+              "ball_third",
+              "ball_fourth"
+            ],
+            "gt_spec": {
+              "resolver": "nearest_anchor_selection",
+              "reference_frame": "world",
+              "metric": "planar_euclidean",
+              "distance_axes": [
+                "x",
+                "y"
+              ],
+              "expected_target": "ball_nearest"
+            }
+          },
+          "scene_adaptation": {
+            "background_overrides": {
+              "hide_basket": true
+            },
+            "layout_constraints": {
+              "min_gap_to_second": 0.03
+            },
+            "runtime_objects": [
+              {
+                "name": "anchor_cylinder",
+                "kind": "primitive_cylinder",
+                "role": "anchor",
+                "radius": 0.03,
+                "height": 0.12,
+                "visual_color": [
+                  0.82,
+                  0.12,
+                  0.12
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.82,
+                    0.12,
+                    0.12
+                  ],
+                  "fallback_roughness": 0.5
+                },
+                "physics": {
+                  "rigid_body": {
+                    "rigid_body_enabled": false
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.4,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "ball_nearest",
+                "kind": "primitive_sphere",
+                "role": "candidate",
+                "radius": 0.03,
+                "visual_color": [
+                  0.66,
+                  0.64,
+                  0.58
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.66,
+                    0.64,
+                    0.58
+                  ],
+                  "fallback_roughness": 0.55
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.485,
+                    0.02
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "ball_second",
+                "kind": "primitive_sphere",
+                "role": "candidate",
+                "radius": 0.03,
+                "visual_color": [
+                  0.66,
+                  0.64,
+                  0.58
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.66,
+                    0.64,
+                    0.58
+                  ],
+                  "fallback_roughness": 0.55
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.34,
+                    0.12
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "ball_third",
+                "kind": "primitive_sphere",
+                "role": "candidate",
+                "radius": 0.03,
+                "visual_color": [
+                  0.66,
+                  0.64,
+                  0.58
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.66,
+                    0.64,
+                    0.58
+                  ],
+                  "fallback_roughness": 0.55
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 1.4,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.56,
+                    -0.09
+                  ],
+                  "yaw": 0.0
+                }
+              },
+              {
+                "name": "ball_fourth",
+                "kind": "primitive_sphere",
+                "role": "candidate",
+                "radius": 0.03,
+                "visual_color": [
+                  0.66,
+                  0.64,
+                  0.58
+                ],
+                "visual_material": {
+                  "fallback_diffuse_color": [
+                    0.66,
+                    0.64,
+                    0.58
+                  ],
+                  "fallback_roughness": 0.55
+                },
+                "physics": {
+                  "rigid_body": {
+                    "linear_damping": 1.2,
+                    "angular_damping": 4.0,
+                    "max_linear_velocity": 2.0,
+                    "max_angular_velocity": 20.0,
+                    "solver_position_iteration_count": 16,
+                    "solver_velocity_iteration_count": 4,
+                    "sleep_threshold": 0.002,
+                    "stabilization_threshold": 0.001
+                  },
+                  "material": {
+                    "static_friction": 2,
+                    "dynamic_friction": 1.2,
+                    "restitution": 0.0,
+                    "friction_combine_mode": "max"
+                  }
+                },
+                "pose": {
+                  "xy": [
+                    0.24,
+                    0.0
+                  ],
+                  "yaw": 0.0
+                }
+              }
+            ]
+          }
+        },
+        "layout_structure": {
+          "layout_key": "grasp_anchor_distance_scene10_base",
+          "scene_layout": "Anchor Distance Runtime Injection",
+          "instance_layout": "anchor_distance_injected",
+          "axis_variant": null,
+          "task_category": "Anchor Reference"
+        }
+      }
+    ]
+  }
+}

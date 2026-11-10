@@ -1,0 +1,38 @@
+% --- GeoMind appendix results dashboard ---
+% \input{paper/appendix_results_dashboard_preamble}  (from repo root or adjust path)
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{array}
+
+% Search both paper/figures and repo-root figures/ for \includegraphics
+\graphicspath{{paper/figures/}{figures/}}
+
+\definecolor{OracleFill}{HTML}{E8F4EA}
+\definecolor{VLAFill}{HTML}{EEF3FA}
+\definecolor{SpatialVLAFill}{HTML}{F3EEFA}
+\definecolor{ModularFill}{HTML}{FAF3E8}
+\definecolor{BestFill}{HTML}{DDEEDB}
+\definecolor{SecondFill}{HTML}{EEF7ED}
+\definecolor{DropLight}{HTML}{FCEEEE}
+\definecolor{DropMid}{HTML}{F7DADA}
+\definecolor{HeaderGray}{HTML}{F3F4F6}
+\definecolor{MemoryFill}{HTML}{EEF6FF}
+\definecolor{ReasoningFill}{HTML}{F6F0FF}
+\definecolor{DemandLow}{HTML}{F5F5F5}
+\definecolor{DemandMed}{HTML}{FFF8E1}
+\definecolor{DemandHigh}{HTML}{FFEBEE}
+
+\newcommand{\augcell}[2]{#1\,{\scriptsize(#2)}}
+% Optional argument ignored; use \TODO{} in tables
+\providecommand{\TODO}[1]{\textcolor{red}{TODO}}

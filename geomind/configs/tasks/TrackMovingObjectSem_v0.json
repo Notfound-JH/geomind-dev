@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "TrackMovingObjectSem_v0",
+  "task_id": "TrackMovingObject",
+  "execution": "LegacyIsaacLab",
+  "condition": "Semantic",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "TrackMovingObjectSem_v0",
+    "track_single:semantic",
+    "TrackSingleSem_v0",
+    "TrackBaseSem_TrackMovingObject_v0",
+    "TrackBaseSem_TrackSingle_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "track_single_scene65_semantic_anchors",
+  "release_version": "1.0"
+}

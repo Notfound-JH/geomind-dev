@@ -1,0 +1,257 @@
+{
+  "benchmark_name": "geomind_spatial_benchmark",
+  "suite_name": "main",
+  "runner_dispatch_mode": "permissive",
+  "description": "Main GeoMind benchmark manifest organized around atomic task ids, versioned task metadata, and a Phase 1-first rollout plan.",
+  "diagnostic_tags": [
+    "spatial_understanding_primary",
+    "phase1_first",
+    "base_skill_stress_control_split",
+    "static_stress_only"
+  ],
+  "task_families": [
+    "anchor_reference",
+    "spatial_placement",
+    "constraint_selection",
+    "state_reindexing",
+    "historical_identity_tracking",
+    "explicit_rule_extrapolation",
+    "implicit_trend_fitting",
+    "shape_completion"
+  ],
+  "declared_task_matrix": [
+    {
+      "task_id": "grasp_anchor_direction",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "grasp_anchor_distance",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "place_on_top",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "place_inside",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "select_visual_spatial",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "select_exclusion_unique",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "reindex_extreme",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "reindex_insert",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "reindex_subset",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "reindex_neighbor",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "track_single",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "track_multi",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "perfect_midpoint",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "isometric_extension",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "point_symmetry",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "trend_continuation",
+      "task_versions": [
+        "base",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "weak_destruction_control",
+      "task_versions": [
+        "control",
+        "stress"
+      ]
+    },
+    {
+      "task_id": "square_completion",
+      "task_versions": [
+        "base",
+        "skill",
+        "stress"
+      ]
+    }
+  ],
+  "task_ids": [
+    "grasp_anchor_direction",
+    "grasp_anchor_distance",
+    "place_on_top",
+    "place_inside",
+    "select_visual_spatial",
+    "select_exclusion_unique",
+    "reindex_extreme",
+    "reindex_insert",
+    "reindex_subset",
+    "reindex_neighbor",
+    "track_single",
+    "track_multi",
+    "perfect_midpoint",
+    "isometric_extension",
+    "point_symmetry",
+    "trend_continuation",
+    "weak_destruction_control",
+    "square_completion"
+  ],
+  "task_version_filter": [],
+  "phase_filter": [],
+  "agent_names": [
+    "state_refresh_core_oracle",
+    "state_refresh_core_random",
+    "historical_oracle",
+    "historical_final_frame_only",
+    "explicit_midpoint_oracle",
+    "explicit_extension_oracle",
+    "explicit_random",
+    "implicit_trend_oracle",
+    "implicit_trend_random"
+  ],
+  "default_agent_groups": {
+    "state_refresh": [
+      "state_refresh_core_oracle",
+      "state_refresh_core_random",
+      "historical_oracle",
+      "historical_final_frame_only"
+    ],
+    "geometric_structure": [
+      "explicit_midpoint_oracle",
+      "explicit_extension_oracle",
+      "explicit_random",
+      "implicit_trend_oracle",
+      "implicit_trend_random"
+    ]
+  },
+  "default_thresholds": {
+    "min_valid_rate": 0.8,
+    "min_success_rate": 0.7,
+    "max_accidental_displacement_rate": 0.2,
+    "max_mean_l2_error": 0.05
+  },
+  "output_layout": {
+    "state_refresh_root": "logs/state_reindexing_matrix/<timestamp>",
+    "geometric_structure_root": "logs/geometric_inference_matrix/<timestamp>",
+    "manifest_file": "run_manifest.tsv",
+    "aggregate_text": "aggregate.txt",
+    "aggregate_csv": "aggregate.csv"
+  },
+  "summary_preset": {
+    "joint_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "skill_type",
+      "phase",
+      "agent_name",
+      "task_type"
+    ],
+    "joint_common_fields": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "skill_type",
+      "phase",
+      "agent_name",
+      "episode_count",
+      "valid_rate",
+      "success_rate",
+      "task_type"
+    ],
+    "state_refresh_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "object_count",
+      "distractor_count",
+      "visual_mode"
+    ],
+    "geometric_structure_group_by": [
+      "semantic_module",
+      "task_id",
+      "task_version",
+      "phase",
+      "agent_name",
+      "noise_level",
+      "anchor_count"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 3,
+  "episode_id": "DetectSceneChange_s1_v0",
+  "task_id": "DetectSceneChange",
+  "scene_id": "registered_scene_65",
+  "layout_id": "change_s1",
+  "protocol_id": "change_protocol_s1",
+  "parameters": {
+    "objects": [
+      "block_0",
+      "block_1",
+      "block_2"
+    ],
+    "frame": "table",
+    "reference": {
+      "phase": "observe",
+      "boundary": "End"
+    },
+    "change_threshold_m": 0.03,
+    "ambiguity_tolerance_m": 0.001
+  },
+  "response": "SelectObject",
+  "seed": 1,
+  "physical_execution": {
+    "action": "ReachAboveTarget",
+    "target_offset_m": [
+      0.0,
+      0.0,
+      0.1
+    ],
+    "position_tolerance_m": 0.012,
+    "orientation_tolerance_rad": 0.15,
+    "dwell_steps": 20,
+    "max_steps": 1800,
+    "joint_step_limit_rad": 0.04,
+    "approach_clearance_m": 0.15
+  },
+  "release_version": "2.0"
+}

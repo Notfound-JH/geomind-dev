@@ -1,0 +1,1624 @@
+{
+    "metadata": {
+        "table_heights": {
+            "TABLE_1": 0.915,
+            "TABLE_2": 0.95,
+            "TABLE_3": 0.75,
+            "TABLE_4": 0.75,
+            "TABLE_5": 0.59,
+            "TABLE_6": 0.59,
+            "TABLE_7": 0.7,
+            "TABLE_8": 0.71,
+            "TABLE_9": 0.55
+        },
+        "description": "Asset catalog categorized for specialized scene generation."
+    },
+    "assets": {
+        "table": [
+            {
+                "name": "table_1",
+                "prim_path": "/World/table_1",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_1.usda",
+                "scale": [
+                    0.011,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -45.718997596821175,
+                "dimensions": {
+                    "x": 98.90387982641565,
+                    "y": 197.90544432322562,
+                    "z": 91.43799519364242
+                }
+            },
+            {
+                "name": "table_2",
+                "prim_path": "/World/table_2",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_2.usda",
+                "scale": [
+                    0.011,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -47.32344416878418,
+                "dimensions": {
+                    "x": 175.9155947458372,
+                    "y": 99.2841162327048,
+                    "z": 94.64688833756836
+                }
+            },
+            {
+                "name": "table_3",
+                "prim_path": "/World/table_3",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_3.usda",
+                "scale": [
+                    0.011,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -37.510299682617166,
+                "dimensions": {
+                    "x": 90.00000732369534,
+                    "y": 167.54661650295571,
+                    "z": 75.02059936523435
+                }
+            },
+            {
+                "name": "table_4",
+                "prim_path": "/World/table_4",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_4.usda",
+                "scale": [
+                    0.011,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -37.49999999999999,
+                "dimensions": {
+                    "x": 86.00000655670854,
+                    "y": 150.00000375917958,
+                    "z": 75.0
+                }
+            },
+            {
+                "name": "table_5",
+                "prim_path": "/World/table_5",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_5.usda",
+                "scale": [
+                    0.014,
+                    0.013,
+                    0.013
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -22.49550018310547,
+                "dimensions": {
+                    "x": 120.98740234375,
+                    "y": 65.01119995117188,
+                    "z": 44.99100036621094
+                }
+            },
+            {
+                "name": "table_6",
+                "prim_path": "/World/table_6",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_6.usda",
+                "scale": [
+                    0.014,
+                    0.013,
+                    0.013
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -22.35079956054687,
+                "dimensions": {
+                    "x": 74.94120483895199,
+                    "y": 139.745804057034,
+                    "z": 44.70159912109375
+                }
+            },
+            {
+                "name": "table_7",
+                "prim_path": "/World/table_7",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_7.usda",
+                "scale": [
+                    0.011,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -35.0,
+                "dimensions": {
+                    "x": 179.2423743238243,
+                    "y": 81.6170236288446,
+                    "z": 70.0
+                }
+            },
+            {
+                "name": "table_8",
+                "prim_path": "/World/table_8",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_8.usda",
+                "scale": [
+                    0.011,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -35.3114990234375,
+                "dimensions": {
+                    "x": 98.10580875329599,
+                    "y": 238.23201112427836,
+                    "z": 70.622998046875
+                }
+            },
+            {
+                "name": "table_9",
+                "prim_path": "/World/table_9",
+                "usd_path": "/home/elm/projects/geomind_assets/table/table_9.usda",
+                "scale": [
+                    0.015,
+                    0.015,
+                    0.015
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -18.000000000000004,
+                "dimensions": {
+                    "x": 89.85480126913873,
+                    "y": 90.40000368794738,
+                    "z": 36.0
+                }
+            },
+            {
+                "name": "table",
+                "prim_path": "/World/table",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Mounts/thor_table.usd",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.7949999993592535,
+                "dimensions": {
+                    "x": 0.9103287269825775,
+                    "y": 0.7678636585045662,
+                    "z": 0.7949999996274748
+                }
+            }
+        ],
+        "container": [
+            {
+                "name": "cabinet_1",
+                "prim_path": "/World/cabinet_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_1.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865475,
+                        0.0,
+                        0.0,
+                        0.7071067811865476
+                    ]
+                ],
+                "z_min_offset": -39.54030151367188,
+                "dimensions": {
+                    "x": 36.715788232672686,
+                    "y": 100.67113198793982,
+                    "z": 79.08060302734376
+                }
+            },
+            {
+                "name": "cabinet_2",
+                "prim_path": "/World/cabinet_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_2.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -44.25,
+                "dimensions": {
+                    "x": 26.4708510672819,
+                    "y": 110.77010547366115,
+                    "z": 88.5
+                }
+            },
+            {
+                "name": "cabinet_3",
+                "prim_path": "/World/cabinet_3",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_3.usda",
+                "scale": [
+                    0.015,
+                    0.015,
+                    0.015
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -21.69019927978515,
+                "dimensions": {
+                    "x": 47.97690215649398,
+                    "y": 47.176804098858746,
+                    "z": 43.38039855957032
+                }
+            },
+            {
+                "name": "cabinet_4",
+                "prim_path": "/World/cabinet_4",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_4.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -38.10729936435062,
+                "dimensions": {
+                    "x": 98.45121709071302,
+                    "y": 43.648098954456586,
+                    "z": 76.2145987287012
+                }
+            },
+            {
+                "name": "cabinet_5",
+                "prim_path": "/World/cabinet_5",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_5.usda",
+                "scale": [
+                    0.007,
+                    0.007,
+                    0.007
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -93.24676718999999,
+                "dimensions": {
+                    "x": 112.54609800000001,
+                    "y": 34.69294638,
+                    "z": 186.49353438000003
+                }
+            },
+            {
+                "name": "bowl_1",
+                "prim_path": "/World/bowl_1",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/bowl_1.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -3.6016374821765407,
+                "dimensions": {
+                    "x": 17.7786613272072,
+                    "y": 15.8838289268333,
+                    "z": 7.2032749643530245
+                }
+            },
+            {
+                "name": "bowl_2",
+                "prim_path": "/World/bowl_2",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/bowl_2.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -3.18221521377564,
+                "dimensions": {
+                    "x": 19.244589996337893,
+                    "y": 19.241450500488284,
+                    "z": 6.3644304275512695
+                }
+            },
+            {
+                "name": "basket_1",
+                "prim_path": "/World/basket_1",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/basket_1.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -5.993474864959717,
+                "dimensions": {
+                    "x": 30.077702120406578,
+                    "y": 30.077802828409986,
+                    "z": 11.986949729919434
+                }
+            },
+            {
+                "name": "basket_2",
+                "prim_path": "/World/basket_2",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/basket_2.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -7.441863802596863,
+                "dimensions": {
+                    "x": 33.09999993804639,
+                    "y": 24.000000149952697,
+                    "z": 14.883727605193725
+                }
+            },
+            {
+                "name": "basket_3",
+                "prim_path": "/World/basket_3",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/basket_3.usda",
+                "scale": [
+                    0.007,
+                    0.007,
+                    0.007
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -11.374480786736395,
+                "dimensions": {
+                    "x": 28.865485597589434,
+                    "y": 47.50000394747786,
+                    "z": 22.748961573472904
+                }
+            },
+            {
+                "name": "bin",
+                "prim_path": "/World/bin",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/KLT_Bin/small_KLT_visual.usd",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.07317995696526478,
+                "dimensions": {
+                    "x": 0.19784278007224207,
+                    "y": 0.29663469362073613,
+                    "z": 0.14635992088309233
+                }
+            }
+        ],
+        "decoration": [
+            {
+                "name": "plant_1",
+                "prim_path": "/World/plant_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/plant_1.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -20.224501419067387,
+                "dimensions": {
+                    "x": 17.67345062214054,
+                    "y": 32.797919269477646,
+                    "z": 40.44900283813477
+                }
+            },
+            {
+                "name": "plant_2",
+                "prim_path": "/World/plant_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/plant_2.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -74.17613525390622,
+                "dimensions": {
+                    "x": 52.80376395882678,
+                    "y": 68.63086352717966,
+                    "z": 148.35227050781245
+                }
+            },
+            {
+                "name": "plant_3",
+                "prim_path": "/World/plant_3",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/plant_3.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -5.236859893798829,
+                "dimensions": {
+                    "x": 10.863800048828125,
+                    "y": 11.307219696044923,
+                    "z": 10.473719787597657
+                }
+            },
+            {
+                "name": "plant_4",
+                "prim_path": "/World/plant_4",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/plant_4.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -12.678804779052731,
+                "dimensions": {
+                    "x": 21.548650545425538,
+                    "y": 21.693604457546428,
+                    "z": 25.35760955810547
+                }
+            },
+            {
+                "name": "plant_5",
+                "prim_path": "/World/plant_5",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/plant_5.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -15.679553896862338,
+                "dimensions": {
+                    "x": 33.33321133942576,
+                    "y": 36.42984535460836,
+                    "z": 33.320624740192564
+                }
+            },
+            {
+                "name": "plant_6",
+                "prim_path": "/World/plant_6",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/plant_6.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -33.06770019531257,
+                "dimensions": {
+                    "x": 34.43330947691017,
+                    "y": 36.607533771749786,
+                    "z": 66.13540039062501
+                }
+            },
+            {
+                "name": "lamp_1",
+                "prim_path": "/World/lamp_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/lamp_1.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -24.75,
+                "dimensions": {
+                    "x": 25.824200439453126,
+                    "y": 25.824200439453126,
+                    "z": 49.5
+                }
+            },
+            {
+                "name": "blanket_1",
+                "prim_path": "/World/blanket_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/blanket_1.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.4999999999999998,
+                "dimensions": {
+                    "x": 186.6575887570329,
+                    "y": 254.14285792976042,
+                    "z": 0.9999999999999998
+                }
+            },
+            {
+                "name": "blanket_2",
+                "prim_path": "/World/blanket_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/blanket_2.usda",
+                "scale": [
+                    0.012,
+                    0.012,
+                    0.012
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.3649912587845451,
+                "dimensions": {
+                    "x": 179.443135859886,
+                    "y": 125.51889018534764,
+                    "z": 0.72998251756909
+                }
+            },
+            {
+                "name": "blanket_3",
+                "prim_path": "/World/blanket_3",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/blanket_3.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -1.0000000000000122,
+                "dimensions": {
+                    "x": 172.97357449531322,
+                    "y": 210.69377321719858,
+                    "z": 2.000000000000025
+                }
+            },
+            {
+                "name": "blanket_4",
+                "prim_path": "/World/blanket_4",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/blanket_4.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.25007300376892094,
+                "dimensions": {
+                    "x": 213.59512383301208,
+                    "y": 283.2719814712893,
+                    "z": 0.500146007537842
+                }
+            },
+            {
+                "name": "blanket_5",
+                "prim_path": "/World/blanket_5",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/blanket_5.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.5407499790191653,
+                "dimensions": {
+                    "x": 148.62831100807722,
+                    "y": 148.6282080028888,
+                    "z": 1.0814999580383307
+                }
+            }
+        ],
+        "furniture": [
+            {
+                "name": "shelf_1",
+                "prim_path": "/World/shelf_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/shelf_1.usda",
+                "scale": [
+                    0.0025,
+                    0.0025,
+                    0.0025
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.054203033447265625,
+                "dimensions": {
+                    "x": 63.93220138549805,
+                    "y": 191.16510009765625,
+                    "z": 78.12035751342773
+                }
+            },
+            {
+                "name": "shelf_2",
+                "prim_path": "/World/shelf_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/shelf_2.usda",
+                "scale": [
+                    0.0025,
+                    0.0025,
+                    0.0025
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": 0.0049300966784358025,
+                "dimensions": {
+                    "x": 139.99844360351562,
+                    "y": 45.99843978881836,
+                    "z": 45.995069903321564
+                }
+            },
+            {
+                "name": "sofa_1",
+                "prim_path": "/World/sofa_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/sofa_1.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -42.44949951171874,
+                "dimensions": {
+                    "x": 244.01800669022134,
+                    "y": 89.5796895708194,
+                    "z": 84.89899902343748
+                }
+            },
+            {
+                "name": "sofa_2",
+                "prim_path": "/World/sofa_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/sofa_2.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -38.44750061035158,
+                "dimensions": {
+                    "x": 161.12180183661974,
+                    "y": 316.9080110548264,
+                    "z": 76.89500122070316
+                }
+            },
+            {
+                "name": "chair_1",
+                "prim_path": "/World/chair_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/chair_1.usda",
+                "scale": [
+                    0.012,
+                    0.012,
+                    0.012
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -26.183387612235872,
+                "dimensions": {
+                    "x": 53.94480338433271,
+                    "y": 82.00041925248235,
+                    "z": 54.34497998230179
+                }
+            },
+            {
+                "name": "chair_2",
+                "prim_path": "/World/chair_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/chair_2.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -42.265399169921864,
+                "dimensions": {
+                    "x": 63.983002283629055,
+                    "y": 58.22361099070966,
+                    "z": 84.53079833984373
+                }
+            },
+            {
+                "name": "chair_3",
+                "prim_path": "/World/chair_3",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/chair_3.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865475,
+                        0.0,
+                        0.0,
+                        0.7071067811865476
+                    ]
+                ],
+                "z_min_offset": -35.15740051269531,
+                "dimensions": {
+                    "x": 66.59279785156251,
+                    "y": 81.92360229492188,
+                    "z": 70.31480102539062
+                }
+            },
+            {
+                "name": "cabinet_1",
+                "prim_path": "/World/cabinet_1",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_1.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.7071067811865475,
+                        0.0,
+                        0.0,
+                        0.7071067811865476
+                    ]
+                ],
+                "z_min_offset": -39.54030151367188,
+                "dimensions": {
+                    "x": 36.715788232672686,
+                    "y": 100.67113198793982,
+                    "z": 79.08060302734376
+                }
+            },
+            {
+                "name": "cabinet_2",
+                "prim_path": "/World/cabinet_2",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_2.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -44.25,
+                "dimensions": {
+                    "x": 26.4708510672819,
+                    "y": 110.77010547366115,
+                    "z": 88.5
+                }
+            },
+            {
+                "name": "cabinet_3",
+                "prim_path": "/World/cabinet_3",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_3.usda",
+                "scale": [
+                    0.015,
+                    0.015,
+                    0.015
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -21.69019927978515,
+                "dimensions": {
+                    "x": 47.97690215649398,
+                    "y": 47.176804098858746,
+                    "z": 43.38039855957032
+                }
+            },
+            {
+                "name": "cabinet_4",
+                "prim_path": "/World/cabinet_4",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_4.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "z_min_offset": -38.10729936435062,
+                "dimensions": {
+                    "x": 98.45121709071302,
+                    "y": 43.648098954456586,
+                    "z": 76.2145987287012
+                }
+            },
+            {
+                "name": "cabinet_5",
+                "prim_path": "/World/cabinet_5",
+                "usd_path": "/home/elm/projects/geomind_assets/layout/cabinet_5.usda",
+                "scale": [
+                    0.007,
+                    0.007,
+                    0.007
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -93.24676718999999,
+                "dimensions": {
+                    "x": 112.54609800000001,
+                    "y": 34.69294638,
+                    "z": 186.49353438000003
+                }
+            }
+        ],
+        "catch_object": [
+            {
+                "name": "plate_1",
+                "prim_path": "/World/plate_1",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/plate_1.usda",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -4.176132806351485,
+                "dimensions": {
+                    "x": 19.783573063080112,
+                    "y": 19.631033260673533,
+                    "z": 7.899160003662107
+                }
+            },
+            {
+                "name": "plate_2",
+                "prim_path": "/World/plate_2",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/plate_2.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.9958714604377656,
+                "dimensions": {
+                    "x": 25.20190082084835,
+                    "y": 25.20190082084835,
+                    "z": 1.991742920875554
+                }
+            },
+            {
+                "name": "blue_can",
+                "prim_path": "/World/blue_can",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/002_master_chef_can.usd",
+                "scale": [
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.05115464096170719,
+                "dimensions": {
+                    "x": 0.10240378627768632,
+                    "y": 0.1401770083566678,
+                    "z": 0.1023085189839783
+                }
+            },
+            {
+                "name": "red_can",
+                "prim_path": "/World/red_can",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/005_tomato_soup_can.usd",
+                "scale": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.03385759993215798,
+                "dimensions": {
+                    "x": 0.0676593789236386,
+                    "y": 0.10185499917294827,
+                    "z": 0.06771425811094955
+                }
+            },
+            {
+                "name": "cube_can",
+                "prim_path": "/World/cube_can",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/010_potted_meat_can.usd",
+                "scale": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.028800548863398667,
+                "dimensions": {
+                    "x": 0.1016467977692157,
+                    "y": 0.08354299835392087,
+                    "z": 0.057600928449609956
+                }
+            },
+            {
+                "name": "low_can",
+                "prim_path": "/World/low_can",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/007_tuna_fish_can.usd",
+                "scale": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.04276999854810537,
+                "dimensions": {
+                    "x": 0.08555899905654041,
+                    "y": 0.03353799983401595,
+                    "z": 0.08553999709621074
+                }
+            },
+            {
+                "name": "glass_can",
+                "prim_path": "/World/glass_can",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/glass_can.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -6.253642881298049,
+                "dimensions": {
+                    "x": 7.804507266519803,
+                    "y": 11.513604257910837,
+                    "z": 7.760877780526773
+                }
+            },
+            {
+                "name": "green_tin",
+                "prim_path": "/World/green_tin",
+                "usd_path": "/home/elm/projects/geomind_assets/objects/green_tin.usda",
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.015948057174682617,
+                "dimensions": {
+                    "x": 10.41434383392334,
+                    "y": 4.992250204086304,
+                    "z": 18.309839963912964
+                }
+            },
+            {
+                "name": "rubiks_cube",
+                "prim_path": "/World/rubiks_cube",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Rubiks_Cube/rubiks_cube.usd",
+                "scale": [
+                    0.7,
+                    0.7,
+                    0.7
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ],
+                    [
+                        0.0,
+                        0.7071067811865476,
+                        0.0,
+                        -0.7071067811865475
+                    ],
+                    [
+                        0.7071067811865476,
+                        0.0,
+                        0.0,
+                        -0.7071067811865475
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.03604898670206247,
+                "dimensions": {
+                    "x": 0.0720979778744732,
+                    "y": 0.07209797340412494,
+                    "z": 0.07209797116895081
+                }
+            },
+            {
+                "name": "red_box",
+                "prim_path": "/World/red_box",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/003_cracker_box.usd",
+                "scale": [
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.035899998339265604,
+                "dimensions": {
+                    "x": 0.16403600326099976,
+                    "y": 0.21343700885540962,
+                    "z": 0.07179999667853121
+                }
+            },
+            {
+                "name": "brown_box",
+                "prim_path": "/World/brown_box",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/008_pudding_box.usd",
+                "scale": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.7071067811865476,
+                        0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": -0.019235260056661208,
+                "dimensions": {
+                    "x": 0.11365433915732037,
+                    "y": 0.08981695928088662,
+                    "z": 0.038471370075537914
+                }
+            },
+            {
+                "name": "yellow_bottle",
+                "prim_path": "/World/yellow_bottle",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/006_mustard_bottle.usd",
+                "scale": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ]
+                ],
+                "z_min_offset": -0.02912422830333794,
+                "dimensions": {
+                    "x": 0.0960241582388246,
+                    "y": 0.1913009982265308,
+                    "z": 0.0582489382121949
+                }
+            },
+            {
+                "name": "white_bottle",
+                "prim_path": "/World/white_bottle",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/021_bleach_cleanser.usd",
+                "scale": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        -0.7071067811865475,
+                        0.7071067811865476
+                    ]
+                ],
+                "z_min_offset": -0.033849000174202004,
+                "dimensions": {
+                    "x": 0.10243299732134492,
+                    "y": 0.25058000004485237,
+                    "z": 0.06769899932222812
+                }
+            },
+            {
+                "name": "glass_cup",
+                "prim_path": "/World/glass_cup",
+                "usd_path": "/media/elm/files/nvidia_assets/Residential_NVD@10012/Assets/ArchVis/Residential/Kitchen/Kitchenware/Dinnerware/P_Glassware_Short.usd",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": 3.4028234663852886e+38,
+                "dimensions": {
+                    "x": -6.805646932770577e+38,
+                    "y": -6.805646932770577e+38,
+                    "z": -6.805646932770577e+38
+                }
+            },
+            {
+                "name": "banana",
+                "prim_path": "/World/banana",
+                "usd_path": "/home/elm/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/011_banana.usd",
+                "scale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": -0.037033509380366425,
+                "dimensions": {
+                    "x": 0.19717395341752564,
+                    "y": 0.03864932927528031,
+                    "z": 0.0740662891998971
+                }
+            },
+            {
+                "name": "apple",
+                "prim_path": "/World/apple",
+                "usd_path": "/media/elm/files/nvidia_assets/Residential_NVD@10012/Assets/ArchVis/Residential/Food/Fruit/Apple.usd",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": 3.4028234663852886e+38,
+                "dimensions": {
+                    "x": -6.805646932770577e+38,
+                    "y": -6.805646932770577e+38,
+                    "z": -6.805646932770577e+38
+                }
+            },
+            {
+                "name": "lime",
+                "prim_path": "/World/lime",
+                "usd_path": "/media/elm/files/nvidia_assets/Residential_NVD@10012/Assets/ArchVis/Residential/Food/Fruit/Lime01.usd",
+                "scale": [
+                    0.009,
+                    0.009,
+                    0.009
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": 3.4028234663852886e+38,
+                "dimensions": {
+                    "x": -6.805646932770577e+38,
+                    "y": -6.805646932770577e+38,
+                    "z": -6.805646932770577e+38
+                }
+            },
+            {
+                "name": "pomegranate",
+                "prim_path": "/World/pomegranate",
+                "usd_path": "/media/elm/files/nvidia_assets/Residential_NVD@10012/Assets/ArchVis/Residential/Food/Fruit/Pomegranate01.usd",
+                "scale": [
+                    0.0075,
+                    0.0075,
+                    0.0075
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "z_min_offset": 3.4028234663852886e+38,
+                "dimensions": {
+                    "x": -6.805646932770577e+38,
+                    "y": -6.805646932770577e+38,
+                    "z": -6.805646932770577e+38
+                }
+            },
+            {
+                "name": "avocado",
+                "prim_path": "/World/avocado",
+                "usd_path": "/media/elm/files/nvidia_assets/Residential_NVD@10012/Assets/ArchVis/Residential/Food/Fruit/Avocado01.usd",
+                "scale": [
+                    0.008,
+                    0.008,
+                    0.008
+                ],
+                "orientations": [
+                    [
+                        0.0,
+                        0.7071067811865476,
+                        0.0,
+                        -0.7071067811865475
+                    ]
+                ],
+                "z_min_offset": 3.4028234663852886e+38,
+                "dimensions": {
+                    "x": -6.805646932770577e+38,
+                    "y": -6.805646932770577e+38,
+                    "z": -6.805646932770577e+38
+                }
+            }
+        ]
+    }
+}

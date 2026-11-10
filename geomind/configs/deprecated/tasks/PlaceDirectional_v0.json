@@ -1,0 +1,43 @@
+{
+  "task_id": "PlaceDirectional",
+  "family": "RelationalGrounding",
+  "condition": "Base",
+  "layout": "Pair",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "place_directional",
+    "split": "base",
+    "variant": "base",
+    "task_version": "base",
+    "scene_id": 65,
+    "instruction": "Move to the block.",
+    "evaluator_key": "move_to_object_evaluator",
+    "semantic_module": "spatial_placement",
+    "skill_type": "move_to_object",
+    "phase": "phase1",
+    "legacy_task_id": "place_directional",
+    "annotation_layout_key": "place_directional_scene65_base",
+    "annotation_task_index": 0,
+    "object_set": "placement_objects",
+    "assets_group": "stage_65",
+    "tags": [
+      "spatial_placement",
+      "base"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "PlaceDirectional_v0",
+    "protocol_family": "spatial_placement",
+    "interface": "Standard"
+  },
+  "aliases": [
+    "PlaceDirectional_v0",
+    "place_directional",
+    "place_directional:base",
+    "RelationBaseBase_PlaceDirectional_v0"
+  ],
+  "status": "Deprecated",
+  "deprecation_reason": "Directional placement is retired from task registration and evaluation."
+}

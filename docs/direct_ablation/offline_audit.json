@@ -1,0 +1,814 @@
+{
+  "coverage": {
+    "checked": [
+      "direct config has an entry for every VLA task",
+      "GT target resolvable without execution_binding",
+      "canonical layout hash identical between base and direct",
+      "object set only ever gains direct_marker",
+      "colour uniqueness rule and expected colour agree"
+    ],
+    "not_checked": [
+      "runtime object poses inside IsaacLab (needs a simulator; see check_direct_pairing.py)",
+      "the instruction string actually sent to the policy server (see check_direct_instructions.py)",
+      "rendered appearance (see render_direct_frames.py)"
+    ]
+  },
+  "tasks": [
+    {
+      "task_index": 0,
+      "task_id": "BindingAugBase_AnchorDistanceVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "ball_nearest",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the sphere closest to the red cylinder.",
+      "direct_instruction": "Move the end effector near the green sphere.",
+      "recolored_object_id": "ball_nearest",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "2b1be51320b163ee8ec2b1e100b06da2111440b0c29e7eed1a531a18053e4d08",
+      "direct_layout_hash": "2b1be51320b163ee8ec2b1e100b06da2111440b0c29e7eed1a531a18053e4d08",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 5,
+      "notes": ""
+    },
+    {
+      "task_index": 1,
+      "task_id": "BindingBaseBase_AnchorDirectionVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "block_right",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube to the right of the blue bowl.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "block_right",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": true,
+      "marker": null,
+      "base_layout_hash": "77a26b79c62c4badecc93d8b54d21b578ab5739c814f1e7035b65fb83896a30b",
+      "direct_layout_hash": "77a26b79c62c4badecc93d8b54d21b578ab5739c814f1e7035b65fb83896a30b",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 5,
+      "notes": "Target carries an MDL wood material; the override must clear visual_material or the color change is invisible."
+    },
+    {
+      "task_index": 2,
+      "task_id": "ConstraintBaseBase_SelectExclusionUniqueVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "red_block_target",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the red cube closest to the blue plate that is not the leftmost.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "red_block_target",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "168bf6598bfe792d0bf05788f8b8e9c76da896049d6caec9f944069d9f3947d9",
+      "direct_layout_hash": "168bf6598bfe792d0bf05788f8b8e9c76da896049d6caec9f944069d9f3947d9",
+      "runtime_object_count_base": 6,
+      "runtime_object_count_direct": 6,
+      "notes": ""
+    },
+    {
+      "task_index": 3,
+      "task_id": "ConstraintBaseBase_SelectVisualSpatialVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "wood_cylinder_target",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the wood-grain cylinder to the right of the red block.",
+      "direct_instruction": "Move the end effector near the green cylinder.",
+      "recolored_object_id": "wood_cylinder_target",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": true,
+      "marker": null,
+      "base_layout_hash": "7ee2b8f3fbbcb25975aab991369357d926dbfaf1380db2806002b01196ac4d07",
+      "direct_layout_hash": "7ee2b8f3fbbcb25975aab991369357d926dbfaf1380db2806002b01196ac4d07",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 5,
+      "notes": "Target carries an MDL wood material; the override must clear visual_material."
+    },
+    {
+      "task_index": 4,
+      "task_id": "GeometricBaseBase_IsometricExtensionVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "held_target_block",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the cube. Place it on the red–blue line extension at equal spacing.",
+      "direct_instruction": "You already hold the cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.66,
+          0.02
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "goal_sequence[0].goals[0].xy",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "1bbf183ec949f4ecf6cdc59362ea71541e9ebe2800f24e597abec2d1c073381d",
+      "direct_layout_hash": "1bbf183ec949f4ecf6cdc59362ea71541e9ebe2800f24e597abec2d1c073381d",
+      "runtime_object_count_base": 3,
+      "runtime_object_count_direct": 4,
+      "notes": ""
+    },
+    {
+      "task_index": 5,
+      "task_id": "GeometricBaseBase_PerfectMidpointVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "held_target_block",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the cube. Place it midway between the red and blue reference cubes.",
+      "direct_instruction": "You already hold the cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.42,
+          0.02
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "goal_sequence[0].goals[0].xy",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "a24b791107fe522efe96dc9feec2413e6fde04aa68b55a67bd68487d34e1402a",
+      "direct_layout_hash": "a24b791107fe522efe96dc9feec2413e6fde04aa68b55a67bd68487d34e1402a",
+      "runtime_object_count_base": 3,
+      "runtime_object_count_direct": 4,
+      "notes": ""
+    },
+    {
+      "task_index": 6,
+      "task_id": "GeometricBaseBase_PointSymmetryVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "held_target_block",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the cube. Place it symmetrically to the blue cube about the red cube.",
+      "direct_instruction": "You already hold the cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.3,
+          -0.08
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "goal_sequence[0].goals[0].xy",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "3a79900f9948bfcb1a1da6549215aa448a822fdf8bd6a07bdbccc119b90458b6",
+      "direct_layout_hash": "3a79900f9948bfcb1a1da6549215aa448a822fdf8bd6a07bdbccc119b90458b6",
+      "runtime_object_count_base": 3,
+      "runtime_object_count_direct": 4,
+      "notes": ""
+    },
+    {
+      "task_index": 7,
+      "task_id": "GeometricBaseBase_SquareCompletionVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "held_target_block",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the fourth cube. Place it to complete a square with the three anchor cubes.",
+      "direct_instruction": "You already hold the fourth cube. Place it on the magenta marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.85,
+        0.1,
+        0.75
+      ],
+      "color_choice_reason": "green_already_used_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.48,
+          0.12
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.85,
+          0.1,
+          0.75
+        ],
+        "source": "goal_sequence[0].goals[0].xy",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "adab0495357bb3d8f47d8e0b112b6f50c1cdef1cff9b0f311c71b1ba7b1e5cd0",
+      "direct_layout_hash": "adab0495357bb3d8f47d8e0b112b6f50c1cdef1cff9b0f311c71b1ba7b1e5cd0",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 5,
+      "notes": "square_anchor_block_C is already green ([0.18, 0.66, 0.36]); the marker must be magenta to stay unique."
+    },
+    {
+      "task_index": 8,
+      "task_id": "GeometricBaseBase_TrendContinuationVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "held_target_block",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the next cube. Place it to continue the visible row/column pattern.",
+      "direct_instruction": "You already hold the next cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.61,
+          0.148
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "goal_sequence[0].goals[0].xy",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "78caa51664fb0da21a325efd2ef538bc4b11d471e76e137556d53709ffe15d20",
+      "direct_layout_hash": "78caa51664fb0da21a325efd2ef538bc4b11d471e76e137556d53709ffe15d20",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 5,
+      "notes": ""
+    },
+    {
+      "task_index": 9,
+      "task_id": "ReindexBaseBase_GridRowcolGroundingVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "grid_cell_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube at row 1, column 2.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "grid_cell_1",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "9e12a4477ed333f44466c3c0381cec2cff401d7541bbfe21c734788aaf3a1ed2",
+      "direct_layout_hash": "9e12a4477ed333f44466c3c0381cec2cff401d7541bbfe21c734788aaf3a1ed2",
+      "runtime_object_count_base": 6,
+      "runtime_object_count_direct": 6,
+      "notes": ""
+    },
+    {
+      "task_index": 10,
+      "task_id": "ReindexBaseBase_OrdinalInsertStaticVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "ordinal_static_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the second cube from the left.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "ordinal_static_1",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "4d273d3ce6ea0e9330c7e6e82e72ab19134086749f45f2c74f81dfaab993c321",
+      "direct_layout_hash": "4d273d3ce6ea0e9330c7e6e82e72ab19134086749f45f2c74f81dfaab993c321",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 5,
+      "notes": ""
+    },
+    {
+      "task_index": 11,
+      "task_id": "ReindexBaseBase_ReindexExtremeVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_only",
+      "gt_target_object_id": "reindex_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the leftmost cube after reordering.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "reindex_block_1",
+      "applied_color": [
+        0.18,
+        0.72,
+        0.36
+      ],
+      "color_choice_reason": "already_green_unique_no_change",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "cd0dcf31a2f240f6110121ac613fd6c976c553efd7a994e912fb6fce6fdcd27b",
+      "direct_layout_hash": "cd0dcf31a2f240f6110121ac613fd6c976c553efd7a994e912fb6fce6fdcd27b",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 4,
+      "notes": "Target is already the unique green object ([0.18, 0.72, 0.36]); the recolor is visually a no-op."
+    },
+    {
+      "task_index": 12,
+      "task_id": "ReindexBaseBase_ReindexInsertVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "insert_block_3",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the second-from-left cube.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "insert_block_3",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "9f82b4ba195d81965a51d3f6643dffc45a432b4f268d988f71f9ead326d976c2",
+      "direct_layout_hash": "9f82b4ba195d81965a51d3f6643dffc45a432b4f268d988f71f9ead326d976c2",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 4,
+      "notes": ""
+    },
+    {
+      "task_index": 13,
+      "task_id": "ReindexBaseBase_ReindexNeighborVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "right_neighbor_block",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube immediately left of the red cube.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "right_neighbor_block",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "b9751e65af82fdcbcf6b1c49f70c0edf78d5d458d860bd9f88d9a51d5d326452",
+      "direct_layout_hash": "b9751e65af82fdcbcf6b1c49f70c0edf78d5d458d860bd9f88d9a51d5d326452",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 5,
+      "notes": ""
+    },
+    {
+      "task_index": 14,
+      "task_id": "ReindexBaseBase_ReindexSubsetVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "red_subset_block_2",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the middle cube among the red cubes only.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "red_subset_block_2",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "17da4c88458b375d9c739e43027e3f12149d7c949f5af1a4d119f42f3aed7968",
+      "direct_layout_hash": "17da4c88458b375d9c739e43027e3f12149d7c949f5af1a4d119f42f3aed7968",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 5,
+      "notes": "Recoloring removes the target from the 'red subset'. Scoring uses gt_spec.target_object_id, so this is harmless; verified by check_direct_pairing.py."
+    },
+    {
+      "task_index": 15,
+      "task_id": "ReindexBaseSem_ReindexExtremeVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_only",
+      "gt_target_object_id": "reindex_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the leftmost cube after reordering.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "reindex_block_1",
+      "applied_color": [
+        0.18,
+        0.72,
+        0.36
+      ],
+      "color_choice_reason": "already_green_unique_no_change",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "cd0dcf31a2f240f6110121ac613fd6c976c553efd7a994e912fb6fce6fdcd27b",
+      "direct_layout_hash": "cd0dcf31a2f240f6110121ac613fd6c976c553efd7a994e912fb6fce6fdcd27b",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 4,
+      "notes": "Target is already the unique green object; the recolor is visually a no-op."
+    },
+    {
+      "task_index": 16,
+      "task_id": "ReindexBaseVisual_ReindexExtremeVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_only",
+      "gt_target_object_id": "reindex_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the leftmost cube after reordering.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "reindex_block_1",
+      "applied_color": [
+        0.18,
+        0.72,
+        0.36
+      ],
+      "color_choice_reason": "already_green_unique_no_change",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "cd0dcf31a2f240f6110121ac613fd6c976c553efd7a994e912fb6fce6fdcd27b",
+      "direct_layout_hash": "cd0dcf31a2f240f6110121ac613fd6c976c553efd7a994e912fb6fce6fdcd27b",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 4,
+      "notes": "Target is already the unique green object; the recolor is visually a no-op."
+    },
+    {
+      "task_index": 17,
+      "task_id": "RelationAugSem_PlaceDirectionalVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "movable_cube",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+      "direct_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.5700000000000001,
+          0.02
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "gt_spec.target_zone.center_offset_from_anchor(anchor=blue_plate)",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "eeb9b0b15fa97d4c70b046ea46c01ef05e53c750bf02ef61870700f571e6a321",
+      "direct_layout_hash": "eeb9b0b15fa97d4c70b046ea46c01ef05e53c750bf02ef61870700f571e6a321",
+      "runtime_object_count_base": 4,
+      "runtime_object_count_direct": 5,
+      "notes": ""
+    },
+    {
+      "task_index": 18,
+      "task_id": "RelationAugVisual_PlaceDirectionalVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "movable_cube",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+      "direct_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.5700000000000001,
+          0.02
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "gt_spec.target_zone.center_offset_from_anchor(anchor=blue_plate)",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "b242b7ea6af4a10249253e8ab5f90e48a7395eb5ffb9d647114eb723ba078edb",
+      "direct_layout_hash": "b242b7ea6af4a10249253e8ab5f90e48a7395eb5ffb9d647114eb723ba078edb",
+      "runtime_object_count_base": 5,
+      "runtime_object_count_direct": 6,
+      "notes": ""
+    },
+    {
+      "task_index": 19,
+      "task_id": "RelationBaseBase_PlaceDirectionalVla_v0",
+      "status": "ok",
+      "mechanism": "marker",
+      "gradient_tier": "instruction_plus_marker",
+      "gt_target_object_id": "movable_cube",
+      "gt_target_source": "protocol.target_object.object_id",
+      "base_instruction": "You already hold the wooden cube. Place it in the legal region in front of the blue plate.",
+      "direct_instruction": "You already hold the wooden cube. Place it on the green marker.",
+      "recolored_object_id": "",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": {
+        "name": "direct_marker",
+        "xy": [
+          0.65,
+          0.02
+        ],
+        "radius": 0.04,
+        "height": 0.002,
+        "color": [
+          0.05,
+          0.75,
+          0.2
+        ],
+        "source": "gt_spec.target_zone.center_offset_from_anchor(anchor=blue_plate)",
+        "collision_enabled": false,
+        "rigid_body_enabled": false
+      },
+      "base_layout_hash": "7fcbecabe0cec9efb418fd2b8b02fe06d93a9debf8698adaa42fbe602cbcfbd2",
+      "direct_layout_hash": "7fcbecabe0cec9efb418fd2b8b02fe06d93a9debf8698adaa42fbe602cbcfbd2",
+      "runtime_object_count_base": 2,
+      "runtime_object_count_direct": 3,
+      "notes": ""
+    },
+    {
+      "task_index": 20,
+      "task_id": "RelationBaseBase_PlaceInsideVla_v0",
+      "status": "ok",
+      "mechanism": "none",
+      "gradient_tier": "unchanged",
+      "gt_target_object_id": "movable_cube",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "You already hold the cube. Put it fully inside the blue box.",
+      "direct_instruction": "You already hold the cube. Put it fully inside the blue box.",
+      "recolored_object_id": "",
+      "applied_color": null,
+      "color_choice_reason": "",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "9c47eb53c88c5efbaca058f2af00f6ca93103c5b7e8958f9ae46f18c201742cd",
+      "direct_layout_hash": "9c47eb53c88c5efbaca058f2af00f6ca93103c5b7e8958f9ae46f18c201742cd",
+      "runtime_object_count_base": 6,
+      "runtime_object_count_direct": 6,
+      "notes": "Instruction is already a direct reference; nothing changes."
+    },
+    {
+      "task_index": 21,
+      "task_id": "RelationBaseBase_PlaceOnTopVla_v0",
+      "status": "ok",
+      "mechanism": "none",
+      "gradient_tier": "unchanged",
+      "gt_target_object_id": "movable_cube",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+      "direct_instruction": "You already hold the cube. Release it onto the top surface of the red wooden block so it rests stably.",
+      "recolored_object_id": "",
+      "applied_color": null,
+      "color_choice_reason": "",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "2010510d4f85e0eaea84528dc1dac2a8278a217dada15da1fa06c43b272a8403",
+      "direct_layout_hash": "2010510d4f85e0eaea84528dc1dac2a8278a217dada15da1fa06c43b272a8403",
+      "runtime_object_count_base": 2,
+      "runtime_object_count_direct": 2,
+      "notes": "Instruction is already a direct reference; nothing changes."
+    },
+    {
+      "task_index": 22,
+      "task_id": "TrackBaseBase_TrackClutterVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "identity_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube that started in the middle after clutter settles.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "identity_block_1",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "2ec2f006fc0b1bba823ec713c574efe713da1438a545e730785a2e49be77499a",
+      "direct_layout_hash": "2ec2f006fc0b1bba823ec713c574efe713da1438a545e730785a2e49be77499a",
+      "runtime_object_count_base": 7,
+      "runtime_object_count_direct": 7,
+      "notes": ""
+    },
+    {
+      "task_index": 23,
+      "task_id": "TrackBaseBase_TrackMultiVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "identity_block_0",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube that started at the far left.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "identity_block_0",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "665d94f8d337612260cc547b76fa7df20308e16c15dac68e4c21eaed2e3675fc",
+      "direct_layout_hash": "665d94f8d337612260cc547b76fa7df20308e16c15dac68e4c21eaed2e3675fc",
+      "runtime_object_count_base": 6,
+      "runtime_object_count_direct": 6,
+      "notes": ""
+    },
+    {
+      "task_index": 24,
+      "task_id": "TrackBaseBase_TrackSingleVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "identity_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube that started in the middle.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "identity_block_1",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "bb4a9c8c873da56791a4cdea1b6ed086d76052de69e2dafc60298a8a17bddd3a",
+      "direct_layout_hash": "bb4a9c8c873da56791a4cdea1b6ed086d76052de69e2dafc60298a8a17bddd3a",
+      "runtime_object_count_base": 3,
+      "runtime_object_count_direct": 3,
+      "notes": ""
+    },
+    {
+      "task_index": 25,
+      "task_id": "TrackBaseSem_TrackSingleVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "identity_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube that started in the middle.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "identity_block_1",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "bb4a9c8c873da56791a4cdea1b6ed086d76052de69e2dafc60298a8a17bddd3a",
+      "direct_layout_hash": "bb4a9c8c873da56791a4cdea1b6ed086d76052de69e2dafc60298a8a17bddd3a",
+      "runtime_object_count_base": 3,
+      "runtime_object_count_direct": 3,
+      "notes": ""
+    },
+    {
+      "task_index": 26,
+      "task_id": "TrackBaseVisual_TrackSingleVla_v0",
+      "status": "ok",
+      "mechanism": "recolor",
+      "gradient_tier": "instruction_plus_recolor",
+      "gt_target_object_id": "identity_block_1",
+      "gt_target_source": "gt_spec.target_object_id",
+      "base_instruction": "Move the end effector near the cube that started in the middle.",
+      "direct_instruction": "Move the end effector near the green cube.",
+      "recolored_object_id": "identity_block_1",
+      "applied_color": [
+        0.05,
+        0.75,
+        0.2
+      ],
+      "color_choice_reason": "green_unused_in_scene",
+      "cleared_visual_material": false,
+      "marker": null,
+      "base_layout_hash": "bb4a9c8c873da56791a4cdea1b6ed086d76052de69e2dafc60298a8a17bddd3a",
+      "direct_layout_hash": "bb4a9c8c873da56791a4cdea1b6ed086d76052de69e2dafc60298a8a17bddd3a",
+      "runtime_object_count_base": 3,
+      "runtime_object_count_direct": 3,
+      "notes": ""
+    }
+  ],
+  "failures": []
+}

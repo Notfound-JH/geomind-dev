@@ -1,0 +1,7 @@
+{
+  "name": "aug_suite",
+  "group": "aug",
+  "task_ids": [
+    "SelectByDistance_v0"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "ExtendEqualSpacing_v0",
+  "task_id": "ExtendEqualSpacing",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "ExtendEqualSpacing_v0",
+    "isometric_extension",
+    "IsometricExtension_v0",
+    "GeometricBaseBase_ExtendEqualSpacing_v0",
+    "GeometricBaseBase_IsometricExtension_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "geometric_inference_isometric_extension_line_2",
+  "release_version": "1.0"
+}

@@ -1,0 +1,7 @@
+method,paradigm,base_avg,semantic_success,semantic_drop,visual_success,visual_drop,execution_success,execution_drop,aug_avg,worst_drop
+OpenVLA,vla,19.2,25.0,+0.0,16.7,-8.3,50.0,+50.0,29.8,-8.3
+pi_0,vla,17.4,37.5,+12.5,25.0,+0.0,,,23.3,+0.0
+pi_0_5,vla,17.4,37.5,+12.5,25.0,+0.0,,,23.3,+0.0
+SpatialVLA,spatial_vla,12.6,16.7,+0.0,16.7,+0.0,75.0,+75.0,31.0,+0.0
+InternVLA-M1,spatial_vla,24.7,8.3,+8.3,8.3,+8.3,75.0,+75.0,28.6,+8.3
+Spatial-Forcing,spatial_vla,23.1,33.3,-8.3,41.7,+0.0,0.0,+0.0,35.7,-8.3

@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "episode_id": "SelectByGridIndex_v0",
+  "task_id": "SelectByGridIndex",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Standard",
+  "version": 0,
+  "parameters": {},
+  "aliases": [
+    "SelectByGridIndex_v0",
+    "grid_rowcol_grounding",
+    "GridRowcolGrounding_v0",
+    "ReindexBaseBase_SelectByGridIndex_v0",
+    "ReindexBaseBase_GridRowcolGrounding_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "grid_rowcol_grounding_grid_2x3_base",
+  "release_version": "1.0"
+}

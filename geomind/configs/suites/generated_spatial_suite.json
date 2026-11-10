@@ -1,0 +1,143 @@
+{
+  "suite_id": "generated_spatial_suite",
+  "backend": "semantic",
+  "generator_hash": "e44623faf5967599d25579d76a47215ec99aa3cac07ade51cd6c4833ccff9c25",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "registration_before_generation": {
+    "DetectSceneChange": {
+      "registration_id": "DetectSceneChange_v0",
+      "physical_status": "placeholder",
+      "capabilities": {
+        "task_id": "DetectSceneChange",
+        "domain": "SpatialMemory",
+        "semantic": true,
+        "isaaclab": true,
+        "isaaclab_legacy": false,
+        "isaaclab_episode": true
+      }
+    },
+    "ProjectOntoLine": {
+      "registration_id": "ProjectOntoLine_v0",
+      "physical_status": "placeholder",
+      "capabilities": {
+        "task_id": "ProjectOntoLine",
+        "domain": "SpatialReasoning",
+        "semantic": true,
+        "isaaclab": true,
+        "isaaclab_legacy": false,
+        "isaaclab_episode": true
+      }
+    },
+    "ReflectAcrossLine": {
+      "registration_id": "ReflectAcrossLine_v0",
+      "physical_status": "placeholder",
+      "capabilities": {
+        "task_id": "ReflectAcrossLine",
+        "domain": "SpatialReasoning",
+        "semantic": true,
+        "isaaclab": true,
+        "isaaclab_legacy": false,
+        "isaaclab_episode": true
+      }
+    }
+  },
+  "cases": [
+    {
+      "episode_id": "ProjectOntoLine_v0",
+      "task_id": "ProjectOntoLine",
+      "expected_answer": {
+        "position_m": [
+          -0.009917137762001685,
+          -0.021180414547081784,
+          0.2007392679365108
+        ],
+        "frame": "table"
+      }
+    },
+    {
+      "episode_id": "ReflectAcrossLine_v0",
+      "task_id": "ReflectAcrossLine",
+      "expected_answer": {
+        "position_m": [
+          0.04812104836765743,
+          0.01795485025052812,
+          0.2007392679365108
+        ],
+        "frame": "table"
+      }
+    },
+    {
+      "episode_id": "DetectSceneChange_v0",
+      "task_id": "DetectSceneChange",
+      "expected_answer": {
+        "object_id": "block_1"
+      }
+    },
+    {
+      "episode_id": "ProjectOntoLine_s1_v0",
+      "task_id": "ProjectOntoLine",
+      "expected_answer": {
+        "position_m": [
+          0.027310614120352548,
+          -0.02344312894279876,
+          0.1995991904056472
+        ],
+        "frame": "table"
+      }
+    },
+    {
+      "episode_id": "ReflectAcrossLine_s1_v0",
+      "task_id": "ReflectAcrossLine",
+      "expected_answer": {
+        "position_m": [
+          -0.025011826270536348,
+          0.023058077832314932,
+          0.1995991904056472
+        ],
+        "frame": "table"
+      }
+    },
+    {
+      "episode_id": "DetectSceneChange_s1_v0",
+      "task_id": "DetectSceneChange",
+      "expected_answer": {
+        "object_id": "block_1"
+      }
+    },
+    {
+      "episode_id": "ProjectOntoLine_s2_v0",
+      "task_id": "ProjectOntoLine",
+      "expected_answer": {
+        "position_m": [
+          -0.1410760407600064,
+          -0.014090188543133132,
+          0.237645347168396
+        ],
+        "frame": "table"
+      }
+    },
+    {
+      "episode_id": "ReflectAcrossLine_s2_v0",
+      "task_id": "ReflectAcrossLine",
+      "expected_answer": {
+        "position_m": [
+          -0.1219839069025073,
+          0.05325586126505783,
+          0.237645347168396
+        ],
+        "frame": "table"
+      }
+    },
+    {
+      "episode_id": "DetectSceneChange_s2_v0",
+      "task_id": "DetectSceneChange",
+      "expected_answer": {
+        "object_id": "block_2"
+      }
+    }
+  ]
+}

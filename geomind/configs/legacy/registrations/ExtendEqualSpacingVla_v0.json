@@ -1,0 +1,44 @@
+{
+  "task_id": "ExtendEqualSpacing",
+  "family": "GeometricInference",
+  "condition": "Base",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "isometric_extension",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "You already hold the cube. Place it on the red–blue line extension at equal spacing.",
+    "semantic_module": "structure_inference",
+    "phase": "phase2",
+    "annotation_layout_key": "geometric_inference_isometric_extension_line_2_vla",
+    "annotation_task_index": 0,
+    "object_set": "",
+    "assets_group": "",
+    "tags": [
+      "explicit_rule_extrapolation",
+      "base",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry",
+      "registered_from": "scripts/DEBUG_SCRIPTS.md",
+      "base_level_registration": true,
+      "canonical_task_id_for_base_level": "isometric_extension"
+    },
+    "registration_id": "ExtendEqualSpacingVla_v0",
+    "protocol_family": "explicit_rule_extrapolation",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "ExtendEqualSpacingVla_v0",
+    "isometric_extension",
+    "isometric_extension:vla",
+    "IsometricExtensionVla_v0",
+    "GeometricBaseBase_ExtendEqualSpacingVla_v0",
+    "GeometricBaseBase_IsometricExtensionVla_v0"
+  ]
+}

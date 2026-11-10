@@ -1,0 +1,41 @@
+{
+  "task_id": "TrackMovingObject",
+  "family": "IdentityTracking",
+  "condition": "Visual",
+  "layout": "Line",
+  "version": 0,
+  "schema_version": 2,
+  "runtime": {
+    "canonical_task_id": "track_single",
+    "split": "base",
+    "variant": "vla",
+    "task_version": "vla",
+    "scene_id": 65,
+    "instruction": "Move the end effector near the cube that started in the middle.",
+    "semantic_module": "identity_tracking",
+    "phase": "phase1",
+    "annotation_layout_key": "historical_identity_blocks_line_3_vla",
+    "annotation_task_index": 0,
+    "object_set": "runtime_blocks",
+    "assets_group": "stage_65",
+    "tags": [
+      "historical_identity_tracking",
+      "visual",
+      "vla"
+    ],
+    "meta": {
+      "source_registry": "geomind_lab.mimic.utils.task_metadata_registry"
+    },
+    "registration_id": "TrackMovingObjectVisualVla_v0",
+    "protocol_family": "historical_identity_tracking",
+    "interface": "Vla"
+  },
+  "aliases": [
+    "TrackMovingObjectVisualVla_v0",
+    "track_single:visual",
+    "track_single:vla",
+    "TrackSingleVisualVla_v0",
+    "TrackBaseVisual_TrackMovingObjectVla_v0",
+    "TrackBaseVisual_TrackSingleVla_v0"
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEOMIND Research"
+  short_description: "选择场景与机械臂，求解任务GT并验证真实动作和研究证据"
+  default_prompt: "使用 $geomind-research 核对任务意图、场景和本体能力，完成已授权的组装、GT求解与最小动作验证，保存实际录像、原始状态和验收边界。"

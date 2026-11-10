@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "episode_id": "UpdateObjectOrderVla_v0",
+  "task_id": "UpdateObjectOrder",
+  "execution": "LegacyIsaacLab",
+  "condition": "Base",
+  "interface": "Vla",
+  "version": 0,
+  "parameters": {
+    "index": 2,
+    "from": "Left",
+    "reference_time": "Current",
+    "history_mode": "Deferred"
+  },
+  "aliases": [
+    "ReindexInsertVla_v0",
+    "reindex_insert",
+    "reindex_insert:vla",
+    "ReindexBaseBase_ReindexInsertVla_v0"
+  ],
+  "seed": 0,
+  "scene_id": "scene_65",
+  "layout_id": "state_reindex_insert_blocks_line_4_vla",
+  "release_version": "1.0"
+}
