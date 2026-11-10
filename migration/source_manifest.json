@@ -1,8 +1,8 @@
 {
   "source_root_redacted": "current_project",
   "destination": "isolated-publication-tree",
-  "files": 964,
-  "total_bytes": 9974147,
+  "files": 965,
+  "total_bytes": 9991269,
   "source_dirs": [
     "geomind",
     "geomind_lab",
@@ -58,8 +58,8 @@
     },
     {
       "path": "ASSETS.md",
-      "size_bytes": 3610,
-      "sha256": "8359aec119f7830d83eeda4f2e2a8b0c2a91b67192774e7552baf55feb6d8ab9"
+      "size_bytes": 5599,
+      "sha256": "6c99760062883d4dfc98b89e4be6daa8f5ea08b30d6adf01e5b589fe98343764"
     },
     {
       "path": "DEVELOPMENT_CONTEXT.md",
@@ -143,8 +143,8 @@
     },
     {
       "path": "configs/reproduction/canonical27_verified.json",
-      "size_bytes": 1066381,
-      "sha256": "723fc530752853f5cffb729ba400896af77905183ded8f49b7fbbfd4e3e0ef70"
+      "size_bytes": 1068162,
+      "sha256": "792b7e23a15a8829e0440291480d9e2a87d71f274626fd834266f276dcdea4ce"
     },
     {
       "path": "configs/research_requests/aug.json",
@@ -323,8 +323,8 @@
     },
     {
       "path": "docs/installation_zh.md",
-      "size_bytes": 10542,
-      "sha256": "a616e253459aa17b046af945fd8fced085d522b3a36f104508a0c0fb5fee0c94"
+      "size_bytes": 10775,
+      "sha256": "d960db1014adb1afdf02def5d689c289cb11ad3d629892ffd68e7191d84522f3"
     },
     {
       "path": "docs/interactive_assets_and_layouts_zh.md",
@@ -2283,8 +2283,8 @@
     },
     {
       "path": "geomind/scene_assembly/robot_execution.py",
-      "size_bytes": 6611,
-      "sha256": "e860393630b9f92714ee6d8f281918461a920fb4669ac0f905977f3e2525525b"
+      "size_bytes": 8543,
+      "sha256": "bffd57bb8714bd8bd0adedf9bca2e666df1d87f7a19fe0ddae68aee77939729c"
     },
     {
       "path": "geomind/scene_assembly/robot_task_config.py",
@@ -2463,8 +2463,8 @@
     },
     {
       "path": "geomind/tools/audit_assembled_robot.py",
-      "size_bytes": 39492,
-      "sha256": "05ab483848c8ad6ccf5e74cf9d8954cc2ca1571a12ffba577d5b8a5ec380c660"
+      "size_bytes": 40507,
+      "sha256": "2b594816db33f9efbe4d6bfe2878f4eb8d8c5a38565bb9ac87bbc1c070e5aafc"
     },
     {
       "path": "geomind/tools/audit_changed_lift.py",
@@ -3223,8 +3223,8 @@
     },
     {
       "path": "scene_construction /configs/robot_config.py",
-      "size_bytes": 4210,
-      "sha256": "dc3d52588decb62e615d65f4af66294f8b369ae10ac3cf2087b3bb46c8eb8dd4"
+      "size_bytes": 4245,
+      "sha256": "7fa556c706968eb14580b39929913143d04bc31808d4cee1f55c415944acfd4c"
     },
     {
       "path": "scene_construction /configs/stage_config.py",
@@ -3378,8 +3378,8 @@
     },
     {
       "path": "scene_construction /random_sampler.py",
-      "size_bytes": 14680,
-      "sha256": "56b86686174d3dd94d5b8055a0d2a9a307c1460b314ab5e2bb182037b675c147"
+      "size_bytes": 14719,
+      "sha256": "93135f49abc418f6aa0e46fe3ae07e7886bca59750b21d627471461440ba7dd8"
     },
     {
       "path": "scene_construction /scene_utils/add_collision.py",
@@ -3528,8 +3528,8 @@
     },
     {
       "path": "scripts/check_portable_install.py",
-      "size_bytes": 8614,
-      "sha256": "14fc014edc573c1c36c8abd22e49724826a9e4984d79f46bead45a8b23886e9c"
+      "size_bytes": 11160,
+      "sha256": "0583874f54aaff4b9f82d7c99b36a4ae882a1cfd2fb8aa0aa2b64642dc761485"
     },
     {
       "path": "scripts/clear_scene_atlas_tabletops.py",
@@ -4083,8 +4083,8 @@
     },
     {
       "path": "scripts/reproduce_canonical27.py",
-      "size_bytes": 8845,
-      "sha256": "26dfe752cdcbaf6c5f050f3455157c8d0fbebab91df589858b80f40d993a9e6b"
+      "size_bytes": 9467,
+      "sha256": "edcad8957c2ae690e3305c17892ee309ad1b13e62da4d5bca8e10c5f4eddef5f"
     },
     {
       "path": "scripts/review_run_eval_openvla_all.sh",
@@ -4403,8 +4403,8 @@
     },
     {
       "path": "source_export_policy.json",
-      "size_bytes": 2835,
-      "sha256": "be16b5207065859cac2f08b5286acca49f4b02d12b901ae87a3f6a17c6d56363"
+      "size_bytes": 3001,
+      "sha256": "1f14b380ac5df92d9d21d05ebb399531caf37b5dc318ae1abc0a1cb350f52cd2"
     },
     {
       "path": "tests/render_static_arrangement_scene.py",
@@ -4715,6 +4715,11 @@
       "path": "tests/test_research_projection.py",
       "size_bytes": 1717,
       "sha256": "cf354444c2fe4eb2084ec5286dbb3dbdd3506ac63dc880c851d16b3a9fdda803"
+    },
+    {
+      "path": "tests/test_robot_audit_environment.py",
+      "size_bytes": 6764,
+      "sha256": "41548f18ca85aa0f571bc49a2d4a2b74b2caf6c18d0f0c4b4829f1582558741d"
     },
     {
       "path": "tests/test_robotiq_mount_filter.py",

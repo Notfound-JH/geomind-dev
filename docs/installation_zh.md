@@ -107,7 +107,7 @@ PYTHONPATH=tests python -m unittest \
   tests.test_native_registration_routing -q
 ```
 
-preflight 检查文件、版本、固定框架源、模块路径和资产 manifest，不启动 Isaac Sim，不执行机器人动作。完整历史测试集还包含旧接口测试；运行并保存其结果，不把旧通过数复制到新主机，也不为包装修改任务答案。
+preflight 检查文件、版本、固定框架源、模块路径和资产 manifest。`--simulation` 还会在所选 SDK Python 的 USD-only 环境中运行一个最长 30 秒的 CPU 探针，只导入 `pxr.Usd` 并返回版本，确认独立审计能找到 USD 库；不导入 Kit/App，不启动仿真或执行机器人动作。普通 CPU 模式不运行该探针。完整历史测试集还包含旧接口测试；运行并保存其结果，不把旧通过数复制到新主机，也不为包装修改任务答案。
 
 ## 6. 真正的 GPU / 资产 / 动作 smoke
 

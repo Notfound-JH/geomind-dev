@@ -15,12 +15,57 @@ import subprocess
 import sys
 
 
+def probe_cpu_usd(timeout_s: int = 30) -> dict:
+    """Check audit-time USD imports in a bounded child, without a Kit app."""
+    detail = {'scope': 'CPU pxr.Usd import using the selected SDK USD-only environment',
+              'timeout_s': timeout_s, 'simulation_started': False}
+    try:
+        from geomind.tools.assemble_scene import _python_environment
+        python, environment = _python_environment(usd_only=True)
+        detail['selected_interpreter'] = python
+        code = (
+            "import json,sys\n"
+            "from pxr import Usd\n"
+            "modules=tuple(sys.modules)\n"
+            "print('GEOMIND_USD_PROBE:'+json.dumps({"
+            "'usd_version':list(Usd.GetVersion()),"
+            "'kit_imported':any(n=='omni.kit' or n.startswith('omni.kit.') for n in modules),"
+            "'simulation_app_imported':any(n.startswith(('isaacsim.simulation_app',"
+            "'omni.isaac.kit','isaaclab.app')) for n in modules)}))\n"
+        )
+        result = subprocess.run([python, '-c', code], env=environment,
+                                capture_output=True, text=True, timeout=timeout_s)
+        detail['returncode'] = result.returncode
+        if result.returncode:
+            detail.update(passed=False, failure='Selected USD-only interpreter cannot import pxr.Usd',
+                          stderr=result.stderr[-4000:])
+            return detail
+        prefix = 'GEOMIND_USD_PROBE:'
+        lines = [line[len(prefix):] for line in result.stdout.splitlines() if line.startswith(prefix)]
+        if len(lines) != 1:
+            raise ValueError('USD probe did not return one version record')
+        payload = json.loads(lines[0])
+        detail.update(payload)
+        version = payload.get('usd_version')
+        detail['passed'] = bool(isinstance(version, list) and version
+            and all(type(value) is int for value in version)
+            and payload.get('kit_imported') is False
+            and payload.get('simulation_app_imported') is False)
+        if not detail['passed']:
+            detail['failure'] = 'USD version or the no-Kit/no-App import boundary did not pass'
+    except subprocess.TimeoutExpired:
+        detail.update(passed=False, failure=f'CPU USD probe timed out after {timeout_s} seconds')
+    except (ImportError, OSError, ValueError, KeyError, TypeError) as exc:
+        detail.update(passed=False, failure=f'{type(exc).__name__}: {exc}')
+    return detail
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--repo-root', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--assets-root', type=Path)
     parser.add_argument('--framework-manifest', type=Path, help='Override the pinned source manifest for an explicit audit')
-    parser.add_argument('--simulation', action='store_true', help='Check the selected simulation interpreter and pinned framework.')
+    parser.add_argument('--simulation', action='store_true', help='Check the selected interpreter/framework and bounded CPU USD import.')
     parser.add_argument('--deep-assets', action='store_true', help='Hash every manifest file; may read tens of GB.')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()
@@ -90,6 +135,8 @@ def main() -> int:
                 path = framework / relative
                 matched = path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest() == expected
                 check('framework-runtime:' + relative, matched, relative)
+        usd_probe = probe_cpu_usd()
+        check('simulation-usd-cpu-probe', usd_probe['passed'], usd_probe)
 
     assets = args.assets_root or (Path(os.environ['GEOMIND_ASSET_BUNDLE_ROOT'])
                                  if os.environ.get('GEOMIND_ASSET_BUNDLE_ROOT') else None)

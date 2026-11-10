@@ -8,7 +8,7 @@ from isaacsim.robot_motion.motion_generation.interface_config_loader import (
     load_supported_lula_kinematics_solver_config,
     load_supported_motion_policy_config,
 )
-from isaacsim.storage.native import get_assets_root_path
+from geomind_lab.utils.portable_paths import isaac_assets_root, resolve_asset_path
 
 from siferbench.robots import FR3
 from siferbench.controllers.fr3controller.fr3pickplacecontroller import FR3PickPlaceController
@@ -78,8 +78,7 @@ class RobotConfig:
 
 
 def _build_fr3_config(stage_units: float, is_dict: bool = True) -> Dict[str, Any]:
-    assets_root = Path(get_assets_root_path())
-    usd_path = assets_root / "Isaac" / "Robots" / "Franka" / "FR3" / "fr3.usd"
+    usd_path = Path(resolve_asset_path(isaac_assets_root() / "Assets/Isaac/4.5/Isaac/Robots/Franka/FR3/fr3.usd", require_exists=True))
     robotconfig = RobotConfig(
             robot_class=FR3,
             controller=ControllerConfig(controller_class=FR3PickPlaceController),

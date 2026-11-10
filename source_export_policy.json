@@ -89,5 +89,6 @@
     "Relevant CPU tests and asset relocation smoke",
     "GitHub file size limit checked; no asset/SDK/outputs blobs",
     "Final archive hash and commit recorded"
-  ]
+  ],
+  "virtual_environment_exclusion_scope": "Root virtual-environment directories only; geomind/core/envs and geomind_lab/mimic/envs are required source and included."
 }

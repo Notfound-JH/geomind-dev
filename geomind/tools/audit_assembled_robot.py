@@ -4,6 +4,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -526,6 +528,24 @@ def audit(root,output):
     return result
 
 
-if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--run',type=Path,required=True)
-    args=parser.parse_args();print(json.dumps(audit(args.run/'robot_configs',args.run/'robot_physics'),ensure_ascii=False,indent=2))
+def main(argv=None):
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--run',type=Path,required=True)
+    parser.add_argument('--isaac-python',help='Selected IsaacSim5.1 interpreter; defaults to GEOMIND_ISAAC_PYTHON or the active SDK environment')
+    args=parser.parse_args(argv)
+    if os.environ.get('GEOMIND_OFFLINE_AUDIT_USD_CHILD')!='1':
+        from geomind.tools.assemble_scene import _python_environment
+        python,environment=_python_environment(args.isaac_python,usd_only=True)
+        environment['GEOMIND_OFFLINE_AUDIT_USD_CHILD']='1'
+        environment['CUDA_VISIBLE_DEVICES']=''
+        command=[python,'-m','geomind.tools.audit_assembled_robot','--run',str(args.run.resolve())]
+        try:
+            return subprocess.run(command,cwd=Path(__file__).resolve().parents[2],env=environment,timeout=120).returncode
+        except subprocess.TimeoutExpired:
+            parser.exit(1,'Offline CPU robot audit exceeded 120 seconds; no physical re-execution was performed.\n')
+    result=audit(args.run/'robot_configs',args.run/'robot_physics')
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+    return 0 if result.get('passed') is True else 1
+
+
+if __name__=='__main__':raise SystemExit(main())

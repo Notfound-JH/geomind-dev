@@ -22,7 +22,8 @@
   "cases": [
     {
       "task_id": "CompleteSquare_v0",
-      "canonical_task_id": "square_completion",
+      "source_solver_task_id": "square_completion",
+      "canonical_task_id": "CompleteSquare",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_v2/CompleteSquare_v0",
       "validation_status": "validated_historical_saved_version",
@@ -851,7 +852,8 @@
     },
     {
       "task_id": "ContinueSpatialPattern_v0",
-      "canonical_task_id": "trend_continuation",
+      "source_solver_task_id": "trend_continuation",
+      "canonical_task_id": "ContinueSpatialPattern",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_v2/ContinueSpatialPattern_v0",
       "validation_status": "validated_historical_saved_version",
@@ -1685,7 +1687,8 @@
     },
     {
       "task_id": "ExtendEqualSpacing_v0",
-      "canonical_task_id": "isometric_extension",
+      "source_solver_task_id": "isometric_extension",
+      "canonical_task_id": "ExtendEqualSpacing",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_spacing_control240_v1/ExtendEqualSpacing_v0",
       "validation_status": "validated_historical_saved_version",
@@ -2534,7 +2537,8 @@
     },
     {
       "task_id": "InferMidpoint_v0",
-      "canonical_task_id": "perfect_midpoint",
+      "source_solver_task_id": "perfect_midpoint",
+      "canonical_task_id": "InferMidpoint",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v3/InferMidpoint_v0",
       "validation_status": "validated_historical_saved_version",
@@ -3373,7 +3377,8 @@
     },
     {
       "task_id": "InferPointSymmetry_v0",
-      "canonical_task_id": "point_symmetry",
+      "source_solver_task_id": "point_symmetry",
+      "canonical_task_id": "InferPointSymmetry",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_v2/InferPointSymmetry_v0",
       "validation_status": "validated_historical_saved_version",
@@ -4209,7 +4214,8 @@
     },
     {
       "task_id": "PlaceByTopologyInside_v0",
-      "canonical_task_id": "place_inside",
+      "source_solver_task_id": "place_inside",
+      "canonical_task_id": "PlaceByTopology",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v3/PlaceByTopologyInside_v0",
       "validation_status": "validated_historical_saved_version",
@@ -5054,7 +5060,8 @@
     },
     {
       "task_id": "PlaceByTopologyOnTop_v0",
-      "canonical_task_id": "place_on_top",
+      "source_solver_task_id": "place_on_top",
+      "canonical_task_id": "PlaceByTopology",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_contact240_v2/PlaceByTopologyOnTop_v0",
       "validation_status": "validated_historical_saved_version",
@@ -5895,7 +5902,8 @@
     },
     {
       "task_id": "SelectAfterExclusion_v0",
-      "canonical_task_id": "select_exclusion_unique",
+      "source_solver_task_id": "select_exclusion_unique",
+      "canonical_task_id": "SelectAfterExclusion",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_v2/SelectAfterExclusion_v0",
       "validation_status": "validated_historical_saved_version",
@@ -6745,7 +6753,8 @@
     },
     {
       "task_id": "SelectByAdjacency_v0",
-      "canonical_task_id": "reindex_neighbor",
+      "source_solver_task_id": "reindex_neighbor",
+      "canonical_task_id": "SelectByAdjacency",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_layout240_v1/SelectByAdjacency_v0",
       "validation_status": "validated_historical_saved_version",
@@ -7696,7 +7705,8 @@
     },
     {
       "task_id": "SelectByDirection_v0",
-      "canonical_task_id": "grasp_anchor_direction",
+      "source_solver_task_id": "grasp_anchor_direction",
+      "canonical_task_id": "SelectByDirection",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_contact240_v1/SelectByDirection_v0",
       "validation_status": "validated_historical_saved_version",
@@ -8546,7 +8556,8 @@
     },
     {
       "task_id": "SelectByDistance_v0",
-      "canonical_task_id": "grasp_anchor_distance",
+      "source_solver_task_id": "grasp_anchor_distance",
+      "canonical_task_id": "SelectByDistance",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_horizontal_tgs240_v1/SelectByDistance_v0",
       "validation_status": "validated_historical_saved_version",
@@ -9396,7 +9407,8 @@
     },
     {
       "task_id": "SelectByGridIndex_v0",
-      "canonical_task_id": "grid_rowcol_grounding",
+      "source_solver_task_id": "grid_rowcol_grounding",
+      "canonical_task_id": "SelectByGridIndex",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v3/SelectByGridIndex_v0",
       "validation_status": "validated_historical_saved_version",
@@ -10434,7 +10446,8 @@
     },
     {
       "task_id": "SelectByOrderFirst_v0",
-      "canonical_task_id": "reindex_extreme",
+      "source_solver_task_id": "reindex_extreme",
+      "canonical_task_id": "SelectByOrder",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_canonical240_v1/SelectByOrderFirst_v0",
       "validation_status": "validated_historical_saved_version",
@@ -11281,7 +11294,8 @@
     },
     {
       "task_id": "SelectByOrderLast_v0",
-      "canonical_task_id": "reindex_extreme",
+      "source_solver_task_id": "reindex_extreme",
+      "canonical_task_id": "SelectByOrder",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v4/SelectByOrderLast_v0",
       "validation_status": "validated_historical_saved_version",
@@ -12133,7 +12147,8 @@
     },
     {
       "task_id": "SelectByOrderSecond_v0",
-      "canonical_task_id": "ordinal_insert_static",
+      "source_solver_task_id": "ordinal_insert_static",
+      "canonical_task_id": "SelectByOrder",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v3/SelectByOrderSecond_v0",
       "validation_status": "validated_historical_saved_version",
@@ -12988,7 +13003,8 @@
     },
     {
       "task_id": "SelectWithVisualCue_v0",
-      "canonical_task_id": "select_visual_spatial",
+      "source_solver_task_id": "select_visual_spatial",
+      "canonical_task_id": "SelectWithVisualCue",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_visual_pgs240_v1/SelectWithVisualCue_v0",
       "validation_status": "validated_historical_saved_version",
@@ -13944,7 +13960,8 @@
     },
     {
       "task_id": "SelectWithinSubset_v0",
-      "canonical_task_id": "reindex_subset",
+      "source_solver_task_id": "reindex_subset",
+      "canonical_task_id": "SelectWithinSubset",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v4/SelectWithinSubset_v0",
       "validation_status": "validated_historical_saved_version",
@@ -14799,7 +14816,8 @@
     },
     {
       "task_id": "TrackMovingObject_v0",
-      "canonical_task_id": "track_single",
+      "source_solver_task_id": "track_single",
+      "canonical_task_id": "TrackMovingObject",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v4/TrackMovingObject_v0",
       "validation_status": "validated_historical_saved_version",
@@ -15648,7 +15666,8 @@
     },
     {
       "task_id": "TrackObjectSwap_v0",
-      "canonical_task_id": "track_multi",
+      "source_solver_task_id": "track_multi",
+      "canonical_task_id": "TrackObjectSwap",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_contact240_v2/TrackObjectSwap_v0",
       "validation_status": "validated_historical_saved_version",
@@ -16506,7 +16525,8 @@
     },
     {
       "task_id": "UpdateObjectOrder_v0",
-      "canonical_task_id": "reindex_insert",
+      "source_solver_task_id": "reindex_insert",
+      "canonical_task_id": "UpdateObjectOrder",
       "evidence_kind": "old",
       "evidence_case_relpath": "outputs/research/registered_robotiq_repairs_v3/UpdateObjectOrder_v0",
       "validation_status": "validated_historical_saved_version",
@@ -17358,6 +17378,7 @@
     },
     {
       "task_id": "SelectByBranchPosition_v0",
+      "source_solver_task_id": "SelectByBranchPosition",
       "canonical_task_id": "SelectByBranchPosition",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_branch_contact_v2/SelectByBranchPosition_v0",
@@ -17982,6 +18003,7 @@
     },
     {
       "task_id": "SelectByRegion_v0",
+      "source_solver_task_id": "SelectByRegion",
       "canonical_task_id": "SelectByRegion",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_smoke_v1/SelectByRegion_v0",
@@ -18573,6 +18595,7 @@
     },
     {
       "task_id": "SelectByPathDistance_v0",
+      "source_solver_task_id": "SelectByPathDistance",
       "canonical_task_id": "SelectByPathDistance",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_path_rebase_v2/SelectByPathDistance_v0",
@@ -19189,6 +19212,7 @@
     },
     {
       "task_id": "SelectByTwoRelations_v0",
+      "source_solver_task_id": "SelectByTwoRelations",
       "canonical_task_id": "SelectByTwoRelations",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_new_v1/SelectByTwoRelations_v0",
@@ -19785,6 +19809,7 @@
     },
     {
       "task_id": "SelectByIndirectReference_v0",
+      "source_solver_task_id": "SelectByIndirectReference",
       "canonical_task_id": "SelectByIndirectReference",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_indirect_camera_v6/SelectByIndirectReference_v0",
@@ -20401,6 +20426,7 @@
     },
     {
       "task_id": "DetectSceneChange_v0",
+      "source_solver_task_id": "DetectSceneChange",
       "canonical_task_id": "DetectSceneChange",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_detect_rebase_v2/DetectSceneChange_v0",
@@ -21004,6 +21030,7 @@
     },
     {
       "task_id": "UpdateEmptySlot_v0",
+      "source_solver_task_id": "UpdateEmptySlot",
       "canonical_task_id": "UpdateEmptySlot",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_temporal_smoke_v2/UpdateEmptySlot_v0",
@@ -21587,6 +21614,7 @@
     },
     {
       "task_id": "TrackObjectOriginClutter_v0",
+      "source_solver_task_id": "TrackObjectOrigin",
       "canonical_task_id": "TrackObjectOrigin",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_new_v1/TrackObjectOriginClutter_v0",
@@ -22175,6 +22203,7 @@
     },
     {
       "task_id": "ProjectOntoLine_v0",
+      "source_solver_task_id": "ProjectOntoLine",
       "canonical_task_id": "ProjectOntoLine",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_geometry_replay_v2/ProjectOntoLine_v0",
@@ -22767,6 +22796,7 @@
     },
     {
       "task_id": "ReflectAcrossLine_v0",
+      "source_solver_task_id": "ReflectAcrossLine",
       "canonical_task_id": "ReflectAcrossLine",
       "evidence_kind": "new",
       "evidence_case_relpath": "outputs/research/canonical27_reflect_rebase_v4/ReflectAcrossLine_v0",
@@ -23357,5 +23387,6 @@
         "0.9328504589976385"
       ]
     }
-  ]
+  ],
+  "canonical_task_id_semantics": "Public 27-type taxonomy from registry.public_task_id; original runtime solver identity is preserved as source_solver_task_id. No physical result or historical source binding is changed."
 }

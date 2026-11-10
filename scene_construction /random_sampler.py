@@ -339,7 +339,7 @@ add_default_plane(plane)
 add_walls(world.scene)
 
 sampler = SceneSampler(
-    catalog_path="scene_construction/assets_catalog_with_metadata.json",
+    catalog_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets_catalog_with_metadata.json"),
     api_key=os.environ["OPENAI_API_KEY"],
     base_url=os.environ.get("OPENAI_BASE_URL", "https://api.chatanywhere.tech/v1"))
 manual_config = {

@@ -37,6 +37,14 @@ def load_cases(path):
     ids = [case["task_id"] for case in cases]
     if len(cases) != 30 or len(set(ids)) != 30:
         raise ValueError("Expected the 30 distinct accepted instances covering 27 types")
+    # Public type coverage is separate from legacy solver identity.  Historical
+    # solver names remain source_solver_task_id metadata and are not regrouped.
+    canonical = [case.get("canonical_task_id") for case in cases]
+    if any(not isinstance(value, str) or re.fullmatch(r"[A-Z][A-Za-z0-9]*", value) is None
+           for value in canonical):
+        raise ValueError("Expected public canonical task type names in matrix metadata")
+    if matrix.get("canonical_task_types") != 27 or len(set(canonical)) != 27:
+        raise ValueError("Expected exactly 27 public canonical types across the 30 matrix instances")
     for case in cases:
         if not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", case["task_id"]):
             raise ValueError("Invalid task identity in reproduction matrix")
